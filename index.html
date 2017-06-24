@@ -140,22 +140,22 @@
             
             <li class>
               <p class="navbar-text">
-                <a href="#Home" class="nav-text">Home</a>
+                <a href="#Home" class="nav-text" name="anchor">Home</a>
               </p>
             </li>
             
             <li class>
               <p class="navbar-text">
-                <a href="#API" class="nav-text">API Reference</a>
+                <a href="#API" class="nav-text" name="anchor">API Reference</a>
               </p>
             </li>
             
           </ul>
           <div class="navbar-text navbar-right">
-            <a href="http://twitter.com/TestArmada" class="nav-text">Twitter</a>
+            <a href="http://twitter.com/TestArmada" class="nav-text" target="_blank">Twitter</a>
           </div>
           <div class="navbar-text navbar-right">
-            <a href="https://github.com/TestArmada" class="nav-text">Github</a>
+            <a href="https://github.com/TestArmada" class="nav-text" target="_blank">Github</a>
           </div>
         </div>
 
@@ -401,51 +401,51 @@ npm test
                 <ul id="browser" class="nav nav-pills nav-stacked collapse">
                   
                   <li role="presentation">
-                    <a href="#getEl">.getEl()</a>
+                    <a href="#getEl" name="anchor">.getEl()</a>
                   </li>
                   
                   <li role="presentation">
-                    <a href="#getEls">.getEls()</a>
+                    <a href="#getEls" name="anchor">.getEls()</a>
                   </li>
                   
                   <li role="presentation">
-                    <a href="#clickEl">.clickEl()</a>
+                    <a href="#clickEl" name="anchor">.clickEl()</a>
                   </li>
                   
                   <li role="presentation">
-                    <a href="#clickAutomationEl">.clickAutomationEl()</a>
+                    <a href="#clickAutomationEl" name="anchor">.clickAutomationEl()</a>
                   </li>
                   
                   <li role="presentation">
-                    <a href="#getElValue">.getElValue()</a>
+                    <a href="#getElValue" name="anchor">.getElValue()</a>
                   </li>
                   
                   <li role="presentation">
-                    <a href="#setElValue">.setElValue()</a>
+                    <a href="#setElValue" name="anchor">.setElValue()</a>
                   </li>
                   
                   <li role="presentation">
-                    <a href="#setMaskedElValue">.setMaskedElValue()</a>
+                    <a href="#setMaskedElValue" name="anchor">.setMaskedElValue()</a>
                   </li>
                   
                   <li role="presentation">
-                    <a href="#moveToEl">.moveToEl()</a>
+                    <a href="#moveToEl" name="anchor">.moveToEl()</a>
                   </li>
                   
                   <li role="presentation">
-                    <a href="#takeElScreenshot">.takeElScreenshot()</a>
+                    <a href="#takeElScreenshot" name="anchor">.takeElScreenshot()</a>
                   </li>
                   
                   <li role="presentation">
-                    <a href="#takeScreenhot">.takeScreenhot()</a>
+                    <a href="#takeScreenhot" name="anchor">.takeScreenhot()</a>
                   </li>
                   
                   <li role="presentation">
-                    <a href="#assert_elContainsText">.assert.elContainsText()</a>
+                    <a href="#assert_elContainsText" name="anchor">.assert.elContainsText()</a>
                   </li>
                   
                   <li role="presentation">
-                    <a href="#assert_elNotContainsText">.assert.elNotContainsText()</a>
+                    <a href="#assert_elNotContainsText" name="anchor">.assert.elNotContainsText()</a>
                   </li>
                   
                 </ul>
@@ -458,39 +458,39 @@ npm test
                 <ul id="app" class="nav nav-pills nav-stacked collapse">
                   
                   <li role="presentation">
-                    <a href="#getMobileEl">.getMobileEl()</a>
+                    <a href="#getMobileEl" name="anchor">.getMobileEl()</a>
                   </li>
                   
                   <li role="presentation">
-                    <a href="#clickMobileEl">.clickMobileEl()</a>
+                    <a href="#clickMobileEl" name="anchor">.clickMobileEl()</a>
                   </li>
                   
                   <li role="presentation">
-                    <a href="#setMobileElValue">.setMobileElValue()</a>
+                    <a href="#setMobileElValue" name="anchor">.setMobileElValue()</a>
                   </li>
                   
                   <li role="presentation">
-                    <a href="#getMobileElValue">.getMobileElValue()</a>
+                    <a href="#getMobileElValue" name="anchor">.getMobileElValue()</a>
                   </li>
                   
                   <li role="presentation">
-                    <a href="#swipeMobileElTo">.swipeMobileElTo()</a>
+                    <a href="#swipeMobileElTo" name="anchor">.swipeMobileElTo()</a>
                   </li>
                   
                   <li role="presentation">
-                    <a href="#swipeScreenTo">.swipeScreenTo()</a>
+                    <a href="#swipeScreenTo" name="anchor">.swipeScreenTo()</a>
                   </li>
                   
                   <li role="presentation">
-                    <a href="#hideKeyboard">.hideKeyboard()</a>
+                    <a href="#hideKeyboard" name="anchor">.hideKeyboard()</a>
                   </li>
                   
                   <li role="presentation">
-                    <a href="#pressKeycode">.pressKeycode()</a>
+                    <a href="#pressKeycode" name="anchor">.pressKeycode()</a>
                   </li>
                   
                   <li role="presentation">
-                    <a href="#tapMobileEl">.tapMobileEl()</a>
+                    <a href="#tapMobileEl" name="anchor">.tapMobileEl()</a>
                   </li>
                   
                 </ul>
@@ -1125,7 +1125,7 @@ npm test
 
     hljs.configure({ useBR: true });
 
-    $(document).on('click', 'a[href]', function (event) {
+    $(document).on('click', 'a[name="anchor"]', function (event) {
       event.preventDefault();
 
       const element = $($.attr(this, 'href'));
