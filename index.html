@@ -257,6 +257,7 @@
       </div>
     </section>
 
+    
     <!--<section class="column-contain full-viewport">
       <a class="anchor" id="GettingStarted"></a>
       <div class="row full-section">
@@ -502,9 +503,9 @@ npm test
         <div class="col-md-9 pre-scrollable full-section" data-spy="scroll" data-target="#navbar-api">
           <div>
              
-            <div class="panel panel-info">
+            <div class="panel panel-info" name="link">
 
-              <div id="getEl" class="panel-heading">
+              <div id="getEl" class="panel-heading" name="link-content">
                 <span>.getEl()</span>
                 <span class="pull-right">tag [ <abbr title="works for desktop and mobile browsers">browser</abbr> ]</span>
               </div>
@@ -543,9 +544,9 @@ npm test
               </div>
             </div>
             
-            <div class="panel panel-info">
+            <div class="panel panel-info" name="link">
 
-              <div id="getEls" class="panel-heading">
+              <div id="getEls" class="panel-heading" name="link-content">
                 <span>.getEls()</span>
                 <span class="pull-right">tag [ <abbr title="works for desktop and mobile browsers">browser</abbr> ]</span>
               </div>
@@ -584,9 +585,9 @@ npm test
               </div>
             </div>
             
-            <div class="panel panel-info">
+            <div class="panel panel-info" name="link">
 
-              <div id="clickEl" class="panel-heading">
+              <div id="clickEl" class="panel-heading" name="link-content">
                 <span>.clickEl()</span>
                 <span class="pull-right">tag [ <abbr title="works for desktop and mobile browsers">browser</abbr> ]</span>
               </div>
@@ -624,9 +625,9 @@ npm test
               </div>
             </div>
             
-            <div class="panel panel-info">
+            <div class="panel panel-info" name="link">
 
-              <div id="clickAutomationEl" class="panel-heading">
+              <div id="clickAutomationEl" class="panel-heading" name="link-content">
                 <span>.clickAutomationEl()</span>
                 <span class="pull-right">tag [ <abbr title="works for desktop and mobile browsers">browser</abbr> ]</span>
               </div>
@@ -665,9 +666,9 @@ npm test
               </div>
             </div>
             
-            <div class="panel panel-info">
+            <div class="panel panel-info" name="link">
 
-              <div id="getElValue" class="panel-heading">
+              <div id="getElValue" class="panel-heading" name="link-content">
                 <span>.getElValue()</span>
                 <span class="pull-right">tag [ <abbr title="works for desktop and mobile browsers">browser</abbr> ]</span>
               </div>
@@ -705,9 +706,9 @@ npm test
               </div>
             </div>
             
-            <div class="panel panel-info">
+            <div class="panel panel-info" name="link">
 
-              <div id="setElValue" class="panel-heading">
+              <div id="setElValue" class="panel-heading" name="link-content">
                 <span>.setElValue()</span>
                 <span class="pull-right">tag [ <abbr title="works for desktop and mobile browsers">browser</abbr> ]</span>
               </div>
@@ -753,9 +754,9 @@ npm test
               </div>
             </div>
             
-            <div class="panel panel-info">
+            <div class="panel panel-info" name="link">
 
-              <div id="setMaskedElValue" class="panel-heading">
+              <div id="setMaskedElValue" class="panel-heading" name="link-content">
                 <span>.setMaskedElValue()</span>
                 <span class="pull-right">tag [ <abbr title="works for desktop and mobile browsers">browser</abbr> ]</span>
               </div>
@@ -764,7 +765,36 @@ npm test
                 <p class="description"><strong>Syntax</strong>
                   <pre><code class="code-wrap javascript">.setMaskedElValue(selector, value, callback/*optional*/);</code></pre>
                 </p>
-                <!--asdffdaa-->
+                <!--asdf{"name"=>"selector", "description"=>"css selector to the html element."}{"name"=>"value", "description"=>"value to be set to the html element."}{"name"=>"callback", "description"=>"optional callback to be called when the command finishes."}fdaa-->
+                
+                <p class="description"><strong>Parameters</strong></p>
+                <dl class="dl-horizontal">
+                  
+                  <dt>
+                    <p class="description"><strong>selector :</strong></p>
+                  </dt>
+                  <dd>
+                    <p class="description">css selector to the html element.
+                      <p>
+                  </dd>
+                  
+                  <dt>
+                    <p class="description"><strong>value :</strong></p>
+                  </dt>
+                  <dd>
+                    <p class="description">value to be set to the html element.
+                      <p>
+                  </dd>
+                  
+                  <dt>
+                    <p class="description"><strong>callback :</strong></p>
+                  </dt>
+                  <dd>
+                    <p class="description">optional callback to be called when the command finishes.
+                      <p>
+                  </dd>
+                  
+                </dl>
                 
                 <p class="description"><strong>Usage</strong>
                   <pre><code class="code-wrap javascript">.setElValue(".phone-number", "123456789");</code></pre>
@@ -772,9 +802,9 @@ npm test
               </div>
             </div>
             
-            <div class="panel panel-info">
+            <div class="panel panel-info" name="link">
 
-              <div id="moveToEl" class="panel-heading">
+              <div id="moveToEl" class="panel-heading" name="link-content">
                 <span>.moveToEl()</span>
                 <span class="pull-right">tag [ <abbr title="works for desktop and mobile browsers">browser</abbr> ]</span>
               </div>
@@ -783,7 +813,44 @@ npm test
                 <p class="description"><strong>Syntax</strong>
                   <pre><code class="code-wrap javascript">.moveToEl(selector, xoffset, yoffset, callback/*optional*/);</code></pre>
                 </p>
-                <!--asdffdaa-->
+                <!--asdf{"name"=>"selector", "description"=>"css selector to the html element."}{"name"=>"xoffset", "description"=>"x offset to move to, relative to the top-left corner of the element."}{"name"=>"yoffset", "description"=>"y offset to move to, relative to the top-left corner of the element."}{"name"=>"callback", "description"=>"optional callback to be called when the command finishes."}fdaa-->
+                
+                <p class="description"><strong>Parameters</strong></p>
+                <dl class="dl-horizontal">
+                  
+                  <dt>
+                    <p class="description"><strong>selector :</strong></p>
+                  </dt>
+                  <dd>
+                    <p class="description">css selector to the html element.
+                      <p>
+                  </dd>
+                  
+                  <dt>
+                    <p class="description"><strong>xoffset :</strong></p>
+                  </dt>
+                  <dd>
+                    <p class="description">x offset to move to, relative to the top-left corner of the element.
+                      <p>
+                  </dd>
+                  
+                  <dt>
+                    <p class="description"><strong>yoffset :</strong></p>
+                  </dt>
+                  <dd>
+                    <p class="description">y offset to move to, relative to the top-left corner of the element.
+                      <p>
+                  </dd>
+                  
+                  <dt>
+                    <p class="description"><strong>callback :</strong></p>
+                  </dt>
+                  <dd>
+                    <p class="description">optional callback to be called when the command finishes.
+                      <p>
+                  </dd>
+                  
+                </dl>
                 
                 <p class="description"><strong>Usage</strong>
                   <pre><code class="code-wrap javascript">.moveToEl(".checkout", 10, 10);</code></pre>
@@ -791,9 +858,9 @@ npm test
               </div>
             </div>
             
-            <div class="panel panel-info">
+            <div class="panel panel-info" name="link">
 
-              <div id="takeElScreenshot" class="panel-heading">
+              <div id="takeElScreenshot" class="panel-heading" name="link-content">
                 <span>.takeElScreenshot()</span>
                 <span class="pull-right">tag [ <abbr title="works for desktop and mobile browsers">browser</abbr> ]</span>
               </div>
@@ -802,7 +869,36 @@ npm test
                 <p class="description"><strong>Syntax</strong>
                   <pre><code class="code-wrap javascript">.takeElScreenshot(selector, filename, callback/*optional*/);</code></pre>
                 </p>
-                <!--asdffdaa-->
+                <!--asdf{"name"=>"selector", "description"=>"css selector to the html element."}{"name"=>"filename", "description"=>"file name where the screen shot will be saved to (.png will be appended as prefix)."}{"name"=>"callback", "description"=>"optional callback to be called when the command finishes."}fdaa-->
+                
+                <p class="description"><strong>Parameters</strong></p>
+                <dl class="dl-horizontal">
+                  
+                  <dt>
+                    <p class="description"><strong>selector :</strong></p>
+                  </dt>
+                  <dd>
+                    <p class="description">css selector to the html element.
+                      <p>
+                  </dd>
+                  
+                  <dt>
+                    <p class="description"><strong>filename :</strong></p>
+                  </dt>
+                  <dd>
+                    <p class="description">file name where the screen shot will be saved to (.png will be appended as prefix).
+                      <p>
+                  </dd>
+                  
+                  <dt>
+                    <p class="description"><strong>callback :</strong></p>
+                  </dt>
+                  <dd>
+                    <p class="description">optional callback to be called when the command finishes.
+                      <p>
+                  </dd>
+                  
+                </dl>
                 
                 <p class="description"><strong>Usage</strong>
                   <pre><code class="code-wrap javascript">.takeElScreenshot(".phone-number", "phone-number");</code></pre>
@@ -810,9 +906,9 @@ npm test
               </div>
             </div>
             
-            <div class="panel panel-info">
+            <div class="panel panel-info" name="link">
 
-              <div id="takeScreenhot" class="panel-heading">
+              <div id="takeScreenhot" class="panel-heading" name="link-content">
                 <span>.takeScreenhot()</span>
                 <span class="pull-right">tag [ <abbr title="works for desktop and mobile browsers">browser</abbr> ]</span>
               </div>
@@ -821,7 +917,28 @@ npm test
                 <p class="description"><strong>Syntax</strong>
                   <pre><code class="code-wrap javascript">.takeScreenhot(filename, callback/*optional*/);</code></pre>
                 </p>
-                <!--asdffdaa-->
+                <!--asdf{"name"=>"filename", "description"=>"file name where the screen shot will be saved to (.png will be appended as prefix)."}{"name"=>"callback", "description"=>"optional callback to be called when the command finishes."}fdaa-->
+                
+                <p class="description"><strong>Parameters</strong></p>
+                <dl class="dl-horizontal">
+                  
+                  <dt>
+                    <p class="description"><strong>filename :</strong></p>
+                  </dt>
+                  <dd>
+                    <p class="description">file name where the screen shot will be saved to (.png will be appended as prefix).
+                      <p>
+                  </dd>
+                  
+                  <dt>
+                    <p class="description"><strong>callback :</strong></p>
+                  </dt>
+                  <dd>
+                    <p class="description">optional callback to be called when the command finishes.
+                      <p>
+                  </dd>
+                  
+                </dl>
                 
                 <p class="description"><strong>Usage</strong>
                   <pre><code class="code-wrap javascript">.takeScreenhot("home-page");</code></pre>
@@ -829,18 +946,39 @@ npm test
               </div>
             </div>
             
-            <div class="panel panel-info">
+            <div class="panel panel-info" name="link">
 
-              <div id="assert_elContainsText" class="panel-heading">
+              <div id="assert_elContainsText" class="panel-heading" name="link-content">
                 <span>.assert.elContainsText()</span>
                 <span class="pull-right">tag [ <abbr title="works for desktop and mobile browsers">browser</abbr> ]</span>
               </div>
               <div class="panel-body">
                 <p class="description">Asserts if current element contains a given text</p>
                 <p class="description"><strong>Syntax</strong>
-                  <pre><code class="code-wrap javascript">.assert.elContainsText(selector, value or regexp);</code></pre>
+                  <pre><code class="code-wrap javascript">.assert.elContainsText(selector, value);</code></pre>
                 </p>
-                <!--asdffdaa-->
+                <!--asdf{"name"=>"selector", "description"=>"css selector to the html element."}{"name"=>"value", "description"=>"textual value or regular expression to assert."}fdaa-->
+                
+                <p class="description"><strong>Parameters</strong></p>
+                <dl class="dl-horizontal">
+                  
+                  <dt>
+                    <p class="description"><strong>selector :</strong></p>
+                  </dt>
+                  <dd>
+                    <p class="description">css selector to the html element.
+                      <p>
+                  </dd>
+                  
+                  <dt>
+                    <p class="description"><strong>value :</strong></p>
+                  </dt>
+                  <dd>
+                    <p class="description">textual value or regular expression to assert.
+                      <p>
+                  </dd>
+                  
+                </dl>
                 
                 <p class="description"><strong>Usage</strong>
                   <pre><code class="code-wrap javascript">.assert.elContainsText(".username", "testarmada");</code></pre>
@@ -848,18 +986,39 @@ npm test
               </div>
             </div>
             
-            <div class="panel panel-info">
+            <div class="panel panel-info" name="link">
 
-              <div id="assert_elNotContainsText" class="panel-heading">
+              <div id="assert_elNotContainsText" class="panel-heading" name="link-content">
                 <span>.assert.elNotContainsText()</span>
                 <span class="pull-right">tag [ <abbr title="works for desktop and mobile browsers">browser</abbr> ]</span>
               </div>
               <div class="panel-body">
                 <p class="description">Asserts if current element doesn't contain a given text</p>
                 <p class="description"><strong>Syntax</strong>
-                  <pre><code class="code-wrap javascript">.assert.elNotContainsText(selector, value or regexp);</code></pre>
+                  <pre><code class="code-wrap javascript">.assert.elNotContainsText(selector, value);</code></pre>
                 </p>
-                <!--asdffdaa-->
+                <!--asdf{"name"=>"selector", "description"=>"css selector to the html element."}{"name"=>"value", "description"=>"textual value or regular expression to assert."}fdaa-->
+                
+                <p class="description"><strong>Parameters</strong></p>
+                <dl class="dl-horizontal">
+                  
+                  <dt>
+                    <p class="description"><strong>selector :</strong></p>
+                  </dt>
+                  <dd>
+                    <p class="description">css selector to the html element.
+                      <p>
+                  </dd>
+                  
+                  <dt>
+                    <p class="description"><strong>value :</strong></p>
+                  </dt>
+                  <dd>
+                    <p class="description">textual value or regular expression to assert.
+                      <p>
+                  </dd>
+                  
+                </dl>
                 
                 <p class="description"><strong>Usage</strong>
                   <pre><code class="code-wrap javascript">.assert.elNotContainsText(".username", "testarmada");</code></pre>
@@ -867,9 +1026,9 @@ npm test
               </div>
             </div>
               
-            <div class="panel panel-info">
+            <div class="panel panel-info" name="link">
 
-              <div id="getMobileEl" class="panel-heading">
+              <div id="getMobileEl" class="panel-heading" name="link-content">
                 <span>.getMobileEl()</span>
                 <span class="pull-right">tag [ <abbr title="works for iOS app">iOS</abbr>  <abbr title="">Android</abbr> ]</span>
               </div>
@@ -878,7 +1037,36 @@ npm test
                 <p class="description"><strong>Syntax</strong>
                   <pre><code class="code-wrap javascript">.getMobileEl(using, selector, callback/*optional*/);</code></pre>
                 </p>
-                <!--asdffdaa-->
+                <!--asdf{"name"=>"using", "description"=>"type (accessibility id, id or xpath) of the selector being used."}{"name"=>"selector", "description"=>"selector to identify the element."}{"name"=>"callback", "description"=>"callback which includes the element information."}fdaa-->
+                
+                <p class="description"><strong>Parameters</strong></p>
+                <dl class="dl-horizontal">
+                  
+                  <dt>
+                    <p class="description"><strong>using :</strong></p>
+                  </dt>
+                  <dd>
+                    <p class="description">type (accessibility id, id or xpath) of the selector being used.
+                      <p>
+                  </dd>
+                  
+                  <dt>
+                    <p class="description"><strong>selector :</strong></p>
+                  </dt>
+                  <dd>
+                    <p class="description">selector to identify the element.
+                      <p>
+                  </dd>
+                  
+                  <dt>
+                    <p class="description"><strong>callback :</strong></p>
+                  </dt>
+                  <dd>
+                    <p class="description">callback which includes the element information.
+                      <p>
+                  </dd>
+                  
+                </dl>
                 
                 <p class="description"><strong>Usage</strong>
                   <pre><code class="code-wrap javascript">.getMobileEl("accessibility id", "mybutton", function(element){<br>  console.log(element); // will print out {'ELEMENT': 1}<br>});
@@ -887,9 +1075,9 @@ npm test
               </div>
             </div>
             
-            <div class="panel panel-info">
+            <div class="panel panel-info" name="link">
 
-              <div id="clickMobileEl" class="panel-heading">
+              <div id="clickMobileEl" class="panel-heading" name="link-content">
                 <span>.clickMobileEl()</span>
                 <span class="pull-right">tag [ <abbr title="works for iOS app">iOS</abbr>  <abbr title="">Android</abbr> ]</span>
               </div>
@@ -898,7 +1086,36 @@ npm test
                 <p class="description"><strong>Syntax</strong>
                   <pre><code class="code-wrap javascript">.clickMobileEl(using, selector, callback/*optional*/);</code></pre>
                 </p>
-                <!--asdffdaa-->
+                <!--asdf{"name"=>"using", "description"=>"type (accessibility id, id or xpath) of the selector being used."}{"name"=>"selector", "description"=>"selector to identify the element."}{"name"=>"callback", "description"=>"optional callback to be called when the command finishes."}fdaa-->
+                
+                <p class="description"><strong>Parameters</strong></p>
+                <dl class="dl-horizontal">
+                  
+                  <dt>
+                    <p class="description"><strong>using :</strong></p>
+                  </dt>
+                  <dd>
+                    <p class="description">type (accessibility id, id or xpath) of the selector being used.
+                      <p>
+                  </dd>
+                  
+                  <dt>
+                    <p class="description"><strong>selector :</strong></p>
+                  </dt>
+                  <dd>
+                    <p class="description">selector to identify the element.
+                      <p>
+                  </dd>
+                  
+                  <dt>
+                    <p class="description"><strong>callback :</strong></p>
+                  </dt>
+                  <dd>
+                    <p class="description">optional callback to be called when the command finishes.
+                      <p>
+                  </dd>
+                  
+                </dl>
                 
                 <p class="description"><strong>Usage</strong>
                   <pre><code class="code-wrap javascript">.clickMobileEl("accessibility id", "checkout");</code></pre>
@@ -906,18 +1123,55 @@ npm test
               </div>
             </div>
             
-            <div class="panel panel-info">
+            <div class="panel panel-info" name="link">
 
-              <div id="setMobileElValue" class="panel-heading">
+              <div id="setMobileElValue" class="panel-heading" name="link-content">
                 <span>.setMobileElValue()</span>
                 <span class="pull-right">tag [ <abbr title="works for iOS app">iOS</abbr>  <abbr title="">Android</abbr> ]</span>
               </div>
               <div class="panel-body">
                 <p class="description">Sets value to a mobile element.</p>
                 <p class="description"><strong>Syntax</strong>
-                  <pre><code class="code-wrap javascript">.setMobileElValue(using, selector, callback/*optional*/);</code></pre>
+                  <pre><code class="code-wrap javascript">.setMobileElValue(using, selector, value, callback/*optional*/);</code></pre>
                 </p>
-                <!--asdffdaa-->
+                <!--asdf{"name"=>"using", "description"=>"type (accessibility id, id or xpath) of the selector being used."}{"name"=>"selector", "description"=>"selector to identify the element."}{"name"=>"value", "description"=>"value to be set to the element."}{"name"=>"callback", "description"=>"optional callback to be called when the command finishes."}fdaa-->
+                
+                <p class="description"><strong>Parameters</strong></p>
+                <dl class="dl-horizontal">
+                  
+                  <dt>
+                    <p class="description"><strong>using :</strong></p>
+                  </dt>
+                  <dd>
+                    <p class="description">type (accessibility id, id or xpath) of the selector being used.
+                      <p>
+                  </dd>
+                  
+                  <dt>
+                    <p class="description"><strong>selector :</strong></p>
+                  </dt>
+                  <dd>
+                    <p class="description">selector to identify the element.
+                      <p>
+                  </dd>
+                  
+                  <dt>
+                    <p class="description"><strong>value :</strong></p>
+                  </dt>
+                  <dd>
+                    <p class="description">value to be set to the element.
+                      <p>
+                  </dd>
+                  
+                  <dt>
+                    <p class="description"><strong>callback :</strong></p>
+                  </dt>
+                  <dd>
+                    <p class="description">optional callback to be called when the command finishes.
+                      <p>
+                  </dd>
+                  
+                </dl>
                 
                 <p class="description"><strong>Usage</strong>
                   <pre><code class="code-wrap javascript">.setMobileElValue("accessibility id", "username", "testarmada");</code></pre>
@@ -925,9 +1179,9 @@ npm test
               </div>
             </div>
             
-            <div class="panel panel-info">
+            <div class="panel panel-info" name="link">
 
-              <div id="getMobileElValue" class="panel-heading">
+              <div id="getMobileElValue" class="panel-heading" name="link-content">
                 <span>.getMobileElValue()</span>
                 <span class="pull-right">tag [ <abbr title="works for iOS app">iOS</abbr>  <abbr title="">Android</abbr> ]</span>
               </div>
@@ -936,7 +1190,36 @@ npm test
                 <p class="description"><strong>Syntax</strong>
                   <pre><code class="code-wrap javascript">.getMobileElValue(using, selector, callback/*optional*/);</code></pre>
                 </p>
-                <!--asdffdaa-->
+                <!--asdf{"name"=>"using", "description"=>"type (accessibility id, id or xpath) of the selector being used."}{"name"=>"selector", "description"=>"selector to identify the element."}{"name"=>"callback", "description"=>"callback which includes the element information."}fdaa-->
+                
+                <p class="description"><strong>Parameters</strong></p>
+                <dl class="dl-horizontal">
+                  
+                  <dt>
+                    <p class="description"><strong>using :</strong></p>
+                  </dt>
+                  <dd>
+                    <p class="description">type (accessibility id, id or xpath) of the selector being used.
+                      <p>
+                  </dd>
+                  
+                  <dt>
+                    <p class="description"><strong>selector :</strong></p>
+                  </dt>
+                  <dd>
+                    <p class="description">selector to identify the element.
+                      <p>
+                  </dd>
+                  
+                  <dt>
+                    <p class="description"><strong>callback :</strong></p>
+                  </dt>
+                  <dd>
+                    <p class="description">callback which includes the element information.
+                      <p>
+                  </dd>
+                  
+                </dl>
                 
                 <p class="description"><strong>Usage</strong>
                   <pre><code class="code-wrap javascript">.getMobileElValue("accessibility id", "username", function(value){<br> console.log(value);<br>});
@@ -945,9 +1228,9 @@ npm test
               </div>
             </div>
             
-            <div class="panel panel-info">
+            <div class="panel panel-info" name="link">
 
-              <div id="swipeMobileElTo" class="panel-heading">
+              <div id="swipeMobileElTo" class="panel-heading" name="link-content">
                 <span>.swipeMobileElTo()</span>
                 <span class="pull-right">tag [ <abbr title="works for iOS app">iOS</abbr>  <abbr title="">Android</abbr> ]</span>
               </div>
@@ -956,7 +1239,52 @@ npm test
                 <p class="description"><strong>Syntax</strong>
                   <pre><code class="code-wrap javascript">.swipeMobileElTo(using, selector, x, y, callback/*optional*/);</code></pre>
                 </p>
-                <!--asdffdaa-->
+                <!--asdf{"name"=>"using", "description"=>"type (accessibility id, id or xpath) of the selector being used."}{"name"=>"selector", "description"=>"selector to identify the element."}{"name"=>"x", "description"=>"distance on x axis from element to where to swipe to."}{"name"=>"y", "description"=>"distance on y axis from element to where to swipe to."}{"name"=>"callback", "description"=>"optional callback to be called when the command finishes."}fdaa-->
+                
+                <p class="description"><strong>Parameters</strong></p>
+                <dl class="dl-horizontal">
+                  
+                  <dt>
+                    <p class="description"><strong>using :</strong></p>
+                  </dt>
+                  <dd>
+                    <p class="description">type (accessibility id, id or xpath) of the selector being used.
+                      <p>
+                  </dd>
+                  
+                  <dt>
+                    <p class="description"><strong>selector :</strong></p>
+                  </dt>
+                  <dd>
+                    <p class="description">selector to identify the element.
+                      <p>
+                  </dd>
+                  
+                  <dt>
+                    <p class="description"><strong>x :</strong></p>
+                  </dt>
+                  <dd>
+                    <p class="description">distance on x axis from element to where to swipe to.
+                      <p>
+                  </dd>
+                  
+                  <dt>
+                    <p class="description"><strong>y :</strong></p>
+                  </dt>
+                  <dd>
+                    <p class="description">distance on y axis from element to where to swipe to.
+                      <p>
+                  </dd>
+                  
+                  <dt>
+                    <p class="description"><strong>callback :</strong></p>
+                  </dt>
+                  <dd>
+                    <p class="description">optional callback to be called when the command finishes.
+                      <p>
+                  </dd>
+                  
+                </dl>
                 
                 <p class="description"><strong>Usage</strong>
                   <pre><code class="code-wrap javascript">.swipeMobileElTo("accessibility id", "price", 0, -100);</code></pre>
@@ -964,9 +1292,9 @@ npm test
               </div>
             </div>
             
-            <div class="panel panel-info">
+            <div class="panel panel-info" name="link">
 
-              <div id="swipeScreenTo" class="panel-heading">
+              <div id="swipeScreenTo" class="panel-heading" name="link-content">
                 <span>.swipeScreenTo()</span>
                 <span class="pull-right">tag [ <abbr title="works for iOS app">iOS</abbr>  <abbr title="">Android</abbr> ]</span>
               </div>
@@ -975,7 +1303,52 @@ npm test
                 <p class="description"><strong>Syntax</strong>
                   <pre><code class="code-wrap javascript">.swipeScreenTo(fx, fy, tx, ty, callback/*optional*/);</code></pre>
                 </p>
-                <!--asdffdaa-->
+                <!--asdf{"name"=>"fx", "description"=>"x coordinate of the element to swipe from."}{"name"=>"fy", "description"=>"y coordinate of the element to swipe from."}{"name"=>"tx", "description"=>"distance on x axis from element to where to swipe to."}{"name"=>"ty", "description"=>"distance on y axis from element to where to swipe to."}{"name"=>"callback", "description"=>"callback which includes the element information."}fdaa-->
+                
+                <p class="description"><strong>Parameters</strong></p>
+                <dl class="dl-horizontal">
+                  
+                  <dt>
+                    <p class="description"><strong>fx :</strong></p>
+                  </dt>
+                  <dd>
+                    <p class="description">x coordinate of the element to swipe from.
+                      <p>
+                  </dd>
+                  
+                  <dt>
+                    <p class="description"><strong>fy :</strong></p>
+                  </dt>
+                  <dd>
+                    <p class="description">y coordinate of the element to swipe from.
+                      <p>
+                  </dd>
+                  
+                  <dt>
+                    <p class="description"><strong>tx :</strong></p>
+                  </dt>
+                  <dd>
+                    <p class="description">distance on x axis from element to where to swipe to.
+                      <p>
+                  </dd>
+                  
+                  <dt>
+                    <p class="description"><strong>ty :</strong></p>
+                  </dt>
+                  <dd>
+                    <p class="description">distance on y axis from element to where to swipe to.
+                      <p>
+                  </dd>
+                  
+                  <dt>
+                    <p class="description"><strong>callback :</strong></p>
+                  </dt>
+                  <dd>
+                    <p class="description">callback which includes the element information.
+                      <p>
+                  </dd>
+                  
+                </dl>
                 
                 <p class="description"><strong>Usage</strong>
                   <pre><code class="code-wrap javascript">.swipeScreenTo(30, 400, 0, -100);</code></pre>
@@ -983,9 +1356,9 @@ npm test
               </div>
             </div>
             
-            <div class="panel panel-info">
+            <div class="panel panel-info" name="link">
 
-              <div id="hideKeyboard" class="panel-heading">
+              <div id="hideKeyboard" class="panel-heading" name="link-content">
                 <span>.hideKeyboard()</span>
                 <span class="pull-right">tag [ <abbr title="">Android</abbr> ]</span>
               </div>
@@ -1015,14 +1388,14 @@ npm test
               </div>
             </div>
             
-            <div class="panel panel-info">
+            <div class="panel panel-info" name="link">
 
-              <div id="pressKeycode" class="panel-heading">
+              <div id="pressKeycode" class="panel-heading" name="link-content">
                 <span>.pressKeycode()</span>
                 <span class="pull-right">tag [ <abbr title="">Android</abbr> ]</span>
               </div>
               <div class="panel-body">
-                <p class="description">Sends a keycode.</p>
+                <p class="description">Sends a keycode to android emulator.</p>
                 <p class="description"><strong>Syntax</strong>
                   <pre><code class="code-wrap javascript">.pressKeycode(keycode, callback/*optional*/);</code></pre>
                 </p>
@@ -1055,18 +1428,18 @@ npm test
               </div>
             </div>
             
-            <div class="panel panel-info">
+            <div class="panel panel-info" name="link">
 
-              <div id="tapMobileEl" class="panel-heading">
+              <div id="tapMobileEl" class="panel-heading" name="link-content">
                 <span>.tapMobileEl()</span>
                 <span class="pull-right">tag [ <abbr title="">Android</abbr> ]</span>
               </div>
               <div class="panel-body">
-                <p class="description">Tap a coordinate (x, y) on device's screen.</p>
+                <p class="description">Taps a coordinate (x, y) on device's screen.</p>
                 <p class="description"><strong>Syntax</strong>
                   <pre><code class="code-wrap javascript">.tapMobileEl(x, y, callback/*optional*/);</code></pre>
                 </p>
-                <!--asdf{"name"=>"x", "description"=>"x coordinate"}{"name"=>"y", "description"=>"y coordinate"}{"name"=>"callback", "description"=>"optional callback to be called when the command finishes."}fdaa-->
+                <!--asdf{"name"=>"x", "description"=>"x coordinate to tap"}{"name"=>"y", "description"=>"y coordinate to tap"}{"name"=>"callback", "description"=>"optional callback to be called when the command finishes."}fdaa-->
                 
                 <p class="description"><strong>Parameters</strong></p>
                 <dl class="dl-horizontal">
@@ -1075,7 +1448,7 @@ npm test
                     <p class="description"><strong>x :</strong></p>
                   </dt>
                   <dd>
-                    <p class="description">x coordinate
+                    <p class="description">x coordinate to tap
                       <p>
                   </dd>
                   
@@ -1083,7 +1456,7 @@ npm test
                     <p class="description"><strong>y :</strong></p>
                   </dt>
                   <dd>
-                    <p class="description">y coordinate
+                    <p class="description">y coordinate to tap
                       <p>
                   </dd>
                   
@@ -1136,9 +1509,9 @@ npm test
       if (index <= -1) {
         offset = 0;
         scrollableContext = element.parents(".pre-scrollable");
-        const index = scrollableContext.find(".panel-heading").index(element);
+        const index = scrollableContext.find('[name="link-content"]').index(element);
         for (let i = 0; i < index; i++) {
-          offset += scrollableContext.find(".panel").get(i).offsetHeight + 20;
+          offset += scrollableContext.find('[name="link"]').get(i).offsetHeight + 20;
         }
       } else {
         scrollableContext = $("html, body");
