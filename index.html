@@ -65,6 +65,30 @@
       max-width: 800px;
     }
 
+    p.description em {
+      font-weight: 600;
+    }
+
+    td {
+      font-size: 16px;
+      color: #56585E;
+    }
+
+    th {
+      font-size: 17px;
+      color: #56585E;
+      font-weight: 600;
+    }
+
+    img {
+      padding-top: 20px;
+      padding-left: 20px;
+      padding-bottom: 20px;
+      padding-right: 20px;
+      height: 100%;
+      width: 100%;
+    }
+
     .nav-pills>li.active>a,
     .nav-pills>li.active>a:focus,
     .nav-pills>li.active>a:hover {
@@ -83,12 +107,27 @@
       float: left;
     }
 
+    .full-section-left {
+      height: 84vh;
+      position: relative;
+    }
+
+    .full-section-right {
+      height: 88vh;
+      position: relative;
+    }
+
     .full-section {
       height: 88vh;
       position: relative;
     }
 
-    .pre-scrollable {
+    .pre-scrollable-left {
+      max-height: 80vh;
+      overflow-y: scroll;
+    }
+
+    .pre-scrollable-right {
       max-height: 86vh;
       overflow-y: scroll;
     }
@@ -115,6 +154,14 @@
     .navbar-text {
       line-height: 20px;
     }
+
+    .scroll-link {
+      margin-bottom: 20px;
+    }
+
+    .nav-pills>li>a {
+      font-size: 90%;
+    }
   </style>
   <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -123,24 +170,24 @@
 
   </header>
 
-  <body class="home-page">
-    <nav class="navbar navbar-default navbar-fixed-top" id="main-page" role="navigation">
+  <body class="home-page" data-spy="scroll" data-target="#navbar-main">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
           <a class="nav-brand" href="">TestArmada</a>
         </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="collapse navbar-collapse" id="navbar-main">
           <ul class="nav navbar-nav">
             
             <li class>
               <p class="navbar-text">
                 <a href="#Home" class="nav-text" name="anchor">Home</a>
+              </p>
+            </li>
+            
+            <li class>
+              <p class="navbar-text">
+                <a href="#GettingStarted" class="nav-text" name="anchor">Getting Started</a>
               </p>
             </li>
             
@@ -162,7 +209,7 @@
 
       </div>
     </nav>
-    <div id="Home" data-spy="scroll" data-target="main-page" data-offset="0">
+    <div id="Home" data-offset="0">
       <div class="masthead">
         <div class="wrapper">
           <div class="left"><img alt="TestArmada logo" src="/assets/images/armada3.png" class="primary-logo">
@@ -178,7 +225,7 @@
         </div>
       </div>
     </div>
-    <section class="about why column-contain">
+    <section class="about why column-contain" id="intro">
       <h2>Why TestArmada?</h2>
       <div class="features">
         
@@ -257,147 +304,601 @@
       </div>
     </section>
 
-    
-    <!--<section class="column-contain full-viewport">
-      <a class="anchor" id="GettingStarted"></a>
-      <div class="row full-section">
-        <div class="col-md-3 full-section">
-          <h2 class="section-header">Getting Started</h2>
-          <ul class="nav nav-pills nav-stacked">
-            <li role="presentation">
-              <a href="#tryitout">Try it out!</a>
-            </li>
+    <section class="column-contain full-viewport">
+  <a class="anchor" id="GettingStarted"></a>
+  <div class="row full-section">
+    <div id="navbar-gettingstarted" class="col-md-3 full-section-left">
+      <h2 class="section-header">Getting Started</h2>
+      <ul class="nav nav-pills nav-stacked pre-scrollable-left">
+        
+        <li role="presentation">
+          
+          <a href="#tryItOut" name="anchor">Try it out!</a>
+          
+        </li>
+        
+        <li role="presentation">
+          
+          <a href="#prerequisites" data-toggle="collapse" data-target=""><span class="glyphicon glyphicon-chevron-right"></span> Prerequisites</a>
+          <div class="nested-nav">
+            <ul id="prerequisites" class="nav nav-pills nav-stacked collapse">
             
-            <li>
-              <a data-toggle="collapse" data-target="#configurelocaltest">> Configure local test</a>
-              <div class="nested-nav">
-                <ul id="configurelocaltest" class="nav nav-pills nav-stacked collapse">
-                  
-                  <li role="presentation">
-                    <h6><a href="#runtestwithbuiltinbrowsers">Run test with builtin browsers</a></h6>
-                  </li>
-                  
-                  <li role="presentation">
-                    <h6><a href="#createanewbrowser">Create a new browser</a></h6>
-                  </li>
-                  
-                </ul>
-              </div>
-            </li>
+              <li role="presentation">
+                <a href="#environment" name="anchor">Environment</a>
+              </li>
             
-            <li>
-              <a data-toggle="collapse" data-target="#configureremotetest">> Configure remote test</a>
-              <div class="nested-nav">
-                <ul id="configureremotetest" class="nav nav-pills nav-stacked collapse">
-                  
-                  <li role="presentation">
-                    <h6><a href="#enableexecutor">Enable executor</a></h6>
-                  </li>
-                  
-                </ul>
-              </div>
-            </li>
+              <li role="presentation">
+                <a href="#testarmadaDependencies" name="anchor">Testarmada depedencies</a>
+              </li>
             
-          </ul>
-        </div>
-        <div class="col-md-9 pre-scrollable full-section">
-          <div>
-            <div class="panel panel-default">
-              <div id="tryitout" class="panel-heading">Try it Out!</div>
-              <div class="panel-body">
-                <p class="description">
-                  Run the following in your favorite terminal to see `Magellan` in action
-                </p>
-                <pre>
-                  <code class="code-wrap bash">git clone git@github.com:TestArmada/boilerplate-nightwatch.git
-npm install
-npm test
-                  </code>
-                </pre>
-              </div>
-            </div>
-            
-            <div class="panel panel-default">
-              <div id="configurelocaltest" class="panel-heading"> Configure local test</div>
-              <div class="panel-body">
-                <p class="description">Having your test run locally is probably the easiest way to debug your test and app.  Magellan has this feature covered. 
-</p>
-                
-                <div class="panel panel-default">
-                  <div id="runtestwithbuiltinbrowsers" class="panel-heading">Run test with builtin browsers</div>
-                  <div class="panel-body">
-                    <p class="description"> The boilerplate has some browser pre-configured so that you can switch to them easily via `--local_browser`, for example </p> <pre>
-  <code class="code-wrap bash">DPRO=local ./node_modules/.bin/magellan --local_browser firefox --test tests/demo-web.js --serial</code>
-</pre> <p class="description"> Built in browser list can be found <a href=https://github.com/TestArmada/boilerplate-nightwatch/blob/master/conf/nightwatch.json>here</a> </p>
-
-                  </div>
-                </div>
-                
-                <div class="panel panel-default">
-                  <div id="createanewbrowser" class="panel-heading">Create a new browser</div>
-                  <div class="panel-body">
-                    <p class="description"> If you cannot find a browser in the built list, to add a new one, simply create an entry in your `nightwatch.json` under `"test_settings"`: </p> <pre>
-  <code class="code-wrap bash">{
-  "safari": {
-    "desiredCapabilities": {
-      "browserName": "safari"
-    }
-  }
-}</code> </pre>
-
-                  </div>
-                </div>
-                
-              </div>
-            </div>
-            
-            <div class="panel panel-default">
-              <div id="configureremotetest" class="panel-heading"> Configure remote test</div>
-              <div class="panel-body">
-                <p class="description"><p class="description">Magellan also support running test remotely via executor. Following executors are supported.</p>
-<p class="description">You're welcome to build and submit your own executor to TestArmada. Please refer to [Developer Guide]() for instructions on how to build your own executor.</p>
-</p>
-                
-                <div class="panel panel-default">
-                  <div id="enableexecutor" class="panel-heading">Enable executor</div>
-                  <div class="panel-body">
-                    <p class="description"> Executor can be enabled in `magellan.json`. You have to at lease have one executor in `magellan.json`. To enable an executor, you need </p> <pre>
-  <code class="code-wrap bash">{
-    "executors": [
-      "testarmada-magellan-local-executor",
-      "testarmada-magellan-saucelabs-executor"
-    ]  
-  }</code>
-</pre>
-                  </div>
-                </div>
-                
-              </div>
-            </div>
-            
+            </ul>
           </div>
+          
+        </li>
+        
+        <li role="presentation">
+          
+          <a href="#localbrowsertest" data-toggle="collapse" data-target=""><span class="glyphicon glyphicon-chevron-right"></span> Local browser test</a>
+          <div class="nested-nav">
+            <ul id="localbrowsertest" class="nav nav-pills nav-stacked collapse">
+            
+              <li role="presentation">
+                <a href="#localBrowserPreresuisites" name="anchor">Prerequisites</a>
+              </li>
+            
+              <li role="presentation">
+                <a href="#runTestWithBuiltInBrowsers" name="anchor">Run test with built in browsers</a>
+              </li>
+            
+              <li role="presentation">
+                <a href="#runTestWithANewBrowser" name="anchor">Run test with a new browser</a>
+              </li>
+            
+            </ul>
+          </div>
+          
+        </li>
+        
+        <li role="presentation">
+          
+          <a href="#remotebrowsertest" data-toggle="collapse" data-target=""><span class="glyphicon glyphicon-chevron-right"></span> Remote browser test</a>
+          <div class="nested-nav">
+            <ul id="remotebrowsertest" class="nav nav-pills nav-stacked collapse">
+            
+              <li role="presentation">
+                <a href="#enableAnExecutor" name="anchor">Enable an executor</a>
+              </li>
+            
+              <li role="presentation">
+                <a href="#runTestWithExecutor" name="anchor">Run test with executor</a>
+              </li>
+            
+            </ul>
+          </div>
+          
+        </li>
+        
+        <li role="presentation">
+          
+          <a href="#devicetest" data-toggle="collapse" data-target=""><span class="glyphicon glyphicon-chevron-right"></span> Device test</a>
+          <div class="nested-nav">
+            <ul id="devicetest" class="nav nav-pills nav-stacked collapse">
+            
+              <li role="presentation">
+                <a href="#deviceTestPreresuisites" name="anchor">Prerequisites</a>
+              </li>
+            
+              <li role="presentation">
+                <a href="#appiumDesiredcapabilities" name="anchor">Apply appium's desiredCapabilities</a>
+              </li>
+            
+              <li role="presentation">
+                <a href="#manageAppiumLifecycle" name="anchor">Manage appium's life cycle</a>
+              </li>
+            
+              <li role="presentation">
+                <a href="#testInLocalEnvironment" name="anchor">Test in local environment</a>
+              </li>
+            
+              <li role="presentation">
+                <a href="#testInRemoteEnvironment" name="anchor">Test in remote environment</a>
+              </li>
+            
+            </ul>
+          </div>
+          
+        </li>
+        
+        <li role="presentation">
+          
+          <a href="#testarmadaPlugins" name="anchor">Run with other test framework</a>
+          
+        </li>
+        
+        <li role="presentation">
+          
+          <a href="#testarmadaReporters" data-toggle="collapse" data-target=""><span class="glyphicon glyphicon-chevron-right"></span> Report your test result</a>
+          <div class="nested-nav">
+            <ul id="testarmadaReporters" class="nav nav-pills nav-stacked collapse">
+            
+              <li role="presentation">
+                <a href="#enableAnReporter" name="anchor">Enable an reporter</a>
+              </li>
+            
+              <li role="presentation">
+                <a href="#graphicalReportSystem" name="anchor">Graphical Report system</a>
+              </li>
+            
+            </ul>
+          </div>
+          
+        </li>
+        
+        <li role="presentation">
+          
+          <a href="#utilities" data-toggle="collapse" data-target=""><span class="glyphicon glyphicon-chevron-right"></span> Utilities</a>
+          <div class="nested-nav">
+            <ul id="utilities" class="nav nav-pills nav-stacked collapse">
+            
+              <li role="presentation">
+                <a href="#dpro" name="anchor">Dpro</a>
+              </li>
+            
+              <li role="presentation">
+                <a href="#guacamole" name="anchor">Guacamole</a>
+              </li>
+            
+              <li role="presentation">
+                <a href="#renv" name="anchor">Renv</a>
+              </li>
+            
+              <li role="presentation">
+                <a href="#crowsNest" name="anchor">Crows-nest</a>
+              </li>
+            
+            </ul>
+          </div>
+          
+        </li>
+         
+      </ul>
+    </div>
+    <div class="col-md-9 pre-scrollable-right full-section-right" data-spy="scroll" data-target="#navbar-gettingstarted">
+      
+      <div name="link" class="scroll-link">
+        <div id="tryItOut" name="link-content">
+          <h2 id="tryItOut" name="link-content">Try it Out!</h2>
+<hr />
+
+<p class="description">Run the following commands in your favorite terminal to see <em>Testarmada</em> in action:</p>
+
+<pre>
+    <code class="code-wrap bash">git clone git@github.com:TestArmada/boilerplate-nightwatch.git<br />npm install<br />npm run test:desktop</code>
+</pre>
+
+<p class="description">You should have seen <em>TestArmada</em>’s test runner <em><a href="https://github.com/TestArmada/magellan">magellan</a></em> open up Chrome and run one test through it.</p>
+
+<p class="description">Next, try the following command. It demonstrates <em>TestArmada</em>’s ability to drive multiple browsers in parallel, and aggregate the results:</p>
+
+<pre>
+    <code class="code-wrap bash">npm run test</code>
+</pre>
+
+<p class="description">You should have seen 2 Chrome windows open at once (probably stacked on top of each other) and the results of all two tests aggregated on the console.</p>
+
+
         </div>
+        <br>
       </div>
-    </section>-->
-    <!--
-    <section class="column-contain">
-      <a class="anchor" id="DeveloperGuide"></a>
-      <div class="row full-section">
-        <div class="col-md-3 full-section">
-          <h2 class="section-header">Developer Guide</h2>
+      
+      <div name="link" class="scroll-link">
+        <div id="prerequisites" name="link-content">
+          <h2 name="link-content" id="prerequisites">Prerequisites</h2>
+<hr />
+
+<h3 id="environment" name="link-content">Environment</h3>
+
+<p class="description"><em>Testarmada</em> requires minimum <em>node@4</em> and <em>npm@2</em>. To run device test locally, in order to integrate appium, <em>Testarmada</em> requires <em>npm@3</em> or higher.</p>
+
+<h3 id="testarmadaDependencies" name="link-content">Testarmada dependencies</h3>
+
+<p class="description">The following <em>Testarmada</em> dependencies are required for every <em>Testarmada</em> test repo.</p>
+
+<pre>
+    <code class="code-wrap json">{<br /> "testarmada-magellan": "^10.0.7",<br /> "testarmada-magellan-local-executor": "^2.0.0",<br /> "testarmada-magellan-nightwatch-plugin": "^7.0.0",<br /> "testarmada-nightwatch-extra": "^4.1.0"<br />}</code>
+</pre>
+
         </div>
+        <br>
       </div>
-    </section>-->
+      
+      <div name="link" class="scroll-link">
+        <div id="localbrowsertest" name="link-content">
+          <h2 name="link-content" id="local-browser-test">Local browser test</h2>
+<hr />
+
+<p class="description">Having your test run in local desktop browser is probably the easiest way to debug your test and app. With <em>Testarmada</em> the setup of your local test is effortless.</p>
+
+<h3 id="localBrowserPreresuisites" name="link-content">Prerequisites</h3>
+
+<p class="description">Even though we’ve helped you to include everything that you need in the <code class="highlighter-rouge">package.json</code> in boilerplate project, it’s always good to have an idea on which dependency is needed for your desktop browser test. The following dependencies are required in your project’s <code class="highlighter-rouge">package.json</code>.</p>
+
+<pre>
+    <code class="code-wrap json">{<br /> "selenium-server": "^3.1.0", <br /> "nightwatch": "^0.9.11"<br />}</code>
+</pre>
+
+<p class="description"><em><a href="https://github.com/TestArmada/magellan-local-executor">magellan-local-browser</a></em> is also required for your local test.</p>
+
+<pre>
+    <code class="code-wrap json">{<br /> "testarmada-magellan-local-executor": "^2.0.0"<br />}</code>
+</pre>
+
+<p class="description">Also, depending on which browser you want to test, you need to include specific browser driver in your <code class="highlighter-rouge">package.json</code>.</p>
+
+<pre>
+    <code class="code-wrap json">{<br /> "chromedriver": "^2.27.2", <br /> "geckodriver": "^1.4.0"<br />}</code>
+</pre>
+
+<p class="description">Full list of dependencies for your local browser test can be found <a href="https://github.com/TestArmada/boilerplate-nightwatch/blob/master/package.json#L20">here</a>.</p>
+
+<h3 id="runTestWithBuiltInBrowsers" name="link-content">Run test with built in browsers</h3>
+
+<p class="description"><em>Testarmada</em>’s boilerplate project has some pre-configured browsers that you can use easily via <code class="highlighter-rouge">--local_browser</code>. For example, the following command triggers your test in the local Firefox.</p>
+
+<pre>
+    <code class="code-wrap bash">DPRO=local ./node_modules/.bin/magellan --local_browser firefox --test tests/demo-web.js --serial</code>
+</pre>
+
+<p class="description">Built in browser list can be found <a href="https://github.com/TestArmada/boilerplate-nightwatch/blob/master/conf/nightwatch.json">here</a>.</p>
+
+<h3 id="runTestWithANewBrowser" name="link-content">Run test with a new browser</h3>
+
+<p class="description">If no desired browser can be found in the built in list, you can create a new entry under “test_settings” in <code class="highlighter-rouge">nightwatch.json</code> to add a new browser. For example the following code adds Safari to the list.</p>
+
+<pre>
+    <code class="code-wrap json">{<br /> "safari": {<br />  "desiredCapabilities": {<br />   "browserName": "safari"<br />  }<br /> }<br />}
+    </code>
+</pre>
+
+        </div>
+        <br>
+      </div>
+      
+      <div name="link" class="scroll-link">
+        <div id="remotebrowsertest" name="link-content">
+          <h2 name="link-content" id="remote-browser-test">Remote browser test</h2>
+<hr />
+
+<p class="description">Don’t have a desired browser in your local? No problem, <em>Testarmada</em> has you covered. The following executors are provided by <em>Testarmada</em> for remote test purpose.</p>
+
+<table class="table table-condensed table-hover">
+  <thead>
+    <tr>
+      <th style="text-align: left">Name</th>
+      <th style="text-align: left">Latest Version</th>
+      <th style="text-align: left">Purpose</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="https://github.com/TestArmada/magellan-local-executor">magellan-saucelabs-executor</a></td>
+      <td style="text-align: left">^3.0.0</td>
+      <td style="text-align: left">Magellan executor to drive test on <a href="https://saucelabs.com/">Saucelabs</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://github.com/TestArmada/magellan-browserstack-executor">magellan-browserstack-executor</a></td>
+      <td style="text-align: left">^1.0.0</td>
+      <td style="text-align: left">Magellan executor to drive test on <a href="https://www.browserstack.com/">Browserstack</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://github.com/TestArmada/magellan-testobject-executor">magellan-testobject-executor</a></td>
+      <td style="text-align: left">^1.0.0</td>
+      <td style="text-align: left">Magellan executor to drive test on <a href="https://testobject.com/">TestObject</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://github.com/TestArmada/magellan-seleniumgrid-executor">magellan-seleniumgrid-executor</a></td>
+      <td style="text-align: left">^1.0.0</td>
+      <td style="text-align: left">Magellan executor to drive test in selenium grid</td>
+    </tr>
+  </tbody>
+</table>
+
+<p class="description">You can also create your own executor. Please refer to <a href="#DeveloperGuide">Developer Guide</a> for instructions on how to build your own executor. You’re welcome to build and submit your own executor to <em>Testarmada</em>.</p>
+
+<h3 id="enableAnExecutor" name="link-content">Enable an executor</h3>
+
+<p class="description">You need to at least enable one executor in <code class="highlighter-rouge">magellan.json</code> in order to run the tests. Please follow these steps to enable executor:</p>
+
+<p class="description">1.Install necessary executor via <code class="highlighter-rouge">npm install</code></p>
+<pre>
+    <code class="code-wrap bash">npm install magellan-saucelabs-executor --save</code>
+</pre>
+
+<p class="description">2.Add following code in your <code class="highlighter-rouge">magellan.json</code></p>
+<pre>
+    <code class="code-wrap json">{<br /> "executors": ["testarmada-magellan-saucelabs-executor"]<br />}</code>
+</pre>
+
+<p class="description">Full example of <code class="highlighter-rouge">magellan.json</code> can be found <a href="https://gecgithub01.walmart.com/otto/boilerplate-nightwatch-mobile/blob/master/magellan.json">here</a>.</p>
+
+<p class="description"><em>Please note</em>: Some executors need specific configuration to be functional. Please refer to the README.md in executor’s repo for detail configuration.</p>
+
+<h3 id="runTestWithExecutor" name="link-content">Run test with executor(s)</h3>
+
+<p class="description">Magellan allows to run tests with one or more executors at the same time. Typically this is done by passing a specific command line argument to magellan. For example, to enable <em><a href="https://github.com/TestArmada/magellan-local-executor">magellan-local-executor</a></em> for all the tests, this command line argument is required</p>
+
+<pre>
+    <code class="code-wrap bash">--local_browser chrome # to run in Chrome</code>
+</pre>
+
+<p class="description">or</p>
+
+<pre>
+    <code class="code-wrap bash">--local_browsers chrome, firefox # to run in both Chrome and Firefox</code>
+</pre>
+
+<p class="description">Here is another example to enable both <em><a href="https://github.com/TestArmada/magellan-local-executor">magellan-local-executor</a></em> and <em><a href="https://github.com/TestArmada/magellan-saucelabs-executor">magellan-saucelabs-executor</a></em> for your test:</p>
+
+<pre>
+    <code class="code-wrap bash">--local_browser chrome --sauce_browser safari_10_OS_X_10_11_Desktop # to run in local Chrome and Safari 10 on Saucelabs</code>
+</pre>
+
+        </div>
+        <br>
+      </div>
+      
+      <div name="link" class="scroll-link">
+        <div id="devicetest" name="link-content">
+          <h2 name="link-content" id="device-test">Device Test</h2>
+<hr />
+
+<p class="description"><em>Testarmada</em> supports mobile browser test as well as native app test via <em><a href="http://appium.io/">appium</a></em>. By using the <em><a href="https://github.com/TestArmada/nightwatch-extra">nightwatch-extra</a></em> addon, <em>Testarmada</em> can even help you to manage the life cycle of appium and simulator for you.</p>
+
+<h3 id="deviceTestPreresuisites" name="link-content">Prerequisites</h3>
+
+<p class="description">Appium is required for device test. You must include it in your project’s <code class="highlighter-rouge">package.json</code>.</p>
+
+<pre>
+    <code class="code-wrap json">{<br /> "appium": "^1.6.3"<br />}</code>
+</pre>
+
+<h3 id="appiumDesiredcapabilities" name="link-content">Apply appium’s desiredCapabilities</h3>
+
+<p class="description">For device test, appium requires a different set of desiredCapabilities from what is needed by desktop browser test, for example <em>deviceName</em> or <em>avd</em> for android are desiredCapabilities for device test only. <em>Testarmada</em> allows to add these desiredCapabilities directly in your configurations. The following example shows how to add those appium specific desiredCapabilities in your configuration.</p>
+
+<pre>
+    <code class="code-wrap json">{<br /> "appiumiosapp": {<br />  "desiredCapabilities": {<br />   "appiumVersion": "1.6.4",<br />   "automationName": "xcuitest",<br />   "platformName": "iOS",<br />   "platformVersion": "10.0",<br />   "deviceName": "iPhone 7 plus",<br />   "waitForAppScript": "true"<br /> }<br />}</code>
+</pre>
+
+<h3 id="manageAppiumLifecycle" name="link-content">Manage appium’s life cycle</h3>
+
+<p class="description"><em>Testarmada</em> can manage appium’s life cycle automatically for you during your test run. To use this feature you need to</p>
+
+<p class="description">1.Disable selenium server and enable appium in your test entry of <code class="highlighter-rouge">nightwatch.json</code>, such as.</p>
+
+<pre>
+    <code class="code-wrap json">{<br /> "appiumiosapp": {<br />  "selenium": {<br />   "start_process": false<br />  },<br />  "appium": {<br />   "start_process": true<br />  }<br /> }<br />}</code>
+</pre>
+
+<p class="description">2.Create a <code class="highlighter-rouge">global.js</code> and put it somewhere in your repo. Example of <code class="highlighter-rouge">global.js</code> can be found <a href="https://github.com/TestArmada/boilerplate-nightwatch/blob/master/lib/globals.js">here</a>.</p>
+
+<p class="description">3.Put path of <code class="highlighter-rouge">global.js</code> in your <code class="highlighter-rouge">nightwatch.json</code>.</p>
+
+<pre>
+    <code class="code-wrap json">{<br /> "globals_path": {PATH_GLOBALJS}<br />}</code>
+</pre>
+
+<p class="description">You can also choose to launch appium manually and plug your <em>Testarmada</em>’s test with it. To do so, appium port and host need to be specified as selenium_port and selenium_host in <code class="highlighter-rouge">nightwatch.json</code>.</p>
+
+<pre>
+    <code class="code-wrap json">{<br /> "test_settings": {<br />  "default": {<br />   "selenium_port": {LOCAL_APPIUM_PORT},<br />   "selenium_host": {LOCAL_APPIUM_HOST}<br />  }<br /> }<br />}</code>
+</pre>
+
+<p class="description">Then in your test entry in <code class="highlighter-rouge">nightwatch.json</code>, enable selenium and disable appium:</p>
+
+<pre>
+    <code class="code-wrap json">{<br /> "appiumiosapp": {<br />  "selenium": {<br />   "start_process": true<br />  },<br />  "appium": {<br />   "start_process": false<br />  }<br /> }<br />}</code>
+</pre>
+
+<h3 id="testInLocalEnvironment" name="link-content">Test in local environment</h3>
+
+<p class="description"><em>Testarmada</em> can manage the life cycle of your local test environment (iOS simulator or Android emulator) automatically for you as well. To fully utilize this feature to launch up or shut down your simulator/emulator, your local test environment should be properly configured. Please refer to <a href="https://github.com/TestArmada/nightwatch-extra/blob/master/docs/android.md#pre-requisites">here</a> for environment setup for android, and <a href="https://github.com/TestArmada/nightwatch-extra/blob/master/docs/ios.md#pre-requisites">here</a> for your iOS environment.</p>
+
+<p class="description">For Android emulator, the <em>platformName</em>, <em>platformVersion</em> and <em>deviceName</em> in your appium desireCapabilities should match what your local environment has. For example</p>
+
+<pre>
+    <code class="code-wrap json">{<br /> "platformName": "Android",<br /> "platformVersion": "7.0",<br /> "deviceName": "Pixel_API_24"<br />}</code>
+</pre>
+
+<p class="description">For iOS simulator, the values of following keys should reflect what your local environment has.</p>
+
+<pre>
+    <code class="code-wrap json">{<br /> "automationName": "xcuitest",<br /> "platformName": "iOS",<br /> "platformVersion": "10.2",<br /> "deviceName": "iPhone 7"<br />}</code>
+</pre>
+
+<p class="description">If you want to run test against a native application, please add key app into your appium desiredCapabilities. This desiredCapabilities tells appium to install and use Walmart.apk in the ./app folder for test.</p>
+
+<pre>
+    <code class="code-wrap json">{<br /> "app": "./app/Walmart.apk"<br />}</code>
+</pre>
+
+<h3 id="testInRemoteEnvironment" name="link-content">Test in remote environment</h3>
+
+<p class="description">Similar to what is described in <a href="#enableanexecutor">Remote browser test</a> section, <em>Testarmada</em> uses executor to drive device test remotely. Currently you can choose from <em>Testarmada</em>’s <a href="https://github.com/TestArmada/magellan-saucelabs-executor">magellan-saucelabs-executor</a> or <a href="https://github.com/TestArmada/magellan-browserstack-executor">magellan-browserstack-executor</a> for testing in simulator/emulator and <a href="https://github.com/TestArmada/magellan-testobject-executor">magellan-testobject-executor</a> for real device test. Please refer to the README.md in each executor for configuration detail.</p>
+
+        </div>
+        <br>
+      </div>
+      
+      <div name="link" class="scroll-link">
+        <div id="testarmadaPlugins" name="link-content">
+          <h2 id="testarmadaPlugins" name="link-content">Run with other test framework</h2>
+<hr />
+
+<p class="description">Not have your test written by nightwatchjs? No problem, <em>Testarmada</em> can work with other test frameworks. This is done via plugin. <em>Testarmada</em> provides following plugins for now.</p>
+
+<table class="table table-condensed table-hover">
+  <thead>
+    <tr>
+      <th style="text-align: left">Name</th>
+      <th style="text-align: left">Latest Version</th>
+      <th style="text-align: left">Purpose</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="https://github.com/TestArmada/magellan-nightwatch-plugin">magellan-nightwatch-plugin</a></td>
+      <td style="text-align: left">^7.0.0</td>
+      <td style="text-align: left">Plugin that connects magellan and <a href="http://nightwatchjs.org/">nightwatch</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://github.com/TestArmada/magellan-mocha-plugin">magellan-mocha-plugin</a></td>
+      <td style="text-align: left">^9.0.0</td>
+      <td style="text-align: left">Plugin that connects magellan and <a href="https://mochajs.org/">mocha</a>.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p class="description">To notify <em>Testarmada</em>’s test runner <em><a href="https://github.com/TestArmada/magellan">magellan</a></em> which test framework it should talk to, a magellan plugin to support that framework needs to be added correspondingly in <code class="highlighter-rouge">magellan.json</code>.</p>
+
+<pre>
+    <code class="code-wrap json">{<br /> "framework": "testarmada-magellan-mocha-plugin"<br />}</code>
+</pre>
+
+<p class="description">Please refer to the README.md of each plugin repo for its details.</p>
+
+<p class="description">You can also implement your own plugin. Please refer to <a href="">Developer Guide</a> for more information on how to create plugin for your need. You’re welcome to submit your plugin to <em>Testarmada</em>.</p>
+
+<p class="description"><em>Please Note</em>: only one framework can be enabled per test run.</p>
+
+
+        </div>
+        <br>
+      </div>
+      
+      <div name="link" class="scroll-link">
+        <div id="testarmadaReporters" name="link-content">
+          <h2 name="link-content" id="report-your-test-result">Report your test result</h2>
+<hr />
+
+<p class="description">By default magellan prints out all the test output in the console. But it can do more than that. <em>Testarmada</em> has a component named reporters to allow you to generate test report in arbitary format. Following reporters are available in <em>Testarmada</em>.</p>
+
+<table class="table table-condensed table-hover">
+  <thead>
+    <tr>
+      <th style="text-align: left">Name</th>
+      <th style="text-align: left">Latest Version</th>
+      <th style="text-align: left">Purpose</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="https://github.com/TestArmada/magellan-xunit-reporter">magellan-xunit-reporter</a></td>
+      <td style="text-align: left">^0.0.3</td>
+      <td style="text-align: left">Reports test result as a XML file in xUnit format.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://github.com/TestArmada/magellan-json-reporter">magellan-json-reporter</a></td>
+      <td style="text-align: left">^0.0.5</td>
+      <td style="text-align: left">Reports test result as a JSON file.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://github.com/TestArmada/magellan-mongo-reporter">magellan-mongo-reporter</a></td>
+      <td style="text-align: left">^0.0.8</td>
+      <td style="text-align: left">Report test information to MongoDB.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://github.com/TestArmada/magellan-admiral-plugin">magellan-admiral-plugin</a></td>
+      <td style="text-align: left">^3.0.1</td>
+      <td style="text-align: left">report to the <a href="https://github.com/TestArmada/admiral">Admiral</a> dashboard system.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="enableAnReporter" name="link-content">Enable an reporter</h3>
+
+<p class="description">Reporter is enabled in <code class="highlighter-rouge">magellan.json</code>. Please follow these steps to enable reporter:</p>
+
+<p class="description">1.Install necessary reporter via <code class="highlighter-rouge">npm install</code></p>
+<pre>
+    <code class="code-wrap bash">npm install magellan-xunit-reporter --save</code>
+</pre>
+
+<p class="description">2.Add following code in your <code class="highlighter-rouge">magellan.json</code></p>
+<pre>
+    <code class="code-wrap json">{<br /> "reporters": ["testarmada-magellan-xunit-reporter"]<br />}</code>
+</pre>
+
+<p class="description">Full example of <code class="highlighter-rouge">magellan.json</code> can be found <a href="https://gecgithub01.walmart.com/otto/boilerplate-nightwatch-mobile/blob/master/magellan.json">here</a>.</p>
+
+<p class="description">You can also enable more than one reporters per test suite. Magellan will generate test report via each configured reporter.</p>
+
+<pre>
+    <code class="code-wrap json">{<br /> "reporters": [<br />  "testarmada-magellan-xunit-reporter", <br />  "testarmada-magellan-admiral-plugin"<br /> ]<br />}</code>
+</pre>
+
+<p class="description">If any reporter errors out, all the other reporters correctly configured will still function.</p>
+
+<p class="description"><em>Please note</em>: Some reporters need specific configuration to be functional. Please refer to the README.md in reporter’s repo for detail configuration.</p>
+
+<h3 id="graphicalReportSystem" name="link-content">Graphical Report system</h3>
+
+<p class="description">Tired of getting all the textual test report? There are tools in <em>Testarmada</em> to help to visualize your test report.</p>
+
+<p class="description"><em><a href="https://github.com/TestArmada/admiral">Admiral</a></em> is <em>Testarmada</em>’s in house graphical report system. Here is the screen shot of admiral.</p>
+
+<p><img src="/assets/images/admiral-demo.gif" alt="Admiral" /></p>
+
+<p class="description">For instructions on how to set admiral up please refer to admiral’s <a href="https://github.com/TestArmada/admiral/blob/master/README.md">readme</a>.</p>
+
+<p class="description"><em>Please note</em>: to have your test report to adimral you need to enable <a href="https://github.com/TestArmada/magellan-admiral-plugin">magellan-admiral-plugin</a>. Please follow <a href="/#enableAnReporter">enable a reporter</a> section.</p>
+
+<p class="description"><em>We’re actively working on testarmada’s next gen graphical report system admiral2, please hold on tight.</em></p>
+
+        </div>
+        <br>
+      </div>
+      
+      <div name="link" class="scroll-link">
+        <div id="utilities" name="link-content">
+          <h2 name="link-content" id="utilities">Utilities</h2>
+<hr />
+
+<p class="description">Good utilities can improve your work flow massively. Based on the feedback of a good number of automation test engineers, we have created several utilities to meet the most common need of our developers in speeding up the development amd better managing their tests, configurations and environments.</p>
+
+<h3 id="dpro" name="link-content">Dpro</h3>
+
+<p class="description"><em><a href="https://github.com/TestArmada/dpro">Dpro</a></em> is the data provider for <em>Testarmada</em>. It supports both <code class="highlighter-rouge">.js</code> and <code class="highlighter-rouge">.json</code> data format, which means you can create dynamic data on the fly. For the instructions on how to use Dpro please refer to the README.md in its repo.</p>
+
+<h3 id="guacamole" name="link-content">Guacamole</h3>
+
+<p class="description"><em><a href="https://github.com/TestArmada/guacamole">Guacamole</a></em> is a wrapper for the SauceLabs platform API. It standardizes browser identification with machine and human-readable browser identifiers by normalizing strings from the SauceLabs browser list API to values that desiredCapabilities actually consumes. It is already built in <a href="https://github.com/TestArmada/magellan-saucelabs-executor">magellan-saucelabs-executor</a>.</p>
+
+<h3 id="renv" name="link-content">Renv</h3>
+
+<p class="description"><em><a href="https://github.com/TestArmada/renv">Renv</a></em> mixes environment variables into the current bash context from a remote location without source or creating a subshell.</p>
+
+<h3 id="crowsNest" name="link-content">Crows-nest</h3>
+
+<p class="description"><em><a href="https://github.com/TestArmada/crows-nest">Crows-nest</a></em> is a supervisor tool to launch and monitor multiple SauceLabs’ <a href="https://wiki.saucelabs.com/display/DOCS/Sauce+Connect+Proxy">Sauce Connect tunnel</a> in <a href="https://wiki.saucelabs.com/display/DOCS/High+Availability+Sauce+Connect+Setup">high avaiability mode</a>.</p>
+
+        </div>
+        <br>
+      </div>
+      
+    </div>
+  </div>
+</section>
 
     <section class="column-contain full-viewport">
       <a class="anchor" id="API"></a>
       <div class="row full-section">
-        <div id="navbar-api" class="col-md-3 pre-scrollable full-section">
+        <div id="navbar-api" class="col-md-3 full-section-left">
           <h2 class="section-header">API Reference</h2>
-          <ul class="nav nav-pills nav-stacked">
+          <ul class="nav nav-pills nav-stacked pre-scrollable-left">
             
             <li>
-              <a data-toggle="collapse" data-target="#browser">> browser</a>
+              <a data-toggle="collapse" data-target="#browser"><span class="glyphicon glyphicon-chevron-right"></span> browser</a>
               <div class="nested-nav">
                 <ul id="browser" class="nav nav-pills nav-stacked collapse">
                   
@@ -454,7 +955,7 @@ npm test
             </li>
             
             <li>
-              <a data-toggle="collapse" data-target="#app">> app</a>
+              <a data-toggle="collapse" data-target="#app"><span class="glyphicon glyphicon-chevron-right"></span> app</a>
               <div class="nested-nav">
                 <ul id="app" class="nav nav-pills nav-stacked collapse">
                   
@@ -500,985 +1001,964 @@ npm test
             
           </ul>
         </div>
-        <div class="col-md-9 pre-scrollable full-section" data-spy="scroll" data-target="#navbar-api">
-          <div>
+        <div class="col-md-9 pre-scrollable-right full-section-right" data-spy="scroll" data-target="#navbar-api">
+          <span>
              
             <div class="panel panel-info" name="link">
 
               <div id="getEl" class="panel-heading" name="link-content">
                 <span>.getEl()</span>
-                <span class="pull-right">tag [ <abbr title="works for desktop and mobile browsers">browser</abbr> ]</span>
-              </div>
-              <div class="panel-body">
-                <p class="description">Returns a html element</p>
-                <p class="description"><strong>Syntax</strong>
-                  <pre><code class="code-wrap javascript">.getEl(selector, callback/*optional*/);</code></pre>
-                </p>
-                <!--asdf{"name"=>"selector", "description"=>"css selector to identify the html element."}{"name"=>"callback", "description"=>"callback which includes the element information."}fdaa-->
-                
-                <p class="description"><strong>Parameters</strong></p>
-                <dl class="dl-horizontal">
-                  
-                  <dt>
-                    <p class="description"><strong>selector :</strong></p>
-                  </dt>
-                  <dd>
-                    <p class="description">css selector to identify the html element.
-                      <p>
-                  </dd>
-                  
-                  <dt>
-                    <p class="description"><strong>callback :</strong></p>
-                  </dt>
-                  <dd>
-                    <p class="description">callback which includes the element information.
-                      <p>
-                  </dd>
-                  
-                </dl>
-                
-                <p class="description"><strong>Usage</strong>
-                  <pre><code class="code-wrap javascript">.getEl(".dropdown-link .user-name", function(element){<br>  console.log(element); // will print out {'ELEMENT': 1}<br>});
-</code></pre>
-                </p>
-              </div>
-            </div>
+          <span class="pull-right">tag [ <abbr title="works for desktop and mobile browsers">browser</abbr> ]</span>
+        </div>
+        <div class="panel-body">
+          <p class="description">Returns a html element</p>
+          <p class="description"><strong>Syntax</strong>
+            <pre><code class="code-wrap javascript">.getEl(selector, callback/*optional*/);</code></pre>
+          </p>
+          
+          <p class="description"><strong>Parameters</strong></p>
+          <dl class="dl-horizontal">
             
+            <dt>
+              <p class="description"><strong>selector :</strong></p>
+            </dt>
+            <dd>
+              <p class="description">css selector to identify the html element.
+                <p>
+            </dd>
+            
+            <dt>
+              <p class="description"><strong>callback :</strong></p>
+            </dt>
+            <dd>
+              <p class="description">callback which includes the element information.
+                <p>
+            </dd>
+            
+          </dl>
+          
+          <p class="description"><strong>Usage</strong>
+            <pre><code class="code-wrap javascript">.getEl(".dropdown-link .user-name", function(element){<br>  console.log(element); // will print out {'ELEMENT': 1}<br>});
+</code></pre>
+          </p>
+        </div>
+      </div>
+      
             <div class="panel panel-info" name="link">
 
               <div id="getEls" class="panel-heading" name="link-content">
                 <span>.getEls()</span>
-                <span class="pull-right">tag [ <abbr title="works for desktop and mobile browsers">browser</abbr> ]</span>
-              </div>
-              <div class="panel-body">
-                <p class="description">Returns html elements</p>
-                <p class="description"><strong>Syntax</strong>
-                  <pre><code class="code-wrap javascript">.getEls(selector, callback/*optional*/);</code></pre>
-                </p>
-                <!--asdf{"name"=>"selector", "description"=>"css selector to identify the html elements."}{"name"=>"callback", "description"=>"callback which includes the elements information."}fdaa-->
-                
-                <p class="description"><strong>Parameters</strong></p>
-                <dl class="dl-horizontal">
-                  
-                  <dt>
-                    <p class="description"><strong>selector :</strong></p>
-                  </dt>
-                  <dd>
-                    <p class="description">css selector to identify the html elements.
-                      <p>
-                  </dd>
-                  
-                  <dt>
-                    <p class="description"><strong>callback :</strong></p>
-                  </dt>
-                  <dd>
-                    <p class="description">callback which includes the elements information.
-                      <p>
-                  </dd>
-                  
-                </dl>
-                
-                <p class="description"><strong>Usage</strong>
-                  <pre><code class="code-wrap javascript">.getEls(".dropdown-link .user-name", function(element){<br>  console.log(element); // will print out [{'ELEMENT': 1}, .....]<br>});
-</code></pre>
-                </p>
-              </div>
-            </div>
+          <span class="pull-right">tag [ <abbr title="works for desktop and mobile browsers">browser</abbr> ]</span>
+        </div>
+        <div class="panel-body">
+          <p class="description">Returns html elements</p>
+          <p class="description"><strong>Syntax</strong>
+            <pre><code class="code-wrap javascript">.getEls(selector, callback/*optional*/);</code></pre>
+          </p>
+          
+          <p class="description"><strong>Parameters</strong></p>
+          <dl class="dl-horizontal">
             
+            <dt>
+              <p class="description"><strong>selector :</strong></p>
+            </dt>
+            <dd>
+              <p class="description">css selector to identify the html elements.
+                <p>
+            </dd>
+            
+            <dt>
+              <p class="description"><strong>callback :</strong></p>
+            </dt>
+            <dd>
+              <p class="description">callback which includes the elements information.
+                <p>
+            </dd>
+            
+          </dl>
+          
+          <p class="description"><strong>Usage</strong>
+            <pre><code class="code-wrap javascript">.getEls(".dropdown-link .user-name", function(element){<br>  console.log(element); // will print out [{'ELEMENT': 1}, .....]<br>});
+</code></pre>
+          </p>
+        </div>
+      </div>
+      
             <div class="panel panel-info" name="link">
 
               <div id="clickEl" class="panel-heading" name="link-content">
                 <span>.clickEl()</span>
-                <span class="pull-right">tag [ <abbr title="works for desktop and mobile browsers">browser</abbr> ]</span>
-              </div>
-              <div class="panel-body">
-                <p class="description">Click a html element</p>
-                <p class="description"><strong>Syntax</strong>
-                  <pre><code class="code-wrap javascript">.clickEl(selector, callback/*optional*/);</code></pre>
-                </p>
-                <!--asdf{"name"=>"selector", "description"=>"css selector to the html element."}{"name"=>"callback", "description"=>"optional callback to be called when the command finishes."}fdaa-->
-                
-                <p class="description"><strong>Parameters</strong></p>
-                <dl class="dl-horizontal">
-                  
-                  <dt>
-                    <p class="description"><strong>selector :</strong></p>
-                  </dt>
-                  <dd>
-                    <p class="description">css selector to the html element.
-                      <p>
-                  </dd>
-                  
-                  <dt>
-                    <p class="description"><strong>callback :</strong></p>
-                  </dt>
-                  <dd>
-                    <p class="description">optional callback to be called when the command finishes.
-                      <p>
-                  </dd>
-                  
-                </dl>
-                
-                <p class="description"><strong>Usage</strong>
-                  <pre><code class="code-wrap javascript">.clickEl("#submit");</code></pre>
-                </p>
-              </div>
-            </div>
+          <span class="pull-right">tag [ <abbr title="works for desktop and mobile browsers">browser</abbr> ]</span>
+        </div>
+        <div class="panel-body">
+          <p class="description">Click a html element</p>
+          <p class="description"><strong>Syntax</strong>
+            <pre><code class="code-wrap javascript">.clickEl(selector, callback/*optional*/);</code></pre>
+          </p>
+          
+          <p class="description"><strong>Parameters</strong></p>
+          <dl class="dl-horizontal">
             
+            <dt>
+              <p class="description"><strong>selector :</strong></p>
+            </dt>
+            <dd>
+              <p class="description">css selector to the html element.
+                <p>
+            </dd>
+            
+            <dt>
+              <p class="description"><strong>callback :</strong></p>
+            </dt>
+            <dd>
+              <p class="description">optional callback to be called when the command finishes.
+                <p>
+            </dd>
+            
+          </dl>
+          
+          <p class="description"><strong>Usage</strong>
+            <pre><code class="code-wrap javascript">.clickEl("#submit");</code></pre>
+          </p>
+        </div>
+      </div>
+      
             <div class="panel panel-info" name="link">
 
               <div id="clickAutomationEl" class="panel-heading" name="link-content">
                 <span>.clickAutomationEl()</span>
-                <span class="pull-right">tag [ <abbr title="works for desktop and mobile browsers">browser</abbr> ]</span>
-              </div>
-              <div class="panel-body">
-                <p class="description">Click an html element which has html attribute [data-automation-id].</p>
-                <p class="description"><strong>Syntax</strong>
-                  <pre><code class="code-wrap javascript">.clickAutomationEl(id, callback/*optional*/);</code></pre>
-                </p>
-                <!--asdf{"name"=>"id", "description"=>"value of data-automation-id attribute."}{"name"=>"callback", "description"=>"optional callback to be called when the command finishes."}fdaa-->
-                
-                <p class="description"><strong>Parameters</strong></p>
-                <dl class="dl-horizontal">
-                  
-                  <dt>
-                    <p class="description"><strong>id :</strong></p>
-                  </dt>
-                  <dd>
-                    <p class="description">value of data-automation-id attribute.
-                      <p>
-                  </dd>
-                  
-                  <dt>
-                    <p class="description"><strong>callback :</strong></p>
-                  </dt>
-                  <dd>
-                    <p class="description">optional callback to be called when the command finishes.
-                      <p>
-                  </dd>
-                  
-                </dl>
-                
-                <p class="description"><strong>Usage</strong>
-                  <pre><code class="code-wrap javascript">.clickAutomationEl("placeOrder"); // equals to .clickEl('[data-automation-id="placeOrder"]');
-</code></pre>
-                </p>
-              </div>
-            </div>
+          <span class="pull-right">tag [ <abbr title="works for desktop and mobile browsers">browser</abbr> ]</span>
+        </div>
+        <div class="panel-body">
+          <p class="description">Click an html element which has html attribute [data-automation-id].</p>
+          <p class="description"><strong>Syntax</strong>
+            <pre><code class="code-wrap javascript">.clickAutomationEl(id, callback/*optional*/);</code></pre>
+          </p>
+          
+          <p class="description"><strong>Parameters</strong></p>
+          <dl class="dl-horizontal">
             
+            <dt>
+              <p class="description"><strong>id :</strong></p>
+            </dt>
+            <dd>
+              <p class="description">value of data-automation-id attribute.
+                <p>
+            </dd>
+            
+            <dt>
+              <p class="description"><strong>callback :</strong></p>
+            </dt>
+            <dd>
+              <p class="description">optional callback to be called when the command finishes.
+                <p>
+            </dd>
+            
+          </dl>
+          
+          <p class="description"><strong>Usage</strong>
+            <pre><code class="code-wrap javascript">.clickAutomationEl("placeOrder"); // equals to .clickEl('[data-automation-id="placeOrder"]');
+</code></pre>
+          </p>
+        </div>
+      </div>
+      
             <div class="panel panel-info" name="link">
 
               <div id="getElValue" class="panel-heading" name="link-content">
                 <span>.getElValue()</span>
-                <span class="pull-right">tag [ <abbr title="works for desktop and mobile browsers">browser</abbr> ]</span>
-              </div>
-              <div class="panel-body">
-                <p class="description">Returns the textual value of a html element</p>
-                <p class="description"><strong>Syntax</strong>
-                  <pre><code class="code-wrap javascript">.getElValue(selector, callback/*optional*/);</code></pre>
-                </p>
-                <!--asdf{"name"=>"selector", "description"=>"css selector to the html element."}{"name"=>"callback", "description"=>"callback which includes the value of the element."}fdaa-->
-                
-                <p class="description"><strong>Parameters</strong></p>
-                <dl class="dl-horizontal">
-                  
-                  <dt>
-                    <p class="description"><strong>selector :</strong></p>
-                  </dt>
-                  <dd>
-                    <p class="description">css selector to the html element.
-                      <p>
-                  </dd>
-                  
-                  <dt>
-                    <p class="description"><strong>callback :</strong></p>
-                  </dt>
-                  <dd>
-                    <p class="description">callback which includes the value of the element.
-                      <p>
-                  </dd>
-                  
-                </dl>
-                
-                <p class="description"><strong>Usage</strong>
-                  <pre><code class="code-wrap javascript">.getEl(".user-profile", function(profile){ });</code></pre>
-                </p>
-              </div>
-            </div>
+          <span class="pull-right">tag [ <abbr title="works for desktop and mobile browsers">browser</abbr> ]</span>
+        </div>
+        <div class="panel-body">
+          <p class="description">Returns the textual value of a html element</p>
+          <p class="description"><strong>Syntax</strong>
+            <pre><code class="code-wrap javascript">.getElValue(selector, callback/*optional*/);</code></pre>
+          </p>
+          
+          <p class="description"><strong>Parameters</strong></p>
+          <dl class="dl-horizontal">
             
+            <dt>
+              <p class="description"><strong>selector :</strong></p>
+            </dt>
+            <dd>
+              <p class="description">css selector to the html element.
+                <p>
+            </dd>
+            
+            <dt>
+              <p class="description"><strong>callback :</strong></p>
+            </dt>
+            <dd>
+              <p class="description">callback which includes the value of the element.
+                <p>
+            </dd>
+            
+          </dl>
+          
+          <p class="description"><strong>Usage</strong>
+            <pre><code class="code-wrap javascript">.getEl(".user-profile", function(profile){ });</code></pre>
+          </p>
+        </div>
+      </div>
+      
             <div class="panel panel-info" name="link">
 
               <div id="setElValue" class="panel-heading" name="link-content">
                 <span>.setElValue()</span>
-                <span class="pull-right">tag [ <abbr title="works for desktop and mobile browsers">browser</abbr> ]</span>
-              </div>
-              <div class="panel-body">
-                <p class="description">Sets value to a html element.</p>
-                <p class="description"><strong>Syntax</strong>
-                  <pre><code class="code-wrap javascript">.setElValue(selector, value, callback/*optional*/);</code></pre>
-                </p>
-                <!--asdf{"name"=>"selector", "description"=>"css selector to the html element."}{"name"=>"value", "description"=>"value to be set to the html element."}{"name"=>"callback", "description"=>"optional callback to be called when the command finishes."}fdaa-->
-                
-                <p class="description"><strong>Parameters</strong></p>
-                <dl class="dl-horizontal">
-                  
-                  <dt>
-                    <p class="description"><strong>selector :</strong></p>
-                  </dt>
-                  <dd>
-                    <p class="description">css selector to the html element.
-                      <p>
-                  </dd>
-                  
-                  <dt>
-                    <p class="description"><strong>value :</strong></p>
-                  </dt>
-                  <dd>
-                    <p class="description">value to be set to the html element.
-                      <p>
-                  </dd>
-                  
-                  <dt>
-                    <p class="description"><strong>callback :</strong></p>
-                  </dt>
-                  <dd>
-                    <p class="description">optional callback to be called when the command finishes.
-                      <p>
-                  </dd>
-                  
-                </dl>
-                
-                <p class="description"><strong>Usage</strong>
-                  <pre><code class="code-wrap javascript">.setElValue("#username", "fake@login.com");</code></pre>
-                </p>
-              </div>
-            </div>
+          <span class="pull-right">tag [ <abbr title="works for desktop and mobile browsers">browser</abbr> ]</span>
+        </div>
+        <div class="panel-body">
+          <p class="description">Sets value to a html element.</p>
+          <p class="description"><strong>Syntax</strong>
+            <pre><code class="code-wrap javascript">.setElValue(selector, value, callback/*optional*/);</code></pre>
+          </p>
+          
+          <p class="description"><strong>Parameters</strong></p>
+          <dl class="dl-horizontal">
             
+            <dt>
+              <p class="description"><strong>selector :</strong></p>
+            </dt>
+            <dd>
+              <p class="description">css selector to the html element.
+                <p>
+            </dd>
+            
+            <dt>
+              <p class="description"><strong>value :</strong></p>
+            </dt>
+            <dd>
+              <p class="description">value to be set to the html element.
+                <p>
+            </dd>
+            
+            <dt>
+              <p class="description"><strong>callback :</strong></p>
+            </dt>
+            <dd>
+              <p class="description">optional callback to be called when the command finishes.
+                <p>
+            </dd>
+            
+          </dl>
+          
+          <p class="description"><strong>Usage</strong>
+            <pre><code class="code-wrap javascript">.setElValue("#username", "fake@login.com");</code></pre>
+          </p>
+        </div>
+      </div>
+      
             <div class="panel panel-info" name="link">
 
               <div id="setMaskedElValue" class="panel-heading" name="link-content">
                 <span>.setMaskedElValue()</span>
-                <span class="pull-right">tag [ <abbr title="works for desktop and mobile browsers">browser</abbr> ]</span>
-              </div>
-              <div class="panel-body">
-                <p class="description">Sets value to a masked html element like credit card number or phone number.</p>
-                <p class="description"><strong>Syntax</strong>
-                  <pre><code class="code-wrap javascript">.setMaskedElValue(selector, value, callback/*optional*/);</code></pre>
-                </p>
-                <!--asdf{"name"=>"selector", "description"=>"css selector to the html element."}{"name"=>"value", "description"=>"value to be set to the html element."}{"name"=>"callback", "description"=>"optional callback to be called when the command finishes."}fdaa-->
-                
-                <p class="description"><strong>Parameters</strong></p>
-                <dl class="dl-horizontal">
-                  
-                  <dt>
-                    <p class="description"><strong>selector :</strong></p>
-                  </dt>
-                  <dd>
-                    <p class="description">css selector to the html element.
-                      <p>
-                  </dd>
-                  
-                  <dt>
-                    <p class="description"><strong>value :</strong></p>
-                  </dt>
-                  <dd>
-                    <p class="description">value to be set to the html element.
-                      <p>
-                  </dd>
-                  
-                  <dt>
-                    <p class="description"><strong>callback :</strong></p>
-                  </dt>
-                  <dd>
-                    <p class="description">optional callback to be called when the command finishes.
-                      <p>
-                  </dd>
-                  
-                </dl>
-                
-                <p class="description"><strong>Usage</strong>
-                  <pre><code class="code-wrap javascript">.setElValue(".phone-number", "123456789");</code></pre>
-                </p>
-              </div>
-            </div>
+          <span class="pull-right">tag [ <abbr title="works for desktop and mobile browsers">browser</abbr> ]</span>
+        </div>
+        <div class="panel-body">
+          <p class="description">Sets value to a masked html element like credit card number or phone number.</p>
+          <p class="description"><strong>Syntax</strong>
+            <pre><code class="code-wrap javascript">.setMaskedElValue(selector, value, callback/*optional*/);</code></pre>
+          </p>
+          
+          <p class="description"><strong>Parameters</strong></p>
+          <dl class="dl-horizontal">
             
+            <dt>
+              <p class="description"><strong>selector :</strong></p>
+            </dt>
+            <dd>
+              <p class="description">css selector to the html element.
+                <p>
+            </dd>
+            
+            <dt>
+              <p class="description"><strong>value :</strong></p>
+            </dt>
+            <dd>
+              <p class="description">value to be set to the html element.
+                <p>
+            </dd>
+            
+            <dt>
+              <p class="description"><strong>callback :</strong></p>
+            </dt>
+            <dd>
+              <p class="description">optional callback to be called when the command finishes.
+                <p>
+            </dd>
+            
+          </dl>
+          
+          <p class="description"><strong>Usage</strong>
+            <pre><code class="code-wrap javascript">.setElValue(".phone-number", "123456789");</code></pre>
+          </p>
+        </div>
+      </div>
+      
             <div class="panel panel-info" name="link">
 
               <div id="moveToEl" class="panel-heading" name="link-content">
                 <span>.moveToEl()</span>
-                <span class="pull-right">tag [ <abbr title="works for desktop and mobile browsers">browser</abbr> ]</span>
-              </div>
-              <div class="panel-body">
-                <p class="description">Moves cursor to a html element</p>
-                <p class="description"><strong>Syntax</strong>
-                  <pre><code class="code-wrap javascript">.moveToEl(selector, xoffset, yoffset, callback/*optional*/);</code></pre>
-                </p>
-                <!--asdf{"name"=>"selector", "description"=>"css selector to the html element."}{"name"=>"xoffset", "description"=>"x offset to move to, relative to the top-left corner of the element."}{"name"=>"yoffset", "description"=>"y offset to move to, relative to the top-left corner of the element."}{"name"=>"callback", "description"=>"optional callback to be called when the command finishes."}fdaa-->
-                
-                <p class="description"><strong>Parameters</strong></p>
-                <dl class="dl-horizontal">
-                  
-                  <dt>
-                    <p class="description"><strong>selector :</strong></p>
-                  </dt>
-                  <dd>
-                    <p class="description">css selector to the html element.
-                      <p>
-                  </dd>
-                  
-                  <dt>
-                    <p class="description"><strong>xoffset :</strong></p>
-                  </dt>
-                  <dd>
-                    <p class="description">x offset to move to, relative to the top-left corner of the element.
-                      <p>
-                  </dd>
-                  
-                  <dt>
-                    <p class="description"><strong>yoffset :</strong></p>
-                  </dt>
-                  <dd>
-                    <p class="description">y offset to move to, relative to the top-left corner of the element.
-                      <p>
-                  </dd>
-                  
-                  <dt>
-                    <p class="description"><strong>callback :</strong></p>
-                  </dt>
-                  <dd>
-                    <p class="description">optional callback to be called when the command finishes.
-                      <p>
-                  </dd>
-                  
-                </dl>
-                
-                <p class="description"><strong>Usage</strong>
-                  <pre><code class="code-wrap javascript">.moveToEl(".checkout", 10, 10);</code></pre>
-                </p>
-              </div>
-            </div>
+          <span class="pull-right">tag [ <abbr title="works for desktop and mobile browsers">browser</abbr> ]</span>
+        </div>
+        <div class="panel-body">
+          <p class="description">Moves cursor to a html element</p>
+          <p class="description"><strong>Syntax</strong>
+            <pre><code class="code-wrap javascript">.moveToEl(selector, xoffset, yoffset, callback/*optional*/);</code></pre>
+          </p>
+          
+          <p class="description"><strong>Parameters</strong></p>
+          <dl class="dl-horizontal">
             
+            <dt>
+              <p class="description"><strong>selector :</strong></p>
+            </dt>
+            <dd>
+              <p class="description">css selector to the html element.
+                <p>
+            </dd>
+            
+            <dt>
+              <p class="description"><strong>xoffset :</strong></p>
+            </dt>
+            <dd>
+              <p class="description">x offset to move to, relative to the top-left corner of the element.
+                <p>
+            </dd>
+            
+            <dt>
+              <p class="description"><strong>yoffset :</strong></p>
+            </dt>
+            <dd>
+              <p class="description">y offset to move to, relative to the top-left corner of the element.
+                <p>
+            </dd>
+            
+            <dt>
+              <p class="description"><strong>callback :</strong></p>
+            </dt>
+            <dd>
+              <p class="description">optional callback to be called when the command finishes.
+                <p>
+            </dd>
+            
+          </dl>
+          
+          <p class="description"><strong>Usage</strong>
+            <pre><code class="code-wrap javascript">.moveToEl(".checkout", 10, 10);</code></pre>
+          </p>
+        </div>
+      </div>
+      
             <div class="panel panel-info" name="link">
 
               <div id="takeElScreenshot" class="panel-heading" name="link-content">
                 <span>.takeElScreenshot()</span>
-                <span class="pull-right">tag [ <abbr title="works for desktop and mobile browsers">browser</abbr> ]</span>
-              </div>
-              <div class="panel-body">
-                <p class="description">Takes screenshot for a html element and save it to file</p>
-                <p class="description"><strong>Syntax</strong>
-                  <pre><code class="code-wrap javascript">.takeElScreenshot(selector, filename, callback/*optional*/);</code></pre>
-                </p>
-                <!--asdf{"name"=>"selector", "description"=>"css selector to the html element."}{"name"=>"filename", "description"=>"file name where the screen shot will be saved to (.png will be appended as prefix)."}{"name"=>"callback", "description"=>"optional callback to be called when the command finishes."}fdaa-->
-                
-                <p class="description"><strong>Parameters</strong></p>
-                <dl class="dl-horizontal">
-                  
-                  <dt>
-                    <p class="description"><strong>selector :</strong></p>
-                  </dt>
-                  <dd>
-                    <p class="description">css selector to the html element.
-                      <p>
-                  </dd>
-                  
-                  <dt>
-                    <p class="description"><strong>filename :</strong></p>
-                  </dt>
-                  <dd>
-                    <p class="description">file name where the screen shot will be saved to (.png will be appended as prefix).
-                      <p>
-                  </dd>
-                  
-                  <dt>
-                    <p class="description"><strong>callback :</strong></p>
-                  </dt>
-                  <dd>
-                    <p class="description">optional callback to be called when the command finishes.
-                      <p>
-                  </dd>
-                  
-                </dl>
-                
-                <p class="description"><strong>Usage</strong>
-                  <pre><code class="code-wrap javascript">.takeElScreenshot(".phone-number", "phone-number");</code></pre>
-                </p>
-              </div>
-            </div>
+          <span class="pull-right">tag [ <abbr title="works for desktop and mobile browsers">browser</abbr> ]</span>
+        </div>
+        <div class="panel-body">
+          <p class="description">Takes screenshot for a html element and save it to file</p>
+          <p class="description"><strong>Syntax</strong>
+            <pre><code class="code-wrap javascript">.takeElScreenshot(selector, filename, callback/*optional*/);</code></pre>
+          </p>
+          
+          <p class="description"><strong>Parameters</strong></p>
+          <dl class="dl-horizontal">
             
+            <dt>
+              <p class="description"><strong>selector :</strong></p>
+            </dt>
+            <dd>
+              <p class="description">css selector to the html element.
+                <p>
+            </dd>
+            
+            <dt>
+              <p class="description"><strong>filename :</strong></p>
+            </dt>
+            <dd>
+              <p class="description">file name where the screen shot will be saved to (.png will be appended as prefix).
+                <p>
+            </dd>
+            
+            <dt>
+              <p class="description"><strong>callback :</strong></p>
+            </dt>
+            <dd>
+              <p class="description">optional callback to be called when the command finishes.
+                <p>
+            </dd>
+            
+          </dl>
+          
+          <p class="description"><strong>Usage</strong>
+            <pre><code class="code-wrap javascript">.takeElScreenshot(".phone-number", "phone-number");</code></pre>
+          </p>
+        </div>
+      </div>
+      
             <div class="panel panel-info" name="link">
 
               <div id="takeScreenhot" class="panel-heading" name="link-content">
                 <span>.takeScreenhot()</span>
-                <span class="pull-right">tag [ <abbr title="works for desktop and mobile browsers">browser</abbr> ]</span>
-              </div>
-              <div class="panel-body">
-                <p class="description">Takes screenshot for the page.</p>
-                <p class="description"><strong>Syntax</strong>
-                  <pre><code class="code-wrap javascript">.takeScreenhot(filename, callback/*optional*/);</code></pre>
-                </p>
-                <!--asdf{"name"=>"filename", "description"=>"file name where the screen shot will be saved to (.png will be appended as prefix)."}{"name"=>"callback", "description"=>"optional callback to be called when the command finishes."}fdaa-->
-                
-                <p class="description"><strong>Parameters</strong></p>
-                <dl class="dl-horizontal">
-                  
-                  <dt>
-                    <p class="description"><strong>filename :</strong></p>
-                  </dt>
-                  <dd>
-                    <p class="description">file name where the screen shot will be saved to (.png will be appended as prefix).
-                      <p>
-                  </dd>
-                  
-                  <dt>
-                    <p class="description"><strong>callback :</strong></p>
-                  </dt>
-                  <dd>
-                    <p class="description">optional callback to be called when the command finishes.
-                      <p>
-                  </dd>
-                  
-                </dl>
-                
-                <p class="description"><strong>Usage</strong>
-                  <pre><code class="code-wrap javascript">.takeScreenhot("home-page");</code></pre>
-                </p>
-              </div>
-            </div>
+          <span class="pull-right">tag [ <abbr title="works for desktop and mobile browsers">browser</abbr> ]</span>
+        </div>
+        <div class="panel-body">
+          <p class="description">Takes screenshot for the page.</p>
+          <p class="description"><strong>Syntax</strong>
+            <pre><code class="code-wrap javascript">.takeScreenhot(filename, callback/*optional*/);</code></pre>
+          </p>
+          
+          <p class="description"><strong>Parameters</strong></p>
+          <dl class="dl-horizontal">
             
+            <dt>
+              <p class="description"><strong>filename :</strong></p>
+            </dt>
+            <dd>
+              <p class="description">file name where the screen shot will be saved to (.png will be appended as prefix).
+                <p>
+            </dd>
+            
+            <dt>
+              <p class="description"><strong>callback :</strong></p>
+            </dt>
+            <dd>
+              <p class="description">optional callback to be called when the command finishes.
+                <p>
+            </dd>
+            
+          </dl>
+          
+          <p class="description"><strong>Usage</strong>
+            <pre><code class="code-wrap javascript">.takeScreenhot("home-page");</code></pre>
+          </p>
+        </div>
+      </div>
+      
             <div class="panel panel-info" name="link">
 
               <div id="assert_elContainsText" class="panel-heading" name="link-content">
                 <span>.assert.elContainsText()</span>
-                <span class="pull-right">tag [ <abbr title="works for desktop and mobile browsers">browser</abbr> ]</span>
-              </div>
-              <div class="panel-body">
-                <p class="description">Asserts if current element contains a given text</p>
-                <p class="description"><strong>Syntax</strong>
-                  <pre><code class="code-wrap javascript">.assert.elContainsText(selector, value);</code></pre>
-                </p>
-                <!--asdf{"name"=>"selector", "description"=>"css selector to the html element."}{"name"=>"value", "description"=>"textual value or regular expression to assert."}fdaa-->
-                
-                <p class="description"><strong>Parameters</strong></p>
-                <dl class="dl-horizontal">
-                  
-                  <dt>
-                    <p class="description"><strong>selector :</strong></p>
-                  </dt>
-                  <dd>
-                    <p class="description">css selector to the html element.
-                      <p>
-                  </dd>
-                  
-                  <dt>
-                    <p class="description"><strong>value :</strong></p>
-                  </dt>
-                  <dd>
-                    <p class="description">textual value or regular expression to assert.
-                      <p>
-                  </dd>
-                  
-                </dl>
-                
-                <p class="description"><strong>Usage</strong>
-                  <pre><code class="code-wrap javascript">.assert.elContainsText(".username", "testarmada");</code></pre>
-                </p>
-              </div>
-            </div>
+          <span class="pull-right">tag [ <abbr title="works for desktop and mobile browsers">browser</abbr> ]</span>
+        </div>
+        <div class="panel-body">
+          <p class="description">Asserts if current element contains a given text</p>
+          <p class="description"><strong>Syntax</strong>
+            <pre><code class="code-wrap javascript">.assert.elContainsText(selector, value);</code></pre>
+          </p>
+          
+          <p class="description"><strong>Parameters</strong></p>
+          <dl class="dl-horizontal">
             
+            <dt>
+              <p class="description"><strong>selector :</strong></p>
+            </dt>
+            <dd>
+              <p class="description">css selector to the html element.
+                <p>
+            </dd>
+            
+            <dt>
+              <p class="description"><strong>value :</strong></p>
+            </dt>
+            <dd>
+              <p class="description">textual value or regular expression to assert.
+                <p>
+            </dd>
+            
+          </dl>
+          
+          <p class="description"><strong>Usage</strong>
+            <pre><code class="code-wrap javascript">.assert.elContainsText(".username", "testarmada");</code></pre>
+          </p>
+        </div>
+      </div>
+      
             <div class="panel panel-info" name="link">
 
               <div id="assert_elNotContainsText" class="panel-heading" name="link-content">
                 <span>.assert.elNotContainsText()</span>
-                <span class="pull-right">tag [ <abbr title="works for desktop and mobile browsers">browser</abbr> ]</span>
-              </div>
-              <div class="panel-body">
-                <p class="description">Asserts if current element doesn't contain a given text</p>
-                <p class="description"><strong>Syntax</strong>
-                  <pre><code class="code-wrap javascript">.assert.elNotContainsText(selector, value);</code></pre>
-                </p>
-                <!--asdf{"name"=>"selector", "description"=>"css selector to the html element."}{"name"=>"value", "description"=>"textual value or regular expression to assert."}fdaa-->
-                
-                <p class="description"><strong>Parameters</strong></p>
-                <dl class="dl-horizontal">
-                  
-                  <dt>
-                    <p class="description"><strong>selector :</strong></p>
-                  </dt>
-                  <dd>
-                    <p class="description">css selector to the html element.
-                      <p>
-                  </dd>
-                  
-                  <dt>
-                    <p class="description"><strong>value :</strong></p>
-                  </dt>
-                  <dd>
-                    <p class="description">textual value or regular expression to assert.
-                      <p>
-                  </dd>
-                  
-                </dl>
-                
-                <p class="description"><strong>Usage</strong>
-                  <pre><code class="code-wrap javascript">.assert.elNotContainsText(".username", "testarmada");</code></pre>
-                </p>
-              </div>
-            </div>
-              
+          <span class="pull-right">tag [ <abbr title="works for desktop and mobile browsers">browser</abbr> ]</span>
+        </div>
+        <div class="panel-body">
+          <p class="description">Asserts if current element doesn't contain a given text</p>
+          <p class="description"><strong>Syntax</strong>
+            <pre><code class="code-wrap javascript">.assert.elNotContainsText(selector, value);</code></pre>
+          </p>
+          
+          <p class="description"><strong>Parameters</strong></p>
+          <dl class="dl-horizontal">
+            
+            <dt>
+              <p class="description"><strong>selector :</strong></p>
+            </dt>
+            <dd>
+              <p class="description">css selector to the html element.
+                <p>
+            </dd>
+            
+            <dt>
+              <p class="description"><strong>value :</strong></p>
+            </dt>
+            <dd>
+              <p class="description">textual value or regular expression to assert.
+                <p>
+            </dd>
+            
+          </dl>
+          
+          <p class="description"><strong>Usage</strong>
+            <pre><code class="code-wrap javascript">.assert.elNotContainsText(".username", "testarmada");</code></pre>
+          </p>
+        </div>
+      </div>
+        
             <div class="panel panel-info" name="link">
 
               <div id="getMobileEl" class="panel-heading" name="link-content">
                 <span>.getMobileEl()</span>
-                <span class="pull-right">tag [ <abbr title="works for iOS app">iOS</abbr>  <abbr title="">Android</abbr> ]</span>
-              </div>
-              <div class="panel-body">
-                <p class="description">Returns a mobile element</p>
-                <p class="description"><strong>Syntax</strong>
-                  <pre><code class="code-wrap javascript">.getMobileEl(using, selector, callback/*optional*/);</code></pre>
-                </p>
-                <!--asdf{"name"=>"using", "description"=>"type (accessibility id, id or xpath) of the selector being used."}{"name"=>"selector", "description"=>"selector to identify the element."}{"name"=>"callback", "description"=>"callback which includes the element information."}fdaa-->
-                
-                <p class="description"><strong>Parameters</strong></p>
-                <dl class="dl-horizontal">
-                  
-                  <dt>
-                    <p class="description"><strong>using :</strong></p>
-                  </dt>
-                  <dd>
-                    <p class="description">type (accessibility id, id or xpath) of the selector being used.
-                      <p>
-                  </dd>
-                  
-                  <dt>
-                    <p class="description"><strong>selector :</strong></p>
-                  </dt>
-                  <dd>
-                    <p class="description">selector to identify the element.
-                      <p>
-                  </dd>
-                  
-                  <dt>
-                    <p class="description"><strong>callback :</strong></p>
-                  </dt>
-                  <dd>
-                    <p class="description">callback which includes the element information.
-                      <p>
-                  </dd>
-                  
-                </dl>
-                
-                <p class="description"><strong>Usage</strong>
-                  <pre><code class="code-wrap javascript">.getMobileEl("accessibility id", "mybutton", function(element){<br>  console.log(element); // will print out {'ELEMENT': 1}<br>});
-</code></pre>
-                </p>
-              </div>
-            </div>
+          <span class="pull-right">tag [ <abbr title="works for iOS app">iOS</abbr>  <abbr title="">Android</abbr> ]</span>
+        </div>
+        <div class="panel-body">
+          <p class="description">Returns a mobile element</p>
+          <p class="description"><strong>Syntax</strong>
+            <pre><code class="code-wrap javascript">.getMobileEl(using, selector, callback/*optional*/);</code></pre>
+          </p>
+          
+          <p class="description"><strong>Parameters</strong></p>
+          <dl class="dl-horizontal">
             
+            <dt>
+              <p class="description"><strong>using :</strong></p>
+            </dt>
+            <dd>
+              <p class="description">type (accessibility id, id or xpath) of the selector being used.
+                <p>
+            </dd>
+            
+            <dt>
+              <p class="description"><strong>selector :</strong></p>
+            </dt>
+            <dd>
+              <p class="description">selector to identify the element.
+                <p>
+            </dd>
+            
+            <dt>
+              <p class="description"><strong>callback :</strong></p>
+            </dt>
+            <dd>
+              <p class="description">callback which includes the element information.
+                <p>
+            </dd>
+            
+          </dl>
+          
+          <p class="description"><strong>Usage</strong>
+            <pre><code class="code-wrap javascript">.getMobileEl("accessibility id", "mybutton", function(element){<br>  console.log(element); // will print out {'ELEMENT': 1}<br>});
+</code></pre>
+          </p>
+        </div>
+      </div>
+      
             <div class="panel panel-info" name="link">
 
               <div id="clickMobileEl" class="panel-heading" name="link-content">
                 <span>.clickMobileEl()</span>
-                <span class="pull-right">tag [ <abbr title="works for iOS app">iOS</abbr>  <abbr title="">Android</abbr> ]</span>
-              </div>
-              <div class="panel-body">
-                <p class="description">Clicks a mobile element</p>
-                <p class="description"><strong>Syntax</strong>
-                  <pre><code class="code-wrap javascript">.clickMobileEl(using, selector, callback/*optional*/);</code></pre>
-                </p>
-                <!--asdf{"name"=>"using", "description"=>"type (accessibility id, id or xpath) of the selector being used."}{"name"=>"selector", "description"=>"selector to identify the element."}{"name"=>"callback", "description"=>"optional callback to be called when the command finishes."}fdaa-->
-                
-                <p class="description"><strong>Parameters</strong></p>
-                <dl class="dl-horizontal">
-                  
-                  <dt>
-                    <p class="description"><strong>using :</strong></p>
-                  </dt>
-                  <dd>
-                    <p class="description">type (accessibility id, id or xpath) of the selector being used.
-                      <p>
-                  </dd>
-                  
-                  <dt>
-                    <p class="description"><strong>selector :</strong></p>
-                  </dt>
-                  <dd>
-                    <p class="description">selector to identify the element.
-                      <p>
-                  </dd>
-                  
-                  <dt>
-                    <p class="description"><strong>callback :</strong></p>
-                  </dt>
-                  <dd>
-                    <p class="description">optional callback to be called when the command finishes.
-                      <p>
-                  </dd>
-                  
-                </dl>
-                
-                <p class="description"><strong>Usage</strong>
-                  <pre><code class="code-wrap javascript">.clickMobileEl("accessibility id", "checkout");</code></pre>
-                </p>
-              </div>
-            </div>
+          <span class="pull-right">tag [ <abbr title="works for iOS app">iOS</abbr>  <abbr title="">Android</abbr> ]</span>
+        </div>
+        <div class="panel-body">
+          <p class="description">Clicks a mobile element</p>
+          <p class="description"><strong>Syntax</strong>
+            <pre><code class="code-wrap javascript">.clickMobileEl(using, selector, callback/*optional*/);</code></pre>
+          </p>
+          
+          <p class="description"><strong>Parameters</strong></p>
+          <dl class="dl-horizontal">
             
+            <dt>
+              <p class="description"><strong>using :</strong></p>
+            </dt>
+            <dd>
+              <p class="description">type (accessibility id, id or xpath) of the selector being used.
+                <p>
+            </dd>
+            
+            <dt>
+              <p class="description"><strong>selector :</strong></p>
+            </dt>
+            <dd>
+              <p class="description">selector to identify the element.
+                <p>
+            </dd>
+            
+            <dt>
+              <p class="description"><strong>callback :</strong></p>
+            </dt>
+            <dd>
+              <p class="description">optional callback to be called when the command finishes.
+                <p>
+            </dd>
+            
+          </dl>
+          
+          <p class="description"><strong>Usage</strong>
+            <pre><code class="code-wrap javascript">.clickMobileEl("accessibility id", "checkout");</code></pre>
+          </p>
+        </div>
+      </div>
+      
             <div class="panel panel-info" name="link">
 
               <div id="setMobileElValue" class="panel-heading" name="link-content">
                 <span>.setMobileElValue()</span>
-                <span class="pull-right">tag [ <abbr title="works for iOS app">iOS</abbr>  <abbr title="">Android</abbr> ]</span>
-              </div>
-              <div class="panel-body">
-                <p class="description">Sets value to a mobile element.</p>
-                <p class="description"><strong>Syntax</strong>
-                  <pre><code class="code-wrap javascript">.setMobileElValue(using, selector, value, callback/*optional*/);</code></pre>
-                </p>
-                <!--asdf{"name"=>"using", "description"=>"type (accessibility id, id or xpath) of the selector being used."}{"name"=>"selector", "description"=>"selector to identify the element."}{"name"=>"value", "description"=>"value to be set to the element."}{"name"=>"callback", "description"=>"optional callback to be called when the command finishes."}fdaa-->
-                
-                <p class="description"><strong>Parameters</strong></p>
-                <dl class="dl-horizontal">
-                  
-                  <dt>
-                    <p class="description"><strong>using :</strong></p>
-                  </dt>
-                  <dd>
-                    <p class="description">type (accessibility id, id or xpath) of the selector being used.
-                      <p>
-                  </dd>
-                  
-                  <dt>
-                    <p class="description"><strong>selector :</strong></p>
-                  </dt>
-                  <dd>
-                    <p class="description">selector to identify the element.
-                      <p>
-                  </dd>
-                  
-                  <dt>
-                    <p class="description"><strong>value :</strong></p>
-                  </dt>
-                  <dd>
-                    <p class="description">value to be set to the element.
-                      <p>
-                  </dd>
-                  
-                  <dt>
-                    <p class="description"><strong>callback :</strong></p>
-                  </dt>
-                  <dd>
-                    <p class="description">optional callback to be called when the command finishes.
-                      <p>
-                  </dd>
-                  
-                </dl>
-                
-                <p class="description"><strong>Usage</strong>
-                  <pre><code class="code-wrap javascript">.setMobileElValue("accessibility id", "username", "testarmada");</code></pre>
-                </p>
-              </div>
-            </div>
+          <span class="pull-right">tag [ <abbr title="works for iOS app">iOS</abbr>  <abbr title="">Android</abbr> ]</span>
+        </div>
+        <div class="panel-body">
+          <p class="description">Sets value to a mobile element.</p>
+          <p class="description"><strong>Syntax</strong>
+            <pre><code class="code-wrap javascript">.setMobileElValue(using, selector, value, callback/*optional*/);</code></pre>
+          </p>
+          
+          <p class="description"><strong>Parameters</strong></p>
+          <dl class="dl-horizontal">
             
+            <dt>
+              <p class="description"><strong>using :</strong></p>
+            </dt>
+            <dd>
+              <p class="description">type (accessibility id, id or xpath) of the selector being used.
+                <p>
+            </dd>
+            
+            <dt>
+              <p class="description"><strong>selector :</strong></p>
+            </dt>
+            <dd>
+              <p class="description">selector to identify the element.
+                <p>
+            </dd>
+            
+            <dt>
+              <p class="description"><strong>value :</strong></p>
+            </dt>
+            <dd>
+              <p class="description">value to be set to the element.
+                <p>
+            </dd>
+            
+            <dt>
+              <p class="description"><strong>callback :</strong></p>
+            </dt>
+            <dd>
+              <p class="description">optional callback to be called when the command finishes.
+                <p>
+            </dd>
+            
+          </dl>
+          
+          <p class="description"><strong>Usage</strong>
+            <pre><code class="code-wrap javascript">.setMobileElValue("accessibility id", "username", "testarmada");</code></pre>
+          </p>
+        </div>
+      </div>
+      
             <div class="panel panel-info" name="link">
 
               <div id="getMobileElValue" class="panel-heading" name="link-content">
                 <span>.getMobileElValue()</span>
-                <span class="pull-right">tag [ <abbr title="works for iOS app">iOS</abbr>  <abbr title="">Android</abbr> ]</span>
-              </div>
-              <div class="panel-body">
-                <p class="description">Returns textual value from a mobile element.</p>
-                <p class="description"><strong>Syntax</strong>
-                  <pre><code class="code-wrap javascript">.getMobileElValue(using, selector, callback/*optional*/);</code></pre>
-                </p>
-                <!--asdf{"name"=>"using", "description"=>"type (accessibility id, id or xpath) of the selector being used."}{"name"=>"selector", "description"=>"selector to identify the element."}{"name"=>"callback", "description"=>"callback which includes the element information."}fdaa-->
-                
-                <p class="description"><strong>Parameters</strong></p>
-                <dl class="dl-horizontal">
-                  
-                  <dt>
-                    <p class="description"><strong>using :</strong></p>
-                  </dt>
-                  <dd>
-                    <p class="description">type (accessibility id, id or xpath) of the selector being used.
-                      <p>
-                  </dd>
-                  
-                  <dt>
-                    <p class="description"><strong>selector :</strong></p>
-                  </dt>
-                  <dd>
-                    <p class="description">selector to identify the element.
-                      <p>
-                  </dd>
-                  
-                  <dt>
-                    <p class="description"><strong>callback :</strong></p>
-                  </dt>
-                  <dd>
-                    <p class="description">callback which includes the element information.
-                      <p>
-                  </dd>
-                  
-                </dl>
-                
-                <p class="description"><strong>Usage</strong>
-                  <pre><code class="code-wrap javascript">.getMobileElValue("accessibility id", "username", function(value){<br> console.log(value);<br>});
-</code></pre>
-                </p>
-              </div>
-            </div>
+          <span class="pull-right">tag [ <abbr title="works for iOS app">iOS</abbr>  <abbr title="">Android</abbr> ]</span>
+        </div>
+        <div class="panel-body">
+          <p class="description">Returns textual value from a mobile element.</p>
+          <p class="description"><strong>Syntax</strong>
+            <pre><code class="code-wrap javascript">.getMobileElValue(using, selector, callback/*optional*/);</code></pre>
+          </p>
+          
+          <p class="description"><strong>Parameters</strong></p>
+          <dl class="dl-horizontal">
             
+            <dt>
+              <p class="description"><strong>using :</strong></p>
+            </dt>
+            <dd>
+              <p class="description">type (accessibility id, id or xpath) of the selector being used.
+                <p>
+            </dd>
+            
+            <dt>
+              <p class="description"><strong>selector :</strong></p>
+            </dt>
+            <dd>
+              <p class="description">selector to identify the element.
+                <p>
+            </dd>
+            
+            <dt>
+              <p class="description"><strong>callback :</strong></p>
+            </dt>
+            <dd>
+              <p class="description">callback which includes the element information.
+                <p>
+            </dd>
+            
+          </dl>
+          
+          <p class="description"><strong>Usage</strong>
+            <pre><code class="code-wrap javascript">.getMobileElValue("accessibility id", "username", function(value){<br> console.log(value);<br>});
+</code></pre>
+          </p>
+        </div>
+      </div>
+      
             <div class="panel panel-info" name="link">
 
               <div id="swipeMobileElTo" class="panel-heading" name="link-content">
                 <span>.swipeMobileElTo()</span>
-                <span class="pull-right">tag [ <abbr title="works for iOS app">iOS</abbr>  <abbr title="">Android</abbr> ]</span>
-              </div>
-              <div class="panel-body">
-                <p class="description">Swipes a mobile element to a coordinate measured by vector (x, y).</p>
-                <p class="description"><strong>Syntax</strong>
-                  <pre><code class="code-wrap javascript">.swipeMobileElTo(using, selector, x, y, callback/*optional*/);</code></pre>
-                </p>
-                <!--asdf{"name"=>"using", "description"=>"type (accessibility id, id or xpath) of the selector being used."}{"name"=>"selector", "description"=>"selector to identify the element."}{"name"=>"x", "description"=>"distance on x axis from element to where to swipe to."}{"name"=>"y", "description"=>"distance on y axis from element to where to swipe to."}{"name"=>"callback", "description"=>"optional callback to be called when the command finishes."}fdaa-->
-                
-                <p class="description"><strong>Parameters</strong></p>
-                <dl class="dl-horizontal">
-                  
-                  <dt>
-                    <p class="description"><strong>using :</strong></p>
-                  </dt>
-                  <dd>
-                    <p class="description">type (accessibility id, id or xpath) of the selector being used.
-                      <p>
-                  </dd>
-                  
-                  <dt>
-                    <p class="description"><strong>selector :</strong></p>
-                  </dt>
-                  <dd>
-                    <p class="description">selector to identify the element.
-                      <p>
-                  </dd>
-                  
-                  <dt>
-                    <p class="description"><strong>x :</strong></p>
-                  </dt>
-                  <dd>
-                    <p class="description">distance on x axis from element to where to swipe to.
-                      <p>
-                  </dd>
-                  
-                  <dt>
-                    <p class="description"><strong>y :</strong></p>
-                  </dt>
-                  <dd>
-                    <p class="description">distance on y axis from element to where to swipe to.
-                      <p>
-                  </dd>
-                  
-                  <dt>
-                    <p class="description"><strong>callback :</strong></p>
-                  </dt>
-                  <dd>
-                    <p class="description">optional callback to be called when the command finishes.
-                      <p>
-                  </dd>
-                  
-                </dl>
-                
-                <p class="description"><strong>Usage</strong>
-                  <pre><code class="code-wrap javascript">.swipeMobileElTo("accessibility id", "price", 0, -100);</code></pre>
-                </p>
-              </div>
-            </div>
+          <span class="pull-right">tag [ <abbr title="works for iOS app">iOS</abbr>  <abbr title="">Android</abbr> ]</span>
+        </div>
+        <div class="panel-body">
+          <p class="description">Swipes a mobile element to a coordinate measured by vector (x, y).</p>
+          <p class="description"><strong>Syntax</strong>
+            <pre><code class="code-wrap javascript">.swipeMobileElTo(using, selector, x, y, callback/*optional*/);</code></pre>
+          </p>
+          
+          <p class="description"><strong>Parameters</strong></p>
+          <dl class="dl-horizontal">
             
+            <dt>
+              <p class="description"><strong>using :</strong></p>
+            </dt>
+            <dd>
+              <p class="description">type (accessibility id, id or xpath) of the selector being used.
+                <p>
+            </dd>
+            
+            <dt>
+              <p class="description"><strong>selector :</strong></p>
+            </dt>
+            <dd>
+              <p class="description">selector to identify the element.
+                <p>
+            </dd>
+            
+            <dt>
+              <p class="description"><strong>x :</strong></p>
+            </dt>
+            <dd>
+              <p class="description">distance on x axis from element to where to swipe to.
+                <p>
+            </dd>
+            
+            <dt>
+              <p class="description"><strong>y :</strong></p>
+            </dt>
+            <dd>
+              <p class="description">distance on y axis from element to where to swipe to.
+                <p>
+            </dd>
+            
+            <dt>
+              <p class="description"><strong>callback :</strong></p>
+            </dt>
+            <dd>
+              <p class="description">optional callback to be called when the command finishes.
+                <p>
+            </dd>
+            
+          </dl>
+          
+          <p class="description"><strong>Usage</strong>
+            <pre><code class="code-wrap javascript">.swipeMobileElTo("accessibility id", "price", 0, -100);</code></pre>
+          </p>
+        </div>
+      </div>
+      
             <div class="panel panel-info" name="link">
 
               <div id="swipeScreenTo" class="panel-heading" name="link-content">
                 <span>.swipeScreenTo()</span>
-                <span class="pull-right">tag [ <abbr title="works for iOS app">iOS</abbr>  <abbr title="">Android</abbr> ]</span>
-              </div>
-              <div class="panel-body">
-                <p class="description">Swipes screen from the given coordinate (fx,fy) to a coordinate measured by vector (tx, ty)</p>
-                <p class="description"><strong>Syntax</strong>
-                  <pre><code class="code-wrap javascript">.swipeScreenTo(fx, fy, tx, ty, callback/*optional*/);</code></pre>
-                </p>
-                <!--asdf{"name"=>"fx", "description"=>"x coordinate of the element to swipe from."}{"name"=>"fy", "description"=>"y coordinate of the element to swipe from."}{"name"=>"tx", "description"=>"distance on x axis from element to where to swipe to."}{"name"=>"ty", "description"=>"distance on y axis from element to where to swipe to."}{"name"=>"callback", "description"=>"callback which includes the element information."}fdaa-->
-                
-                <p class="description"><strong>Parameters</strong></p>
-                <dl class="dl-horizontal">
-                  
-                  <dt>
-                    <p class="description"><strong>fx :</strong></p>
-                  </dt>
-                  <dd>
-                    <p class="description">x coordinate of the element to swipe from.
-                      <p>
-                  </dd>
-                  
-                  <dt>
-                    <p class="description"><strong>fy :</strong></p>
-                  </dt>
-                  <dd>
-                    <p class="description">y coordinate of the element to swipe from.
-                      <p>
-                  </dd>
-                  
-                  <dt>
-                    <p class="description"><strong>tx :</strong></p>
-                  </dt>
-                  <dd>
-                    <p class="description">distance on x axis from element to where to swipe to.
-                      <p>
-                  </dd>
-                  
-                  <dt>
-                    <p class="description"><strong>ty :</strong></p>
-                  </dt>
-                  <dd>
-                    <p class="description">distance on y axis from element to where to swipe to.
-                      <p>
-                  </dd>
-                  
-                  <dt>
-                    <p class="description"><strong>callback :</strong></p>
-                  </dt>
-                  <dd>
-                    <p class="description">callback which includes the element information.
-                      <p>
-                  </dd>
-                  
-                </dl>
-                
-                <p class="description"><strong>Usage</strong>
-                  <pre><code class="code-wrap javascript">.swipeScreenTo(30, 400, 0, -100);</code></pre>
-                </p>
-              </div>
-            </div>
+          <span class="pull-right">tag [ <abbr title="works for iOS app">iOS</abbr>  <abbr title="">Android</abbr> ]</span>
+        </div>
+        <div class="panel-body">
+          <p class="description">Swipes screen from the given coordinate (fx,fy) to a coordinate measured by vector (tx, ty)</p>
+          <p class="description"><strong>Syntax</strong>
+            <pre><code class="code-wrap javascript">.swipeScreenTo(fx, fy, tx, ty, callback/*optional*/);</code></pre>
+          </p>
+          
+          <p class="description"><strong>Parameters</strong></p>
+          <dl class="dl-horizontal">
             
+            <dt>
+              <p class="description"><strong>fx :</strong></p>
+            </dt>
+            <dd>
+              <p class="description">x coordinate of the element to swipe from.
+                <p>
+            </dd>
+            
+            <dt>
+              <p class="description"><strong>fy :</strong></p>
+            </dt>
+            <dd>
+              <p class="description">y coordinate of the element to swipe from.
+                <p>
+            </dd>
+            
+            <dt>
+              <p class="description"><strong>tx :</strong></p>
+            </dt>
+            <dd>
+              <p class="description">distance on x axis from element to where to swipe to.
+                <p>
+            </dd>
+            
+            <dt>
+              <p class="description"><strong>ty :</strong></p>
+            </dt>
+            <dd>
+              <p class="description">distance on y axis from element to where to swipe to.
+                <p>
+            </dd>
+            
+            <dt>
+              <p class="description"><strong>callback :</strong></p>
+            </dt>
+            <dd>
+              <p class="description">callback which includes the element information.
+                <p>
+            </dd>
+            
+          </dl>
+          
+          <p class="description"><strong>Usage</strong>
+            <pre><code class="code-wrap javascript">.swipeScreenTo(30, 400, 0, -100);</code></pre>
+          </p>
+        </div>
+      </div>
+      
             <div class="panel panel-info" name="link">
 
               <div id="hideKeyboard" class="panel-heading" name="link-content">
                 <span>.hideKeyboard()</span>
-                <span class="pull-right">tag [ <abbr title="">Android</abbr> ]</span>
-              </div>
-              <div class="panel-body">
-                <p class="description">Dismisses the software keyboard.</p>
-                <p class="description"><strong>Syntax</strong>
-                  <pre><code class="code-wrap javascript">.hideKeyboard(callback/*optional*/);</code></pre>
-                </p>
-                <!--asdf{"name"=>"callback", "description"=>"optional callback to be called when the command finishes."}fdaa-->
-                
-                <p class="description"><strong>Parameters</strong></p>
-                <dl class="dl-horizontal">
-                  
-                  <dt>
-                    <p class="description"><strong>callback :</strong></p>
-                  </dt>
-                  <dd>
-                    <p class="description">optional callback to be called when the command finishes.
-                      <p>
-                  </dd>
-                  
-                </dl>
-                
-                <p class="description"><strong>Usage</strong>
-                  <pre><code class="code-wrap javascript">.hideKeyboard();</code></pre>
-                </p>
-              </div>
-            </div>
+          <span class="pull-right">tag [ <abbr title="">Android</abbr> ]</span>
+        </div>
+        <div class="panel-body">
+          <p class="description">Dismisses the software keyboard.</p>
+          <p class="description"><strong>Syntax</strong>
+            <pre><code class="code-wrap javascript">.hideKeyboard(callback/*optional*/);</code></pre>
+          </p>
+          
+          <p class="description"><strong>Parameters</strong></p>
+          <dl class="dl-horizontal">
             
+            <dt>
+              <p class="description"><strong>callback :</strong></p>
+            </dt>
+            <dd>
+              <p class="description">optional callback to be called when the command finishes.
+                <p>
+            </dd>
+            
+          </dl>
+          
+          <p class="description"><strong>Usage</strong>
+            <pre><code class="code-wrap javascript">.hideKeyboard();</code></pre>
+          </p>
+        </div>
+      </div>
+      
             <div class="panel panel-info" name="link">
 
               <div id="pressKeycode" class="panel-heading" name="link-content">
                 <span>.pressKeycode()</span>
-                <span class="pull-right">tag [ <abbr title="">Android</abbr> ]</span>
-              </div>
-              <div class="panel-body">
-                <p class="description">Sends a keycode to android emulator.</p>
-                <p class="description"><strong>Syntax</strong>
-                  <pre><code class="code-wrap javascript">.pressKeycode(keycode, callback/*optional*/);</code></pre>
-                </p>
-                <!--asdf{"name"=>"keycode", "description"=>"keycode to be sent."}{"name"=>"callback", "description"=>"optional callback to be called when the command finishes."}fdaa-->
-                
-                <p class="description"><strong>Parameters</strong></p>
-                <dl class="dl-horizontal">
-                  
-                  <dt>
-                    <p class="description"><strong>keycode :</strong></p>
-                  </dt>
-                  <dd>
-                    <p class="description">keycode to be sent.
-                      <p>
-                  </dd>
-                  
-                  <dt>
-                    <p class="description"><strong>callback :</strong></p>
-                  </dt>
-                  <dd>
-                    <p class="description">optional callback to be called when the command finishes.
-                      <p>
-                  </dd>
-                  
-                </dl>
-                
-                <p class="description"><strong>Usage</strong>
-                  <pre><code class="code-wrap javascript">.pressKeycode(4);</code></pre>
-                </p>
-              </div>
-            </div>
+          <span class="pull-right">tag [ <abbr title="">Android</abbr> ]</span>
+        </div>
+        <div class="panel-body">
+          <p class="description">Sends a keycode to android emulator.</p>
+          <p class="description"><strong>Syntax</strong>
+            <pre><code class="code-wrap javascript">.pressKeycode(keycode, callback/*optional*/);</code></pre>
+          </p>
+          
+          <p class="description"><strong>Parameters</strong></p>
+          <dl class="dl-horizontal">
             
+            <dt>
+              <p class="description"><strong>keycode :</strong></p>
+            </dt>
+            <dd>
+              <p class="description">keycode to be sent.
+                <p>
+            </dd>
+            
+            <dt>
+              <p class="description"><strong>callback :</strong></p>
+            </dt>
+            <dd>
+              <p class="description">optional callback to be called when the command finishes.
+                <p>
+            </dd>
+            
+          </dl>
+          
+          <p class="description"><strong>Usage</strong>
+            <pre><code class="code-wrap javascript">.pressKeycode(4);</code></pre>
+          </p>
+        </div>
+      </div>
+      
             <div class="panel panel-info" name="link">
 
               <div id="tapMobileEl" class="panel-heading" name="link-content">
                 <span>.tapMobileEl()</span>
-                <span class="pull-right">tag [ <abbr title="">Android</abbr> ]</span>
-              </div>
-              <div class="panel-body">
-                <p class="description">Taps a coordinate (x, y) on device's screen.</p>
-                <p class="description"><strong>Syntax</strong>
-                  <pre><code class="code-wrap javascript">.tapMobileEl(x, y, callback/*optional*/);</code></pre>
-                </p>
-                <!--asdf{"name"=>"x", "description"=>"x coordinate to tap"}{"name"=>"y", "description"=>"y coordinate to tap"}{"name"=>"callback", "description"=>"optional callback to be called when the command finishes."}fdaa-->
-                
-                <p class="description"><strong>Parameters</strong></p>
-                <dl class="dl-horizontal">
-                  
-                  <dt>
-                    <p class="description"><strong>x :</strong></p>
-                  </dt>
-                  <dd>
-                    <p class="description">x coordinate to tap
-                      <p>
-                  </dd>
-                  
-                  <dt>
-                    <p class="description"><strong>y :</strong></p>
-                  </dt>
-                  <dd>
-                    <p class="description">y coordinate to tap
-                      <p>
-                  </dd>
-                  
-                  <dt>
-                    <p class="description"><strong>callback :</strong></p>
-                  </dt>
-                  <dd>
-                    <p class="description">optional callback to be called when the command finishes.
-                      <p>
-                  </dd>
-                  
-                </dl>
-                
-                <p class="description"><strong>Usage</strong>
-                  <pre><code class="code-wrap javascript">.tapMobileEl(300, 120);</code></pre>
-                </p>
-              </div>
-            </div>
-             
-
-          </div>
+          <span class="pull-right">tag [ <abbr title="works for iOS app">iOS</abbr>  <abbr title="">Android</abbr> ]</span>
         </div>
+        <div class="panel-body">
+          <p class="description">Taps a coordinate (x, y) on device's screen.</p>
+          <p class="description"><strong>Syntax</strong>
+            <pre><code class="code-wrap javascript">.tapMobileEl(x, y, callback/*optional*/);</code></pre>
+          </p>
+          
+          <p class="description"><strong>Parameters</strong></p>
+          <dl class="dl-horizontal">
+            
+            <dt>
+              <p class="description"><strong>x :</strong></p>
+            </dt>
+            <dd>
+              <p class="description">x coordinate to tap
+                <p>
+            </dd>
+            
+            <dt>
+              <p class="description"><strong>y :</strong></p>
+            </dt>
+            <dd>
+              <p class="description">y coordinate to tap
+                <p>
+            </dd>
+            
+            <dt>
+              <p class="description"><strong>callback :</strong></p>
+            </dt>
+            <dd>
+              <p class="description">optional callback to be called when the command finishes.
+                <p>
+            </dd>
+            
+          </dl>
+          
+          <p class="description"><strong>Usage</strong>
+            <pre><code class="code-wrap javascript">.tapMobileEl(300, 120);</code></pre>
+          </p>
+        </div>
+      </div>
+       
+
+      </span>
+      </div>
       </div>
     </section>
 
@@ -1498,27 +1978,49 @@ npm test
 
     hljs.configure({ useBR: true });
 
+    $(document).on('click', 'a[data-toggle="collapse"]', function (event) {
+      $(this).find("span").toggleClass("glyphicon-chevron-down");
+    });
+
     $(document).on('click', 'a[name="anchor"]', function (event) {
       event.preventDefault();
 
+      // replace url hash
       const element = $($.attr(this, 'href'));
+
+      if (history.replaceState) {
+        history.replaceState(null, null, "#" + element.get(0).id);
+      }
+
+      let offset = element.offset().top;
       const index = $.inArray(element.attr('id'), ["Home", "GettingStarted", "DeveloperGuide", "API"]);
-      let offset = element.offset().top
       let scrollableContext = $("html, body");
 
       if (index <= -1) {
         offset = 0;
-        scrollableContext = element.parents(".pre-scrollable");
-        const index = scrollableContext.find('[name="link-content"]').index(element);
+        scrollableContext = element.parents(".pre-scrollable-right");
+
+        // get index of current parent in scrollable context
+        const index = scrollableContext.find('[name="link"]').index(element.parents('[name="link"]'));
+        // calculate height of all previous siblings of current parent
         for (let i = 0; i < index; i++) {
           offset += scrollableContext.find('[name="link"]').get(i).offsetHeight + 20;
         }
+
+        // get index of current node in current parents
+        const eIndex = element.parents('[name="link"]').find('[name="link-content"]').index(element);
+        if (eIndex >= 2) {
+          offset += element.offset().top - element.parents('[name="link"]').offset().top;
+        }
+
       } else {
         scrollableContext = $("html, body");
       }
+
       scrollableContext.animate({
         scrollTop: offset
       }, 500);
+
     });
   </script>
 
