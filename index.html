@@ -533,10 +533,17 @@
     <code class="code-wrap json">{<br /> "testarmada-magellan-local-executor": "^2.0.0"<br />}</code>
 </pre>
 
-<p class="description">Also, depending on which browser you want to test, you need to include specific browser driver in your <code class="highlighter-rouge">package.json</code>.</p>
+<p class="description">Depending on which browser you want to test, you need to include specific browser driver in your <code class="highlighter-rouge">package.json</code>.</p>
 
 <pre>
     <code class="code-wrap json">{<br /> "chromedriver": "^2.27.2", <br /> "geckodriver": "^1.4.0"<br />}</code>
+</pre>
+
+<p class="description">Then, don’t forget to add these drivers in your <code class="highlighter-rouge">nightwatch.json</code>.</p>
+
+<pre>
+    <code class="code-wrap json">{<br /> "selenium": {<br />  "cli_args": {<br />   "webdriver.chrome.driver": "./node_modules/chromedriver/lib/chromedriver/chromedriver",<br />   "webdriver.gecko.driver": "./node_modules/geckodriver/bin/geckodriver",
+<br />  }<br /> }<br />}</code>
 </pre>
 
 <p class="description">Full list of dependencies for your local browser test can be found <a href="https://github.com/TestArmada/boilerplate-nightwatch/blob/master/package.json#L20">here</a>.</p>
@@ -607,7 +614,7 @@
 
 <h3 id="enableAnExecutor" name="link-content">Enable an executor</h3>
 
-<p class="description">You need to at least enable one executor in <code class="highlighter-rouge">magellan.json</code> in order to run the tests. Please follow these steps to enable executor:</p>
+<p class="description">At least one executor has to be enabled in <code class="highlighter-rouge">magellan.json</code>. Please follow these steps to enable executor:</p>
 
 <p class="description">1.Install necessary executor via <code class="highlighter-rouge">npm install</code></p>
 <pre>
@@ -652,7 +659,7 @@
           <h2 name="link-content" id="device-test">Device Test</h2>
 <hr />
 
-<p class="description"><em>Testarmada</em> supports mobile browser test as well as native app test via <em><a href="http://appium.io/">appium</a></em>. By using the <em><a href="https://github.com/TestArmada/nightwatch-extra">nightwatch-extra</a></em> addon, <em>Testarmada</em> can even help you to manage the life cycle of appium and simulator for you.</p>
+<p class="description"><em>Testarmada</em> supports mobile browser test as well as native app test via <em><a href="http://appium.io/">appium</a></em>. By using the <em><a href="https://github.com/TestArmada/nightwatch-extra">nightwatch-extra</a></em> addon, <em>Testarmada</em> can even manage the life cycle of appium and simulator for you.</p>
 
 <h3 id="deviceTestPreresuisites" name="link-content">Prerequisites</h3>
 
@@ -702,7 +709,7 @@
 
 <h3 id="testInLocalEnvironment" name="link-content">Test in local environment</h3>
 
-<p class="description"><em>Testarmada</em> can manage the life cycle of your local test environment (iOS simulator or Android emulator) automatically for you as well. To fully utilize this feature to launch up or shut down your simulator/emulator, your local test environment should be properly configured. Please refer to <a href="https://github.com/TestArmada/nightwatch-extra/blob/master/docs/android.md#pre-requisites">here</a> for environment setup for android, and <a href="https://github.com/TestArmada/nightwatch-extra/blob/master/docs/ios.md#pre-requisites">here</a> for your iOS environment.</p>
+<p class="description"><em>Testarmada</em> can manage the life cycle of your local test environment (iOS simulator or Android emulator) automatically for you as well. To fully utilize this feature, your local test environment should be properly configured. Please refer to <a href="https://github.com/TestArmada/nightwatch-extra/blob/master/docs/android.md#pre-requisites">here</a> for environment setup for android, and <a href="https://github.com/TestArmada/nightwatch-extra/blob/master/docs/ios.md#pre-requisites">here</a> for your iOS environment.</p>
 
 <p class="description">For Android emulator, the <em>platformName</em>, <em>platformVersion</em> and <em>deviceName</em> in your appium desireCapabilities should match what your local environment has. For example</p>
 
@@ -724,7 +731,7 @@
 
 <h3 id="testInRemoteEnvironment" name="link-content">Test in remote environment</h3>
 
-<p class="description">Similar to what is described in <a href="#enableanexecutor">Remote browser test</a> section, <em>Testarmada</em> uses executor to drive device test remotely. Currently you can choose from <em>Testarmada</em>’s <a href="https://github.com/TestArmada/magellan-saucelabs-executor">magellan-saucelabs-executor</a> or <a href="https://github.com/TestArmada/magellan-browserstack-executor">magellan-browserstack-executor</a> for testing in simulator/emulator and <a href="https://github.com/TestArmada/magellan-testobject-executor">magellan-testobject-executor</a> for real device test. Please refer to the README.md in each executor for configuration detail.</p>
+<p class="description">Similar to what is described in <a href="#enableAnExecutor">Remote browser test</a> section, <em>Testarmada</em> uses executor to drive device test remotely. Currently you can choose from <em>Testarmada</em>’s <em><a href="https://github.com/TestArmada/magellan-saucelabs-executor">magellan-saucelabs-executor</a></em> or <em>[magellan-browserstack-executor]</em>(https://github.com/TestArmada/magellan-browserstack-executor) for testing in simulator/emulator and <em><a href="https://github.com/TestArmada/magellan-testobject-executor">magellan-testobject-executor</a></em> for real device test. Please refer to the README.md in each executor for configuration detail.</p>
 
         </div>
         <br>
@@ -759,7 +766,7 @@
   </tbody>
 </table>
 
-<p class="description">To notify <em>Testarmada</em>’s test runner <em><a href="https://github.com/TestArmada/magellan">magellan</a></em> which test framework it should talk to, a magellan plugin to support that framework needs to be added correspondingly in <code class="highlighter-rouge">magellan.json</code>.</p>
+<p class="description">To notify <em>Testarmada</em>’s test runner <em><a href="https://github.com/TestArmada/magellan">magellan</a></em> which test framework it should talk to, a magellan plugin for that framework needs to be added in <code class="highlighter-rouge">magellan.json</code>.</p>
 
 <pre>
     <code class="code-wrap json">{<br /> "framework": "testarmada-magellan-mocha-plugin"<br />}</code>
@@ -781,7 +788,7 @@
           <h2 name="link-content" id="report-your-test-result">Report your test result</h2>
 <hr />
 
-<p class="description">By default magellan prints out all the test output in the console. But it can do more than that. <em>Testarmada</em> has a component named reporters to allow you to generate test report in arbitary format. Following reporters are available in <em>Testarmada</em>.</p>
+<p class="description">By default magellan prints out all the test output in the console. But it can do more than that. <em>Testarmada</em> has a component named reporter to allow you to generate test report in arbitary format. Following reporters are available in <em>Testarmada</em>.</p>
 
 <table class="table table-condensed table-hover">
   <thead>
