@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="{{ site.lang | default: " en-US " }}">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="/assets/images/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/assets/images/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/assets/images/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/assets/images/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-TileImage" content="/assets/images/mstile-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <title itemprop="name">TestArmada - A fleet of tools for better end-to-end testing</title>
+  <meta content="A fleet of tools for better end-to-end testing" name="description">
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+    crossorigin="anonymous">-->
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/assets/css/marionette.css?t=1449505260726">
+  <link href="http://fonts.googleapis.com/css?family=Questrial" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+  <style type="text/css">
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    section.full-viewport {
+      height: 95vh;
+    }
+
+    strong {
+      font-weight: 700;
+    }
+
+    p.description {
+      padding-bottom: 8px;
+      max-width: 800px;
+      margin-bottom: 2px;
+    }
+
+    p.description em {
+      font-weight: 600;
+    }
+
+    h4 {
+      font-size: 16px;
+      line-height: 26px;
+      color: #4890e2;
+      margin-bottom: 12px;
+    }
+
+    td {
+      font-size: 16px;
+      color: #56585E;
+    }
+
+    th {
+      font-size: 17px;
+      color: #56585E;
+      font-weight: 600;
+    }
+
+    img {
+      padding-top: 20px;
+      padding-left: 20px;
+      padding-bottom: 20px;
+      padding-right: 20px;
+      height: 100%;
+      width: 100%;
+    }
+
+    .nav-pills>li.active>a,
+    .nav-pills>li.active>a:focus,
+    .nav-pills>li.active>a:hover {
+      background-color: #d9edf7;
+    }
+
+    a.nav-text {
+      color: white;
+    }
+
+    a.nav-brand {
+      color: white;
+      padding: 15px 15px;
+      font-size: 30px;
+      line-height: 20px;
+      float: left;
+    }
+
+    .full-section-left {
+      height: 84vh;
+      position: relative;
+    }
+
+    .full-section-right {
+      height: 88vh;
+      position: relative;
+    }
+
+    .full-section {
+      height: 88vh;
+      position: relative;
+    }
+
+    .pre-scrollable-left {
+      max-height: 80vh;
+      overflow-y: scroll;
+    }
+
+    .pre-scrollable-right {
+      max-height: 86vh;
+      overflow-y: scroll;
+    }
+
+    .anchor {
+      display: block;
+      position: relative;
+      top: -80px;
+      visibility: hidden;
+    }
+
+    .nested-nav {
+      margin-left: 7%;
+    }
+
+    .code-wrap {
+      width: 90%;
+    }
+
+    .navbar-default {
+      background: #4890e2;
+    }
+
+    .navbar-text {
+      line-height: 20px;
+    }
+
+    .scroll-link {
+      margin-bottom: 20px;
+    }
+
+    .nav-pills>li>a {
+      font-size: 90%;
+    }
+  </style>
+  <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </header>
+
+  <body class="home-page" data-spy="scroll" data-target="#navbar-main">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="nav-brand" href="">TestArmada</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-main">
+          <ul class="nav navbar-nav">
+            {% for menu in site.menu %}
+            <li class>
+              <p class="navbar-text">
+                <a href="{{ menu.link }}" class="nav-text" name="anchor">{{ menu.name }}</a>
+              </p>
+            </li>
+            {% endfor %}
+          </ul>
+          <div class="navbar-text navbar-right">
+            <a href="http://twitter.com/TestArmada" class="nav-text" target="_blank">Twitter</a>
+          </div>
+          <div class="navbar-text navbar-right">
+            <a href="https://github.com/TestArmada" class="nav-text" target="_blank">Github</a>
+          </div>
+        </div>
+
+
+      </div>
+    </nav>
+    <div id="Home" data-offset="0">
+      <div class="masthead">
+        <div class="wrapper">
+          <div class="left"><img alt="TestArmada logo" src="/assets/images/armada3.png" class="primary-logo">
+            <testarmada></testarmada>
+          </div>
+          <div class="right">
+            <h1 itemprop="alternativeHeadline">End to End testing doesn't have to be slow and unreliable.</h1>
+            <p itemprop="description">TestArmada is a fleet of tools for making cross-browser end-to-end testing fast, user-friendly, and valuable
+              at scale, across large teams, without those annoying false positives.</p>
+            <div id="wml-logo">
+              <p>Built with pride at</p><img alt="WalmartLabs Logo" src="/assets/images/walmartlabs.png"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="about why column-contain" id="intro">
+      <h2>Why TestArmada?</h2>
+      <div class="features">
+        {% for reason in site.data.reasons %}
+        <div class="feature col-1-2 left">
+          <header>
+            <h3>{{ reason.title }}</h3>
+          </header>
+          <p class="description">{{ reason.description }}</p>
+        </div>
+        {% endfor %}
+        <div class="cl"></div>
+      </div>
+    </section>
+    <div class="cl"></div>
+    <section class="about column-contain">
+      <h2>TestArmada's Components</h2>
+      <div class="features">
+        {% for component in site.data.components %}
+        <div class="feature col-1-2 left">
+          <header>
+            <h3>{{ component.name }}</h3>
+          </header>
+          <p class="description">{{ component.description }}</p>
+        </div>
+        {% endfor %}
+        <div class="cl"></div>
+      </div>
+    </section>
+
+    {{ content }}
+
+    <section class="column-contain full-viewport">
+      <a class="anchor" id="API"></a>
+      <div class="row full-section">
+        <div id="navbar-api" class="col-md-3 full-section-left">
+          <h2 class="section-header">API Reference</h2>
+          <ul class="nav nav-pills nav-stacked pre-scrollable-left">
+            {% for category in site.data.apis %}
+            <li>
+              <a data-toggle="collapse" data-target="#{{ category.name }}"><span class="glyphicon glyphicon-chevron-right"></span> {{ category.name }}</a>
+              <div class="nested-nav">
+                <ul id="{{ category.name }}" class="nav nav-pills nav-stacked collapse">
+                  {% for api in category.apis %}
+                  <li role="presentation">
+                    <a href="#{{ api.anchor }}" name="anchor">{{ api.name }}</a>
+                  </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="col-md-9 pre-scrollable-right full-section-right" data-spy="scroll" data-target="#navbar-api">
+          <span>
+            {% for category in site.data.apis %} {% for api in category.apis %}
+            <div class="panel panel-info" name="link">
+
+              <div id="{{ api.anchor }}" class="panel-heading" name="link-content">
+                <span>{{ api.name }}</span>
+          <span class="pull-right">tag [{% for tag in api.tags %} <abbr title="{{ site.api_attributes[tag.name] }}">{{ tag.name }}</abbr> {% endfor%}]</span>
+        </div>
+        <div class="panel-body">
+          <p class="description">{{ api.description }}</p>
+          <p class="description"><strong>Syntax</strong>
+            <pre><code class="code-wrap javascript">{{ api.syntax }}</code></pre>
+          </p>
+          {% if api.params != nil %}
+          <p class="description"><strong>Parameters</strong></p>
+          <dl class="dl-horizontal">
+            {% for param in api.params %}
+            <dt>
+              <p class="description"><strong>{{ param.name }} :</strong></p>
+            </dt>
+            <dd>
+              <p class="description">{{ param.description }}
+                <p>
+            </dd>
+            {% endfor %}
+          </dl>
+          {% endif %}
+          <p class="description"><strong>Usage</strong>
+            <pre><code class="code-wrap javascript">{{ api.example }}</code></pre>
+          </p>
+        </div>
+      </div>
+      {% endfor %} {% endfor %}
+
+      </span>
+      </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Made with &hearts; by&nbsp;<a href="https://github.com/TestArmada/magellan/graphs/contributors" target="_blank">all of us</a></p>
+    </footer><a href="#Home" class="top"><span class="hidden-visually">Top</span></a>
+  </body>
+  <script src="/assets/js/build.js" defer></script>
+  <script>
+    window.liveSettings = {
+      api_key: "96d622d552d34443afc50e1704d746c0",
+      picker: "bottom-right",
+      detectlang: true,
+      dynamic: true,
+      autocollect: true
+    };
+
+    hljs.configure({ useBR: true });
+
+    $(document).on('click', 'a[data-toggle="collapse"]', function (event) {
+      $(this).find("span").toggleClass("glyphicon-chevron-down");
+    });
+
+    $(document).on('click', 'a[name="anchor"]', function (event) {
+      event.preventDefault();
+
+      // replace url hash
+      const element = $($.attr(this, 'href'));
+
+      if (history.replaceState) {
+        history.replaceState(null, null, "#" + element.get(0).id);
+      }
+
+      let offset = element.offset().top;
+      const index = $.inArray(element.attr('id'), ["Home", "GettingStarted", "DeveloperGuide", "API"]);
+      let scrollableContext = $("html, body");
+
+      if (index <= -1) {
+        offset = 0;
+        scrollableContext = element.parents(".pre-scrollable-right");
+
+        // get index of current parent in scrollable context
+        const index = scrollableContext.find('[name="link"]').index(element.parents('[name="link"]'));
+        // calculate height of all previous siblings of current parent
+        for (let i = 0; i < index; i++) {
+          offset += scrollableContext.find('[name="link"]').get(i).offsetHeight + 20;
+        }
+
+        // get index of current node in current parents
+        const eIndex = element.parents('[name="link"]').find('[name="link-content"]').index(element);
+        if (eIndex >= 2) {
+          offset += element.offset().top - element.parents('[name="link"]').offset().top;
+        }
+
+      } else {
+        scrollableContext = $("html, body");
+      }
+
+      scrollableContext.animate({
+        scrollTop: offset
+      }, 500);
+
+    });
+  </script>
+
+</html>

@@ -1,0 +1,20 @@
+title: TestArmada
+description: Built with pride at @WalmartLabs
+menu:
+  - name: "Home"
+    link: "#Home"
+  - name: "Getting Started"
+    link: "#GettingStarted"
+  - name: "Developer Guide"
+    link: "#DeveloperGuide"
+  - name: "API Reference"
+    link: "#API"
+api_attributes:
+  browser: works for desktop and mobile browsers
+  iOS: works for iOS app
+  Adnroid: works for android app
+show_downloads: false
+google_analytics:
+theme:
+github:
+  repository_url: https://github.com/TestArmada

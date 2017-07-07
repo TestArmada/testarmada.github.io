@@ -1,0 +1,150 @@
+---
+layout: default
+---
+
+## Try it out
+
+Run the following in your favorite terminal to see `Magellan` in action:
+
+```bash
+git clone git@github.com:TestArmada/boilerplate-nightwatch.git
+npm install
+npm test
+```
+
+## Configure local test
+Having your test run locally is probably the easiest way to debug your test and app. Magellan has this feature covered. 
+
+### Run test with built in browsers
+The boilerplate has some browser pre-configured so that you can switch to them easily via `--local_browser`, for example
+
+```bash
+DPRO=local ./node_modules/.bin/magellan --local_browser firefox --test tests/demo-web.js --serial
+```
+
+Built in browser list can be found [here](https://github.com/TestArmada/boilerplate-nightwatch/blob/master/conf/nightwatch.json).
+
+### Run test with a new browser
+If you cannot find a browser in the built list, to add a new one, simply create an entry in your `nightwatch.json` under `"test_settings"`:
+
+```json
+{
+  "safari": {
+    "desiredCapabilities": {
+      "browserName": "safari"
+    }
+  }
+}
+```
+
+## Configure remote test
+Magellan also support running test remotely via executor. Following executors are supported. 
+
+| Name | Purpose |
+|:----------|:----------|
+| [magellan-local-executor](https://github.com/TestArmada/magellan-local-executor) | Magellan executor to drive test locally |
+| [magellan-saucelabs-executor](https://github.com/TestArmada/magellan-local-executor) | Magellan executor to drive test on [Saucelabs](https://saucelabs.com/) |
+| [magellan-browserstack-executor](https://github.com/TestArmada/magellan-browserstack-executor) | Magellan executor to drive test on [Browserstack](https://www.browserstack.com/) |
+| [magellan-testobject-executor](https://github.com/TestArmada/magellan-testobject-executor) | Magellan executor to drive test on [TestObject](https://testobject.com/) |
+| [magellan-seleniumgrid-executor](https://github.com/TestArmada/magellan-seleniumgrid-executor) | Magellan executor to drive test in selenium grid |
+
+You're welcome to build and submit your own executor to TestArmada. Please refer to [Developer Guide]() for instructions on how to build your own executor.
+
+### Enable executor
+Executor can be enabled in `magellan.json`. You have to at lease have one executor in `magellan.json`. To enable an executor, you need 
+ 1. Install executor via `npm install`
+ 2. Add it in `magellan.json` as
+
+ ```json
+ {
+    "executors": [
+      "testarmada-magellan-local-executor",
+      "testarmada-magellan-saucelabs-executor"
+    ]  
+  }
+ ```
+
+Full example of `magellan.json` can be found [here](https://gecgithub01.walmart.com/otto/boilerplate-nightwatch-mobile/blob/master/magellan.json).
+
+### Configure executor
+Several executors need specific configuration to be functional. Please refer to the readme in executor's repo for detail configuration.
+
+### Run test
+You can run all tests with only one executor by passing command line arguments required by that particular executor. For example, following argument means `Magellan` will run all tests on [Saucelabs](https://saucelabs.com/) with latest chrome browser in a Windows 10:
+
+```bash
+--sauce_browser chrome_latest_Windows_10_Desktop
+```
+
+You can also run all tests with multiple executors via command line arguments. Following example runs all tests on [Saucelabs](https://saucelabs.com/) and [Browserstack](https://www.browserstack.com):
+
+```bash
+--sauce_browser chrome_latest_Windows_10_Desktop --bs_browser opera_12_15_OS_X_Sierra
+```
+
+# [](#header-1)Developer Guide
+
+# [](#header-1)API Reference
+
+## [](#header-2).getEl()
+
+Returns an element from page.
+
+**Syntax**
+```js
+.getEl(selector, callback/*optional*/);
+```
+
+**Example**
+```js
+.getEl(".dropdown-link .user-name", function(element){
+  console.log(element);
+  // will print out {'ELEMENT': 1}
+});
+```
+
+## [](#header-2).getEls()
+
+## [](#header-2).clickEl()
+
+Clicks an element on page.
+
+**Syntax**
+```js
+.clickEl(selector, callback/*optional*/);
+```
+
+**Example**
+```js
+.clickEl("#submit");
+```
+
+## [](#header-2).clickAutomationEl()
+
+Clicks an element with html attribute [data-automation-id]. 
+
+**Syntax**
+```js
+.clickAutomationEl(selector, callback/*optional*/);
+```
+
+**Example**
+```js
+.clickAutomationEl("placeOrder");
+// equals to .clickEl('[data-automation-id="placeOrder"]');
+```
+
+
+## [](#header-2).getElValue()
+
+## [](#header-2).setElValue()
+
+## [](#header-2).setMaskedElValue()
+
+## [](#header-2).moveToEl()
+
+## [](#header-2).takeElScreenshot()
+
+## [](#header-2).takeScreenhot()
+
+## [](#header-2).waitForElNotPresent()

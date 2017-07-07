@@ -1,0 +1,10 @@
+- name: Magellan
+  description: The heart of TestArmada, Magellan is a massively parallel test runner. By distributing tests across available CPU cores, Magellan blazes through long test suites in a fraction of the time, aggregating results in one friendly report.
+- name: Nightwatch-Extra
+  description: Nightwatch is a friendly NodeJS-based wrapper for Selenium, allowing developers to author tests in a way that's easy to learn and quick to iterate on. The Nightwatch-Extra adapter is the first of many adapters to come for bringing other webdriver wrappers into the TestArmada ecosystem.
+- name: Admiral
+  description: Like a tree falling in the woods, a test report that nobody reads doesn't make a sound. Admiral is a beautiful dashboard that makes it easy to check the latest cross-browser test results, and to spot trends and sources of failures.
+- name: Executor
+  description: Executor acts as a middle layer between magellan and test framework to drive test run (via framework) based on a specific need (differentiated by executing environments).
+- name: Reporter
+  description: Magellan can give you various test reports if configured with a proper reporter. There are already several reporters available in Testarmada to grab, however the simple API Testarmada exposes also allows to create a customized reporter in an easy way. 

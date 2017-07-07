@@ -1,0 +1,321 @@
+- name: browser
+  apis:
+    - name: .getEl()
+      anchor: getEl
+      tags: 
+        - name: browser
+      description: Returns a html element
+      syntax: .getEl(selector, callback/*optional*/);
+      params: 
+        - name: selector
+          description: css selector to identify the html element.
+        - name: callback
+          description: callback which includes the element information.
+      example: > 
+        .getEl(".dropdown-link .user-name", function(element){<br>  console.log(element); // will print out {'ELEMENT': 1}<br>});
+
+    - name: .getEls()
+      anchor: getEls
+      tags: 
+        - name: browser
+      description: Returns html elements
+      syntax: .getEls(selector, callback/*optional*/);
+      params: 
+        - name: selector
+          description: css selector to identify the html elements.
+        - name: callback
+          description: callback which includes the elements information.
+      example: > 
+        .getEls(".dropdown-link .user-name", function(element){<br>  console.log(element); // will print out [{'ELEMENT': 1}, .....]<br>});
+
+    - name: .clickEl()
+      anchor: clickEl
+      tags: 
+        - name: browser
+      description: Click a html element
+      syntax: .clickEl(selector, callback/*optional*/);
+      params: 
+        - name: selector
+          description: css selector to the html element.
+        - name: callback
+          description: optional callback to be called when the command finishes.
+      example: .clickEl("#submit");
+
+    - name: .clickAutomationEl()
+      anchor: clickAutomationEl
+      tags: 
+        - name: browser
+      description: Click an html element which has html attribute [data-automation-id].
+      syntax: .clickAutomationEl(id, callback/*optional*/);
+      params: 
+        - name: id
+          description: value of data-automation-id attribute.
+        - name: callback
+          description: optional callback to be called when the command finishes.
+      example: >
+        .clickAutomationEl("placeOrder"); // equals to .clickEl('[data-automation-id="placeOrder"]');
+
+    - name: .getElValue()
+      anchor: getElValue
+      tags: 
+        - name: browser
+      description: Returns the textual value of a html element
+      syntax: .getElValue(selector, callback/*optional*/);
+      params: 
+        - name: selector
+          description: css selector to the html element.
+        - name: callback
+          description: callback which includes the value of the element.
+      example: .getEl(".user-profile", function(profile){ });
+
+    - name: .setElValue()
+      anchor: setElValue
+      tags: 
+        - name: browser
+      description: Sets value to a html element.
+      syntax: .setElValue(selector, value, callback/*optional*/);
+      params: 
+        - name: selector
+          description: css selector to the html element.
+        - name: value
+          description: value to be set to the html element.
+        - name: callback
+          description: optional callback to be called when the command finishes.
+      example: .setElValue("#username", "fake@login.com");
+
+    - name: .setMaskedElValue()
+      anchor: setMaskedElValue
+      tags: 
+        - name: browser
+      description: Sets value to a masked html element like credit card number or phone number.
+      syntax: .setMaskedElValue(selector, value, callback/*optional*/);
+      params: 
+        - name: selector
+          description: css selector to the html element.
+        - name: value
+          description: value to be set to the html element.
+        - name: callback
+          description: optional callback to be called when the command finishes.
+      example: .setElValue(".phone-number", "123456789");
+
+    - name: .moveToEl()
+      anchor: moveToEl
+      tags: 
+        - name: browser
+      description: Moves cursor to a html element
+      syntax: .moveToEl(selector, xoffset, yoffset, callback/*optional*/);
+      params: 
+        - name: selector
+          description: css selector to the html element.
+        - name: xoffset
+          description: x offset to move to, relative to the top-left corner of the element.
+        - name: yoffset
+          description: y offset to move to, relative to the top-left corner of the element.
+        - name: callback
+          description: optional callback to be called when the command finishes.
+      example: .moveToEl(".checkout", 10, 10);
+
+    - name: .takeElScreenshot()
+      anchor: takeElScreenshot
+      tags: 
+        - name: browser
+      description: Takes screenshot for a html element and save it to file
+      syntax: .takeElScreenshot(selector, filename, callback/*optional*/);
+      params: 
+        - name: selector
+          description: css selector to the html element.
+        - name: filename
+          description: file name where the screen shot will be saved to (.png will be appended as prefix).
+        - name: callback
+          description: optional callback to be called when the command finishes.
+      example: .takeElScreenshot(".phone-number", "phone-number");
+
+    - name: .takeScreenhot()
+      anchor: takeScreenhot
+      tags: 
+        - name: browser
+      description: Takes screenshot for the page.
+      syntax: .takeScreenhot(filename, callback/*optional*/);
+      params: 
+        - name: filename
+          description: file name where the screen shot will be saved to (.png will be appended as prefix).
+        - name: callback
+          description: optional callback to be called when the command finishes.
+      example: .takeScreenhot("home-page");
+
+    - name: .assert.elContainsText()
+      anchor: assert_elContainsText
+      tags: 
+        - name: browser
+      description: Asserts if current element contains a given text
+      syntax: .assert.elContainsText(selector, value);
+      params: 
+        - name: selector
+          description: css selector to the html element.
+        - name: value
+          description: textual value or regular expression to assert.
+      example: .assert.elContainsText(".username", "testarmada");
+
+    - name: .assert.elNotContainsText()
+      anchor: assert_elNotContainsText
+      tags: 
+        - name: browser
+      description: Asserts if current element doesn't contain a given text
+      syntax: .assert.elNotContainsText(selector, value);
+      params: 
+        - name: selector
+          description: css selector to the html element.
+        - name: value
+          description: textual value or regular expression to assert.
+      example: .assert.elNotContainsText(".username", "testarmada");
+
+- name: app
+  apis:
+    - name: .getMobileEl()
+      anchor: getMobileEl
+      tags: 
+        - name: iOS
+        - name: Android
+      description: Returns a mobile element
+      syntax: .getMobileEl(using, selector, callback/*optional*/);
+      params: 
+        - name: using
+          description: type (accessibility id, id or xpath) of the selector being used.
+        - name: selector
+          description: selector to identify the element.
+        - name: callback
+          description: callback which includes the element information.
+      example: > 
+        .getMobileEl("accessibility id", "mybutton", function(element){<br>  console.log(element); // will print out {'ELEMENT': 1}<br>});
+
+    - name: .clickMobileEl()
+      anchor: clickMobileEl
+      tags: 
+        - name: iOS
+        - name: Android
+      description: Clicks a mobile element
+      syntax: .clickMobileEl(using, selector, callback/*optional*/);
+      params: 
+        - name: using
+          description: type (accessibility id, id or xpath) of the selector being used.
+        - name: selector
+          description: selector to identify the element.
+        - name: callback
+          description: optional callback to be called when the command finishes.
+      example: .clickMobileEl("accessibility id", "checkout");
+
+    - name: .setMobileElValue()
+      anchor: setMobileElValue
+      tags: 
+        - name: iOS
+        - name: Android
+      description: Sets value to a mobile element.
+      syntax: .setMobileElValue(using, selector, value, callback/*optional*/);
+      params: 
+        - name: using
+          description: type (accessibility id, id or xpath) of the selector being used.
+        - name: selector
+          description: selector to identify the element.
+        - name: value
+          description: value to be set to the element.
+        - name: callback
+          description: optional callback to be called when the command finishes.
+      example: .setMobileElValue("accessibility id", "username", "testarmada");
+    
+    - name: .getMobileElValue()
+      anchor: getMobileElValue
+      tags: 
+        - name: iOS
+        - name: Android
+      description: Returns textual value from a mobile element.
+      syntax: .getMobileElValue(using, selector, callback/*optional*/);
+      params: 
+        - name: using
+          description: type (accessibility id, id or xpath) of the selector being used.
+        - name: selector
+          description: selector to identify the element.
+        - name: callback
+          description: callback which includes the element information.
+      example: >
+        .getMobileElValue("accessibility id", "username", function(value){<br> console.log(value);<br>});
+
+    - name: .swipeMobileElTo()
+      anchor: swipeMobileElTo
+      tags: 
+        - name: iOS
+        - name: Android
+      description: Swipes a mobile element to a coordinate measured by vector (x, y).
+      params: 
+        - name: using
+          description: type (accessibility id, id or xpath) of the selector being used.
+        - name: selector
+          description: selector to identify the element.
+        - name: x
+          description: distance on x axis from element to where to swipe to.
+        - name: y
+          description: distance on y axis from element to where to swipe to.
+        - name: callback
+          description: optional callback to be called when the command finishes.
+      syntax: .swipeMobileElTo(using, selector, x, y, callback/*optional*/);
+      example: .swipeMobileElTo("accessibility id", "price", 0, -100);
+
+    - name: .swipeScreenTo()
+      anchor: swipeScreenTo
+      tags: 
+        - name: iOS
+        - name: Android
+      description: Swipes screen from the given coordinate (fx,fy) to a coordinate measured by vector (tx, ty)
+      syntax: .swipeScreenTo(fx, fy, tx, ty, callback/*optional*/);
+      params: 
+        - name: fx
+          description: x coordinate of the element to swipe from.
+        - name: fy
+          description: y coordinate of the element to swipe from.
+        - name: tx
+          description: distance on x axis from element to where to swipe to.
+        - name: ty
+          description: distance on y axis from element to where to swipe to.
+        - name: callback
+          description: callback which includes the element information.
+      example: .swipeScreenTo(30, 400, 0, -100);
+
+    - name: .hideKeyboard()
+      anchor: hideKeyboard
+      tags: 
+        - name: Android
+      description: Dismisses the software keyboard.
+      syntax: .hideKeyboard(callback/*optional*/);
+      params: 
+        - name: callback
+          description: optional callback to be called when the command finishes.
+      example: .hideKeyboard();
+
+    - name: .pressKeycode()
+      anchor: pressKeycode
+      tags: 
+        - name: Android
+      description: Sends a keycode to android emulator.
+      syntax: .pressKeycode(keycode, callback/*optional*/);
+      params: 
+        - name: keycode
+          description: keycode to be sent.
+        - name: callback
+          description: optional callback to be called when the command finishes.
+      example: .pressKeycode(4);
+    
+    - name: .tapMobileEl()
+      anchor: tapMobileEl
+      tags: 
+        - name: iOS
+        - name: Android
+      description: Taps a coordinate (x, y) on device's screen.
+      syntax: .tapMobileEl(x, y, callback/*optional*/);
+      params: 
+        - name: x
+          description: x coordinate to tap
+        - name: y
+          description: y coordinate to tap
+        - name: callback
+          description: optional callback to be called when the command finishes.
+      example: .tapMobileEl(300, 120);
+      
