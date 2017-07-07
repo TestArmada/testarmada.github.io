@@ -61,12 +61,20 @@
     }
 
     p.description {
-      padding-bottom: 0px;
+      padding-bottom: 8px;
       max-width: 800px;
+      margin-bottom: 2px;
     }
 
     p.description em {
       font-weight: 600;
+    }
+
+    h4 {
+      font-size: 16px;
+      line-height: 26px;
+      color: #4890e2;
+      margin-bottom: 12px;
     }
 
     td {
@@ -193,6 +201,12 @@
             
             <li class>
               <p class="navbar-text">
+                <a href="#DeveloperGuide" class="nav-text" name="anchor">Developer Guide</a>
+              </p>
+            </li>
+            
+            <li class>
+              <p class="navbar-text">
                 <a href="#API" class="nav-text" name="anchor">API Reference</a>
               </p>
             </li>
@@ -311,11 +325,14 @@
       <h2 class="section-header">Getting Started</h2>
       <ul class="nav nav-pills nav-stacked pre-scrollable-left">
         
+        
         <li role="presentation">
           
           <a href="#tryItOut" name="anchor">Try it out!</a>
           
         </li>
+        
+        
         
         <li role="presentation">
           
@@ -335,6 +352,8 @@
           </div>
           
         </li>
+        
+        
         
         <li role="presentation">
           
@@ -359,6 +378,8 @@
           
         </li>
         
+        
+        
         <li role="presentation">
           
           <a href="#remotebrowsertest" data-toggle="collapse" data-target=""><span class="glyphicon glyphicon-chevron-right"></span> Remote browser test</a>
@@ -377,6 +398,8 @@
           </div>
           
         </li>
+        
+        
         
         <li role="presentation">
           
@@ -409,11 +432,15 @@
           
         </li>
         
+        
+        
         <li role="presentation">
           
           <a href="#testarmadaPlugins" name="anchor">Run with other test framework</a>
           
         </li>
+        
+        
         
         <li role="presentation">
           
@@ -433,6 +460,8 @@
           </div>
           
         </li>
+        
+        
         
         <li role="presentation">
           
@@ -460,10 +489,16 @@
           </div>
           
         </li>
+        
+        
+        
+        
+        
          
       </ul>
     </div>
     <div class="col-md-9 pre-scrollable-right full-section-right" data-spy="scroll" data-target="#navbar-gettingstarted">
+      
       
       <div name="link" class="scroll-link">
         <div id="tryItOut" name="link-content">
@@ -491,6 +526,8 @@
         <br>
       </div>
       
+      
+      
       <div name="link" class="scroll-link">
         <div id="prerequisites" name="link-content">
           <h2 name="link-content" id="prerequisites">Prerequisites</h2>
@@ -511,6 +548,8 @@
         </div>
         <br>
       </div>
+      
+      
       
       <div name="link" class="scroll-link">
         <div id="localbrowsertest" name="link-content">
@@ -571,6 +610,8 @@
         <br>
       </div>
       
+      
+      
       <div name="link" class="scroll-link">
         <div id="remotebrowsertest" name="link-content">
           <h2 name="link-content" id="remote-browser-test">Remote browser test</h2>
@@ -616,12 +657,12 @@
 
 <p class="description">At least one executor has to be enabled in <code class="highlighter-rouge">magellan.json</code>. Please follow these steps to enable executor:</p>
 
-<p class="description">1.Install necessary executor via <code class="highlighter-rouge">npm install</code></p>
+<p class="description"><em>1)</em>.Install necessary executor via <code class="highlighter-rouge">npm install</code></p>
 <pre>
     <code class="code-wrap bash">npm install testarmada-magellan-saucelabs-executor --save</code>
 </pre>
 
-<p class="description">2.Add following code in your <code class="highlighter-rouge">magellan.json</code></p>
+<p class="description"><em>2)</em>.Add following code in your <code class="highlighter-rouge">magellan.json</code></p>
 <pre>
     <code class="code-wrap json">{<br /> "executors": ["testarmada-magellan-saucelabs-executor"]<br />}</code>
 </pre>
@@ -654,6 +695,8 @@
         <br>
       </div>
       
+      
+      
       <div name="link" class="scroll-link">
         <div id="devicetest" name="link-content">
           <h2 name="link-content" id="device-test">Device Test</h2>
@@ -681,15 +724,15 @@
 
 <p class="description"><em>Testarmada</em> can manage appium’s life cycle automatically for you during your test run. To use this feature you need to</p>
 
-<p class="description">1.Disable selenium server and enable appium in your test entry of <code class="highlighter-rouge">nightwatch.json</code>, such as.</p>
+<p class="description"><em>1)</em>.Disable selenium server and enable appium in your test entry of <code class="highlighter-rouge">nightwatch.json</code>, such as.</p>
 
 <pre>
     <code class="code-wrap json">{<br /> "appiumiosapp": {<br />  "selenium": {<br />   "start_process": false<br />  },<br />  "appium": {<br />   "start_process": true<br />  }<br /> }<br />}</code>
 </pre>
 
-<p class="description">2.Create a <code class="highlighter-rouge">global.js</code> and put it somewhere in your repo. Example of <code class="highlighter-rouge">global.js</code> can be found <a href="https://github.com/TestArmada/boilerplate-nightwatch/blob/master/lib/globals.js">here</a>.</p>
+<p class="description"><em>2)</em>.Copy <a href="https://github.com/TestArmada/boilerplate-nightwatch/blob/master/lib/globals.js">global.js</a> and put it somewhere in your repo.</p>
 
-<p class="description">3.Put path of <code class="highlighter-rouge">global.js</code> in your <code class="highlighter-rouge">nightwatch.json</code>.</p>
+<p class="description"><em>3)</em>.Put path of <code class="highlighter-rouge">global.js</code> in your <code class="highlighter-rouge">nightwatch.json</code>.</p>
 
 <pre>
     <code class="code-wrap json">{<br /> "globals_path": {PATH_GLOBALJS}<br />}</code>
@@ -737,6 +780,8 @@
         <br>
       </div>
       
+      
+      
       <div name="link" class="scroll-link">
         <div id="testarmadaPlugins" name="link-content">
           <h2 id="testarmadaPlugins" name="link-content">Run with other test framework</h2>
@@ -783,6 +828,8 @@
         <br>
       </div>
       
+      
+      
       <div name="link" class="scroll-link">
         <div id="testarmadaReporters" name="link-content">
           <h2 name="link-content" id="report-your-test-result">Report your test result</h2>
@@ -826,12 +873,12 @@
 
 <p class="description">Reporter is enabled in <code class="highlighter-rouge">magellan.json</code>. Please follow these steps to enable reporter:</p>
 
-<p class="description">1.Install necessary reporter via <code class="highlighter-rouge">npm install</code></p>
+<p class="description"><em>1)</em>.Install necessary reporter via <code class="highlighter-rouge">npm install</code></p>
 <pre>
     <code class="code-wrap bash">npm install magellan-xunit-reporter --save</code>
 </pre>
 
-<p class="description">2.Add following code in your <code class="highlighter-rouge">magellan.json</code></p>
+<p class="description"><em>2)</em>.Add following code in your <code class="highlighter-rouge">magellan.json</code></p>
 <pre>
     <code class="code-wrap json">{<br /> "reporters": ["testarmada-magellan-xunit-reporter"]<br />}</code>
 </pre>
@@ -866,6 +913,8 @@
         <br>
       </div>
       
+      
+      
       <div name="link" class="scroll-link">
         <div id="utilities" name="link-content">
           <h2 name="link-content" id="utilities">Utilities</h2>
@@ -892,6 +941,512 @@
         </div>
         <br>
       </div>
+      
+      
+      
+      
+      
+      
+    </div>
+  </div>
+</section>
+
+<section class="column-contain full-viewport">
+  <a class="anchor" id="DeveloperGuide"></a>
+  <div class="row full-section">
+    <div id="navbar-developerguide" class="col-md-3 full-section-left">
+      <h2 class="section-header">Developer Guide</h2>
+      <ul class="nav nav-pills nav-stacked pre-scrollable-left">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li role="presentation">
+          
+          <a href="#usingMagellan" data-toggle="collapse" data-target=""><span class="glyphicon glyphicon-chevron-right"></span> Using Magellan</a>
+          <div class="nested-nav">
+            <ul id="usingMagellan" class="nav nav-pills nav-stacked collapse">
+            
+              <li role="presentation">
+                <a href="#scaleMagellanViaCommand" name="anchor">Via Command Line Arguments</a>
+              </li>
+            
+              <li role="presentation">
+                <a href="#scaleMagellanViaConfigFile" name="anchor">Via magellan.json</a>
+              </li>
+            
+              <li role="presentation">
+                <a href="#configureTestProfile" name="anchor">Configure test profile</a>
+              </li>
+            
+            </ul>
+          </div>
+          
+        </li>
+        
+        
+        
+        <li role="presentation">
+          
+          <a href="#usingNightwatchextra" data-toggle="collapse" data-target=""><span class="glyphicon glyphicon-chevron-right"></span> Using Nightwatch-extra</a>
+          <div class="nested-nav">
+            <ul id="usingNightwatchextra" class="nav nav-pills nav-stacked collapse">
+            
+              <li role="presentation">
+                <a href="#createNightwatchTest" name="anchor">Create test</a>
+              </li>
+            
+              <li role="presentation">
+                <a href="#extendBaseTest" name="anchor">Extend the base test</a>
+              </li>
+            
+              <li role="presentation">
+                <a href="#customizeTestCommand" name="anchor">Customize command</a>
+              </li>
+            
+              <li role="presentation">
+                <a href="#customizeTestAssertion" name="anchor">Customize assertion</a>
+              </li>
+            
+              <li role="presentation">
+                <a href="#pageObject" name="anchor">Page Object</a>
+              </li>
+            
+              <li role="presentation">
+                <a href="#accelerateTestExecution" name="anchor">Accelerate test execution</a>
+              </li>
+            
+            </ul>
+          </div>
+          
+        </li>
+        
+         
+      </ul>
+    </div>
+    <div class="col-md-9 pre-scrollable-right full-section-right" data-spy="scroll" data-target="#navbar-developerguide">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <div name="link" class="scroll-link">
+        <div id="usingMagellan" name="link-content">
+          <h2 name="link-content" id="using-magellan">Using Magellan</h2>
+<hr />
+
+<p class="description"><em><a href="https://github.com/TestArmada/magellan">Magellan</a></em> is designed for scalability, which means you’ve been granted the full control of scaling your test run with <em>magellan</em>. There are two ways to tell magellan how you want to scale</p>
+
+<h3 id="scaleMagellanViaCommand" name="link-content">Via Command Line Arguments</h3>
+
+<p class="description">All command line arguments of <em>magellan</em> and its components (executors, reporters and plugins) that are enabled can be listed out by running following command in your favorite bash</p>
+
+<pre>
+    <code class="code-wrap bash">./node_modules/.bin/magellan --help</code>
+</pre>
+
+<p class="description">Following is an example telling <em>magellan</em> to run tests with 30 workers, 5 retry attempts per failed test and bail whole suite if any failure is met.</p>
+
+<pre>
+    <code class="code-wrap bash">./node_modules/.bin/magellan --max_workers 30 --max_test_attempts 5 --bail_fast</code>
+</pre>
+
+<h3 id="scaleMagellanViaConfigFile" name="link-content">Via magellan.json</h3>
+
+<p class="description">All command line arguments of <em>magellan</em> can be placed into <code class="highlighter-rouge">magellan.json</code>. You can copy the key value pair straightly into it. For example</p>
+
+<pre>
+    <code class="code-wrap bash">./node_modules/.bin/magellan --max_workers 30</code>
+</pre>
+
+<p class="description">equals to the same content configured in <code class="highlighter-rouge">magellan.json</code></p>
+
+<pre>
+    <code class="code-wrap json">{<br /> "max_workers": 30<br />}</code>
+</pre>
+
+<p class="description"><em>Please Note</em>: If a configuration exists in both <code class="highlighter-rouge">magellan.json</code> and command line arguments, the one in <code class="highlighter-rouge">magellan.json</code> will take effect.</p>
+
+<p class="description"><em>Magellan</em> searches <code class="highlighter-rouge">magellan.json</code> in your repo root by default. If you put it in a different folder, make sure to tell <em>magellan</em> where it is by</p>
+
+<pre>
+    <code class="code-wrap bash">./node_modules/.bin/magellan --config ${PATH_TO_MAGELLAN.JSON}</code>
+</pre>
+
+<h3 id="configureTestProfile" name="link-content">Configure test profile</h3>
+
+<p class="description"><em>Magellan</em> passes down test profile information, like which browser or test environment your test runs in, to its executor(s). Usually this is done by setting up a specific argument in <em>magellan</em> command, such as</p>
+
+<pre>
+    <code class="code-wrap bash">./node_modules/.bin/magellan --local_browser chrome</code>
+</pre>
+
+<h4 id="via---profile-command-line-argument">Via <code class="highlighter-rouge">--profile</code> command line argument</h4>
+
+<p class="description"><em>Magellan</em> can retrieve test profile information from an URL. This gives you the convenience of managing your test environments and sharing your configuration management in a more standard way. Furthermore, by putting test profiles in to a file, you can add more information into your test profile, such as screen resolution, orientation or device information for you app test.</p>
+
+<p class="description">The hosted test profile file should follow the format of</p>
+
+<pre>
+  <code class="code-wrap json">{<br /> "profiles": {<br />  "microsoftedge": [{<br />   "browser": "microsoftedge_14_Windows_10_Desktop",<br />   "resolution": "1280x1024", <br />   "executor": "sauce"<br />  }]<br /> }<br />}</code>
+</pre>
+
+<p class="description"><em>Magellan</em> can read and resolve the hosted profile by following command.</p>
+
+<pre>
+    <code class="code-wrap shell">./node_modules/.bin/magellan --profile http://some.host#microsoftedge</code>
+</pre>
+
+<p class="description">You can add as many test profiles as your need in the hosted file. <em>Magellan</em> is able to read more test profiles via</p>
+
+<pre>
+    <code class="code-wrap shell">./node_modules/.bin/magellan --profile http://some.host#microsoftedge,googlechrome59,firefox57</code>
+</pre>
+
+<p class="description">Or, as a better way to handle multiple test profiles as a batch, you can put multiple test profiles into one collection, such as</p>
+
+<pre>
+  <code class="code-wrap json">{<br /> "profiles": {<br />  "tier-one-browsers": [{<br />   "browser": "microsoftedge_14_Windows_10_Desktop",<br />   "resolution": "1280x1024", <br />   "executor": "sauce"<br />  },<br />  {<br />   "browser": "chrome_latest_Windows_10_Desktop",<br />   "resolution": "1280x1024", <br />   "executor": "sauce"<br />  },<br />  {<br />   "browser": "iphone_10_0_iOS_iPhone_7_Simulator",<br />   "orientation": "portrait",<br />   "appium": {<br />    "app": "sauce-storage:my_app.zip",<br />    "appiumVersion": "1.6.4",<br />     "automationName": "xcuitest",<br />    "sendKeyStrategy": "setValue",<br />    "waitForAppScript": "true"<br />   }<br />  }]<br /> }<br />}</code>
+</pre>
+
+<p class="description">Then simply call <em>magellan</em> with</p>
+
+<pre>
+    <code class="code-wrap shell">./node_modules/.bin/magellan --profile http://some.host#tier-one-browsers</code>
+</pre>
+
+<h4 id="via-magellanjson-file">Via <code class="highlighter-rouge">magellan.json</code> file</h4>
+
+<p class="description"><code class="highlighter-rouge">Magellan.json</code> supports the same test profile format as the hosted test profile file.</p>
+
+<pre>
+  <code class="code-wrap json">/* magellan.json */<br />{<br /> "profiles": {<br />  "tier-one-browsers": [{<br />   "browser": "microsoftedge_14_Windows_10_Desktop",<br />   "resolution": "1280x1024", <br />   "executor": "sauce"<br />  },<br />  {<br />   "browser": "chrome_latest_Windows_10_Desktop",<br />   "resolution": "1280x1024", <br />   "executor": "sauce"<br />  }]<br /> }<br />}</code>
+</pre>
+
+<p>Then those profiles are ready to use via</p>
+
+<pre>
+    <code class="code-wrap shell">./node_modules/.bin/magellan --profile tier-one-browsers</code>
+</pre>
+
+        </div>
+        <br>
+      </div>
+      
+      
+      
+      <div name="link" class="scroll-link">
+        <div id="usingNightwatchextra" name="link-content">
+          <h2 name="link-content" id="using-nightwatch-extra">Using Nightwatch-extra</h2>
+<hr />
+
+<h3 id="createNightwatchTest" name="link-content">Create test</h3>
+
+<p class="description"><em>Nightwatch-extra</em> supports everything that nightwatchjs supports. Please refer to <a href="http://nightwatchjs.org/guide#using-nightwatch">nightwatchjs’ developer guide</a> for the basic usage of nightwatchjs.</p>
+
+<h3 id="extendBaseTest" name="link-content">Extend the base-test-class.js</h3>
+
+<p class="description"><em>Nightwatch-extra</em>’s <code class="highlighter-rouge">base-test-class.js</code> passes certain information, such as selenium session information and test result, back to <em>magellan</em>. We highly recommend all your tests extend from <code class="highlighter-rouge">base-test-class.js</code>.</p>
+
+<pre>
+    <code class="code-wrap javascript">/* simple-test.js */<br />const Test = require("testarmada-nightwatch-extra/lib/base-test-class");<br />module.exports = new Test({<br /> "Load goole page": function (client) {<br />  client.url("http://www.google.com");<br /> }<br />});</code>
+</pre>
+
+<p class="description">You can override <code class="highlighter-rouge">before()</code>, <code class="highlighter-rouge">beforeEach()</code>, <code class="highlighter-rouge">afterEach()</code> and <code class="highlighter-rouge">after()</code> method or add your own base test methods by extending the <code class="highlighter-rouge">base-test-class.js</code>. To create your own base test, simple inherit your test from <a href="https://github.com/TestArmada/nightwatch-extra/blob/master/src/base-test-class.js">base-test-class.js</a>.</p>
+
+<pre>
+    <code class="code-wrap javascript">const Base = require("testarmada-nightwatch-extra/lib/base-test-class");<br />const util = require("util");<br />const MyBaseTest = function (steps) { <br />  // call super-constructor<br />  Base.call(this, steps);<br />};<br />util.inherits(MyBaseTest, Base);<br />MyBaseTest.prototype = {<br />   // you can extend beforeEach, after, afterEach like before<br />   before: function (client, callback) {<br />    Base.prototype.before.call(this, client, callback);<br />  }<br />};<br />module.exports = MyBaseTest;</code>
+</pre>
+
+<p class="description">Then in your test, create new test from <code class="highlighter-rouge">MyBaseTest</code> instead of <code class="highlighter-rouge">base-test-class.js</code></p>
+
+<pre>
+    <code class="code-wrap javascript">/* simple-test.js v2*/<br />const Test = require("../lib/MyBaseTest");<br />module.exports = new Test({});</code>
+</pre>
+
+<h3 id="customizeTestCommand" name="link-content">Customize command</h3>
+
+<p class="description"><em>Nightwatch-extra</em> provides two sets of command API, one for browser test and one for app test. Please refer to <a href="#API">API Reference</a> to get more information. To use <em>nightwatch-extra</em>’s command API, you need to add its path to <code class="highlighter-rouge">nightwatch.json</code></p>
+
+<pre>
+    <code class="code-wrap json">{<br /> "custom_commands_path": [<br />  "./node_modules/testarmada-nightwatch-extra/lib/commands",<br />  "./node_modules/testarmada-nightwatch-extra/lib/commands/mobile"<br /> ]<br />}</code>
+</pre>
+
+<p class="description">A typical flow of how <em>nightwatch-extra</em>’s command works is</p>
+
+<p class="description"><em>1)</em>. Get all information, like selector, values, callback, from <code class="highlighter-rouge">command()</code> method’s arguments.</p>
+
+<p class="description"><em>2)</em>. Check element’s apparence. If element isn’t present or isn’t visible within given time, fail the command.</p>
+
+<p class="description"><em>3)</em>. Invoke customized code to get element information (via <code class="highlighter-rouge">injectedJsCommand()</code> for browser test command).</p>
+
+<p class="description"><em>4)</em>. Expose element handler to user to do extra things to the element via <code class="highlighter-rouge">do()</code>.</p>
+
+<p class="description">All commands of <em>nightwatch-extra</em> won’t proceed if either of the following conditions isn’t met.</p>
+
+<p class="description"><em>1)</em>.The element you want to operate is in the DOM (or it’s in the doc tree in app test).</p>
+
+<p class="description"><em>2)</em>.The element you want to operate is visible in the view port.</p>
+
+<h4 id="implement-a-browser-test-command">Implement a browser test command</h4>
+
+<p class="description">We provide a <a href="https://github.com/TestArmada/nightwatch-extra/blob/master/src/base-command.js">base-command.js</a> for inheritance to implement your own command for browser test. To implement a command for browser usage, you need to</p>
+
+<p class="description"><em>1)</em>.Inherit your command from the <code class="highlighter-rouge">base-command.js</code>.</p>
+
+<p class="description"><em>2)</em>.Implement method <code class="highlighter-rouge">injectedJsCommand()</code>, <code class="highlighter-rouge">do()</code> and <code class="highlighter-rouge">command()</code> as documented <a href="https://github.com/TestArmada/nightwatch-extra/blob/master/src/base-command.js#L233-L262">here</a>.</p>
+
+<table class="table table-condensed table-hover">
+  <thead>
+    <tr>
+      <th style="text-align: left">Method</th>
+      <th style="text-align: left">Purpose</th>
+      <th style="text-align: left">Arguments</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="highlighter-rouge">injectedJsCommand($el)</code></td>
+      <td style="text-align: left">The piece of javascript injected into the web page to get element information, such as element’s textual value</td>
+      <td style="text-align: left"><em>$el</em> is the javascript object representing the html element.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="highlighter-rouge">do(magellanSelector)</code></td>
+      <td style="text-align: left">Called by base test if element exists and is visible, you can do you own things in this method.</td>
+      <td style="text-align: left"><em>magellanSelector</em> is the selector you should use which is generated by <em>nightwatch-extra</em></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="highlighter-rouge">command(..., callback)</code></td>
+      <td style="text-align: left">The command signature which user will use in their test</td>
+      <td style="text-align: left">Parameter amount can be arbitary with an optional callback which will be called when the command successfully finishes.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p class="description"><em>3)</em>.Add the path to your new command to <code class="highlighter-rouge">nightwatch.json</code></p>
+
+<pre>
+    <code class="code-wrap json">{<br /> "custom_commands_path": [<br />  "./lib/custom_commands"<br /> ]<br />}</code>
+</pre>
+
+<p class="description">You can use all the <a href="https://github.com/TestArmada/nightwatch-extra/tree/master/src/commands">browser commands</a> provided by <em>nightwatch-extra</em> as example to build your own browser test command.</p>
+
+<h4 id="implement-an-app-test-command">Implement an app test command</h4>
+
+<p class="description">We provide a <a href="https://github.com/TestArmada/nightwatch-extra/blob/master/src/base-mobile-command.js">base-mobile-command.js</a> for inheritance to implement your own command for app test. To implement a command for app usage, you need to</p>
+
+<p class="description"><em>1)</em>.Inherit your command from the <code class="highlighter-rouge">base-mobile-command.js</code>.</p>
+
+<p class="description"><em>2)</em>.Implement method <code class="highlighter-rouge">do()</code> and <code class="highlighter-rouge">command()</code> as documented <a href="https://github.com/TestArmada/nightwatch-extra/blob/master/src/base-mobile-command.js#L102-L119">here</a>.</p>
+
+<table class="table table-condensed table-hover">
+  <thead>
+    <tr>
+      <th style="text-align: left">Method</th>
+      <th style="text-align: left">Purpose</th>
+      <th style="text-align: left">Arguments</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="highlighter-rouge">do(elementInfo)</code></td>
+      <td style="text-align: left">Called by base test if element exists and is visible, you can do you own things in this method.</td>
+      <td style="text-align: left"><em>elementInfo</em> is the element information returned by appium server</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="highlighter-rouge">command(..., callback)</code></td>
+      <td style="text-align: left">The command signature which user will use in their test</td>
+      <td style="text-align: left">Parameter amount can be arbitary with an optional callback which will be called when the command successfully finishes.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p class="description"><em>3)</em>.Add the path to your new command to <code class="highlighter-rouge">nightwatch.json</code></p>
+
+<p class="description">You can use all the <a href="https://github.com/TestArmada/nightwatch-extra/tree/master/src/commands/mobile">app commands</a> provided by <em>nightwatch-extra</em> as example to build your own app test command.</p>
+
+<h3 id="customizeTestAssertion" name="link-content">Customize assertion</h3>
+
+<p class="description"><em>Nightwatch-extra</em> provides two sets of assertion API, one for browser test and one for app test. Please refer to <a href="#API">API Reference</a> to get more information. To use <em>nightwatch-extra</em>’s assertion API, you need to add its path to <code class="highlighter-rouge">nightwatch.json</code></p>
+
+<pre>
+    <code class="code-wrap json">{<br /> "custom_assertions_path": [<br />  "./node_modules/testarmada-nightwatch-extra/lib/assertions",<br />  "./node_modules/testarmada-nightwatch-extra/lib/assertions/mobile"<br /> ]<br />}</code>
+</pre>
+
+<p class="description">A typical flow of how <em>nightwatch-extra</em>’s assertion works is</p>
+
+<p class="description"><em>1)</em>. Get all information, like selector, expectedValue, callback, from <code class="highlighter-rouge">command()</code> method’s arguments.</p>
+
+<p class="description"><em>2)</em>. Check element’s apparence. If element isn’t present or isn’t visible within given time, fail the command.</p>
+
+<p class="description"><em>3)</em>. Invoke customized code to get element information (via <code class="highlighter-rouge">injectedJsCommand()</code> for browser test command).</p>
+
+<p class="description"><em>4)</em>. Expose element handler to user to do extra things to the element and assert via <code class="highlighter-rouge">assert()</code>.</p>
+
+<p class="description">All assertions of <em>nightwatch-extra</em> won’t proceed if either of the following conditions isn’t met.</p>
+
+<p class="description"><em>1)</em>.The element you want to operate is in the DOM (or it’s in the doc tree in app test).</p>
+
+<p class="description"><em>2)</em>.The element you want to operate is visible in the view port.</p>
+
+<h4 id="implement-a-browser-test-assertion">Implement a browser test assertion</h4>
+
+<p class="description">We provide a <a href="https://github.com/TestArmada/nightwatch-extra/blob/master/src/base-assertion.js">base-assertion.js</a> for inheritance to implement your own assertion for browser test. To implement an assertion for browser test, you need to</p>
+
+<p class="description"><em>1)</em>.Inherit your assertion from the <code class="highlighter-rouge">base-assertion.js</code>.</p>
+
+<p class="description"><em>2)</em>.Implement method <code class="highlighter-rouge">injectedJsCommand()</code>, <code class="highlighter-rouge">assert()</code> and <code class="highlighter-rouge">command()</code> as documented <a href="https://github.com/TestArmada/nightwatch-extra/blob/master/src/base-assertion.js#L225-L254">here</a>.</p>
+
+<table class="table table-condensed table-hover">
+  <thead>
+    <tr>
+      <th style="text-align: left">Method</th>
+      <th style="text-align: left">Purpose</th>
+      <th style="text-align: left">Arguments</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="highlighter-rouge">injectedJsCommand($el)</code></td>
+      <td style="text-align: left">The piece of javascript injected into the web page to get element information, such as element’s textual value</td>
+      <td style="text-align: left"><em>$el</em> is the javascript object representing the html element.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="highlighter-rouge">assert(actual, expected)</code></td>
+      <td style="text-align: left">Called by base assertion if element exists and is visible, you can do you own assertion in this method.</td>
+      <td style="text-align: left"><em>actual</em> is the actual value returned by <code class="highlighter-rouge">injectedJsCommand()</code> method, <em>expected</em> is the expected value passed in <code class="highlighter-rouge">command()</code> method</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="highlighter-rouge">command(selector, expected, ..., callback)</code></td>
+      <td style="text-align: left">The command signature which user will use in their test</td>
+      <td style="text-align: left">Parameter amount can be arbitary with a selector, an expected value and an optional callback which will be called when the assertion successfully finishes.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p class="description"><em>3)</em>.Add the path to your new assertion to <code class="highlighter-rouge">nightwatch.json</code></p>
+
+<pre>
+    <code class="code-wrap json">{<br /> "custom_assertions_path": [<br />  "./lib/custom_assertions"<br /> ]<br />}</code>
+</pre>
+
+<p class="description">You can use all the <a href="https://github.com/TestArmada/nightwatch-extra/tree/master/src/assertions">browser assertions</a> provided by <em>nightwatch-extra</em> as example to build your own browser test assertion.</p>
+
+<h4 id="implement-an-app-test-assertion">Implement an app test assertion</h4>
+
+<p class="description">We provide a <a href="https://github.com/TestArmada/nightwatch-extra/blob/master/src/base-mobile-assertion.js">base-mobile-assertion.js</a> for inheritance to implement your own assertion for app test. To implement an assertion for app test, you need to</p>
+
+<p class="description"><em>1)</em>.Inherit your assertion from the <code class="highlighter-rouge">base-mobile-assertion.js</code>.</p>
+
+<p class="description"><em>2)</em>.Implement method <code class="highlighter-rouge">do()</code>, <code class="highlighter-rouge">assert()</code> and <code class="highlighter-rouge">command()</code> as documented <a href="https://github.com/TestArmada/nightwatch-extra/blob/master/src/base-mobile-assertion.js#L95-L119">here</a>.</p>
+
+<table class="table table-condensed table-hover">
+  <thead>
+    <tr>
+      <th style="text-align: left">Method</th>
+      <th style="text-align: left">Purpose</th>
+      <th style="text-align: left">Arguments</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="highlighter-rouge">do(elementInfo)</code></td>
+      <td style="text-align: left">Called by base assertion if element exists and is visible, you can do you own things in this method.</td>
+      <td style="text-align: left"><em>elementInfo</em> is the element information returned by appium server</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="highlighter-rouge">assert(actual, expected)</code></td>
+      <td style="text-align: left">Called by base assertion if element exists and is visible, you can do you own assertion in this method.</td>
+      <td style="text-align: left"><em>actual</em> is the actual value returned by <code class="highlighter-rouge">do()</code> method, <em>expected</em> is the expected value passed in <code class="highlighter-rouge">command()</code> method</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="highlighter-rouge">command(selector, expected, ..., callback)</code></td>
+      <td style="text-align: left">The command signature which user will use in their test</td>
+      <td style="text-align: left">Parameter amount can be arbitary with a selector, an expected value and an optional callback which will be called when the assertion successfully finishes.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p class="description"><em>3)</em>.Add the path to your new assertion to <code class="highlighter-rouge">nightwatch.json</code></p>
+
+<p class="description">You can use all the <a href="https://github.com/TestArmada/nightwatch-extra/tree/master/src/assertions/mobile">app assertions</a> provided by <em>nightwatch-extra</em> as example to build your own app test assertion.</p>
+
+<h3 id="pageObject" name="link-content">Page Object</h3>
+
+<p class="description"><em>Nightwatch-extra</em> is fully compatible with <em>nightwatchjs</em>’ <a href="http://nightwatchjs.org/guide#page-objects">page object</a> pattern. You can access <em>nightwatch-extra</em>’s API or your customized API in page object command via</p>
+
+<pre>
+    <code class="code-wrap javascript">{<br /> createNewCreditCard: function () {<br />  const selectors = this.elements;<br />  return this<br />   .clickEl(selectors.addCreditCardButton.selector)<br />   .setElValue(selectors.firstName.selector, "testarmada");<br /> }<br />}</code>
+</pre>
+
+<p class="description">All <em>nightwatchjs</em>’ APIs are accessible and chainable with <em>nightwatch-extra</em>’s API or your customized API via</p>
+
+<pre>
+    <code class="code-wrap javascript">{<br /> selectPayByCash: function () {<br />  this<br />   .clickMobileEl("accessibility id", selectors.morePaymentOptions.selector)<br />   .swipeMobileElTo("xpath", selectors.visaCheckout.selector, 0, -50)<br />   .api.pause(3000)<br />   .clickMobileEl("xpath", selectors.payWithCash.selector);<br />  return this;<br /> }<br />}</code>
+</pre>
+
+<h3 id="accelerateTestExecution" name="link-content">Accelerate test execution</h3>
+
+<p class="description"><em>Nightwatch-extra</em> relies on javascript injection to unify the element detection experience across browsers with <a href="https://sizzlejs.com/">sizzlejs</a>. Selenium’s <code class="highlighter-rouge">/execute</code> and <code class="highlighter-rouge">/execute_async</code> API are heavily in use in this case. We provide both synchronous and asynchronous javascript injection for <code class="highlighter-rouge">/execute</code> and <code class="highlighter-rouge">/execute_async</code>.</p>
+
+<p class="description">The synchronous version of javascript injection is for <code class="highlighter-rouge">/execute</code> API and it works for all browsers. However because of the nature of synchronization, the execution speed of using <code class="highlighter-rouge">/execute</code> is much slower than its asynchronous cousin. We recommend using <code class="highlighter-rouge">/execute_async</code> as much as you can unless</p>
+
+<p class="description"><em>1)</em>.You’re testing against some latest desktop browsers who don’t support <code class="highlighter-rouge">/execute_async</code> API, like Safari@10.</p>
+
+<p class="description"><em>2)</em>.You’re testing against some mobile browsers whose javascript engine is out of date.</p>
+
+<p class="description"><em>Nightwatch-extra</em> uses <code class="highlighter-rouge">/execute</code> by default. There are two ways to switch to <code class="highlighter-rouge">/execute_async</code></p>
+
+<p class="description"><em>1)</em>.Via command line argument <code class="highlighter-rouge">--sync_browsers</code></p>
+
+<p class="description">The following code tells <em>nightwatch-extra</em> to use <code class="highlighter-rouge">/execute</code> API for all versions of safari</p>
+<pre>
+    <code class="code-wrap bash">./node_modules/.bin/magellan --sync_browsers safari</code>
+</pre>
+
+<p class="description">The following code tells <em>nightwatch-extra</em> to use <code class="highlighter-rouge">/execute</code> API for safari@10 only</p>
+<pre>
+    <code class="code-wrap bash">./node_modules/.bin/magellan --sync_browsers safari:10</code>
+</pre>
+
+<p class="description"><em>2)</em>.Via <code class="highlighter-rouge">nightwatch.json</code></p>
+
+<p class="description">The following code tells <em>nightwatch-extra</em> to use <code class="highlighter-rouge">/execute</code> API for all safari@10 and all versions of chrome</p>
+<pre>
+    <code class="code-wrap json">{<br /> "test_settings": {<br />  "default": {<br />   "globals": {<br />    "syncModeBrowserList": [<br />     "safari:10",<br />     "chrome"<br />    ]<br />   }<br />  }<br /> }</code>
+</pre>
+
+        </div>
+        <br>
+      </div>
+      
       
     </div>
   </div>
