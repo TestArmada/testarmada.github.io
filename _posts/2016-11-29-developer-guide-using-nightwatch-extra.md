@@ -266,7 +266,7 @@ _1)_.You're testing against some latest desktop browsers who don't support `/exe
 _2)_.You're testing against some mobile browsers whose javascript engine is out of date.
 
 {:.description}
-_Nightwatch-extra_ uses `/execute` by default. There are two ways to switch to `/execute_async`
+_Nightwatch-extra_ uses `/execute_async` by default. There are two ways to switch to `/execute`
 
 {:.description}
 _1)_.Via command line argument `--sync_browsers`
