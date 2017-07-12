@@ -257,6 +257,15 @@ All _nightwatchjs_' APIs are accessible and chainable with _nightwatch-extra_'s 
 _Nightwatch-extra_ relies on javascript injection to unify the element detection experience across browsers with [sizzlejs](https://sizzlejs.com/). Selenium's `/execute` and `/execute_async` API are heavily in use in this case. We provide both synchronous and asynchronous javascript injection for `/execute` and `/execute_async`. 
 
 {:.description}
+> _Extensive Reading_:
+
+{:.description}
+> <[Accelerate Web Test Automation, Part 1](https://medium.com/walmartlabs/accelerate-web-test-automation-part-1-e574f31938d1)> on Medium.
+
+{:.description}
+> <[Accelerate Web Test Automation, Part 2](https://medium.com/walmartlabs/accelerate-web-test-automation-part-2-bd5833fa01b4)> on Medium.
+
+{:.description}
 The synchronous version of javascript injection is for `/execute` API and it works for all browsers. However because of the nature of synchronization, the execution speed of using `/execute` is much slower than its asynchronous cousin. We recommend using `/execute_async` as much as you can unless
 
 {:.description}

@@ -48,3 +48,9 @@ _[Renv](https://github.com/TestArmada/renv)_ mixes environment variables into th
 
 {:.description}
 _[Crows-nest](https://github.com/TestArmada/crows-nest)_ is a supervisor tool to launch and monitor multiple SauceLabs' [Sauce Connect tunnel](https://wiki.saucelabs.com/display/DOCS/Sauce+Connect+Proxy) in [high avaiability mode](https://wiki.saucelabs.com/display/DOCS/High+Availability+Sauce+Connect+Setup).
+
+{:.description}
+> _Extensive Reading_: 
+
+{:.description}
+> <[Crows Nest, The Sauce Connect Manager](https://medium.com/@leizhu/crows-nest-the-sauce-connect-manager-c8489554748b)> on Medium.
