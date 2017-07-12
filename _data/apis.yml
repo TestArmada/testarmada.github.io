@@ -169,6 +169,47 @@
           description: textual value or regular expression to assert.
       example: .assert.elNotContainsText(".username", "testarmada");
 
+    - name: .assert.selectorHasLength()
+      anchor: assert_selectorHasLength
+      tags: 
+        - name: browser
+      description: Asserts if current selector returns given amount of elements
+      syntax: .assert.selectorHasLength(selector, value);
+      params: 
+        - name: selector
+          description: css selector to the html element.
+        - name: value
+          description: numeric value to assert.
+      example: .assert.selectorHasLength(".username", 1);
+
+    - name: .assert.elValueContains()
+      anchor: assert_elValueContains
+      tags: 
+        - name: browser
+      description: Asserts if current element contains the given value
+      syntax: .assert.elValueContains(selector, value);
+      params: 
+        - name: selector
+          description: css selector to the html element.
+        - name: value
+          description: textual value to assert.
+      example: .assert.selectorHasLength(".username", 1);
+
+    - name: .assert.elLengthGreaterThan()
+      anchor: assert_elLengthGreaterThan
+      tags: 
+        - name: browser
+      description: Asserts if the length of an element's attribute is greater than a number
+      syntax: .assert.elLengthGreaterThan(selector, using, value);
+      params: 
+        - name: selector
+          description: css selector to the html element.
+        - name: using
+          description: element attribute, can be chosen from ["value", "text", "html", "length"].
+        - name: value
+          description: numeric value to assert.
+      example: .assert.elLengthGreaterThan(".username", "text", 1);
+
 - name: app
   apis:
     - name: .getMobileEl()
@@ -318,4 +359,21 @@
         - name: callback
           description: optional callback to be called when the command finishes.
       example: .tapMobileEl(300, 120);
-      
+    
+    - name: .assert.mobileElAttrContains()
+      anchor: assert_mobileElAttrContains
+      tags: 
+        - name: iOS
+        - name: Android
+      description: Asserts if the attribute of current element contains the given value
+      syntax: .assert.mobileElAttrContains(using, selector, attr, value);
+      params: 
+        - name: using
+          description: type (accessibility id, id or xpath) of the selector being used.
+        - name: selector
+          description: selector to identify the element.
+        - name: attr
+          description: attribute of the element.
+        - name: value
+          description: textual value or regular expression to assert.
+      example: .assert.mobileElAttrContains("accessibility id", "username", "name", "Testarmada");
