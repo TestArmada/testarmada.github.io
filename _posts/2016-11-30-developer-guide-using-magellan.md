@@ -17,7 +17,7 @@ category: Developer Guide
 ---
 
 {:.description}
-_[Magellan](https://github.com/TestArmada/magellan)_ is designed for scalability, which means you've been granted the full control of scaling your test run with _magellan_. There are two ways to tell magellan how you want to scale
+_[Magellan](https://github.com/TestArmada/magellan)_ is designed for running tests in massive scale, which means you've been granted the full control of the scalability. There are two ways to tell magellan how you want to scale your tests
 
 
 {:id="scaleMagellanViaCommand"}
@@ -54,11 +54,14 @@ All command line arguments of _magellan_ can be placed into `magellan.json`. You
 equals to the same content configured in `magellan.json`
 
 <pre>
-    <code class="code-wrap json">{<br> "max_workers": 30<br>}</code>
+    <code class="code-wrap js">{ // magellan.json<br> "max_workers": 30<br>}</code>
 </pre>
 
 {:.description}
-_Please Note_: If a configuration exists in both `magellan.json` and command line arguments, the one in `magellan.json` will take effect.
+> _Please note_: 
+
+{:.description}
+> If a configuration exists in both `magellan.json` and command line arguments, the one in `magellan.json` will take effect.
 
 {:.description}
 _Magellan_ searches `magellan.json` in your repo root by default. If you put it in a different folder, make sure to tell _magellan_ where it is by
@@ -84,10 +87,10 @@ _Magellan_ passes down test profile information, like which browser or test envi
 _Magellan_ can retrieve test profile information from an URL. This gives you the convenience of managing your test environments and sharing your configuration management in a more standard way. Furthermore, by putting test profiles in to a file, you can add more information into your test profile, such as screen resolution, orientation or device information for you app test.
 
 {:.description}
-The hosted test profile file should follow the format of
+The hosted test profile file needs to follow the format of
 
 <pre>
-  <code class="code-wrap json">{<br> "profiles": {<br>  "microsoftedge": [{<br>   "browser": "microsoftedge_14_Windows_10_Desktop",<br>   "resolution": "1280x1024", <br>   "executor": "sauce"<br>  }]<br> }<br>}</code>
+  <code class="code-wrap js">{ // magellan.json<br> "profiles": {<br>  "microsoftedge": [{<br>   "browser": "microsoftedge_14_Windows_10_Desktop",<br>   "resolution": "1280x1024", <br>   "executor": "sauce"<br>  }]<br> }<br>}</code>
 </pre>
 
 {:.description}
@@ -108,7 +111,7 @@ You can add as many test profiles as your need in the hosted file. _Magellan_ is
 Or, as a better way to handle multiple test profiles as a batch, you can put multiple test profiles into one collection, such as
 
 <pre>
-  <code class="code-wrap json">{<br> "profiles": {<br>  "tier-one-browsers": [{<br>   "browser": "microsoftedge_14_Windows_10_Desktop",<br>   "resolution": "1280x1024", <br>   "executor": "sauce"<br>  },<br>  {<br>   "browser": "chrome_latest_Windows_10_Desktop",<br>   "resolution": "1280x1024", <br>   "executor": "sauce"<br>  },<br>  {<br>   "browser": "iphone_10_0_iOS_iPhone_7_Simulator",<br>   "orientation": "portrait",<br>   "appium": {<br>    "app": "sauce-storage:my_app.zip",<br>    "appiumVersion": "1.6.4",<br>     "automationName": "xcuitest",<br>    "sendKeyStrategy": "setValue",<br>    "waitForAppScript": "true"<br>   }<br>  }]<br> }<br>}</code>
+  <code class="code-wrap js">{ // magellan.json<br> "profiles": {<br>  "tier-one-browsers": [{<br>   "browser": "microsoftedge_14_Windows_10_Desktop",<br>   "resolution": "1280x1024", <br>   "executor": "sauce"<br>  },<br>  {<br>   "browser": "chrome_latest_Windows_10_Desktop",<br>   "resolution": "1280x1024", <br>   "executor": "sauce"<br>  },<br>  {<br>   "browser": "iphone_10_0_iOS_iPhone_7_Simulator",<br>   "orientation": "portrait",<br>   "appium": {<br>    "app": "sauce-storage:my_app.zip",<br>    "appiumVersion": "1.6.4",<br>     "automationName": "xcuitest",<br>    "sendKeyStrategy": "setValue",<br>    "waitForAppScript": "true"<br>   }<br>  }]<br> }<br>}</code>
 </pre>
 
 {:.description}
@@ -124,7 +127,7 @@ Then simply call _magellan_ with
 `Magellan.json` supports the same test profile format as the hosted test profile file. 
 
 <pre>
-  <code class="code-wrap json">/* magellan.json */<br>{<br> "profiles": {<br>  "tier-one-browsers": [{<br>   "browser": "microsoftedge_14_Windows_10_Desktop",<br>   "resolution": "1280x1024", <br>   "executor": "sauce"<br>  },<br>  {<br>   "browser": "chrome_latest_Windows_10_Desktop",<br>   "resolution": "1280x1024", <br>   "executor": "sauce"<br>  }]<br> }<br>}</code>
+  <code class="code-wrap js">{ // magellan.json<br> "profiles": {<br>  "tier-one-browsers": [{<br>   "browser": "microsoftedge_14_Windows_10_Desktop",<br>   "resolution": "1280x1024", <br>   "executor": "sauce"<br>  },<br>  {<br>   "browser": "chrome_latest_Windows_10_Desktop",<br>   "resolution": "1280x1024", <br>   "executor": "sauce"<br>  }]<br> }<br>}</code>
 </pre>
 
 Then those profiles are ready to use via 

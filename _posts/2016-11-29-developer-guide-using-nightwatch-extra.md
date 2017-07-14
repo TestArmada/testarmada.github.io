@@ -34,10 +34,10 @@ _Nightwatch-extra_ supports everything that nightwatchjs supports. Please refer 
 ### Extend the base-test-class.js
 
 {:.description}
-_Nightwatch-extra_'s `base-test-class.js` passes certain information, such as selenium session information and test result, back to _magellan_. We highly recommend all your tests extend from `base-test-class.js`.
+_Nightwatch-extra_'s `base-test-class.js` passes certain information, such as selenium session information and test result, back to _magellan_. We highly recommend all your tests extend it.
 
 <pre>
-    <code class="code-wrap javascript">/* simple-test.js */<br>const Test = require("testarmada-nightwatch-extra/lib/base-test-class");<br>module.exports = new Test({<br> "Load goole page": function (client) {<br>  client.url("http://www.google.com");<br> }<br>});</code>
+    <code class="code-wrap javascript">// simple-test.js <br>const Test = require("testarmada-nightwatch-extra/lib/base-test-class");<br>module.exports = new Test({<br> "Load goole page": function (client) {<br>  client.url("http://www.google.com");<br> }<br>});</code>
 </pre>
 
 {:.description}
@@ -48,10 +48,10 @@ You can override `before()`, `beforeEach()`, `afterEach()` and `after()` method 
 </pre>
 
 {:.description}
-Then in your test, create new test from `MyBaseTest` instead of `base-test-class.js`
+Then create your new test from `MyBaseTest` instead of `base-test-class.js`
 
 <pre>
-    <code class="code-wrap javascript">/* simple-test.js v2*/<br>const Test = require("../lib/MyBaseTest");<br>module.exports = new Test({});</code>
+    <code class="code-wrap javascript">// simple-test.js v2<br>const Test = require("../lib/MyBaseTest");<br>module.exports = new Test({});</code>
 </pre>
 
 
@@ -63,44 +63,52 @@ Then in your test, create new test from `MyBaseTest` instead of `base-test-class
 _Nightwatch-extra_ provides two sets of command API, one for browser test and one for app test. Please refer to [API Reference](#API) to get more information. To use _nightwatch-extra_'s command API, you need to add its path to `nightwatch.json`
 
 <pre>
-    <code class="code-wrap json">{<br> "custom_commands_path": [<br>  "./node_modules/testarmada-nightwatch-extra/lib/commands",<br>  "./node_modules/testarmada-nightwatch-extra/lib/commands/mobile"<br> ]<br>}</code>
+    <code class="code-wrap js">{ // nightwatch.json<br> "custom_commands_path": [<br>  "./node_modules/testarmada-nightwatch-extra/lib/commands",<br>  "./node_modules/testarmada-nightwatch-extra/lib/commands/mobile"<br> ]<br>}</code>
 </pre>
 
 {:.description}
 A typical flow of how _nightwatch-extra_'s command works is 
 
+{:.list}
 {:.description}
-_1)_. Get all information, like selector, values, callback, from `command()` method's arguments.
+1). Get all information, like selector, values, callback, from `command()` method's arguments.
 
+{:.list}
 {:.description}
-_2)_. Check element's apparence. If element isn't present or isn't visible within given time, fail the command.
+2). Check element's apparence. If element isn't present or isn't visible within given time, fail the command.
 
+{:.list}
 {:.description}
-_3)_. Invoke customized code to get element information (via `injectedJsCommand()` for browser test command).
+3). Invoke customized code to get element information (via `injectedJsCommand()` for browser test command).
 
+{:.list}
 {:.description}
-_4)_. Expose element handler to user to do extra things to the element via `do()`. 
+4). Expose element handler to user to do extra things to the element via `do()`. 
 
 
 {:.description}
 All commands of _nightwatch-extra_ won't proceed if either of the following conditions isn't met.
 
+{:.list}
 {:.description}
-_1)_.The element you want to operate is in the DOM (or it's in the doc tree in app test).
+1). The element you want to operate is in the DOM (or it's in the doc tree in app test).
 
+{:.list}
 {:.description}
-_2)_.The element you want to operate is visible in the view port.
+2). The element you want to operate is visible in the view port.
 
 #### Implement a browser test command
 
 {:.description}
 We provide a [base-command.js](https://github.com/TestArmada/nightwatch-extra/blob/master/src/base-command.js) for inheritance to implement your own command for browser test. To implement a command for browser usage, you need to
 
+{:.list}
 {:.description}
-_1)_.Inherit your command from the `base-command.js`.
+1). Inherit your command from the `base-command.js`.
 
+{:.list}
 {:.description}
-_2)_.Implement method `injectedJsCommand()`, `do()` and `command()` as documented [here](https://github.com/TestArmada/nightwatch-extra/blob/master/src/base-command.js#L233-L262).
+2). Implement method `injectedJsCommand()`, `do()` and `command()` as documented [here](https://github.com/TestArmada/nightwatch-extra/blob/master/src/base-command.js#L233-L262).
 
 {:.table.table-condensed.table-hover}
 | Method | Purpose | Arguments |
@@ -109,26 +117,29 @@ _2)_.Implement method `injectedJsCommand()`, `do()` and `command()` as documente
 | `do(magellanSelector)` | Called by base test if element exists and is visible, you can do you own things in this method. | _magellanSelector_ is the selector you should use which is generated by _nightwatch-extra_ |
 | `command(..., callback)`  | The command signature which user will use in their test | Parameter amount can be arbitary with an optional callback which will be called when the command successfully finishes.|
 
+{:.list}
 {:.description}
-_3)_.Add the path to your new command to `nightwatch.json`
+3). Add the path of your new command to `nightwatch.json`
 
 <pre>
-    <code class="code-wrap json">{<br> "custom_commands_path": [<br>  "./lib/custom_commands"<br> ]<br>}</code>
+    <code class="code-wrap js">{ // nightwatch.json<br> "custom_commands_path": [<br>  "./lib/custom_commands"<br> ]<br>}</code>
 </pre>
 
 {:.description}
-You can use all the [browser commands](https://github.com/TestArmada/nightwatch-extra/tree/master/src/commands) provided by _nightwatch-extra_ as example to build your own browser test command.
+You can use all [browser commands](https://github.com/TestArmada/nightwatch-extra/tree/master/src/commands) provided by _nightwatch-extra_ as example to build your own browser test command.
 
 #### Implement an app test command
 
 {:.description}
 We provide a [base-mobile-command.js](https://github.com/TestArmada/nightwatch-extra/blob/master/src/base-mobile-command.js) for inheritance to implement your own command for app test. To implement a command for app usage, you need to
 
+{:.list}
 {:.description}
-_1)_.Inherit your command from the `base-mobile-command.js`.
+1). Inherit your command from `base-mobile-command.js`.
 
+{:.list}
 {:.description}
-_2)_.Implement method `do()` and `command()` as documented [here](https://github.com/TestArmada/nightwatch-extra/blob/master/src/base-mobile-command.js#L102-L119).
+2). Implement method `do()` and `command()` as documented [here](https://github.com/TestArmada/nightwatch-extra/blob/master/src/base-mobile-command.js#L102-L119).
 
 {:.table.table-condensed.table-hover}
 | Method | Purpose | Arguments |
@@ -136,8 +147,9 @@ _2)_.Implement method `do()` and `command()` as documented [here](https://github
 | `do(elementInfo)` | Called by base test if element exists and is visible, you can do you own things in this method. | _elementInfo_ is the element information returned by appium server |
 | `command(..., callback)`  | The command signature which user will use in their test | Parameter amount can be arbitary with an optional callback which will be called when the command successfully finishes.|
 
+{:.list}
 {:.description}
-_3)_.Add the path to your new command to `nightwatch.json`
+3). Add the path of your new command to `nightwatch.json`
 
 {:.description}
 You can use all the [app commands](https://github.com/TestArmada/nightwatch-extra/tree/master/src/commands/mobile) provided by _nightwatch-extra_ as example to build your own app test command.
@@ -150,44 +162,52 @@ You can use all the [app commands](https://github.com/TestArmada/nightwatch-extr
 _Nightwatch-extra_ provides two sets of assertion API, one for browser test and one for app test. Please refer to [API Reference](#API) to get more information. To use _nightwatch-extra_'s assertion API, you need to add its path to `nightwatch.json`
 
 <pre>
-    <code class="code-wrap json">{<br> "custom_assertions_path": [<br>  "./node_modules/testarmada-nightwatch-extra/lib/assertions",<br>  "./node_modules/testarmada-nightwatch-extra/lib/assertions/mobile"<br> ]<br>}</code>
+    <code class="code-wrap js">{ // nightwatch.json<br> "custom_assertions_path": [<br>  "./node_modules/testarmada-nightwatch-extra/lib/assertions",<br>  "./node_modules/testarmada-nightwatch-extra/lib/assertions/mobile"<br> ]<br>}</code>
 </pre>
 
 {:.description}
 A typical flow of how _nightwatch-extra_'s assertion works is 
 
+{:.list}
 {:.description}
-_1)_. Get all information, like selector, expectedValue, callback, from `command()` method's arguments.
+1). Get all information, like selector, expectedValue, callback, from `command()` method's arguments.
 
+{:.list}
 {:.description}
-_2)_. Check element's apparence. If element isn't present or isn't visible within given time, fail the command.
+2). Check element's apparence. If element isn't present or isn't visible within given time, fail the command.
 
+{:.list}
 {:.description}
-_3)_. Invoke customized code to get element information (via `injectedJsCommand()` for browser test command).
+3). Invoke customized code to get element information (via `injectedJsCommand()` for browser test command).
 
+{:.list}
 {:.description}
-_4)_. Expose element handler to user to do extra things to the element and assert via `assert()`. 
+4). Expose element handler to user to do extra things to the element and assert via `assert()`. 
 
 
 {:.description}
 All assertions of _nightwatch-extra_ won't proceed if either of the following conditions isn't met.
 
+{:.list}
 {:.description}
-_1)_.The element you want to operate is in the DOM (or it's in the doc tree in app test).
+1). The element you want to operate is in the DOM (or it's in the doc tree in app test).
 
+{:.list}
 {:.description}
-_2)_.The element you want to operate is visible in the view port.
+2). The element you want to operate is visible in the view port.
 
 #### Implement a browser test assertion
 
 {:.description}
 We provide a [base-assertion.js](https://github.com/TestArmada/nightwatch-extra/blob/master/src/base-assertion.js) for inheritance to implement your own assertion for browser test. To implement an assertion for browser test, you need to
 
+{:.list}
 {:.description}
-_1)_.Inherit your assertion from the `base-assertion.js`.
+1). Inherit your assertion from the `base-assertion.js`.
 
+{:.list}
 {:.description}
-_2)_.Implement method `injectedJsCommand()`, `assert()` and `command()` as documented [here](https://github.com/TestArmada/nightwatch-extra/blob/master/src/base-assertion.js#L225-L254).
+2). Implement method `injectedJsCommand()`, `assert()` and `command()` as documented [here](https://github.com/TestArmada/nightwatch-extra/blob/master/src/base-assertion.js#L225-L254).
 
 {:.table.table-condensed.table-hover}
 | Method | Purpose | Arguments |
@@ -196,11 +216,12 @@ _2)_.Implement method `injectedJsCommand()`, `assert()` and `command()` as docum
 | `assert(actual, expected)` | Called by base assertion if element exists and is visible, you can do you own assertion in this method. | _actual_ is the actual value returned by `injectedJsCommand()` method, _expected_ is the expected value passed in `command()` method |
 | `command(selector, expected, ..., callback)`  | The command signature which user will use in their test | Parameter amount can be arbitary with a selector, an expected value and an optional callback which will be called when the assertion successfully finishes.|
 
+{:.list}
 {:.description}
-_3)_.Add the path to your new assertion to `nightwatch.json`
+3). Add the path to your new assertion to `nightwatch.json`
 
 <pre>
-    <code class="code-wrap json">{<br> "custom_assertions_path": [<br>  "./lib/custom_assertions"<br> ]<br>}</code>
+    <code class="code-wrap js">{ // nightwatch.json<br> "custom_assertions_path": [<br>  "./lib/custom_assertions"<br> ]<br>}</code>
 </pre>
 
 {:.description}
@@ -211,11 +232,13 @@ You can use all the [browser assertions](https://github.com/TestArmada/nightwatc
 {:.description}
 We provide a [base-mobile-assertion.js](https://github.com/TestArmada/nightwatch-extra/blob/master/src/base-mobile-assertion.js) for inheritance to implement your own assertion for app test. To implement an assertion for app test, you need to
 
+{:.list}
 {:.description}
-_1)_.Inherit your assertion from the `base-mobile-assertion.js`.
+1). Inherit your assertion from the `base-mobile-assertion.js`.
 
+{:.list}
 {:.description}
-_2)_.Implement method `do()`, `assert()` and `command()` as documented [here](https://github.com/TestArmada/nightwatch-extra/blob/master/src/base-mobile-assertion.js#L95-L119).
+2). Implement method `do()`, `assert()` and `command()` as documented [here](https://github.com/TestArmada/nightwatch-extra/blob/master/src/base-mobile-assertion.js#L95-L119).
 
 
 {:.table.table-condensed.table-hover}
@@ -225,8 +248,9 @@ _2)_.Implement method `do()`, `assert()` and `command()` as documented [here](ht
 | `assert(actual, expected)` | Called by base assertion if element exists and is visible, you can do you own assertion in this method. | _actual_ is the actual value returned by `do()` method, _expected_ is the expected value passed in `command()` method |
 | `command(selector, expected, ..., callback)`  | The command signature which user will use in their test | Parameter amount can be arbitary with a selector, an expected value and an optional callback which will be called when the assertion successfully finishes.|
 
+{:.list}
 {:.description}
-_3)_.Add the path to your new assertion to `nightwatch.json`
+3). Add the path to your new assertion to `nightwatch.json`
 
 {:.description}
 You can use all the [app assertions](https://github.com/TestArmada/nightwatch-extra/tree/master/src/assertions/mobile) provided by _nightwatch-extra_ as example to build your own app test assertion.
@@ -257,7 +281,7 @@ All _nightwatchjs_' APIs are accessible and chainable with _nightwatch-extra_'s 
 _Nightwatch-extra_ relies on javascript injection to unify the element detection experience across browsers with [sizzlejs](https://sizzlejs.com/). Selenium's `/execute` and `/execute_async` API are heavily in use in this case. We provide both synchronous and asynchronous javascript injection for `/execute` and `/execute_async`. 
 
 {:.description}
-> _Extensive Reading_:
+> _Extensive reading_:
 
 {:.description}
 > <[Accelerate Web Test Automation, Part 1](https://medium.com/walmartlabs/accelerate-web-test-automation-part-1-e574f31938d1)> on Medium.
@@ -268,17 +292,20 @@ _Nightwatch-extra_ relies on javascript injection to unify the element detection
 {:.description}
 The synchronous version of javascript injection is for `/execute` API and it works for all browsers. However because of the nature of synchronization, the execution speed of using `/execute` is much slower than its asynchronous cousin. We recommend using `/execute_async` as much as you can unless
 
+{:.list}
 {:.description}
-_1)_.You're testing against some latest desktop browsers who don't support `/execute_async` API, like Safari@10.
+1). You're testing against some latest desktop browsers who don't support `/execute_async` API, like Safari@10.
 
+{:.list}
 {:.description}
-_2)_.You're testing against some mobile browsers whose javascript engine is out of date.
+2). You're testing against some mobile browsers whose javascript engine is out of date.
 
 {:.description}
 _Nightwatch-extra_ uses `/execute_async` by default. There are two ways to switch to `/execute`
 
+{:.list}
 {:.description}
-_1)_.Via command line argument `--sync_browsers`
+1). Via command line argument `--sync_browsers`
 
 {:.description}
 The following code tells _nightwatch-extra_ to use `/execute` API for all versions of safari
@@ -292,11 +319,12 @@ The following code tells _nightwatch-extra_ to use `/execute` API for safari@10 
     <code class="code-wrap bash">./node_modules/.bin/magellan --sync_browsers safari:10</code>
 </pre>
 
+{:.list}
 {:.description}
-_2)_.Via `nightwatch.json`
+2). Via `nightwatch.json`
 
 {:.description}
 The following code tells _nightwatch-extra_ to use `/execute` API for all safari@10 and all versions of chrome
 <pre>
-    <code class="code-wrap json">{<br> "test_settings": {<br>  "default": {<br>   "globals": {<br>    "syncModeBrowserList": [<br>     "safari:10",<br>     "chrome"<br>    ]<br>   }<br>  }<br> }</code>
+    <code class="code-wrap js">{ // nightwatch.json<br> "test_settings": {<br>  "default": {<br>   "globals": {<br>    "syncModeBrowserList": [<br>     "safari:10",<br>     "chrome"<br>    ]<br>   }<br>  }<br> }</code>
 </pre>

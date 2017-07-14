@@ -22,7 +22,10 @@ category: Developer Guide
 Executor is introduced in _Magellan X_ (_magellan_ version 10). Each executor maps to a specific test environment (or test vendor). With executor's help _magellan_ now can run test in multiple test environments at the same time. 
 
 {:.description}
-_Please Note_: Executor is only supported by _Magellan X_ and above.
+> _Please note_: 
+
+{:.description}
+> Executor is only supported by _Magellan X_ and above.
 
 {:id="whatDoesExecutorDo"}
 {:name="link-content"}
@@ -31,23 +34,28 @@ _Please Note_: Executor is only supported by _Magellan X_ and above.
 {:.description}
 A _magellan_ executor does following things at least
 
+{:.list}
 {:.description}
-_1)_. Forks the test and runs it as child process per _magellan_'s worker. 
+1). Forks the test and runs it as child process per _magellan_'s worker. 
 
+{:.list}
 {:.description}
-_2)_. Updates test result on the test vendor.
+2). Updates test result on the test vendor.
 
+{:.list}
 {:.description}
-_3)_. Simplifies the complex desiredCapabilities required by a test vendor (usually to a string).
+3). Simplifies the complex desiredCapabilities required by a test vendor (usually to a string).
 
+{:.list}
 {:.description}
-_4)_. Manages the life cycle of the test proxy required by test vendor if there is any.
+4). Manages the life cycle of the test proxy required by test vendor if there is any.
 
 {:.description}
 _Magellan_ executor can be easily extended to do extra things, for example
 
+{:.list}
 {:.description}
-_1)_. Talks to a traffic control system to throttle your tests for a specific test environment.
+1). Talks to a traffic control system to throttle your tests for a specific test environment.
 
 
 {:id="executorsLifeCycle"}
@@ -60,26 +68,33 @@ The executor instance is initialized when _magellan_ initializes, and destroyed 
 {:.description}
 Here is an overview on how the executor invocation flow is like when a test suite is running.
 
+{:.list}
 {:.description}
-_1)_. Executor configuration will be verified via `validateConfig()` and returned to _magellan_ via `getConfig()`.
+1). Executor configuration will be verified via `validateConfig()` and returned to _magellan_ via `getConfig()`.
 
+{:.list}
 {:.description}
-_2)_. Test profile will be returned to _magellan_ via `getProfiles()` and `getCapabilities()`.
+2). Test profile will be returned to _magellan_ via `getProfiles()` and `getCapabilities()`.
 
+{:.list}
 {:.description}
-_3)_. `setupRunner()` will be called when executor needs extra setup before _magellan_ runner runs.
+3). `setupRunner()` will be called when executor needs extra setup before _magellan_ runner runs.
 
+{:.list}
 {:.description}
-_4)_. `setupTest()` will be called when executor needs set someting up before a test runs.
+4). `setupTest()` will be called when executor needs set someting up before a test runs.
 
+{:.list}
 {:.description}
-_5)_. Test will be invoked by `execute()`.
+5). Test will be invoked by `execute()`.
 
+{:.list}
 {:.description}
-_6)_. `teardownTest()` and `summerizeTest()` will be called when test is done.
+6). `teardownTest()` and `summerizeTest()` will be called when test is done.
 
+{:.list}
 {:.description}
-_7)_. `teardownRunner()` will be called when _magellan_ runner is done.
+7). `teardownRunner()` will be called when _magellan_ runner is done.
 
 
 {:id="createAnExecutor"}
@@ -125,12 +140,14 @@ _[Magellan-local-executor](https://github.com/TestArmada/magellan-local-executor
 {:.description}
 You need to tell _magellan_ which executor it should use for a test profile. By default, if no executor is specified in profile, _magellan_ is going to run it with _[magellan-saucelabs-executor](https://github.com/TestArmada/magellan-saucelabs-executor)_ if it is configured in `magellan.json` or _magellan_ will error out. To enable your own executor, please follow these steps
 
+{:.list}
 {:.description}
-_1)_. Follow [Enable an executor](#enableAnExecutor).
+1). Follow [Enable an executor](#enableAnExecutor).
 
+{:.list}
 {:.description}
-_2)_. Add it in test profile in `magellan.json`.
+2). Add it in test profile in `magellan.json`.
 
 <pre>
-    <code class="code-wrap js">{<br> "profiles": {<br>  "browserstack": [{<br>   "browser": "xxxxxxxx",<br>   "executor":"myownexecutor" // fill executor's shortName here<br>  }]<br> }<br>}</code>
+    <code class="code-wrap js">{ // magellan.json<br> "profiles": {<br>  "browserstack": [{<br>   "browser": "xxxxxxxx",<br>   "executor":"myownexecutor" // fill executor's shortName here<br>  }]<br> }<br>}</code>
 </pre>

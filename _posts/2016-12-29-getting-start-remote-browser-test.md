@@ -35,23 +35,28 @@ You can also create your own executor. Please refer to [Developer Guide](#Develo
 {:.description}
 At least one executor has to be enabled in `magellan.json`. Please follow these steps to enable executor:
 
+{:.list}
 {:.description}
-_1)_.Install necessary executor via `npm install`
+1). Install necessary executor via `npm install`
 <pre>
     <code class="code-wrap bash">npm install testarmada-magellan-saucelabs-executor --save</code>
 </pre>
 
+{:.list}
 {:.description}
-_2)_.Add following code in your `magellan.json`
+2) .Add following code in your `magellan.json`
 <pre>
-    <code class="code-wrap json">{<br> "executors": ["testarmada-magellan-saucelabs-executor"]<br>}</code>
+    <code class="code-wrap js">{ // magellan.json<br> "executors": ["testarmada-magellan-saucelabs-executor"]<br>}</code>
 </pre>
 
 {:.description}
 Full example of `magellan.json` can be found [here](https://gecgithub01.walmart.com/otto/boilerplate-nightwatch-mobile/blob/master/magellan.json).
 
 {:.description}
-_Please note_: Some executors need specific configuration to be functional. Please refer to the README.md in executor's repo for detail configuration.
+> _Please note_: 
+
+{:.description}
+> Some executors need specific configuration to be functional. Please refer to the README.md in executor's repo for detail configuration.
 
 {:id="runTestWithExecutor"}
 {:name="link-content"}

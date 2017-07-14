@@ -27,28 +27,28 @@ Having your test run in local desktop browser is probably the easiest way to deb
 Even though we've helped you to include everything that you need in the `package.json` in boilerplate project, it's always good to have an idea on which dependency is needed for your desktop browser test. The following dependencies are required in your project's `package.json`.
 
 <pre>
-    <code class="code-wrap json">{<br> "selenium-server": "^3.1.0", <br> "nightwatch": "^0.9.11"<br>}</code>
+    <code class="code-wrap js">{ // package.json<br> "selenium-server": "^3.1.0", <br> "nightwatch": "^0.9.11"<br>}</code>
 </pre>
 
 {:.description}
 _[magellan-local-browser](https://github.com/TestArmada/magellan-local-executor)_ is also required for your local test.
 
 <pre>
-    <code class="code-wrap json">{<br> "testarmada-magellan-local-executor": "^2.0.0"<br>}</code>
+    <code class="code-wrap jjsson">{ // package.json<br> "testarmada-magellan-local-executor": "^2.0.0"<br>}</code>
 </pre>
 
 {:.description}
 Depending on which browser you want to test, you need to include specific browser driver in your `package.json`.
 
 <pre>
-    <code class="code-wrap json">{<br> "chromedriver": "^2.27.2", <br> "geckodriver": "^1.4.0"<br>}</code>
+    <code class="code-wrap js">{ // package.json<br> "chromedriver": "^2.27.2", <br> "geckodriver": "^1.4.0"<br>}</code>
 </pre>
 
 {:.description}
 Then, don't forget to add these drivers in your `nightwatch.json`.
 
 <pre>
-    <code class="code-wrap json">{<br> "selenium": {<br>  "cli_args": {<br>   "webdriver.chrome.driver": "./node_modules/chromedriver/lib/chromedriver/chromedriver",<br>   "webdriver.gecko.driver": "./node_modules/geckodriver/bin/geckodriver",
+    <code class="code-wrap js">{ // nightwatch.json<br> "selenium": {<br>  "cli_args": {<br>   "webdriver.chrome.driver": "./node_modules/chromedriver/lib/chromedriver/chromedriver",<br>   "webdriver.gecko.driver": "./node_modules/geckodriver/bin/geckodriver",
 <br>  }<br> }<br>}</code>
 </pre>
 
@@ -77,6 +77,6 @@ Built in browser list can be found [here](https://github.com/TestArmada/boilerpl
 If no desired browser can be found in the built in list, you can create a new entry under "test_settings" in `nightwatch.json` to add a new browser. For example the following code adds Safari to the list.
 
 <pre>
-    <code class="code-wrap json">{<br> "safari": {<br>  "desiredCapabilities": {<br>   "browserName": "safari"<br>  }<br> }<br>}
+    <code class="code-wrap js">{ // nightwatch.json<br> "safari": {<br>  "desiredCapabilities": {<br>   "browserName": "safari"<br>  }<br> }<br>}
     </code>
 </pre>

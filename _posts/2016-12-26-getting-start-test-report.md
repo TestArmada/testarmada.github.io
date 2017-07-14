@@ -33,16 +33,18 @@ By default magellan prints out all the test output in the console. But it can do
 {:.description}
 Reporter is enabled in `magellan.json`. Please follow these steps to enable reporter:
 
+{:.list}
 {:.description}
-_1)_.Install necessary reporter via `npm install`
+1). Install necessary reporter via `npm install`
 <pre>
     <code class="code-wrap bash">npm install magellan-xunit-reporter --save</code>
 </pre>
 
+{:.list}
 {:.description}
-_2)_.Add following code in your `magellan.json`
+2). Add following code in your `magellan.json`
 <pre>
-    <code class="code-wrap json">{<br> "reporters": ["testarmada-magellan-xunit-reporter"]<br>}</code>
+    <code class="code-wrap js">{ // magellan.json<br> "reporters": ["testarmada-magellan-xunit-reporter"]<br>}</code>
 </pre>
 
 {:.description}
@@ -52,14 +54,17 @@ Full example of `magellan.json` can be found [here](https://gecgithub01.walmart.
 You can also enable more than one reporters per test suite. Magellan will generate test report via each configured reporter. 
 
 <pre>
-    <code class="code-wrap json">{<br> "reporters": [<br>  "testarmada-magellan-xunit-reporter", <br>  "testarmada-magellan-admiral-plugin"<br> ]<br>}</code>
+    <code class="code-wrap js">{// magellan.json<br> "reporters": [<br>  "testarmada-magellan-xunit-reporter", <br>  "testarmada-magellan-admiral-plugin"<br> ]<br>}</code>
 </pre>
 
 {:.description}
 If any reporter errors out, all the other reporters correctly configured will still function.
 
 {:.description}
-_Please note_: Some reporters need specific configuration to be functional. Please refer to the README.md in reporter's repo for detail configuration.
+> _Please note_: 
+
+{:.description}
+> Some reporters need specific configuration to be functional. Please refer to the README.md in reporter's repo for detail configuration.
 
 {:id="graphicalReportSystem"}
 {:name="link-content"}
@@ -77,7 +82,10 @@ _[Admiral](https://github.com/TestArmada/admiral)_ is _Testarmada_'s in house gr
 For instructions on how to set admiral up please refer to admiral's [readme](https://github.com/TestArmada/admiral/blob/master/README.md).
 
 {:.description}
-_Please note_: to have your test report to adimral you need to enable [magellan-admiral-plugin](https://github.com/TestArmada/magellan-admiral-plugin). Please follow [enable a reporter](/#enableAnReporter) section.
+> _Please note_: 
+
+{:.description}
+> to have your test report to adimral you need to enable [magellan-admiral-plugin](https://github.com/TestArmada/magellan-admiral-plugin). Please follow [enable a reporter](/#enableAnReporter) section.
 
 {:.description}
 _We're actively working on testarmada's next gen graphical report system admiral2, please hold on tight._

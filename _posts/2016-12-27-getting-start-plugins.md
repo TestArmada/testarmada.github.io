@@ -23,7 +23,7 @@ Not have your test written by nightwatchjs? No problem, _Testarmada_ can work wi
 To notify _Testarmada_'s test runner _[magellan](https://github.com/TestArmada/magellan)_ which test framework it should talk to, a magellan plugin for that framework needs to be added in `magellan.json`.
 
 <pre>
-    <code class="code-wrap json">{<br> "framework": "testarmada-magellan-mocha-plugin"<br>}</code>
+    <code class="code-wrap js">{ // magellan.json<br> "framework": "testarmada-magellan-mocha-plugin"<br>}</code>
 </pre>
 
 {:.description}
@@ -34,5 +34,8 @@ You can also implement your own plugin. Please refer to [Developer Guide]() for 
 
 
 {:.description}
-_Please Note_: only one framework can be enabled per test run.
+> _Please note_: 
+
+{:.description}
+> only one framework can be enabled per test run.
 
