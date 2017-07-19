@@ -68,9 +68,7 @@ A reporter must implement following methods.
 {:.description}
 A typical reporter looks like
 
-<pre>
-    <code class="code-wrap javascript">/* testarmada-magellan-dev-reporter */<br>class Reporter {<br> constructor(opts) {},<br> initialize() {},<br> listenTo(testRun, test, source) {},<br> _handleMessage(testRun, test, msg) {}, <br> flush() {}<br>};<br>module.exports = Reporter;</code>
-</pre>
+<script src="https://gist.github.com/archlichking/30a33e2458b36f1593ca03bc2607c3b9.js"></script>
 
 {:.description}
 _[Magellan-xunit-reporter](https://github.com/TestArmada/magellan-xunit-reporter)_ can be refered as example. It generates a `.xml` file following xunit format when test run finishes. _[Magellan-admiral-plugin](https://github.com/TestArmada/magellan-admiral-plugin)_ is a complex _magellan_ reporter example which reports test result to our test reporting system _[admiral](https://github.com/TestArmada/admiral)_ via http.
@@ -86,12 +84,9 @@ _[Magellan-xunit-reporter](https://github.com/TestArmada/magellan-xunit-reporter
 ### Enable your reporter
 
 {:.description}
-Please follow [enable an executor](#enableAnReporter) for instructions. To enable multiple executors, simply add them in `magellan.json`
+Please follow [enable a reporter](#enableAnReporter) for instructions. To enable multiple reporters, simply add them in `magellan.json`
 
-<pre>
-    <code class="code-wrap js">{ // magellan.json<br> "reporters": [<br>  "testarmada-magellan-json-reporter",<br>  "testarmada-magellan-dev-reporter"<br> ]<br>}</code>
-</pre>
-
+<code data-gist-id="38099f892a51d1eb34bad4efc710b82b" data-gist-line="3-6"></code>
 
 {:.description}
 > _Please note_:

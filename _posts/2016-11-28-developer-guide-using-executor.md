@@ -148,6 +148,5 @@ You need to tell _magellan_ which executor it should use for a test profile. By 
 {:.description}
 2). Add it in test profile in `magellan.json`.
 
-<pre>
-    <code class="code-wrap js">{ // magellan.json<br> "profiles": {<br>  "browserstack": [{<br>   "browser": "xxxxxxxx",<br>   "executor":"myownexecutor" // fill executor's shortName here<br>  }]<br> }<br>}</code>
-</pre>
+<code data-gist-id="38099f892a51d1eb34bad4efc710b82b" data-gist-line="42-45"></code>
+

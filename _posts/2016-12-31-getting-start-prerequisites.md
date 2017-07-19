@@ -28,6 +28,4 @@ _Testarmada_ requires minimum _node@4_ and _npm@2_. To run device test locally, 
 {:.description}
 The following _Testarmada_ dependencies are required for every _Testarmada_ test repo.
 
-<pre>
-    <code class="code-wrap js">{ // package.json<br> "testarmada-magellan": "^10.0.7",<br> "testarmada-magellan-local-executor": "^2.0.0",<br> "testarmada-magellan-nightwatch-plugin": "^7.0.0",<br> "testarmada-nightwatch-extra": "^4.1.0"<br>}</code>
-</pre>
+<code data-gist-id="ffe008d062530ea8e444496a03f08c37" data-gist-line="1,20,31,33-34,36,38-39"></code>

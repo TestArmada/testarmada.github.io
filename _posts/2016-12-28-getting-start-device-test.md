@@ -32,9 +32,7 @@ _Testarmada_ supports mobile browser test as well as native app test via _[appiu
 {:.description}
 Appium is required for device test. You must include it in your project's `package.json`.
 
-<pre>
-    <code class="code-wrap js">{ // package.json<br> "appium": "^1.6.3"<br>}</code>
-</pre>
+<code data-gist-id="ffe008d062530ea8e444496a03f08c37" data-gist-line="1,20,21,38-39"></code>
 
 {:id="appiumDesiredcapabilities"}
 {:name="link-content"}
@@ -43,9 +41,7 @@ Appium is required for device test. You must include it in your project's `packa
 {:.description}
 For device test, appium requires a different set of desiredCapabilities from what is needed by desktop browser test, for example _deviceName_ or _avd_ for android are desiredCapabilities for device test only. _Testarmada_ allows to add these desiredCapabilities directly in your configurations. The following example shows how to add those appium specific desiredCapabilities in your configuration.
 
-<pre>
-    <code class="code-wrap js">{ // nightwatch.json<br> "appiumiosapp": {<br>  "desiredCapabilities": {<br>   "appiumVersion": "1.6.4",<br>   "automationName": "xcuitest",<br>   "platformName": "iOS",<br>   "platformVersion": "10.0",<br>   "deviceName": "iPhone 7 plus",<br>   "waitForAppScript": "true"<br> }<br>}</code>
-</pre>
+<code data-gist-id="557c10f8cf51e41c3f73293e98ee9044" data-gist-line="1,32,92,94,96-102,110,177-178"></code>
 
 {:id="manageAppiumLifecycle"}
 {:name="link-content"}
@@ -58,9 +54,7 @@ _Testarmada_ can manage appium's life cycle automatically for you during your te
 {:.description}
 1). Disable selenium server and enable appium in your test entry of `nightwatch.json`, such as.
 
-<pre>
-    <code class="code-wrap js">{ // nightwatch.json<br> "appiumiosapp": {<br>  "selenium": {<br>   "start_process": false<br>  },<br>  "appium": {<br>   "start_process": true<br>  }<br> }<br>}</code>
-</pre>
+<code data-gist-id="557c10f8cf51e41c3f73293e98ee9044" data-gist-line="1,32,92,103-110,177-178"></code>
 
 {:.list}
 {:.description}
@@ -70,24 +64,23 @@ _Testarmada_ can manage appium's life cycle automatically for you during your te
 {:.description}
 3). Put path of `global.js` in your `nightwatch.json`.
 
-<pre>
-    <code class="code-wrap js">{ // nightwatch.json<br> "globals_path": {PATH_GLOBALJS}<br>}</code>
-</pre>
-
+<code data-gist-id="557c10f8cf51e41c3f73293e98ee9044" data-gist-line="1,19,178"></code>
 
 {:.description}
 You can also choose to launch appium manually and plug your _Testarmada_'s test with it. To do so, appium port and host need to be specified as selenium_port and selenium_host in `nightwatch.json`.
 
-<pre>
-    <code class="code-wrap js">{ // nightwatch.json<br> "test_settings": {<br>  "default": {<br>   "selenium_port": {LOCAL_APPIUM_PORT},<br>   "selenium_host": {LOCAL_APPIUM_HOST}<br>  }<br> }<br>}</code>
-</pre>
+<code data-gist-id="557c10f8cf51e41c3f73293e98ee9044" data-gist-line="1,32-33,35-36,51,177-178"></code>
 
 {:.description}
-Then in your test entry in `nightwatch.json`, enable selenium and disable appium:
+Then in your test entry in `nightwatch.json`, diable both selenium and appium:
 
-<pre>
-    <code class="code-wrap js">{ // nightwatch.json<br> "appiumiosapp": {<br>  "selenium": {<br>   "start_process": true<br>  },<br>  "appium": {<br>   "start_process": false<br>  }<br> }<br>}</code>
-</pre>
+<code data-gist-id="557c10f8cf51e41c3f73293e98ee9044" data-gist-line="1,32,92,156-159,177-178"></code>
+
+{:.description}
+> _Pleaes note_:
+
+{:.description}
+> By default if not being explicitly specified, appium server will be disabled.
 
 {:id="testInLocalEnvironment"}
 {:name="link-content"}
@@ -99,23 +92,17 @@ _Testarmada_ can manage the life cycle of your local test environment (iOS simul
 {:.description}
 For Android emulator, the _platformName_, _platformVersion_ and _deviceName_ in your appium desireCapabilities should match what your local environment has. For example
 
-<pre>
-    <code class="code-wrap js">{ // nightwatch.json<br> "platformName": "Android",<br> "platformVersion": "7.0",<br> "deviceName": "Pixel_API_24"<br>}</code>
-</pre>
+<code data-gist-id="557c10f8cf51e41c3f73293e98ee9044" data-gist-line="1,32,111,113,115-119,127,177-178"></code>
 
 {:.description}
 For iOS simulator, the values of following keys should reflect what your local environment has.
 
-<pre>
-    <code class="code-wrap js">{ // nightwatch.json<br> "automationName": "xcuitest",<br> "platformName": "iOS",<br> "platformVersion": "10.2",<br> "deviceName": "iPhone 7"<br>}</code>
-</pre>
+<code data-gist-id="557c10f8cf51e41c3f73293e98ee9044" data-gist-line="1,32,92,94,98-100,102,110,177-178"></code>
 
 {:.description}
 If you want to run test against a native application, please add key app into your appium desiredCapabilities. This desiredCapabilities tells appium to install and use Walmart.apk in the ./app folder for test.
 
-<pre>
-    <code class="code-wrap js">{ // nightwatch.json<br> "app": "./app/Walmart.apk"<br>}</code>
-</pre>
+<code data-gist-id="557c10f8cf51e41c3f73293e98ee9044" data-gist-line="1,32,111,113-114,119,127,177-178"></code>
 
 {:id="testInRemoteEnvironment"}
 {:name="link-content"}

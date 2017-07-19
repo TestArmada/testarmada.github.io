@@ -36,23 +36,17 @@ _Nightwatch-extra_ supports everything that nightwatchjs supports. Please refer 
 {:.description}
 _Nightwatch-extra_'s `base-test-class.js` passes certain information, such as selenium session information and test result, back to _magellan_. We highly recommend all your tests extend it.
 
-<pre>
-    <code class="code-wrap javascript">// simple-test.js <br>const Test = require("testarmada-nightwatch-extra/lib/base-test-class");<br>module.exports = new Test({<br> "Load goole page": function (client) {<br>  client.url("http://www.google.com");<br> }<br>});</code>
-</pre>
+<script src="https://gist.github.com/archlichking/e03a9a91c98c13c42cc37601d32855e1.js"></script>
 
 {:.description}
 You can override `before()`, `beforeEach()`, `afterEach()` and `after()` method or add your own base test methods by extending the `base-test-class.js`. To create your own base test, simple inherit your test from [base-test-class.js](https://github.com/TestArmada/nightwatch-extra/blob/master/src/base-test-class.js).
 
-<pre>
-    <code class="code-wrap javascript">const Base = require("testarmada-nightwatch-extra/lib/base-test-class");<br>const util = require("util");<br>const MyBaseTest = function (steps) { <br>  // call super-constructor<br>  Base.call(this, steps);<br>};<br>util.inherits(MyBaseTest, Base);<br>MyBaseTest.prototype = {<br>   // you can extend beforeEach, after, afterEach like before<br>   before: function (client, callback) {<br>    Base.prototype.before.call(this, client, callback);<br>  }<br>};<br>module.exports = MyBaseTest;</code>
-</pre>
+<script src="https://gist.github.com/archlichking/5bb21dd62e2a540fa78e2bfb5db588db.js"></script>
 
 {:.description}
 Then create your new test from `MyBaseTest` instead of `base-test-class.js`
 
-<pre>
-    <code class="code-wrap javascript">// simple-test.js v2<br>const Test = require("../lib/MyBaseTest");<br>module.exports = new Test({});</code>
-</pre>
+<script src="https://gist.github.com/archlichking/66ea695c944b05218b25f6df56881f9a.js"></script>
 
 
 {:id="customizeTestCommand"}
@@ -62,9 +56,7 @@ Then create your new test from `MyBaseTest` instead of `base-test-class.js`
 {:.description}
 _Nightwatch-extra_ provides two sets of command API, one for browser test and one for app test. Please refer to [API Reference](#API) to get more information. To use _nightwatch-extra_'s command API, you need to add its path to `nightwatch.json`
 
-<pre>
-    <code class="code-wrap js">{ // nightwatch.json<br> "custom_commands_path": [<br>  "./node_modules/testarmada-nightwatch-extra/lib/commands",<br>  "./node_modules/testarmada-nightwatch-extra/lib/commands/mobile"<br> ]<br>}</code>
-</pre>
+<code data-gist-id="557c10f8cf51e41c3f73293e98ee9044" data-gist-line="6-8,10"></code>
 
 {:.description}
 A typical flow of how _nightwatch-extra_'s command works is 
@@ -121,9 +113,7 @@ We provide a [base-command.js](https://github.com/TestArmada/nightwatch-extra/bl
 {:.description}
 3). Add the path of your new command to `nightwatch.json`
 
-<pre>
-    <code class="code-wrap js">{ // nightwatch.json<br> "custom_commands_path": [<br>  "./lib/custom_commands"<br> ]<br>}</code>
-</pre>
+<code data-gist-id="557c10f8cf51e41c3f73293e98ee9044" data-gist-line="6-10"></code>
 
 {:.description}
 You can use all [browser commands](https://github.com/TestArmada/nightwatch-extra/tree/master/src/commands) provided by _nightwatch-extra_ as example to build your own browser test command.
@@ -161,9 +151,7 @@ You can use all the [app commands](https://github.com/TestArmada/nightwatch-extr
 {:.description}
 _Nightwatch-extra_ provides two sets of assertion API, one for browser test and one for app test. Please refer to [API Reference](#API) to get more information. To use _nightwatch-extra_'s assertion API, you need to add its path to `nightwatch.json`
 
-<pre>
-    <code class="code-wrap js">{ // nightwatch.json<br> "custom_assertions_path": [<br>  "./node_modules/testarmada-nightwatch-extra/lib/assertions",<br>  "./node_modules/testarmada-nightwatch-extra/lib/assertions/mobile"<br> ]<br>}</code>
-</pre>
+<code data-gist-id="557c10f8cf51e41c3f73293e98ee9044" data-gist-line="11-13,15"></code>
 
 {:.description}
 A typical flow of how _nightwatch-extra_'s assertion works is 
@@ -220,9 +208,7 @@ We provide a [base-assertion.js](https://github.com/TestArmada/nightwatch-extra/
 {:.description}
 3). Add the path to your new assertion to `nightwatch.json`
 
-<pre>
-    <code class="code-wrap js">{ // nightwatch.json<br> "custom_assertions_path": [<br>  "./lib/custom_assertions"<br> ]<br>}</code>
-</pre>
+<code data-gist-id="557c10f8cf51e41c3f73293e98ee9044" data-gist-line="11-15"></code>
 
 {:.description}
 You can use all the [browser assertions](https://github.com/TestArmada/nightwatch-extra/tree/master/src/assertions) provided by _nightwatch-extra_ as example to build your own browser test assertion.
@@ -262,16 +248,12 @@ You can use all the [app assertions](https://github.com/TestArmada/nightwatch-ex
 {:.description}
 _Nightwatch-extra_ is fully compatible with _nightwatchjs_' [page object](http://nightwatchjs.org/guide#page-objects) pattern. You can access _nightwatch-extra_'s API or your customized API in page object command via
 
-<pre>
-    <code class="code-wrap javascript">{<br> createNewCreditCard: function () {<br>  const selectors = this.elements;<br>  return this<br>   .clickEl(selectors.addCreditCardButton.selector)<br>   .setElValue(selectors.firstName.selector, "testarmada");<br> }<br>}</code>
-</pre>
+<code data-gist-id="c967083c8059ebe7a1a0ae457876c3f8" data-gist-line="2-7"></code>
 
 {:.description}
 All _nightwatchjs_' APIs are accessible and chainable with _nightwatch-extra_'s API or your customized API via  
 
-<pre>
-    <code class="code-wrap javascript">{<br> selectPayByCash: function () {<br>  this<br>   .clickMobileEl("accessibility id", selectors.morePaymentOptions.selector)<br>   .swipeMobileElTo("xpath", selectors.visaCheckout.selector, 0, -50)<br>   .api.pause(3000)<br>   .clickMobileEl("xpath", selectors.payWithCash.selector);<br>  return this;<br> }<br>}</code>
-</pre>
+<code data-gist-id="c967083c8059ebe7a1a0ae457876c3f8" data-gist-line="9-16"></code>
 
 {:id="accelerateTestExecution"}
 {:name="link-content"}
@@ -325,6 +307,5 @@ The following code tells _nightwatch-extra_ to use `/execute` API for safari@10 
 
 {:.description}
 The following code tells _nightwatch-extra_ to use `/execute` API for all safari@10 and all versions of chrome
-<pre>
-    <code class="code-wrap js">{ // nightwatch.json<br> "test_settings": {<br>  "default": {<br>   "globals": {<br>    "syncModeBrowserList": [<br>     "safari:10",<br>     "chrome"<br>    ]<br>   }<br>  }<br> }</code>
-</pre>
+
+<code data-gist-id="557c10f8cf51e41c3f73293e98ee9044" data-gist-line="46-49"></code>

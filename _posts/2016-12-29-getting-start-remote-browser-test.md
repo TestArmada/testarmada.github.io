@@ -45,9 +45,8 @@ At least one executor has to be enabled in `magellan.json`. Please follow these 
 {:.list}
 {:.description}
 2) .Add following code in your `magellan.json`
-<pre>
-    <code class="code-wrap js">{ // magellan.json<br> "executors": ["testarmada-magellan-saucelabs-executor"]<br>}</code>
-</pre>
+
+<code data-gist-id="38099f892a51d1eb34bad4efc710b82b" data-gist-line="1,7,9,11,49"></code>
 
 {:.description}
 Full example of `magellan.json` can be found [here](https://gecgithub01.walmart.com/otto/boilerplate-nightwatch-mobile/blob/master/magellan.json).

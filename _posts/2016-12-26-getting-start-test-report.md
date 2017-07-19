@@ -43,9 +43,8 @@ Reporter is enabled in `magellan.json`. Please follow these steps to enable repo
 {:.list}
 {:.description}
 2). Add following code in your `magellan.json`
-<pre>
-    <code class="code-wrap js">{ // magellan.json<br> "reporters": ["testarmada-magellan-xunit-reporter"]<br>}</code>
-</pre>
+
+<code data-gist-id="38099f892a51d1eb34bad4efc710b82b" data-gist-line="1,3,4,6,49"></code>
 
 {:.description}
 Full example of `magellan.json` can be found [here](https://gecgithub01.walmart.com/otto/boilerplate-nightwatch-mobile/blob/master/magellan.json).
@@ -53,9 +52,7 @@ Full example of `magellan.json` can be found [here](https://gecgithub01.walmart.
 {:.description}
 You can also enable more than one reporters per test suite. Magellan will generate test report via each configured reporter. 
 
-<pre>
-    <code class="code-wrap js">{// magellan.json<br> "reporters": [<br>  "testarmada-magellan-xunit-reporter", <br>  "testarmada-magellan-admiral-plugin"<br> ]<br>}</code>
-</pre>
+<code data-gist-id="38099f892a51d1eb34bad4efc710b82b" data-gist-line="1,3,4-6,49"></code>
 
 {:.description}
 If any reporter errors out, all the other reporters correctly configured will still function.
