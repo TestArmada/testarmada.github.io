@@ -20,7 +20,7 @@ Don't have a desired browser in your local? No problem, _Testarmada_ has you cov
 {:.table.table-condensed.table-hover}
 | Name | Latest Version | Purpose |
 |:----------|:--------|:----------|
-| [magellan-saucelabs-executor](https://github.com/TestArmada/magellan-local-executor) | ^3.0.0 | Magellan executor to drive test on [Saucelabs](https://saucelabs.com/) |
+| [magellan-saucelabs-executor](https://github.com/TestArmada/magellan-saucelabs-executor) | ^3.0.0 | Magellan executor to drive test on [Saucelabs](https://saucelabs.com/) |
 | [magellan-browserstack-executor](https://github.com/TestArmada/magellan-browserstack-executor) | ^1.0.0 | Magellan executor to drive test on [Browserstack](https://www.browserstack.com/) |
 | [magellan-testobject-executor](https://github.com/TestArmada/magellan-testobject-executor) | ^1.0.0 | Magellan executor to drive test on [TestObject](https://testobject.com/) |
 | [magellan-seleniumgrid-executor](https://github.com/TestArmada/magellan-seleniumgrid-executor) | ^1.0.0 | Magellan executor to drive test in selenium grid |
