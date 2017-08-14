@@ -228,6 +228,25 @@
           description: callback which includes the element information.
       example: > 
         .getMobileEl("accessibility id", "mybutton", function(element){<br>  console.log(element); // will print out {'ELEMENT': 1}<br>});
+    
+    - name: .getMobileElConditional()
+      anchor: getMobileElConditional
+      tags: 
+        - name: iOS
+        - name: Android
+      description: Returns a mobile element conditionally
+      syntax: .getMobileElConditional(using, selector, timeout, callback/*optional*/);
+      params: 
+        - name: using
+          description: type (accessibility id, id or xpath) of the selector being used.
+        - name: selector
+          description: selector to identify the element.
+        - name: timeout
+          description: timeout in milliseconds when the callback is called if no element is found.
+        - name: callback
+          description: callback which includes the result if element is found.
+      example: > 
+        .getMobileEl("accessibility id", "mybutton", 1000, function(result){<br>  console.log(result); // will print out true if element is found, otherwise print false<br>});
 
     - name: .clickMobileEl()
       anchor: clickMobileEl
