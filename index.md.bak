@@ -43,7 +43,7 @@ Magellan also support running test remotely via executor. Following executors ar
 | Name | Purpose |
 |:----------|:----------|
 | [magellan-local-executor](https://github.com/TestArmada/magellan-local-executor) | Magellan executor to drive test locally |
-| [magellan-saucelabs-executor](https://github.com/TestArmada/magellan-local-executor) | Magellan executor to drive test on [Saucelabs](https://saucelabs.com/) |
+| [magellan-saucelabs-executor](https://github.com/TestArmada/magellan-saucelabs-executor) | Magellan executor to drive test on [Saucelabs](https://saucelabs.com/) |
 | [magellan-browserstack-executor](https://github.com/TestArmada/magellan-browserstack-executor) | Magellan executor to drive test on [Browserstack](https://www.browserstack.com/) |
 | [magellan-testobject-executor](https://github.com/TestArmada/magellan-testobject-executor) | Magellan executor to drive test on [TestObject](https://testobject.com/) |
 | [magellan-seleniumgrid-executor](https://github.com/TestArmada/magellan-seleniumgrid-executor) | Magellan executor to drive test in selenium grid |
