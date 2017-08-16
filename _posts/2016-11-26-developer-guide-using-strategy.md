@@ -34,7 +34,7 @@ Bail strategy is the first strategy _magellan_ supports. _Magellan_ uses it to d
 | Current Strategy | Previous Rule | Purpose |
 |:----------|:--------|:----------|
 | bail_never | bail_never | Default bail strategy. Never early ternimate a magellan test or test suite, run every tests in the suite at least once. |
-| bail_fast | bail_fast | Ternimate a magellan test suite if any test in the suite fails. |
+| [magellan-fast-bail-strategy](https://github.com/TestArmada/magellan-fast-bail-strategy) | bail_fast | Ternimate a magellan test suite if any test in the suite fails. |
 | [magellan-early-bail-strategy](https://github.com/TestArmada/magellan-early-bail-strategy) | bail_early | Terminate a magellan test suite according to test attemps and failure rate. |
 
 {:.description}
