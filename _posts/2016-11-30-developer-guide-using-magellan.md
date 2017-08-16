@@ -38,6 +38,12 @@ Following is an example telling _magellan_ to run tests with 30 workers, 5 retry
     <code class="code-wrap bash">./node_modules/.bin/magellan --max_workers 30 --max_test_attempts 5 --bail_fast</code>
 </pre>
 
+{:.description}
+> _Please note_: 
+
+{:.description}
+> All -bail_xxxx arguments are going to be deprecated in the next release of _magellan@10.1.0_. Please refer to [Using Strategy](#whatDoesStrategyDo) section for more infomation.
+
 
 {:id="scaleMagellanViaConfigFile"}
 {:name="link-content"}
