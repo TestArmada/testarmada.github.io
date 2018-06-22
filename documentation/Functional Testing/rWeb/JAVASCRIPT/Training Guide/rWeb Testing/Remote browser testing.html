@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test Armada</title>
+	<link rel="stylesheet" type="text/css" href="/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="/css/common.css">
+	<link rel="stylesheet" type="text/css" href="/css/header.css">
+	<link rel="stylesheet" type="text/css" href="/css/home.css">
+	<link rel="stylesheet" type="text/css" href="/css/doc.css">
+	<link rel="stylesheet" type="text/css" href="/css/training.css">
+	<link rel="stylesheet" type="text/css" href="/css/faq.css">
+	<link rel="stylesheet" type="text/css" href="/css/contact.css">
+	<link rel="stylesheet" type="text/css" href="/css/search.css">
+	<link rel="stylesheet" type="text/css" href="/css/custom.css">
+	<link rel="stylesheet" type="text/css" href="/css/slick.css">
+	<link rel="stylesheet" type="text/css" href="/css/prism.css">
+	<link rel="stylesheet" type="text/css" href="/css/responsive.css">
+	
+	<link rel="shortcut icon" href="/documentation/images/favicon.ico">
+	
+</head>
+<body>
+	
+	<header>
+		<a href="/">
+			<img src="/documentation/images/ta-logo.png" class="logo" alt="Main Brand Logo"
+				 srcset="/documentation/images/ta-logo%402x.png 2x, /documentation/images/ta-logo%403x.png 3x">
+		</a>
+		<form action="/search" method="get">
+			<input type="text" id="search-box" name="query" placeholder="Search" class="search-box">
+			<div class="select-box">
+				<select name="fleet" id="fleet-box" onchange="document.getElementById('search-box').focus();">
+					<option value="all">All Fleets</option>
+					
+					<option value="Functional Testing">Functional Testing</option>
+					
+					<option value="Mocking">Mocking</option>
+					
+					<option value="Performance Testing">Performance Testing</option>
+					
+					<option value="Data Insights">Data Insights</option>
+					
+				</select>
+			</div>
+		</form>
+		<div class="nav-links">
+			<div class="nav-links__fleets">
+				<a class="nav-links__fleets-btn">
+					Fleets <img src="/images/arrow-down-icon.png" class="arrow-down-icon"
+								srcset="/images/arrow-down-icon%402x.png 2x,
+										/images/arrow-down-icon%403x.png 3x">
+				</a>
+				<div class="nav-links__fleets-content">
+					<a href="/">
+						All Fleets
+					</a>
+					
+					<a href="/Functional Testing/">
+						Functional Testing
+					</a>
+					
+					<a href="/Mocking/">
+						Mocking
+					</a>
+					
+					<a href="/Performance Testing/">
+						Performance Testing
+					</a>
+					
+					<a href="/Data Insights/">
+						Data Insights
+					</a>
+					
+				</div>
+			</div>
+			
+			
+			<a href="/documentation/About.html" class="nav-links__main-links">About Us</a>
+			
+			
+			<a href="/faq" class="nav-links__main-links">FAQ</a>
+			
+			
+			
+			<a href="https://github.com/TestArmada/" target="_blank" class="nav-links__main-links">GitHub</a>
+			
+		</div>
+	</header>
+
+	<div class="container">
+		  <div class="clear"></div>
+<div class="doc-container">
+  <div class="breadcrumb doc-breadcrumb">
+    <p>
+      <a class="breadcrumb__link" href="/">Home</a>
+      <img src="/images/arrow-right-icon.png"
+           srcset="/images/arrow-right-icon%402x.png 2x,
+                   /images/arrow-right-icon%403x.png 3x"
+           class="arrow-right-icon">
+      <a class="breadcrumb__link" href="/Functional Testing/">Functional Testing</a>
+      <img src="/images/arrow-right-icon.png"
+           srcset="/images/arrow-right-icon%402x.png 2x,
+                   /images/arrow-right-icon%403x.png 3x"
+           class="arrow-right-icon">
+      <a class="breadcrumb__link" href="/documentation/Functional Testing/rWeb/JAVASCRIPT/Introduction">rWeb JAVASCRIPT</a>
+      <img src="/images/arrow-right-icon.png"
+           srcset="/images/arrow-right-icon%402x.png 2x,
+                   /images/arrow-right-icon%403x.png 3x"
+           class="arrow-right-icon">
+      <a class="breadcrumb__link" href="/Functional Testing/rWeb/JAVASCRIPT/Training Guide">Training Guide</a>
+      <img src="/images/arrow-right-icon.png"
+           srcset="/images/arrow-right-icon%402x.png 2x,
+                   /images/arrow-right-icon%403x.png 3x"
+           class="arrow-right-icon">
+      <span class="breadcrumb__current-page">rWeb Testing</span>
+    </p>
+  </div>
+  <div class="clear"></div>
+  <div class="training-container">
+    <div class="sidebar">
+<div class="training-doc-link">
+<div class="training-doc-link-left">
+<img class="training-doc-link-left__img" src="/images/training/checked.png" srcset="/images/training/checked%402x.png 2x, /images/training/checked%403x.png 3x" /><hr class="training-doc-link-left__hr training-doc-link-left__hr-completed" /></div>
+<p class="training-doc-link__text">
+<a class="training-doc-link__text-completed" href="./Prerequisites">Prerequisites</a></p>
+</div>
+<div class="training-doc-link">
+<div class="training-doc-link-left">
+<img class="training-doc-link-left__img" src="/images/training/checked.png" srcset="/images/training/checked%402x.png 2x, /images/training/checked%403x.png 3x" /><hr class="training-doc-link-left__hr training-doc-link-left__hr-completed" /></div>
+<p class="training-doc-link__text">
+<a class="training-doc-link__text-completed" href="./Built-in browser testing">Built-in browser testing</a></p>
+</div>
+<div class="training-doc-link">
+<div class="training-doc-link-left">
+<img class="training-doc-link-left__img" src="/images/training/actived.png" srcset="/images/training/actived%402x.png 2x, /images/training/actived%403x.png 3x" /></div>
+<p class="training-doc-link__text">
+<a class="training-doc-link__text-current" href="./Remote browser testing">Remote browser testing</a></p>
+</div>
+</div>
+<div class="training-doc-nav-btn">
+<a href="./Built-in browser testing"><img src="/images/training/btn-left.png" srcset="/images/training/btn-left%402x.png 2x, /images/training/btn-left%403x.png 3x" /></a>
+</div>
+<div class="training-content markdown">
+<h3>Remote browser testing</h3>
+<p>Don’t have a desired browser in your local? No worry, you can use the following executors for remote test.</p>
+<ul>
+<li><a href="https://github.com/TestArmada/magellan-saucelabs-executor">magellan-saucelabs-executor</a>: Drive tests on <a href="https://saucelabs.com/">Saucelabs</a></li>
+<li><a href="https://github.com/TestArmada/magellan-testobject-executor">magellan-testobject-executor</a>: Drive tests on <a href="https://testobject.com/">TestObject</a></li>
+<li><a href="https://github.com/TestArmada/magellan-browserstack-executor">magellan-browserstack-executor</a>: Drive tests on <a href="https://www.browserstack.com/">Browserstack</a></li>
+<li><a href="https://github.com/TestArmada/magellan-seleniumgrid-executor">magellan-seleniumgrid-executor</a>:  Drive tests in selenium grid</li>
+</ul>
+<h3>Enable an executor</h3>
+<p>To do the remote browser test, you need to enable an executor:</p>
+<ul>
+<li>Install the wanted executor via <strong>npm install</strong> or add it into your <strong>package.json</strong> file.</li>
+<li>E.g. install from <strong>npm install</strong>:</li>
+</ul>
+<pre><code class="language-bash">npm install testarmada-magellan-saucelabs-executor --save
+</code></pre>
+<ul>
+<li>Add following code in your <code>magellan.json</code></li>
+</ul>
+<pre><code class="language-bash">{
+  &quot;executors&quot;: [
+    &quot;testarmada-magellan-saucelabs-executor&quot;
+  ],
+  &quot;strategy_bail&quot;: &quot;testarmada-magellan-early-bail-strategy&quot;
+}
+</code></pre>
+<ul>
+<li>Please note: Some executors need specific configuration to be functional. Please refer to the <em>README.md</em> in executor’s repo for detail configuration.</li>
+</ul>
+<h3>Run tests with multiple executors</h3>
+<p>Magellan allows to run tests with one or more executors at the same time. This is done by passing a specific command line argument to magellan.</p>
+<ul>
+<li>For local tests, after enable <em><a href="https://github.com/TestArmada/magellan-local-executor">magellan-local-executor</a></em></li>
+</ul>
+<pre><code class="language-bash"># to run test in Chrome
+--local_browser chrome
+# to run test in both Chrome and Firefox
+--local_browsers chrome, firefox
+</code></pre>
+<h4>Quiz</h4>
+<ul>
+<li>Can you enable both <em><a href="https://github.com/TestArmada/magellan-local-executor">magellan-local-executor</a></em> and <em><a href="https://github.com/TestArmada/magellan-saucelabs-executor">magellan-saucelabs-executor</a></em> for your test? and run test in local Chrome and Chrome 60 on Sauce Labs?</li>
+</ul>
+</div>
+<div class="training-doc-nav-btn">
+</div>
+
+  </div>
+  <div class="clear"></div>
+</div>
+<script type="text/javascript">
+  var elements = document.getElementsByTagName('pre');
+  for (var i = 0; i < elements.length; i++) {
+    elements[i].className += " line-numbers";
+    if (!elements[i].children[0].className) {
+      elements[i].children[0].className = "language-javascript";
+    }
+  }
+</script>
+<script type="text/javascript" src="/js/prism.js"></script>
+	</div>
+
+	<footer>
+		<img class="left-footer-logo" alt="Left Footer Logo"
+			 src="/documentation/images/dxt-logo.png"
+			 srcset="/documentation/images/dxt-logo%402x.png 2x,
+					 /documentation/images/dxt-logo%403x.png 3x">
+		
+		<span class="copyright">&copy; 2018 Walmart Inc.</span>
+		
+		<img class="right-footer-logo" alt="Right Footer Logo"
+			 src="/documentation/images/walmartlabs-logo.png"
+			 srcset="/documentation/images/walmartlabs-logo%402x.png 2x,
+			 		 /documentation/images/walmartlabs-logo%403x.png 3x">
+	</footer>
+
+</body>
+</html>

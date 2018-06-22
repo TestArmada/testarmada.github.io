@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300');
+
+.training-container {
+  display: flex;
+}
+
+/* Training placards */
+.training-placard {
+  float: left;
+  width: 295px;
+  margin: 5px 30px 25px 5px;
+  background-color: #fbfbfb;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.training-placard:nth-child(3n) {
+  margin-right: 0;
+}
+
+.training-placard__short {
+  border-bottom: 5px solid #0abc73;
+}
+
+.training-placard__medium {
+  border-bottom: 5px solid #ffc532;
+}
+
+.training-placard__long {
+  border-bottom: 5px solid #d13bcc;
+}
+
+.training-placard__unknown {
+  border-bottom: 5px solid #4778b3;
+}
+
+.training-time {
+  height: 26px;
+  margin: 0;
+  margin-top: 20px;
+}
+
+.training-time__value {
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 16px;
+  border-top-right-radius: 13px;
+  border-bottom-right-radius: 13px;
+}
+
+.training-time__value img {
+  border: none;
+  padding: 0;
+  vertical-align: sub;
+  margin-right: 2px;
+}
+
+.training-time__short {
+  background-color: #0abc73;
+}
+
+.training-time__medium {
+  background-color: #ffc532;
+}
+
+.training-time__long {
+  background-color: #d13bcc;
+}
+
+.training-time__unknown {
+  background-color: #4778b3;
+}
+
+.training-data {
+  padding: 20px;
+  padding-top: 0px;
+}
+
+.training-data__title {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 300;
+  color: #333333;
+  font-size: 32px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+hr.training-data__hr {
+  height: 1px;
+  border: none;
+  background-color: #cccccc;
+  margin: 0;
+}
+
+.training-data__topics {
+  height: 180px;
+  margin-top: 15px;
+}
+
+p.training-data__topics-title {
+  font-size: 12px;
+  font-weight: 500;
+  color: #555555;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.training-data__topics-row {
+  max-height: 40px;
+  margin-bottom: 10px;
+}
+
+.training-data__topics-img {
+  max-height: 40px;
+  width: 10px;
+  margin-right: 10px;
+  float: left;
+}
+
+.training-data__topics-img img {
+  width: 10px;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+p.training-data__topics-text {
+  max-height: 40px;
+  line-height: 20px;
+  font-size: 14px;
+  color: #5e5e5e;
+  margin: 0;
+  overflow: hidden;
+}
+
+.training-start-btn-wrapper {
+  width: 100%;
+  text-align: right;
+}
+
+.training-start-btn {
+  background-color: #3693ff;
+  border: none;
+  border-radius: 4px;
+  line-height: 14px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.training-start-btn span {
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-right: 5px;
+}
+
+.training-start-btn img {
+  height: 14px;
+  border: none;
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+}
+
+
+/* Training docs */
+
+/* Sidebar */
+.training-doc-link {
+  width: 100%;
+  height: 80px;
+}
+
+.training-doc-link-left {
+  width: 30px;
+  height: 80px;
+  float: left;
+  margin-right: 20px;
+}
+
+.training-doc-link-left__img {
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.training-doc-link-left__hr {
+  width: 3px;
+  height: 60px;
+  border: none;
+  margin: 0;
+  padding: 0;
+  margin-left: 14px;
+  margin-top: -10px;
+}
+
+.training-doc-link-left__hr-completed {
+  background-color: #444444;
+}
+
+.training-doc-link-left__hr-pending {
+  background-color: #eeeeee;
+}
+
+.training-doc-link__text {
+  font-size: 18px;
+  margin: 0;
+  padding-top: 3px;
+  max-height: 70px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.training-doc-link__text-completed {
+  color: #555555;
+}
+
+.training-doc-link__text-current {
+  color: #e2a910;
+}
+
+.training-doc-link__text-pending {
+  color: #555555;
+  opacity: 0.5;
+}
+
+/* Buttons */
+.training-doc-nav-btn {
+  width: 50px;
+  height: inherit;
+  position: relative;
+  float: left;
+}
+
+.training-doc-nav-btn img {
+  position: absolute;
+  bottom: 40px;
+}
+
+/* Content */
+.training-content {
+  width: 850px;
+  position: relative;
+  float: left;
+  margin: 0 40px;
+  padding: 20px;
+  padding-top: 0px;
+  box-sizing: border-box;
+  background-color: #f8f8f8;
+}
+
+.training-content pre {
+  border: 1px solid #dddddd;
+}
+
+.training-content blockquote {
+  background-color: rgba(10, 188, 115, 0.2);
+  border-left-color: #0abc73;
+  color: #333333;
+  margin: 20px auto;
+}
+
+.training-content h1,
+.training-content h2,
+.training-content h3,
+.training-content h4,
+.training-content h5,
+.training-content h6 {
+  font-weight: normal;
+}

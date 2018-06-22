@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test Armada</title>
+	<link rel="stylesheet" type="text/css" href="/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="/css/common.css">
+	<link rel="stylesheet" type="text/css" href="/css/header.css">
+	<link rel="stylesheet" type="text/css" href="/css/home.css">
+	<link rel="stylesheet" type="text/css" href="/css/doc.css">
+	<link rel="stylesheet" type="text/css" href="/css/training.css">
+	<link rel="stylesheet" type="text/css" href="/css/faq.css">
+	<link rel="stylesheet" type="text/css" href="/css/contact.css">
+	<link rel="stylesheet" type="text/css" href="/css/search.css">
+	<link rel="stylesheet" type="text/css" href="/css/custom.css">
+	<link rel="stylesheet" type="text/css" href="/css/slick.css">
+	<link rel="stylesheet" type="text/css" href="/css/prism.css">
+	<link rel="stylesheet" type="text/css" href="/css/responsive.css">
+	
+	<link rel="shortcut icon" href="/documentation/images/favicon.ico">
+	
+</head>
+<body>
+	
+	<header>
+		<a href="/">
+			<img src="/documentation/images/ta-logo.png" class="logo" alt="Main Brand Logo"
+				 srcset="/documentation/images/ta-logo%402x.png 2x, /documentation/images/ta-logo%403x.png 3x">
+		</a>
+		<form action="/search" method="get">
+			<input type="text" id="search-box" name="query" placeholder="Search" class="search-box">
+			<div class="select-box">
+				<select name="fleet" id="fleet-box" onchange="document.getElementById('search-box').focus();">
+					<option value="all">All Fleets</option>
+					
+					<option value="Functional Testing">Functional Testing</option>
+					
+					<option value="Mocking">Mocking</option>
+					
+					<option value="Performance Testing">Performance Testing</option>
+					
+					<option value="Data Insights">Data Insights</option>
+					
+				</select>
+			</div>
+		</form>
+		<div class="nav-links">
+			<div class="nav-links__fleets">
+				<a class="nav-links__fleets-btn">
+					Fleets <img src="/images/arrow-down-icon.png" class="arrow-down-icon"
+								srcset="/images/arrow-down-icon%402x.png 2x,
+										/images/arrow-down-icon%403x.png 3x">
+				</a>
+				<div class="nav-links__fleets-content">
+					<a href="/">
+						All Fleets
+					</a>
+					
+					<a href="/Functional Testing/">
+						Functional Testing
+					</a>
+					
+					<a href="/Mocking/">
+						Mocking
+					</a>
+					
+					<a href="/Performance Testing/">
+						Performance Testing
+					</a>
+					
+					<a href="/Data Insights/">
+						Data Insights
+					</a>
+					
+				</div>
+			</div>
+			
+			
+			<a href="/documentation/About.html" class="nav-links__main-links">About Us</a>
+			
+			
+			<a href="/faq" class="nav-links__main-links">FAQ</a>
+			
+			
+			
+			<a href="https://github.com/TestArmada/" target="_blank" class="nav-links__main-links">GitHub</a>
+			
+		</div>
+	</header>
+
+	<div class="container">
+		  <div class="clear"></div>
+<div class="doc-container">
+  <div class="breadcrumb doc-breadcrumb">
+    <p>
+      <a class="breadcrumb__link" href="/">Home</a>
+      <img src="/images/arrow-right-icon.png"
+           srcset="/images/arrow-right-icon%402x.png 2x,
+                   /images/arrow-right-icon%403x.png 3x"
+           class="arrow-right-icon">
+      <a class="breadcrumb__link" href="/Functional Testing/">Functional Testing</a>
+      <img src="/images/arrow-right-icon.png"
+           srcset="/images/arrow-right-icon%402x.png 2x,
+                   /images/arrow-right-icon%403x.png 3x"
+           class="arrow-right-icon">
+      <a class="breadcrumb__link" href="/documentation/Functional Testing/Native Android/JAVASCRIPT/Introduction">Native Android JAVASCRIPT</a>
+      <img src="/images/arrow-right-icon.png"
+           srcset="/images/arrow-right-icon%402x.png 2x,
+                   /images/arrow-right-icon%403x.png 3x"
+           class="arrow-right-icon">
+      <a class="breadcrumb__link" href="/Functional Testing/Native Android/JAVASCRIPT/Training Guide">Training Guide</a>
+      <img src="/images/arrow-right-icon.png"
+           srcset="/images/arrow-right-icon%402x.png 2x,
+                   /images/arrow-right-icon%403x.png 3x"
+           class="arrow-right-icon">
+      <span class="breadcrumb__current-page">Android Automation</span>
+    </p>
+  </div>
+  <div class="clear"></div>
+  <div class="training-container">
+    <div class="sidebar">
+<div class="training-doc-link">
+<div class="training-doc-link-left">
+<img class="training-doc-link-left__img" src="/images/training/actived.png" srcset="/images/training/actived%402x.png 2x, /images/training/actived%403x.png 3x" /><hr class="training-doc-link-left__hr training-doc-link-left__hr-pending" /></div>
+<p class="training-doc-link__text">
+<a class="training-doc-link__text-current" href="./Desired Capabilities">Desired Capabilities</a></p>
+</div>
+<div class="training-doc-link">
+<div class="training-doc-link-left">
+<img class="training-doc-link-left__img" src="/images/training/unread.png" srcset="/images/training/unread%402x.png 2x, /images/training/unread%403x.png 3x" /></div>
+<p class="training-doc-link__text">
+<a class="training-doc-link__text-pending" href="./Native Android locators">Native Android locators</a></p>
+</div>
+</div>
+<div class="training-doc-nav-btn">
+</div>
+<div class="training-content markdown">
+<h2>Desired Capabilities</h2>
+<h4>After we understand the tests framework, we can start to take a closer look on how Android app automation works</h4>
+<h3>Underlying we are using <a href="http://appium.io"><strong>Appium</strong></a> to drive native Android app automation</h3>
+<ul>
+<li>Most concepts are similar for web and app automations, a few things maybe new to people who come from web automation world:</li>
+</ul>
+<p><strong>Desired Capabilities</strong></p>
+<ul>
+<li>Desired capabilities are a set of keys and values (i.e., a map or hash) sent to the Appium server to tell the server what kind of automation session we're interested in starting up.</li>
+<li>There are various capabilities which can modify the behavior of the server during automation.</li>
+<li>For example, we could set the <strong>platformName</strong> capability to <strong>Android</strong> to tell Appium that we want an Android session, rather than an iOS one. See the <a href="http://appium.io/docs/en/writing-running-appium/caps/index.html">capabilities doc</a> for the complete list of capabilities available for Appium.</li>
+<li>For our sample repo, Desired Capabilities are defined either in profiles in <strong>magellan.json</strong> file or in <strong><em>./conf/nightwatch.json</em></strong> file. You can specify to use which one in your command line.</li>
+<li>For example, in your command, you can specify it via <code>--profile appium-ios-app</code>, which means look up desired capability defined in <em>profile</em> style in <strong>magellan.json</strong> file.</li>
+<li>It is highly recommended to set the  <code>appPackage</code>  and  <code>appActivity</code>  capabilities in order to let Appium know exactly which package and activity should be launched for your application. Otherwise, Appium will try to determine these automatically from your app manifest. E.g.</li>
+</ul>
+<pre><code class="language-bash">    &quot;appium-android-app&quot;: [
+      {
+        &quot;browser&quot;: &quot;Android_GoogleAPI_Emulator_Android_7_1_Android&quot;,
+        &quot;orientation&quot;: &quot;portrait&quot;,
+        &quot;appium&quot;: {
+          &quot;app&quot;: &quot;sauce-storage:AUT.apk&quot;,
+          &quot;platformName&quot;: &quot;Android&quot;,
+          &quot;appiumVersion&quot;: &quot;1.7.2&quot;,
+          &quot;fullReset&quot;: &quot;true&quot;,
+          &quot;noReset&quot;: &quot;false&quot;,
+          &quot;appActivity&quot;: &quot;com.yourcompany.android.main.MainActivity&quot;,
+          &quot;appWaitActivity&quot;: &quot;com.yourcompany.android.main.AnotherActivity&quot;
+        }
+      }
+    ],
+</code></pre>
+</div>
+<div class="training-doc-nav-btn">
+<a href="./Native Android locators"><img src="/images/training/btn-right.png" srcset="/images/training/btn-right%402x.png 2x, /images/training/btn-right%403x.png 3x" /></a>
+</div>
+
+  </div>
+  <div class="clear"></div>
+</div>
+<script type="text/javascript">
+  var elements = document.getElementsByTagName('pre');
+  for (var i = 0; i < elements.length; i++) {
+    elements[i].className += " line-numbers";
+    if (!elements[i].children[0].className) {
+      elements[i].children[0].className = "language-javascript";
+    }
+  }
+</script>
+<script type="text/javascript" src="/js/prism.js"></script>
+	</div>
+
+	<footer>
+		<img class="left-footer-logo" alt="Left Footer Logo"
+			 src="/documentation/images/dxt-logo.png"
+			 srcset="/documentation/images/dxt-logo%402x.png 2x,
+					 /documentation/images/dxt-logo%403x.png 3x">
+		
+		<span class="copyright">&copy; 2018 Walmart Inc.</span>
+		
+		<img class="right-footer-logo" alt="Right Footer Logo"
+			 src="/documentation/images/walmartlabs-logo.png"
+			 srcset="/documentation/images/walmartlabs-logo%402x.png 2x,
+			 		 /documentation/images/walmartlabs-logo%403x.png 3x">
+	</footer>
+
+</body>
+</html>

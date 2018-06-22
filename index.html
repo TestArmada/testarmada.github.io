@@ -1,89 +1,287 @@
---- 
-layout: default 
----
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test Armada</title>
+	<link rel="stylesheet" type="text/css" href="/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="/css/common.css">
+	<link rel="stylesheet" type="text/css" href="/css/header.css">
+	<link rel="stylesheet" type="text/css" href="/css/home.css">
+	<link rel="stylesheet" type="text/css" href="/css/doc.css">
+	<link rel="stylesheet" type="text/css" href="/css/training.css">
+	<link rel="stylesheet" type="text/css" href="/css/faq.css">
+	<link rel="stylesheet" type="text/css" href="/css/contact.css">
+	<link rel="stylesheet" type="text/css" href="/css/search.css">
+	<link rel="stylesheet" type="text/css" href="/css/custom.css">
+	<link rel="stylesheet" type="text/css" href="/css/slick.css">
+	<link rel="stylesheet" type="text/css" href="/css/prism.css">
+	<link rel="stylesheet" type="text/css" href="/css/responsive.css">
+	
+	<link rel="shortcut icon" href="/documentation/images/favicon.ico">
+	
+</head>
+<body>
+	
+	<header>
+		<a href="/">
+			<img src="/documentation/images/ta-logo.png" class="logo" alt="Main Brand Logo"
+				 srcset="/documentation/images/ta-logo%402x.png 2x, /documentation/images/ta-logo%403x.png 3x">
+		</a>
+		<form action="/search" method="get">
+			<input type="text" id="search-box" name="query" placeholder="Search" class="search-box">
+			<div class="select-box">
+				<select name="fleet" id="fleet-box" onchange="document.getElementById('search-box').focus();">
+					<option value="all">All Fleets</option>
+					
+					<option value="Functional Testing">Functional Testing</option>
+					
+					<option value="Mocking">Mocking</option>
+					
+					<option value="Performance Testing">Performance Testing</option>
+					
+					<option value="Data Insights">Data Insights</option>
+					
+				</select>
+			</div>
+		</form>
+		<div class="nav-links">
+			<div class="nav-links__fleets">
+				<a class="nav-links__fleets-btn">
+					Fleets <img src="/images/arrow-down-icon.png" class="arrow-down-icon"
+								srcset="/images/arrow-down-icon%402x.png 2x,
+										/images/arrow-down-icon%403x.png 3x">
+				</a>
+				<div class="nav-links__fleets-content">
+					<a href="/">
+						All Fleets
+					</a>
+					
+					<a href="/Functional Testing/">
+						Functional Testing
+					</a>
+					
+					<a href="/Mocking/">
+						Mocking
+					</a>
+					
+					<a href="/Performance Testing/">
+						Performance Testing
+					</a>
+					
+					<a href="/Data Insights/">
+						Data Insights
+					</a>
+					
+				</div>
+			</div>
+			
+			
+			<a href="/documentation/About.html" class="nav-links__main-links">About Us</a>
+			
+			
+			<a href="/faq" class="nav-links__main-links">FAQ</a>
+			
+			
+			
+			<a href="https://github.com/TestArmada/" target="_blank" class="nav-links__main-links">GitHub</a>
+			
+		</div>
+	</header>
 
-<section class="column-contain full-viewport">
-  <a class="anchor" id="GettingStarted"></a>
-  <div class="row full-section">
-    <div id="navbar-gettingstarted" class="col-md-3 full-section-left">
-      <h2 class="section-header">Getting Started</h2>
-      <ul class="nav nav-pills nav-stacked pre-scrollable-left">
-        {% for post in site.posts %}
-        {% if post.category == "Getting Started" %}
-        <li role="presentation">
-          {% if post.tags == empty %}
-          <a href="#{{ post.link }}" name="anchor">{{ post.title }}</a>
-          {% else %}
-          <a href="#{{ post.link }}" data-toggle="collapse" data-target=""><span class="glyphicon glyphicon-chevron-right"></span> {{ post.title }}</a>
-          <div class="nested-nav">
-            <ul id="{{ post.link }}" class="nav nav-pills nav-stacked collapse">
-            {% for tag in post.tags %}
-              <li role="presentation">
-                <a href="#{{ tag.link }}" name="anchor">{{ tag.name }}</a>
-              </li>
-            {% endfor %}
-            </ul>
-          </div>
-          {% endif %}
-        </li>
-        {% endif %}
-        {% endfor %} 
-      </ul>
-    </div>
-    <div class="col-md-9 pre-scrollable-right full-section-right" data-spy="scroll" data-target="#navbar-gettingstarted">
-      {% for post in site.posts %}
-      {% if post.category == "Getting Started" %}
-      <div name="link" class="scroll-link">
-        <div id="{{ post.link }}" name="link-content">
-          {{ post.content }}
-        </div>
-        <br>
-      </div>
-      {% endif %}
-      {% endfor %}
-    </div>
-  </div>
-</section>
+	<div class="container">
+		<div class="jumbotron">
+	
+	<div class="banner-text-wrapper"><p class="banner-text" style="font-family: 'Barlow Condensed', sans-serif; font-size: 40px; ">End to End testing doesn't have to be slow and unreliable</p></div><div class="banner-text-wrapper"><p class="banner-text" style="font-family: 'Roboto Condensed', sans-serif; font-size: 24px; ">TestArmada is a fleet of tools for making cross-browser end-to-end testing fast, user-friendly, and valuable at scale, across large teams, without those annoying false positives.</p></div><div class="banner-text-wrapper"><p class="banner-text" style="font-family: 'Roboto Condensed', sans-serif; font-size: 24px; height: 24px; ">Built with pride at <img src="/documentation/images/walmartlabs-logo@2x.png" height="30" style="padding-top: 5px;" /></p></div>
+	
+	
+</div>
 
-<section class="column-contain full-viewport">
-  <a class="anchor" id="DeveloperGuide"></a>
-  <div class="row full-section">
-    <div id="navbar-developerguide" class="col-md-3 full-section-left">
-      <h2 class="section-header">Developer Guide</h2>
-      <ul class="nav nav-pills nav-stacked pre-scrollable-left">
-        {% for post in site.posts %}
-        {% if post.category == "Developer Guide" %}
-        <li role="presentation">
-          {% if post.tags == empty %}
-          <a href="#{{ post.link }}" name="anchor">{{ post.title }}</a>
-          {% else %}
-          <a href="#{{ post.link }}" data-toggle="collapse" data-target=""><span class="glyphicon glyphicon-chevron-right"></span> {{ post.title }}</a>
-          <div class="nested-nav">
-            <ul id="{{ post.link }}" class="nav nav-pills nav-stacked collapse">
-            {% for tag in post.tags %}
-              <li role="presentation">
-                <a href="#{{ tag.link }}" name="anchor">{{ tag.name }}</a>
-              </li>
-            {% endfor %}
-            </ul>
-          </div>
-          {% endif %}
-        </li>
-        {% endif %}
-        {% endfor %} 
-      </ul>
-    </div>
-    <div class="col-md-9 pre-scrollable-right full-section-right" data-spy="scroll" data-target="#navbar-developerguide">
-      {% for post in site.posts %}
-      {% if post.category == "Developer Guide" %}
-      <div name="link" class="scroll-link">
-        <div id="{{ post.link }}" name="link-content">
-          {{ post.content }}
-        </div>
-        <br>
-      </div>
-      {% endif %}
-      {% endfor %}
-    </div>
-  </div>
-</section>
+<div class="inner-container carousel">
+	
+	
+	<div class="carousel__card-bg">
+		<div class="carousel__card-fg">
+			
+			
+			
+			
+			
+			<img src="documentation/Functional%20Testing/images/placard.png" srcset="documentation/Functional%20Testing/images/placard@2x.png 2x,
+				 		 documentation/Functional%20Testing/images/placard@3x.png 3x" onerror="this.src='/images/fleets/default-placard.png';
+						  this.srcset='/images/fleets/default-placard@2x.png 2x, /images/default-placard@3x.png 3x'" class="carousel__gear" />
+		</div>
+		<h3 class="carousel__title">Functional Testing</h3>
+		
+		<p class="carousel__intro line-clamp">Run web, native or web services functional tests reliably at massive parallel scale, By distributing tests across available CPU cores, Test Armada blazes through long test suites in a fraction of the time, aggregating results in one friendly report.
+</p>
+		
+		<a href="Functional Testing/"><button class="carousel__card-btn">Learn More</button></a>
+	</div>
+	
+	<div class="carousel__card-bg">
+		<div class="carousel__card-fg">
+			
+			
+			
+			<span class="placard-label">Coming Soon</span>
+			
+			
+			
+			<img src="documentation/Mocking/images/placard.png" srcset="documentation/Mocking/images/placard@2x.png 2x,
+				 		 documentation/Mocking/images/placard@3x.png 3x" onerror="this.src='/images/fleets/default-placard.png';
+						  this.srcset='/images/fleets/default-placard@2x.png 2x, /images/default-placard@3x.png 3x'" class="carousel__gear" />
+		</div>
+		<h3 class="carousel__title">Mocking</h3>
+		
+		<p class="carousel__intro line-clamp">Create reliable test data for test execution and development. “Mocks” are imitations that emulate real software components for testing purposes. Mocking functions focus on very specific scenarios and contexts and simulate behavioral responses to fulfill a certain development need for repeated and reliable test execution and debugging. 
+</p>
+		
+		<a href="Mocking/"><button class="carousel__card-btn">Learn More</button></a>
+	</div>
+	
+	<div class="carousel__card-bg">
+		<div class="carousel__card-fg">
+			
+			
+			
+			<span class="placard-label">Coming Soon</span>
+			
+			
+			
+			<img src="documentation/Performance%20Testing/images/placard.png" srcset="documentation/Performance%20Testing/images/placard@2x.png 2x,
+				 		 documentation/Performance%20Testing/images/placard@3x.png 3x" onerror="this.src='/images/fleets/default-placard.png';
+						  this.srcset='/images/fleets/default-placard@2x.png 2x, /images/default-placard@3x.png 3x'" class="carousel__gear" />
+		</div>
+		<h3 class="carousel__title">Performance Testing</h3>
+		
+		<p class="carousel__intro line-clamp">Execute performance tests for both Client ( web &amp; mobile web ) and Web Service applications, with options to run on CI pipeline or any internal/external environments.
+</p>
+		
+		<a href="Performance Testing/"><button class="carousel__card-btn">Learn More</button></a>
+	</div>
+	
+	<div class="carousel__card-bg">
+		<div class="carousel__card-fg">
+			
+			
+			
+			<span class="placard-label">Coming Soon</span>
+			
+			
+			
+			<img src="documentation/Data%20Insights/images/placard.png" srcset="documentation/Data%20Insights/images/placard@2x.png 2x,
+				 		 documentation/Data%20Insights/images/placard@3x.png 3x" onerror="this.src='/images/fleets/default-placard.png';
+						  this.srcset='/images/fleets/default-placard@2x.png 2x, /images/default-placard@3x.png 3x'" class="carousel__gear" />
+		</div>
+		<h3 class="carousel__title">Data Insights</h3>
+		
+		<p class="carousel__intro line-clamp">The data insights platform collates test run data from multiple sources, providing a single source of truth for deep insight in to code quality, cross-browser test results and application performance.</p>
+		
+		<a href="Data Insights/"><button class="carousel__card-btn">Learn More</button></a>
+	</div>
+	
+	
+</div>
+
+<div class="inner-container">
+	
+	<div class="col-2 feature">
+		<img src="/documentation/images/icon-1.png" srcset="/documentation/images/icon-1@2x.png 2x,
+		             /documentation/images/icon-1@3x.png 3x" class="feature__img" alt="Feature icon" />
+		<div class="feature__text">
+			<p class="feature__title">Developer Community Friendly</p>
+			<p class="feature__description">Built on and for open source community</p>
+		</div>
+	</div>
+	
+	<div class="col-2 feature">
+		<img src="/documentation/images/icon-2.png" srcset="/documentation/images/icon-2@2x.png 2x,
+		             /documentation/images/icon-2@3x.png 3x" class="feature__img" alt="Feature icon" />
+		<div class="feature__text">
+			<p class="feature__title">Massively Parallel</p>
+			<p class="feature__description">Ability to process hundreds of test cases simultaneously to speed up overall completion of a test suite</p>
+		</div>
+	</div>
+	
+	<div class="col-2 feature">
+		<img src="/documentation/images/icon-3.png" srcset="/documentation/images/icon-3@2x.png 2x,
+		             /documentation/images/icon-3@3x.png 3x" class="feature__img" alt="Feature icon" />
+		<div class="feature__text">
+			<p class="feature__title">Multi Platform</p>
+			<p class="feature__description">Supports e2e testing capabilities across web, native app, services.</p>
+		</div>
+	</div>
+	
+	<div class="col-2 feature">
+		<img src="/documentation/images/icon-4.png" srcset="/documentation/images/icon-4@2x.png 2x,
+		             /documentation/images/icon-4@3x.png 3x" class="feature__img" alt="Feature icon" />
+		<div class="feature__text">
+			<p class="feature__title">Reliable &amp; Deterministic</p>
+			<p class="feature__description">Smart Retry feature and mocking guard against flaky test</p>
+		</div>
+	</div>
+	
+	<div class="col-2 feature">
+		<img src="/documentation/images/icon-5.png" srcset="/documentation/images/icon-5@2x.png 2x,
+		             /documentation/images/icon-5@3x.png 3x" class="feature__img" alt="Feature icon" />
+		<div class="feature__text">
+			<p class="feature__title">Quality Automation</p>
+			<p class="feature__description">Enables a shift left testing philosophy with fully automated, early quality checks.</p>
+		</div>
+	</div>
+	
+	<div class="col-2 feature">
+		<img src="/documentation/images/icon-6.png" srcset="/documentation/images/icon-6@2x.png 2x,
+		             /documentation/images/icon-6@3x.png 3x" class="feature__img" alt="Feature icon" />
+		<div class="feature__text">
+			<p class="feature__title">Actionable Dashboards</p>
+			<p class="feature__description">Real-time and trending metrics provide valuable insights to help debug/troubleshoot quality issues</p>
+		</div>
+	</div>
+	
+	<div class="clear"></div>
+</div>
+
+<script src="/js/jquery-3.3.1.min.js"></script>
+
+<script src="/js/slick.js"></script>
+
+<script type="text/javascript">
+
+$('.carousel').slick({
+  dots: false,
+  infinite: false,
+  speed: 300,
+  slidesToShow: 4,
+  slidesToScroll: 4,
+  responsive: [
+    {
+      breakpoint: 1279,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3
+      }
+    }
+  ]
+});
+
+</script>
+
+
+	</div>
+
+	<footer>
+		<img class="left-footer-logo" alt="Left Footer Logo"
+			 src="/documentation/images/dxt-logo.png"
+			 srcset="/documentation/images/dxt-logo%402x.png 2x,
+					 /documentation/images/dxt-logo%403x.png 3x">
+		
+		<span class="copyright">&copy; 2018 Walmart Inc.</span>
+		
+		<img class="right-footer-logo" alt="Right Footer Logo"
+			 src="/documentation/images/walmartlabs-logo.png"
+			 srcset="/documentation/images/walmartlabs-logo%402x.png 2x,
+			 		 /documentation/images/walmartlabs-logo%403x.png 3x">
+	</footer>
+
+</body>
+</html>
