@@ -20,9 +20,9 @@ Lei Zhu, Staff Engineer - <LZhu@walmart.com>
 
 Chengzhi Jia, Software Engineer - <CJia@walmartlabs.com>
 
-Chi Ahrens, Staff Engineer <CAhrens@walmartlabs.com>
+Chi Ahrens, Staff Engineer - <CAhrens@walmartlabs.com>
 
-Lillian Wang, Staff Engineer <YWang0@walmart.com>
+Lillian Wang, Staff Engineer - <YWang0@walmart.com>
 
 ----
 
@@ -34,7 +34,7 @@ Pranav Parikh, Senior Engineer - <PParikh@walmartlabs.com>
 
 Shane Chapman, Staff Engineer - <Shane.Chapman@walmartlabs.com>
 
-Yash Shah, Vendor - <Yash.Shah@walmartlabs.com>
+Yash Shah, Software Engineer - <Yash.Shah@walmartlabs.com>
 
 ----
 
@@ -48,9 +48,9 @@ Abha Gupta, Senior Engineer - <AGupta3@walmart.com>
 
 Ashish Shah, Senior Engineer - <AShah@walmartlabs.com>
 
-Irfan RabbanSab, Senior Engineer <IRabban@walmartlabs.com>
+Irfan RabbanSab, Senior Engineer - <IRabban@walmartlabs.com>
 
-Kiran Maharana, Engineer <Kiran.Maharana@walmartlabs.com>
+Kiran Maharana, Software Engineer - <Kiran.Maharana@walmartlabs.com>
 
 John Bouchard, Senior Engineer <JBouchard@walmart.com>
 
@@ -64,7 +64,7 @@ Vijay Giri, Staff Engineer - <vgiri@walmartlabs.com>
 
 Michael Davis, Staff Engineer - <Michael.Davis@walmartlabs.com>
 
-Vinay Pullepu - Engineer - <Vinay.Pullepu@walmartlabs.com>
+Vinay Pullepu - Software Engineer - <Vinay.Pullepu@walmartlabs.com>
 
 ----
 
@@ -74,7 +74,7 @@ Rainer Lichtenfeld, Principle Engineer - <RLichtenfeld@walmartlabs.com>
 
 ----
 
-#### Program 
+#### Program
 
 Parag Parkhi, Principal Program Manager - <Parag.Parkhi@walmartlabs.com>
 
