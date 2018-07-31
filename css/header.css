@@ -1,18 +1,16 @@
 header {
   width: 100%;
-  height: 90px;
-  background-color: #444444;
-  background-color: var(--greyish-brown);
-  line-height: 90px;
+  height: 83px;
+  background-color: #1e2428;
+  line-height: 83px;
   text-align: center;
 }
 
 .logo {
   float: left;
   margin-left: 25px;
-  margin-top: 9px;
-  height: 70px;
-  max-width: 325px;
+  margin-top: 10px;
+  height: 60px;
 }
 
 form {
@@ -90,11 +88,10 @@ option {
 
 .nav-links {
   float: right;
-  margin-right: 35px;
+  margin-right: 25px;
 }
 
 .nav-links a {
-  font-weight: bold;
   text-align: left;
   padding-left: 16px;
   padding-right: 16px;
@@ -107,13 +104,13 @@ option {
 }
 
 .nav-links__fleets-btn {
-  font-weight: bold;
   text-align: left;
   padding: 0 10px;
   padding-bottom: 10px;
   color: #ffffff;
   display: inline-block;
   text-transform: uppercase;
+  font-size: 18px;
 }
 
 .nav-links__fleets:hover {
@@ -131,8 +128,8 @@ option {
 .nav-links__fleets-content {
   display: none;
   position: absolute;
-  top: 100px;
-  left: -50%;
+  top: 92px;
+  left: -25px;
   min-width: 200px;
   box-shadow: 0 0px 15px 0 rgba(0, 0, 0, 0.2);
   z-index: 2;
@@ -182,12 +179,24 @@ option {
   display: block;
 }
 
-.nav-links__main-links {
+.nav-links__main-links,
+.nav-links__main-highlight {
   text-transform: uppercase;
   display: inline-block;
-  height: 86px;
+  height: 80px;
+  font-size: 18px;
 }
 
 .nav-links__main-links:hover {
   border-bottom: 3px solid #ffffff;
+}
+
+.nav-links__main-highlight-link {
+  padding: 5px 10px !important;
+  border-radius: 4px;
+  margin: 10px;
+}
+
+.nav-links__main-highlight-link:hover {
+  opacity: 0.9;
 }

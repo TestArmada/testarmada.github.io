@@ -4,6 +4,7 @@
 	<title>Test Armada</title>
 	<link rel="stylesheet" type="text/css" href="/css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="/css/common.css">
+	<link rel="stylesheet" type="text/css" href="/css/subheader.css">
 	<link rel="stylesheet" type="text/css" href="/css/header.css">
 	<link rel="stylesheet" type="text/css" href="/css/home.css">
 	<link rel="stylesheet" type="text/css" href="/css/doc.css">
@@ -20,13 +21,55 @@
 	
 </head>
 <body>
-	
+
+	<div class="subheader">
+		<div class="search-bar">
+			<form class="search-bar__form" action="/search" method="get">
+				<div class="select-box-sub">
+					<select class="select-box-sub__select" name="fleet" id="fleet-box" onchange="document.getElementById('search-box').focus();">
+						<option value="all">All Fleets</option>
+						
+						<option value="Functional Testing">Functional Testing</option>
+						
+						<option value="Mocking">Mocking</option>
+						
+						<option value="Performance Testing">Performance Testing</option>
+						
+						<option value="Data Insights">Data Insights</option>
+						
+					</select>
+				</div>
+				<input type="text" id="search-box" name="query" autocomplete="off" class="search-box-sub">
+			</form>
+		</div>
+		<div class="nav-sub-links">
+			
+			
+			
+			<a href="/documentation/Presentations" class="nav-sub-links__link">Presentations</a>
+			
+			
+			
+			
+			<a href="/documentation/About" class="nav-sub-links__link">About Us</a>
+			
+			
+			
+			
+			
+			<a href="https://github.com/TestArmada/" class="nav-sub-links__link" target="_blank">GitHub</a>
+			
+			
+			
+		</div>
+	</div>
+
 	<header>
 		<a href="/">
 			<img src="/documentation/images/ta-logo.png" class="logo" alt="Main Brand Logo"
 				 srcset="/documentation/images/ta-logo%402x.png 2x, /documentation/images/ta-logo%403x.png 3x">
 		</a>
-		<form action="/search" method="get">
+		<!-- <form action="/search" method="get">
 			<input type="text" id="search-box" name="query" placeholder="Search" class="search-box">
 			<div class="select-box">
 				<select name="fleet" id="fleet-box" onchange="document.getElementById('search-box').focus();">
@@ -42,8 +85,15 @@
 					
 				</select>
 			</div>
-		</form>
+		</form> -->
 		<div class="nav-links">
+			
+			
+			
+			
+			
+			
+			
 			<div class="nav-links__fleets">
 				<a class="nav-links__fleets-btn">
 					Fleets <img src="/images/arrow-down-icon.png" class="arrow-down-icon"
@@ -55,19 +105,19 @@
 						All Fleets
 					</a>
 					
-					<a href="/Functional Testing/">
+					<a href="/documentation/Functional Testing/">
 						Functional Testing
 					</a>
 					
-					<a href="/Mocking/">
+					<a href="/documentation/Mocking/">
 						Mocking
 					</a>
 					
-					<a href="/Performance Testing/">
+					<a href="/documentation/Performance Testing/">
 						Performance Testing
 					</a>
 					
-					<a href="/Data Insights/">
+					<a href="/documentation/Data Insights/">
 						Data Insights
 					</a>
 					
@@ -75,14 +125,13 @@
 			</div>
 			
 			
-			<a href="/documentation/About.html" class="nav-links__main-links">About Us</a>
 			
 			
 			<a href="/faq" class="nav-links__main-links">FAQ</a>
 			
 			
 			
-			<a href="https://github.com/TestArmada/" target="_blank" class="nav-links__main-links">GitHub</a>
+			
 			
 		</div>
 	</header>
@@ -97,7 +146,7 @@
            srcset="/images/arrow-right-icon%402x.png 2x,
                    /images/arrow-right-icon%403x.png 3x"
            class="arrow-right-icon">
-      <a class="breadcrumb__link" href="/Mocking/">Mocking</a>
+      <a class="breadcrumb__link" href="/documentation/Mocking/">Mocking</a>
       <img src="/images/arrow-right-icon.png"
            srcset="/images/arrow-right-icon%402x.png 2x,
                    /images/arrow-right-icon%403x.png 3x"
@@ -107,7 +156,7 @@
            srcset="/images/arrow-right-icon%402x.png 2x,
                    /images/arrow-right-icon%403x.png 3x"
            class="arrow-right-icon">
-      <a class="breadcrumb__link" href="/Mocking/rWeb/JAVASCRIPT/Training Guide">Training Guide</a>
+      <a class="breadcrumb__link" href="/documentation/Mocking/rWeb/JAVASCRIPT/Training Guide">Training Guide</a>
       <img src="/images/arrow-right-icon.png"
            srcset="/images/arrow-right-icon%402x.png 2x,
                    /images/arrow-right-icon%403x.png 3x"
@@ -244,6 +293,31 @@ The underlying mock service automatically figures out the file extension so that
 			 srcset="/documentation/images/walmartlabs-logo%402x.png 2x,
 			 		 /documentation/images/walmartlabs-logo%403x.png 3x">
 	</footer>
+
+	<script type="text/javascript">
+		document.querySelector('.search-box-sub').addEventListener('click', function() {
+			document.querySelector('.search-box-sub').classList.add('expand-input');
+			document.querySelector('.search-box-sub').placeholder = 'Enter text to search or "Esc" to close';
+			document.querySelector('.select-box-sub').classList.add('expand-select');
+		});
+		document.querySelector('.search-box-sub').onkeydown = function(evt) {
+			evt = evt || window.event;
+			if (evt.keyCode == 27) {
+				document.querySelector('.search-box-sub').classList.remove('expand-input');
+				document.querySelector('.search-box-sub').placeholder = '';
+				document.querySelector('.select-box-sub').classList.remove('expand-select');
+			}
+		};
+		document.querySelector('body').addEventListener('click', function(evt) {
+			evt = evt || window.event;
+			var ignore = '.search-box-sub, .select-box-sub, .select-box-sub__select, a, button';
+			if (!evt.target.matches(ignore)) {
+				document.querySelector('.search-box-sub').classList.remove('expand-input');
+				document.querySelector('.search-box-sub').placeholder = '';
+				document.querySelector('.select-box-sub').classList.remove('expand-select');
+			}
+		});
+	</script>
 
 </body>
 </html>

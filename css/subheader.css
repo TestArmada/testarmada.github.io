@@ -1,0 +1,127 @@
+.subheader {
+  width: 100%;
+  height: 36px;
+  line-height: 36px;
+  background-color: #1e2428;
+  border-bottom: 1px solid #40484d;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.nav-sub-links{
+  float: right;
+}
+
+.nav-sub-links__link {
+  display: inline-block;
+  margin-right: 15px;
+  color: #C4C4C4;
+}
+
+.nav-sub-links__link:hover {
+  color: #ffffff;
+}
+
+.search-bar {
+  float: right;
+  height: 26px;
+  border: 18px;
+  margin-top: 5px;
+  margin-right: 32px;
+  overflow: hidden;
+}
+
+.search-bar__form {
+  display: block;
+}
+
+/* Reset Select */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0;
+  /*border: 0 !important;*/
+  background: #2c3e50;
+  background-image: none;
+}
+
+/* Custom Select */
+.select-box-sub {
+  position: relative;
+  display: block;
+  float: left;
+  width: 0;
+  height: 26px;
+  line-height: 1;
+  background: #f2f2f2;
+  overflow: hidden;
+  border-top-left-radius: 18px;
+  border-bottom-left-radius: 18px;
+  box-sizing: border-box;
+}
+
+.select-box-sub__select {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0 0 0 .5em;
+  cursor: pointer;
+  background-color: #f2f2f2;
+  font-size: 14px;
+  color: #5e5e5e;
+  display: block;
+}
+.select-box-sub__select::-ms-expand {
+  display: none;
+}
+
+option {
+  height: 26px;
+}
+
+.search-box-sub {
+  width: 26px;
+  height: 26px;
+  border: 1px solid #70767a;
+  border-radius: 18px;
+  background-color: #1e2428;
+  box-sizing: border-box;
+  float: left;
+  font-size: 14px;
+  color: transparent;
+  padding-left: 7px;
+  padding-right: 7%;
+  background-image: url('../images/search/search-icon.png');
+  background-image:
+    -webkit-image-set(
+      url('../images/search/search-icon.png') 1x,
+      url('../images/search/search-icon%402x.png') 2x,
+      url('../images/search/search-icon%403x.png') 3x
+    );
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  cursor: pointer;
+  outline: none;
+  transition: all .3s ease;
+}
+
+.expand-input {
+  width: 310px;
+  border: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: #ffffff;
+  background-position: 95% 50%;
+  cursor: text;
+  color: #555555;
+  transition: all .3s ease;
+}
+
+.expand-select {
+  width: 172px;
+  transition: all .3s ease;
+}

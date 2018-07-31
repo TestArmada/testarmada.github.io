@@ -44,9 +44,10 @@
 
 // Make sidebar sticky depending on scroll
 $(document).ready(function () {
+  var sidebarOffsetTop = $('.sidebar').offset().top;
   $(window).scroll(function () {
     var distanceFromTop = $(document).scrollTop();
-    if (distanceFromTop >= 200) {
+    if (distanceFromTop >= sidebarOffsetTop) {
       $('.sidebar').addClass('sticky');
     } else {
       $('.sidebar').removeClass('sticky');

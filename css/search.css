@@ -57,10 +57,12 @@
   text-align: center;
 }
 
-/* Pagination buttons */
+/* Pagination buttons & pages */
 
 .pagination__prev,
-.pagination__next {
+.pagination__next,
+.pagination__page,
+.pagination__more {
   display: inline-block;
   width: 40px;
   height: 40px;
@@ -68,30 +70,10 @@
   cursor: pointer;
   box-sizing: border-box;
 }
-
-.pagination__prev {
-  margin-right: 40px;
-}
-
-.pagination__next {
-  margin-left: 40px;
-}
-
-.pagination__disabled {
-  cursor: default;
-}
-
-/* Pagination pages */
 
 .pagination__page {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
   font-size: 14px;
   color: #555555;
-  line-height: 40px;
-  cursor: pointer;
-  box-sizing: border-box;
 }
 
 .pagination__page:hover {
@@ -103,5 +85,17 @@
   background-color: #28b5f6;
   font-weight: 700;
   color: #ffffff;
+  cursor: default;
+}
+
+.pagination__prev {
+  margin-right: 40px;
+}
+
+.pagination__next {
+  margin-left: 40px;
+}
+
+.pagination__disabled {
   cursor: default;
 }

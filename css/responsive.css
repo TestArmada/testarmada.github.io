@@ -19,10 +19,6 @@
     width: 190px;
   }
 
-  .nav-links {
-    margin-right: 30px;
-  }
-
   .nav-links a {
     padding-left: 14px;
     padding-right: 14px;
@@ -40,15 +36,6 @@
 
   .select-box {
     width: 170px;
-  }
-
-  .nav-links {
-    margin-right: 25px;
-  }
-
-  .nav-links a {
-    padding-left: 12px;
-    padding-right: 12px;
   }
 
   /* Documentation */
@@ -75,13 +62,13 @@
     width: 150px;
   }
 
-  .nav-links {
-    margin-right: 20px;
+  .nav-links a {
+    padding-left: 12px;
+    padding-right: 12px;
   }
 
-  .nav-links a {
-    padding-left: 8px;
-    padding-right: 8px;
+  .nav-sub-links__link {
+    margin-right: 12px;
   }
 
   /* Documentation */
@@ -124,8 +111,6 @@
 
   .logo {
     margin-left: 15px;
-    margin-top: 10px;
-    max-width: 310px;
   }
 
   .search-box {
@@ -136,17 +121,13 @@
     width: 110px;
   }
 
-  .arrow-down-icon {
-    padding-left: 4px;
-  }
-
-  .nav-links {
-    margin-right: 8px;
-  }
-
   .nav-links a {
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .nav-sub-links__link {
+    margin-right: 10px;
   }
 
   /* Home and intermediate pages */
@@ -178,7 +159,7 @@
   .col-2:nth-child(odd) {
     margin-right: 64px;
   }
-  
+
   .card-bg {
     margin-top: 64px;
   }
@@ -234,15 +215,12 @@
   }
 
 }
-
 @media screen and (max-width: 1079px) {
 
   /* Header */
 
   .logo {
     margin-left: 10px;
-    margin-top: 11px;
-    max-width: 300px;
   }
 
   .search-box {
@@ -253,17 +231,13 @@
     width: 110px;
   }
 
-  .arrow-down-icon {
-    padding-left: 2px;
-  }
-
-  .nav-links {
-    margin-right: 5px;
-  }
-
   .nav-links a {
-    padding-left: 4px;
-    padding-right: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .nav-sub-links__link {
+    margin-right: 8px;
   }
 
   /* Home and intermediate pages */
@@ -324,7 +298,7 @@
   .training-placard {
     width: 330px;
   }
-  
+
   .training-content {
     width: 650px;
   }

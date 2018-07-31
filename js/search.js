@@ -113,11 +113,32 @@ function appendPagination(currentPage) {
     data += '<span class="pagination__prev pagination__disabled">' + getPrevIcon() + '</span>';
   }
   // Pages
-  for (let i = 1; i <= totalPages; i++) {
-    if (i === currentPage) {
-      data += '<span class="pagination__page pagination__current-page">' + i + '</span>';
-    } else {
-      data += '<span class="pagination__page" onclick="generateOutput(' + i + ');return false;">' + i + '</span>';
+  var maxPages = 20; // Max 20 pages fit without overflowing (even on 1024px wide screen)
+  var minPages = maxPages - 2; // -2 for ... on both sides
+  var pagesToLeft = parseInt(minPages / 2); // Max pages on left of current page
+  var pagesToRight = minPages - pagesToLeft - 1; // Max pages on right of current page (-1 to account current page)
+  if (totalPages > maxPages) { // Show ...
+    if (currentPage <= (maxPages / 2) + 1) { // Show ... only at the end (+1 as there won't be ... at the beginning)
+      for (let i = 1; i < maxPages; i++) {
+        data += getPageBtn(i, currentPage);
+      }
+      data += getMorePagesBtn();
+    } else { // Show ... at the beginning
+      data += getMorePagesBtn();
+      if (currentPage + pagesToRight < totalPages - 1) { // Show ... at the end
+        for (let i = currentPage - pagesToLeft; i <= currentPage + pagesToRight; i++) {
+          data += getPageBtn(i, currentPage);
+        }
+        data += getMorePagesBtn();
+      } else { // ... not needed at the end
+        for (let i = totalPages - minPages; i <= totalPages; i++) {
+          data += getPageBtn(i, currentPage);
+        }
+      }
+    }
+  } else { // Show all pages
+    for (let i = 1; i <= totalPages; i++) {
+      data += getPageBtn(i, currentPage);
     }
   }
   // Next button
@@ -135,6 +156,20 @@ function getPrevIcon() {
 
 function getNextIcon() {
   return '<img src="/images/search/arrow-right-icon.png" srcset="/images/search/arrow-right-icon%402x.png 2x, /images/search/arrow-right-icon%403x.png 3x" />';
+}
+
+function getPageBtn(index, currentPage) {
+  var content = '';
+  if (index === currentPage) {
+    content = '<span class="pagination__page pagination__current-page">' + index + '</span>';
+  } else {
+    content = '<span class="pagination__page" onclick="generateOutput(' + index + ');return false;">' + index + '</span>';
+  }
+  return content;
+}
+
+function getMorePagesBtn() {
+  return '<span class="pagination__more pagination__disabled">...</span>';
 }
 
 function getResult(item, searchTerm) {

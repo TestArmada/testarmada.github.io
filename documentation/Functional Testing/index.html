@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test Armada</title>
+	<link rel="stylesheet" type="text/css" href="/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="/css/common.css">
+	<link rel="stylesheet" type="text/css" href="/css/subheader.css">
+	<link rel="stylesheet" type="text/css" href="/css/header.css">
+	<link rel="stylesheet" type="text/css" href="/css/home.css">
+	<link rel="stylesheet" type="text/css" href="/css/doc.css">
+	<link rel="stylesheet" type="text/css" href="/css/training.css">
+	<link rel="stylesheet" type="text/css" href="/css/faq.css">
+	<link rel="stylesheet" type="text/css" href="/css/contact.css">
+	<link rel="stylesheet" type="text/css" href="/css/search.css">
+	<link rel="stylesheet" type="text/css" href="/css/custom.css">
+	<link rel="stylesheet" type="text/css" href="/css/slick.css">
+	<link rel="stylesheet" type="text/css" href="/css/prism.css">
+	<link rel="stylesheet" type="text/css" href="/css/responsive.css">
+	
+	<link rel="shortcut icon" href="/documentation/images/favicon.ico">
+	
+</head>
+<body>
+
+	<div class="subheader">
+		<div class="search-bar">
+			<form class="search-bar__form" action="/search" method="get">
+				<div class="select-box-sub">
+					<select class="select-box-sub__select" name="fleet" id="fleet-box" onchange="document.getElementById('search-box').focus();">
+						<option value="all">All Fleets</option>
+						
+						<option value="Functional Testing">Functional Testing</option>
+						
+						<option value="Mocking">Mocking</option>
+						
+						<option value="Performance Testing">Performance Testing</option>
+						
+						<option value="Data Insights">Data Insights</option>
+						
+					</select>
+				</div>
+				<input type="text" id="search-box" name="query" autocomplete="off" class="search-box-sub">
+			</form>
+		</div>
+		<div class="nav-sub-links">
+			
+			
+			
+			<a href="/documentation/Presentations" class="nav-sub-links__link">Presentations</a>
+			
+			
+			
+			
+			<a href="/documentation/About" class="nav-sub-links__link">About Us</a>
+			
+			
+			
+			
+			
+			<a href="https://github.com/TestArmada/" class="nav-sub-links__link" target="_blank">GitHub</a>
+			
+			
+			
+		</div>
+	</div>
+
+	<header>
+		<a href="/">
+			<img src="/documentation/images/ta-logo.png" class="logo" alt="Main Brand Logo"
+				 srcset="/documentation/images/ta-logo%402x.png 2x, /documentation/images/ta-logo%403x.png 3x">
+		</a>
+		<!-- <form action="/search" method="get">
+			<input type="text" id="search-box" name="query" placeholder="Search" class="search-box">
+			<div class="select-box">
+				<select name="fleet" id="fleet-box" onchange="document.getElementById('search-box').focus();">
+					<option value="all">All Fleets</option>
+					
+					<option value="Functional Testing">Functional Testing</option>
+					
+					<option value="Mocking">Mocking</option>
+					
+					<option value="Performance Testing">Performance Testing</option>
+					
+					<option value="Data Insights">Data Insights</option>
+					
+				</select>
+			</div>
+		</form> -->
+		<div class="nav-links">
+			
+			
+			
+			
+			
+			
+			
+			<div class="nav-links__fleets">
+				<a class="nav-links__fleets-btn">
+					Fleets <img src="/images/arrow-down-icon.png" class="arrow-down-icon"
+								srcset="/images/arrow-down-icon%402x.png 2x,
+										/images/arrow-down-icon%403x.png 3x">
+				</a>
+				<div class="nav-links__fleets-content">
+					<a href="/">
+						All Fleets
+					</a>
+					
+					<a href="/documentation/Functional Testing/">
+						Functional Testing
+					</a>
+					
+					<a href="/documentation/Mocking/">
+						Mocking
+					</a>
+					
+					<a href="/documentation/Performance Testing/">
+						Performance Testing
+					</a>
+					
+					<a href="/documentation/Data Insights/">
+						Data Insights
+					</a>
+					
+				</div>
+			</div>
+			
+			
+			
+			
+			<a href="/faq" class="nav-links__main-links">FAQ</a>
+			
+			
+			
+			
+			
+		</div>
+	</header>
+
+	<div class="container">
+		<div class="inner-container">
+  <div class="breadcrumb">
+    <p>
+      <a class="breadcrumb__link" href="/">Home</a>
+      <img src="/images/arrow-right-icon.png" srcset="/images/arrow-right-icon%402x.png 2x,
+                     /images/arrow-right-icon%403x.png 3x" class="arrow-right-icon" />
+      <span class="breadcrumb__current-page">Functional Testing</span>
+    </p>
+  </div>
+  
+  
+      <h2 class="functional-area-title">Functional Testing</h2>
+      
+      <p class="functional-area-description">Run web, native or web services functional tests reliably at massive parallel scale, By distributing tests across available CPU cores, Test Armada blazes through long test suites in a fraction of the time, aggregating results in one friendly report.
+</p>
+      <div class="clear"></div>
+      
+      
+      <div class="col-2 card-bg">
+        <div class="card-fg">
+          <img src="/documentation/Functional%20Testing/rWeb/images/placard.png" srcset="/documentation/Functional%20Testing/rWeb/images/placard%402x.png 2x,
+                       /documentation/Functional%20Testing/rWeb/images/placard%403x.png 3x" onerror="this.src='/images/platforms/default-placard.png'; this.srcset='/images/platforms/default-placard%402x.png 2x, /images/platforms/default-placard%403x.png 3x'" class="platform-img" />
+          <h3 class="title">rWeb</h3>
+          
+          <p class="intro platform-intro">Functional testing for rWeb</p>
+          
+        </div>
+        
+        <a href="/documentation/Functional%20Testing/rWeb/JAVASCRIPT/Introduction">
+          <button class="card-btn platform-btn">JAVASCRIPT</button>
+        </a>
+        
+      </div>
+      
+      <div class="col-2 card-bg">
+        <div class="card-fg">
+          <img src="/documentation/Functional%20Testing/Native%20Android/images/placard.png" srcset="/documentation/Functional%20Testing/Native%20Android/images/placard%402x.png 2x,
+                       /documentation/Functional%20Testing/Native%20Android/images/placard%403x.png 3x" onerror="this.src='/images/platforms/default-placard.png'; this.srcset='/images/platforms/default-placard%402x.png 2x, /images/platforms/default-placard%403x.png 3x'" class="platform-img" />
+          <h3 class="title">Native Android</h3>
+          
+          <p class="intro platform-intro">Functional testing for Android</p>
+          
+        </div>
+        
+        <a href="/documentation/Functional%20Testing/Native Android/JAVASCRIPT/Introduction">
+          <button class="card-btn platform-btn">JAVASCRIPT</button>
+        </a>
+        
+      </div>
+      
+      <div class="col-2 card-bg">
+        <div class="card-fg">
+          <img src="/documentation/Functional%20Testing/Native%20iOS/images/placard.png" srcset="/documentation/Functional%20Testing/Native%20iOS/images/placard%402x.png 2x,
+                       /documentation/Functional%20Testing/Native%20iOS/images/placard%403x.png 3x" onerror="this.src='/images/platforms/default-placard.png'; this.srcset='/images/platforms/default-placard%402x.png 2x, /images/platforms/default-placard%403x.png 3x'" class="platform-img" />
+          <h3 class="title">Native iOS</h3>
+          
+          <p class="intro platform-intro">Functional testing for iOS</p>
+          
+        </div>
+        
+        <a href="/documentation/Functional%20Testing/Native iOS/JAVASCRIPT/Introduction">
+          <button class="card-btn platform-btn">JAVASCRIPT</button>
+        </a>
+        
+      </div>
+      
+      <div class="clear"></div>
+  
+  
+  
+  
+  
+  
+  
+  
+</div>
+
+	</div>
+
+	<footer>
+		<img class="left-footer-logo" alt="Left Footer Logo"
+			 src="/documentation/images/dxt-logo.png"
+			 srcset="/documentation/images/dxt-logo%402x.png 2x,
+					 /documentation/images/dxt-logo%403x.png 3x">
+		
+		<span class="copyright">&copy; 2018 Walmart Inc.</span>
+		
+		<img class="right-footer-logo" alt="Right Footer Logo"
+			 src="/documentation/images/walmartlabs-logo.png"
+			 srcset="/documentation/images/walmartlabs-logo%402x.png 2x,
+			 		 /documentation/images/walmartlabs-logo%403x.png 3x">
+	</footer>
+
+	<script type="text/javascript">
+		document.querySelector('.search-box-sub').addEventListener('click', function() {
+			document.querySelector('.search-box-sub').classList.add('expand-input');
+			document.querySelector('.search-box-sub').placeholder = 'Enter text to search or "Esc" to close';
+			document.querySelector('.select-box-sub').classList.add('expand-select');
+		});
+		document.querySelector('.search-box-sub').onkeydown = function(evt) {
+			evt = evt || window.event;
+			if (evt.keyCode == 27) {
+				document.querySelector('.search-box-sub').classList.remove('expand-input');
+				document.querySelector('.search-box-sub').placeholder = '';
+				document.querySelector('.select-box-sub').classList.remove('expand-select');
+			}
+		};
+		document.querySelector('body').addEventListener('click', function(evt) {
+			evt = evt || window.event;
+			var ignore = '.search-box-sub, .select-box-sub, .select-box-sub__select, a, button';
+			if (!evt.target.matches(ignore)) {
+				document.querySelector('.search-box-sub').classList.remove('expand-input');
+				document.querySelector('.search-box-sub').placeholder = '';
+				document.querySelector('.select-box-sub').classList.remove('expand-select');
+			}
+		});
+	</script>
+
+</body>
+</html>
