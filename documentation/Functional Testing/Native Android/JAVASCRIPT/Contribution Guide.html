@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test Armada</title>
+	<link rel="stylesheet" type="text/css" href="/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="/css/common.css">
+	<link rel="stylesheet" type="text/css" href="/css/subheader.css">
+	<link rel="stylesheet" type="text/css" href="/css/header.css">
+	<link rel="stylesheet" type="text/css" href="/css/home.css">
+	<link rel="stylesheet" type="text/css" href="/css/doc.css">
+	<link rel="stylesheet" type="text/css" href="/css/training.css">
+	<link rel="stylesheet" type="text/css" href="/css/faq.css">
+	<link rel="stylesheet" type="text/css" href="/css/contact.css">
+	<link rel="stylesheet" type="text/css" href="/css/search.css">
+	<link rel="stylesheet" type="text/css" href="/css/custom.css">
+	<link rel="stylesheet" type="text/css" href="/css/slick.css">
+	<link rel="stylesheet" type="text/css" href="/css/prism.css">
+	<link rel="stylesheet" type="text/css" href="/css/responsive.css">
+	
+	<link rel="shortcut icon" href="/documentation/images/favicon.ico">
+	
+</head>
+<body>
+
+	<div class="subheader">
+		<div class="search-bar">
+			<form class="search-bar__form" action="/search" method="get">
+				<div class="select-box-sub">
+					<select class="select-box-sub__select" name="fleet" id="fleet-box" onchange="document.getElementById('search-box').focus();">
+						<option value="all">All Fleets</option>
+						
+						<option value="Functional Testing">Functional Testing</option>
+						
+						<option value="Mocking">Mocking</option>
+						
+						<option value="Performance Testing">Performance Testing</option>
+						
+						<option value="Data Insights">Data Insights</option>
+						
+					</select>
+				</div>
+				<input type="text" id="search-box" name="query" autocomplete="off" class="search-box-sub">
+			</form>
+		</div>
+		<div class="nav-sub-links">
+			
+			
+			
+			<a href="/documentation/Presentations" class="nav-sub-links__link">Presentations</a>
+			
+			
+			
+			
+			<a href="/documentation/About" class="nav-sub-links__link">About Us</a>
+			
+			
+			
+			
+			
+			<a href="https://github.com/TestArmada/" class="nav-sub-links__link" target="_blank">GitHub</a>
+			
+			
+			
+		</div>
+	</div>
+
+	<header>
+		<a href="/">
+			<img src="/documentation/images/ta-logo.png" class="logo" alt="Main Brand Logo"
+				 srcset="/documentation/images/ta-logo%402x.png 2x, /documentation/images/ta-logo%403x.png 3x">
+		</a>
+		<!-- <form action="/search" method="get">
+			<input type="text" id="search-box" name="query" placeholder="Search" class="search-box">
+			<div class="select-box">
+				<select name="fleet" id="fleet-box" onchange="document.getElementById('search-box').focus();">
+					<option value="all">All Fleets</option>
+					
+					<option value="Functional Testing">Functional Testing</option>
+					
+					<option value="Mocking">Mocking</option>
+					
+					<option value="Performance Testing">Performance Testing</option>
+					
+					<option value="Data Insights">Data Insights</option>
+					
+				</select>
+			</div>
+		</form> -->
+		<div class="nav-links">
+			
+			
+			
+			
+			
+			
+			
+			<div class="nav-links__fleets">
+				<a class="nav-links__fleets-btn">
+					Fleets <img src="/images/arrow-down-icon.png" class="arrow-down-icon"
+								srcset="/images/arrow-down-icon%402x.png 2x,
+										/images/arrow-down-icon%403x.png 3x">
+				</a>
+				<div class="nav-links__fleets-content">
+					<a href="/">
+						All Fleets
+					</a>
+					
+					<a href="/documentation/Functional Testing/">
+						Functional Testing
+					</a>
+					
+					<a href="/documentation/Mocking/">
+						Mocking
+					</a>
+					
+					<a href="/documentation/Performance Testing/">
+						Performance Testing
+					</a>
+					
+					<a href="/documentation/Data Insights/">
+						Data Insights
+					</a>
+					
+				</div>
+			</div>
+			
+			
+			
+			
+			<a href="/faq" class="nav-links__main-links">FAQ</a>
+			
+			
+			
+			
+			
+		</div>
+	</header>
+
+	<div class="container">
+		  <div class="clear"></div>
+<div class="doc-container">
+  <div class="breadcrumb doc-breadcrumb">
+    <p>
+      <a class="breadcrumb__link" href="/">Home</a>
+      <img src="/images/arrow-right-icon.png"
+           srcset="/images/arrow-right-icon@2x.png 2x,
+                   /images/arrow-right-icon@3x.png 3x"
+           class="arrow-right-icon">
+      <a class="breadcrumb__link" href="/documentation/Functional Testing/">Functional Testing</a>
+      <img src="/images/arrow-right-icon.png"
+           srcset="/images/arrow-right-icon@2x.png 2x,
+                   /images/arrow-right-icon@3x.png 3x"
+           class="arrow-right-icon">
+      <span class="breadcrumb__current-page">Native Android JAVASCRIPT</span>
+    </p>
+  </div>
+  <div class="clear"></div>
+  <div class="sidebar">
+    <ul>
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+        
+          
+          
+            <li><a href="/documentation/Functional Testing/Native Android/JAVASCRIPT/Introduction" class="sidebar__file-links">
+              Introduction
+            </a></li>
+          
+        
+      
+        
+          
+          
+            <li><a href="/documentation/Functional Testing/Native Android/JAVASCRIPT/Getting Started" class="sidebar__file-links">
+              Getting Started
+            </a></li>
+          
+        
+      
+        
+          
+            
+            
+              <li class="sidebar__file-links">Developer Guide</li>
+            
+          
+          
+          
+            <li><a href="/documentation/Functional Testing/Native Android/JAVASCRIPT/Training Guide" class="sidebar__file-links sidebar__file-sublink">
+              Training Guide
+            </a></li>
+          
+        
+      
+        
+          
+          
+          
+            <li><a href="/documentation/Functional Testing/Native Android/JAVASCRIPT/API Guide" class="sidebar__file-links sidebar__file-sublink">
+              API Guide
+            </a></li>
+          
+        
+      
+        
+          
+          
+          
+            <li><a href="/documentation/Functional Testing/Native Android/JAVASCRIPT/Boilerplates" class="sidebar__file-links sidebar__file-sublink">
+              Boilerplates
+            </a></li>
+          
+        
+      
+        
+          
+          
+            <li><a href="/documentation/Functional Testing/Native Android/JAVASCRIPT/Contribution Guide" class="sidebar__file-links sidebar__file-links-current">
+              Contribution Guide
+            </a></li>
+          
+        
+      
+        
+          
+          
+            <li><a href="/documentation/Functional Testing/Native Android/JAVASCRIPT/FAQ" class="sidebar__file-links">
+              FAQ
+            </a></li>
+          
+        
+      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </ul>
+  </div>
+  <div class="doc-content markdown">
+    <h2 id="code-base">Code base</h2>
+<p>All contributions will be done on Github, including PR, review process etc.</p>
+
+<ul>
+  <li>
+    <p><a href="https://github.com/TestArmada/magellan">Magellan code base</a></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/TestArmada/nightwatch-extra">Nightwatch-Extra code base</a></p>
+  </li>
+</ul>
+
+<h3 id="bugs-reporting">Bugs reporting</h3>
+<p>Please file the issue in the github projects above. Please ensure your issue has not been reported earlier.</p>
+
+<h3 id="versioning">Versioning</h3>
+<p>The functional TDK follows <a href="https://semver.org/">semantic versioning</a>, patch versions for bug fixes, minor versions for new features, major versions for non-backwards compatible updates.</p>
+
+<h2 id="customize-command">Customize command</h2>
+
+<p>We provide a base-command.js for inheritance to implement your own command for browser test. To implement a command for browser usage, you need to</p>
+
+<ol>
+  <li>Inherit your command from the base-command.js.</li>
+  <li>Implement method do() and command()</li>
+</ol>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Method</th>
+      <th style="text-align: left">Purpose</th>
+      <th style="text-align: left">Arguments</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">do(magellanSelector)</td>
+      <td style="text-align: left">Called by base test if element exists and is visible, you can do you own things in this method.</td>
+      <td style="text-align: left">magellanSelector is the selector you should use which is generated by nightwatch-extra</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">command(…, callback)</td>
+      <td style="text-align: left">The command signature which user will use in their test</td>
+      <td style="text-align: left">Parameter amount can be arbitary with an optional callback which will be called when the command successfully finishes.</td>
+    </tr>
+  </tbody>
+</table>
+
+<ol>
+  <li>Add the path of your new command to nightwatch.json</li>
+</ol>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code>  <span class="s2">"custom_commands_path"</span><span class="err">:</span> <span class="p">[</span>
+    <span class="s2">"./node_modules/testarmada-nightwatch-extra/lib/commands"</span><span class="p">,</span>
+    <span class="s2">"./node_modules/testarmada-nightwatch-extra/lib/commands/mobile"</span><span class="p">,</span>
+    <span class="s2">"./lib/custom_commands"</span>
+  <span class="p">],</span>
+</code></pre>
+</div>
+
+<h2 id="customize-assertion">Customize assertion</h2>
+
+<p>We provide a base-assertion.js for inheritance to implement your own assertion for browser test. To implement an assertion for browser test, you need to</p>
+
+<ol>
+  <li>Inherit your assertion from the base-assertion.js.</li>
+  <li>Implement method do(), assert() and command().</li>
+</ol>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Method</th>
+      <th style="text-align: left">Purpose</th>
+      <th style="text-align: left">Arguments</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">do(magellanSelector)</td>
+      <td style="text-align: left">Called by base test if element exists and is visible, you can do you own things in this method.</td>
+      <td style="text-align: left">magellanSelector is the selector you should use which is generated by nightwatch-extra</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">assert(actual, expected)</td>
+      <td style="text-align: left">Called by base assertion if element exists and is visible, you can do you own assertion in this method.</td>
+      <td style="text-align: left">actual is the actual value returned by injectedJsCommand() method, expected is the expected value passed in command() method</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">command(selector, expected, …, callback)</td>
+      <td style="text-align: left">The command signature which user will use in their test</td>
+      <td style="text-align: left">Parameter amount can be arbitary with a selector, an expected value and an optional callback which will be called when the assertion successfully finishes.</td>
+    </tr>
+  </tbody>
+</table>
+
+<ol>
+  <li>Add the path to your new assertion to nightwatch.json</li>
+</ol>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code>  <span class="s2">"custom_assertions_path"</span><span class="err">:</span> <span class="p">[</span>
+    <span class="s2">"./node_modules/testarmada-nightwatch-extra/lib/assertions"</span><span class="p">,</span>
+    <span class="s2">"./node_modules/testarmada-nightwatch-extra/lib/assertions/mobile"</span><span class="p">,</span>
+    <span class="s2">"./lib/custom_assertions"</span>
+  <span class="p">],</span>
+</code></pre>
+</div>
+
+<h1 id="contribute-to-reporter">Contribute to reporter</h1>
+
+<h2 id="create-a-reporter">Create a reporter</h2>
+
+<p>A reporter must implement following methods.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Method</th>
+      <th style="text-align: left">Purpose</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">initialize()</td>
+      <td style="text-align: left">initialize current reporter instance</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">listenTo(testRun, test, source)</td>
+      <td style="text-align: left">listen to magellan’s test run</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">_handleMessage(testRun, test, msg)</td>
+      <td style="text-align: left">will be called when magellan emits certain events</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">flush()</td>
+      <td style="text-align: left">will be called when magellan finishes</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><em><strong>Please note</strong>: _handleMessage() will be called per test. Please handle the error properly if it happens in one of the _handleMessage() so all your following _handleMessage() and flush() don’t error out.</em></p>
+
+<h2 id="enable-your-reporter">Enable your reporter</h2>
+
+<p>To enable multiple reporters, simply add them in magellan.json</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="s2">"reporters"</span><span class="err">:</span> <span class="p">[</span>
+    <span class="s2">"testarmada-magellan-xunit-reporter"</span><span class="p">,</span>
+    <span class="s2">"testarmada-magellan-dev-reporter"</span>
+  <span class="p">],</span>
+</code></pre>
+</div>
+
+  </div>
+  <div class="clear"></div>
+</div>
+<script type="text/javascript">
+  var elements = document.getElementsByClassName('highlight');
+  for (var i = 0; i < elements.length; i++) {
+    elements[i].className += " line-numbers";
+    if (!elements[i].parentElement.classList.value.match(/language/)) {
+      elements[i].children[0].className = "language-javascript";
+    }
+  }
+</script>
+<script type="text/javascript" src="/js/prism.js"></script>
+<script src="/js/jquery-3.3.1.min.js"></script>
+<script src="/js/doc.js"></script>
+	</div>
+
+	<footer>
+		<img class="left-footer-logo" alt="Left Footer Logo"
+			 src="/documentation/images/dxt-logo.png"
+			 srcset="/documentation/images/dxt-logo%402x.png 2x,
+					 /documentation/images/dxt-logo%403x.png 3x">
+		
+		<span class="copyright">&copy; 2018 Walmart Inc.</span>
+		
+		<img class="right-footer-logo" alt="Right Footer Logo"
+			 src="/documentation/images/walmartlabs-logo.png"
+			 srcset="/documentation/images/walmartlabs-logo%402x.png 2x,
+			 		 /documentation/images/walmartlabs-logo%403x.png 3x">
+	</footer>
+
+	<script type="text/javascript">
+		document.querySelector('.search-box-sub').addEventListener('click', function() {
+			document.querySelector('.search-box-sub').classList.add('expand-input');
+			document.querySelector('.search-box-sub').placeholder = 'Enter text to search or "Esc" to close';
+			document.querySelector('.select-box-sub').classList.add('expand-select');
+		});
+		document.querySelector('.search-box-sub').onkeydown = function(evt) {
+			evt = evt || window.event;
+			if (evt.keyCode == 27) {
+				document.querySelector('.search-box-sub').classList.remove('expand-input');
+				document.querySelector('.search-box-sub').placeholder = '';
+				document.querySelector('.select-box-sub').classList.remove('expand-select');
+			}
+		};
+		document.querySelector('body').addEventListener('click', function(evt) {
+			evt = evt || window.event;
+			var ignore = '.search-box-sub, .select-box-sub, .select-box-sub__select, a, button';
+			if (!evt.target.matches(ignore)) {
+				document.querySelector('.search-box-sub').classList.remove('expand-input');
+				document.querySelector('.search-box-sub').placeholder = '';
+				document.querySelector('.select-box-sub').classList.remove('expand-select');
+			}
+		});
+	</script>
+
+</body>
+</html>

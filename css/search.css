@@ -1,0 +1,101 @@
+.search-content {
+  font-family: 'Roboto', sans-serif;
+  color: #444444;
+}
+
+#result-count {
+  font-size: 30px;
+}
+
+#not-found-message {
+  display: none;
+}
+
+.search-result {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.result-url {
+  font-size: 20px;
+  color: #399cf5;
+  margin: 0;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.result-title {
+  font-size: 24px;
+  margin: 0;
+}
+
+.result-excerpt {
+  font-size: 20px;
+  margin: 0;
+}
+
+.search-term {
+  padding: 0 2px;
+  background-color: #ffe450;
+}
+
+
+/* Pagination */
+
+#pagination {
+  display: none;
+}
+
+.pagination {
+  height: 40px;
+  margin-top: 100px;
+  background-color: #eeeeee;
+  border: solid 1px #cccccc;
+  border-radius: 3px;
+  text-align: center;
+}
+
+/* Pagination buttons & pages */
+
+.pagination__prev,
+.pagination__next,
+.pagination__page,
+.pagination__more {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.pagination__page {
+  font-size: 14px;
+  color: #555555;
+}
+
+.pagination__page:hover {
+  background-color: #c4c4c4;
+  color: #ffffff;
+}
+
+.pagination__current-page {
+  background-color: #28b5f6;
+  font-weight: 700;
+  color: #ffffff;
+  cursor: default;
+}
+
+.pagination__prev {
+  margin-right: 40px;
+}
+
+.pagination__next {
+  margin-left: 40px;
+}
+
+.pagination__disabled {
+  cursor: default;
+}

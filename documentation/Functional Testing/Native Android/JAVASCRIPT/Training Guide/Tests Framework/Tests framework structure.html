@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test Armada</title>
+	<link rel="stylesheet" type="text/css" href="/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="/css/common.css">
+	<link rel="stylesheet" type="text/css" href="/css/subheader.css">
+	<link rel="stylesheet" type="text/css" href="/css/header.css">
+	<link rel="stylesheet" type="text/css" href="/css/home.css">
+	<link rel="stylesheet" type="text/css" href="/css/doc.css">
+	<link rel="stylesheet" type="text/css" href="/css/training.css">
+	<link rel="stylesheet" type="text/css" href="/css/faq.css">
+	<link rel="stylesheet" type="text/css" href="/css/contact.css">
+	<link rel="stylesheet" type="text/css" href="/css/search.css">
+	<link rel="stylesheet" type="text/css" href="/css/custom.css">
+	<link rel="stylesheet" type="text/css" href="/css/slick.css">
+	<link rel="stylesheet" type="text/css" href="/css/prism.css">
+	<link rel="stylesheet" type="text/css" href="/css/responsive.css">
+	
+	<link rel="shortcut icon" href="/documentation/images/favicon.ico">
+	
+</head>
+<body>
+
+	<div class="subheader">
+		<div class="search-bar">
+			<form class="search-bar__form" action="/search" method="get">
+				<div class="select-box-sub">
+					<select class="select-box-sub__select" name="fleet" id="fleet-box" onchange="document.getElementById('search-box').focus();">
+						<option value="all">All Fleets</option>
+						
+						<option value="Functional Testing">Functional Testing</option>
+						
+						<option value="Mocking">Mocking</option>
+						
+						<option value="Performance Testing">Performance Testing</option>
+						
+						<option value="Data Insights">Data Insights</option>
+						
+					</select>
+				</div>
+				<input type="text" id="search-box" name="query" autocomplete="off" class="search-box-sub">
+			</form>
+		</div>
+		<div class="nav-sub-links">
+			
+			
+			
+			<a href="/documentation/Presentations" class="nav-sub-links__link">Presentations</a>
+			
+			
+			
+			
+			<a href="/documentation/About" class="nav-sub-links__link">About Us</a>
+			
+			
+			
+			
+			
+			<a href="https://github.com/TestArmada/" class="nav-sub-links__link" target="_blank">GitHub</a>
+			
+			
+			
+		</div>
+	</div>
+
+	<header>
+		<a href="/">
+			<img src="/documentation/images/ta-logo.png" class="logo" alt="Main Brand Logo"
+				 srcset="/documentation/images/ta-logo%402x.png 2x, /documentation/images/ta-logo%403x.png 3x">
+		</a>
+		<!-- <form action="/search" method="get">
+			<input type="text" id="search-box" name="query" placeholder="Search" class="search-box">
+			<div class="select-box">
+				<select name="fleet" id="fleet-box" onchange="document.getElementById('search-box').focus();">
+					<option value="all">All Fleets</option>
+					
+					<option value="Functional Testing">Functional Testing</option>
+					
+					<option value="Mocking">Mocking</option>
+					
+					<option value="Performance Testing">Performance Testing</option>
+					
+					<option value="Data Insights">Data Insights</option>
+					
+				</select>
+			</div>
+		</form> -->
+		<div class="nav-links">
+			
+			
+			
+			
+			
+			
+			
+			<div class="nav-links__fleets">
+				<a class="nav-links__fleets-btn">
+					Fleets <img src="/images/arrow-down-icon.png" class="arrow-down-icon"
+								srcset="/images/arrow-down-icon%402x.png 2x,
+										/images/arrow-down-icon%403x.png 3x">
+				</a>
+				<div class="nav-links__fleets-content">
+					<a href="/">
+						All Fleets
+					</a>
+					
+					<a href="/documentation/Functional Testing/">
+						Functional Testing
+					</a>
+					
+					<a href="/documentation/Mocking/">
+						Mocking
+					</a>
+					
+					<a href="/documentation/Performance Testing/">
+						Performance Testing
+					</a>
+					
+					<a href="/documentation/Data Insights/">
+						Data Insights
+					</a>
+					
+				</div>
+			</div>
+			
+			
+			
+			
+			<a href="/faq" class="nav-links__main-links">FAQ</a>
+			
+			
+			
+			
+			
+		</div>
+	</header>
+
+	<div class="container">
+		  <div class="clear"></div>
+<div class="doc-container">
+  <div class="breadcrumb doc-breadcrumb">
+    <p>
+      <a class="breadcrumb__link" href="/">Home</a>
+      <img src="/images/arrow-right-icon.png"
+           srcset="/images/arrow-right-icon%402x.png 2x,
+                   /images/arrow-right-icon%403x.png 3x"
+           class="arrow-right-icon">
+      <a class="breadcrumb__link" href="/documentation/Functional Testing/">Functional Testing</a>
+      <img src="/images/arrow-right-icon.png"
+           srcset="/images/arrow-right-icon%402x.png 2x,
+                   /images/arrow-right-icon%403x.png 3x"
+           class="arrow-right-icon">
+      <a class="breadcrumb__link" href="/documentation/Functional Testing/Native Android/JAVASCRIPT/Introduction">Native Android JAVASCRIPT</a>
+      <img src="/images/arrow-right-icon.png"
+           srcset="/images/arrow-right-icon%402x.png 2x,
+                   /images/arrow-right-icon%403x.png 3x"
+           class="arrow-right-icon">
+      <a class="breadcrumb__link" href="/documentation/Functional Testing/Native Android/JAVASCRIPT/Training Guide">Training Guide</a>
+      <img src="/images/arrow-right-icon.png"
+           srcset="/images/arrow-right-icon%402x.png 2x,
+                   /images/arrow-right-icon%403x.png 3x"
+           class="arrow-right-icon">
+      <span class="breadcrumb__current-page">Tests Framework</span>
+    </p>
+  </div>
+  <div class="clear"></div>
+  <div class="training-container">
+    <div class="sidebar">
+<div class="training-doc-link">
+<div class="training-doc-link-left">
+<img class="training-doc-link-left__img" src="/images/training/checked.png" srcset="/images/training/checked%402x.png 2x, /images/training/checked%403x.png 3x" /><hr class="training-doc-link-left__hr training-doc-link-left__hr-completed" /></div>
+<p class="training-doc-link__text">
+<a class="training-doc-link__text-completed" href="./Execution commands">Execution commands</a></p>
+</div>
+<div class="training-doc-link">
+<div class="training-doc-link-left">
+<img class="training-doc-link-left__img" src="/images/training/actived.png" srcset="/images/training/actived%402x.png 2x, /images/training/actived%403x.png 3x" /></div>
+<p class="training-doc-link__text">
+<a class="training-doc-link__text-current" href="./Tests framework structure">Tests framework structure</a></p>
+</div>
+</div>
+<div class="training-doc-nav-btn">
+<a href="./Execution commands"><img src="/images/training/btn-left.png" srcset="/images/training/btn-left%402x.png 2x, /images/training/btn-left%403x.png 3x" /></a>
+</div>
+<div class="training-content markdown">
+<h2>Tests framework structure</h2>
+<h3>Where to find mobile commands and assertions</h3>
+<ol>
+<li>When look at commands in page files, e.g. <strong>clickMobileEl()</strong> may look new to you. Those mobile commands are defined in <strong><em>./node_modules/testarmada-nightwatch-extra/lib/commands/mobile</em></strong></li>
+<li>Assertions, e.g. <strong>mobileElAttrContains()</strong>, are defined in <strong><em>./node_modules/testarmada-nightwatch-extra/lib/assertions/mobile</em></strong></li>
+<li>To use those mobile commands and assertions, need to add the following lines in nightwatch.json file:</li>
+</ol>
+<pre><code class="language-bash">  &quot;custom_commands_path&quot;: [
+    &quot;./node_modules/testarmada-nightwatch-extra/lib/commands/mobile&quot;
+  ],
+  &quot;custom_assertions_path&quot;: [
+    &quot;./node_modules/testarmada-nightwatch-extra/lib/assertions/mobile&quot;
+  ],
+</code></pre>
+<ol start="4">
+<li>You can also add your customized commands into folder <strong>./lib/custom_commands</strong>, to increase code reusability. And please remember to add the path to nightwatch.json file, e.g.</li>
+</ol>
+<pre><code class="language-bash">  &quot;custom_commands_path&quot;: [
+    &quot;./node_modules/testarmada-nightwatch-extra/lib/commands/mobile&quot;,
+    &quot;./lib/custom_commands&quot;
+  ],
+</code></pre>
+</div>
+<div class="training-doc-nav-btn">
+</div>
+
+  </div>
+  <div class="clear"></div>
+</div>
+<script type="text/javascript">
+  var elements = document.getElementsByTagName('pre');
+  for (var i = 0; i < elements.length; i++) {
+    elements[i].className += " line-numbers";
+    if (!elements[i].children[0].className) {
+      elements[i].children[0].className = "language-javascript";
+    }
+  }
+</script>
+<script type="text/javascript" src="/js/prism.js"></script>
+	</div>
+
+	<footer>
+		<img class="left-footer-logo" alt="Left Footer Logo"
+			 src="/documentation/images/dxt-logo.png"
+			 srcset="/documentation/images/dxt-logo%402x.png 2x,
+					 /documentation/images/dxt-logo%403x.png 3x">
+		
+		<span class="copyright">&copy; 2018 Walmart Inc.</span>
+		
+		<img class="right-footer-logo" alt="Right Footer Logo"
+			 src="/documentation/images/walmartlabs-logo.png"
+			 srcset="/documentation/images/walmartlabs-logo%402x.png 2x,
+			 		 /documentation/images/walmartlabs-logo%403x.png 3x">
+	</footer>
+
+	<script type="text/javascript">
+		document.querySelector('.search-box-sub').addEventListener('click', function() {
+			document.querySelector('.search-box-sub').classList.add('expand-input');
+			document.querySelector('.search-box-sub').placeholder = 'Enter text to search or "Esc" to close';
+			document.querySelector('.select-box-sub').classList.add('expand-select');
+		});
+		document.querySelector('.search-box-sub').onkeydown = function(evt) {
+			evt = evt || window.event;
+			if (evt.keyCode == 27) {
+				document.querySelector('.search-box-sub').classList.remove('expand-input');
+				document.querySelector('.search-box-sub').placeholder = '';
+				document.querySelector('.select-box-sub').classList.remove('expand-select');
+			}
+		};
+		document.querySelector('body').addEventListener('click', function(evt) {
+			evt = evt || window.event;
+			var ignore = '.search-box-sub, .select-box-sub, .select-box-sub__select, a, button';
+			if (!evt.target.matches(ignore)) {
+				document.querySelector('.search-box-sub').classList.remove('expand-input');
+				document.querySelector('.search-box-sub').placeholder = '';
+				document.querySelector('.select-box-sub').classList.remove('expand-select');
+			}
+		});
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,312 @@
+/* 
+  Breakpoints and corresponding style changes -
+    1440px and above = default styling
+    1366px to 1439px = documentation
+    1280px to 1365px = header, documentation, training
+    1080px to 1279px = header, home & intermediate pages, documentation, training, faq
+    (1024) to 1079px = header, home & intermediate pages, documentation, training, faq
+*/
+
+@media screen and (max-width: 1499px) {
+
+  /* Header */
+
+  .search-box {
+    width: 310px;
+  }
+
+  .select-box {
+    width: 190px;
+  }
+
+  .nav-links a {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+}
+
+@media screen and (max-width: 1439px) {
+
+  /* Header */
+
+  .search-box {
+    width: 290px;
+  }
+
+  .select-box {
+    width: 170px;
+  }
+
+  /* Documentation */
+
+  .doc-container {
+    width: 1366px;
+  }
+
+  .doc-content {
+    margin: 0 50px;
+  }
+
+}
+
+@media screen and (max-width: 1365px) {
+
+  /* Header */
+
+  .search-box {
+    width: 270px;
+  }
+
+  .select-box {
+    width: 150px;
+  }
+
+  .nav-links a {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .nav-sub-links__link {
+    margin-right: 12px;
+  }
+
+  /* Documentation */
+
+  .doc-breadcrumb {
+    margin-left: 58px;
+  }
+
+  .sidebar {
+    margin-left: 37px;
+  }
+
+  .doc-container {
+    width: 1280px;
+  }
+
+  .doc-content {
+    width: 900px;
+  }
+
+  /* Training Guide */
+
+  .training-placard {
+    width: 270px;
+  }
+
+  .training-content {
+    margin: 0 20px;
+  }
+
+  .training-doc-nav-btn img {
+    width: 44px;
+  }
+
+}
+
+@media screen and (max-width: 1279px) {
+
+  /* Header */
+
+  .logo {
+    margin-left: 15px;
+  }
+
+  .search-box {
+    width: 210px;
+  }
+
+  .select-box {
+    width: 110px;
+  }
+
+  .nav-links a {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .nav-sub-links__link {
+    margin-right: 10px;
+  }
+
+  /* Home and intermediate pages */
+
+  .inner-container {
+    width: 1024px;
+  }
+
+  .slick-slider {
+    width: 940px;
+  }
+
+  .slick-slide {
+    max-width: 293px;
+  }
+
+  .slick-prev {
+    left: -45px;
+  }
+
+  .slick-next {
+    right: -45px;
+  }
+
+  .col-2 {
+    width: 480px;
+  }
+
+  .col-2:nth-child(odd) {
+    margin-right: 64px;
+  }
+
+  .card-bg {
+    margin-top: 64px;
+  }
+
+  /* Documentation */
+
+  .doc-breadcrumb {
+    margin-left: 48px;
+  }
+
+  .sidebar {
+    margin-left: 27px;
+  }
+
+  .doc-container {
+    width: 1080px;
+  }
+
+  .doc-content {
+    width: 770px;
+    margin: 0 25px;
+  }
+
+  /* Training Guide */
+
+  .training-placard {
+    width: 350px;
+    margin: 10px 35px 30px 10px;
+  }
+
+  .training-placard:nth-child(3n) {
+    margin-right: 35px;
+  }
+
+  .training-placard:nth-child(2n) {
+    margin-right: 0;
+  }
+
+  .training-content {
+    width: 700px;
+    margin: 0 10px;
+  }
+
+  .training-doc-nav-btn,
+  .training-doc-nav-btn img {
+    width: 40px;
+  }
+
+  /* FAQ */
+
+  .faq-select-box {
+    width: 280px;
+  }
+
+}
+@media screen and (max-width: 1079px) {
+
+  /* Header */
+
+  .logo {
+    margin-left: 10px;
+  }
+
+  .search-box {
+    width: 185px;
+  }
+
+  .select-box {
+    width: 110px;
+  }
+
+  .nav-links a {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .nav-sub-links__link {
+    margin-right: 8px;
+  }
+
+  /* Home and intermediate pages */
+
+  .inner-container {
+    width: 980px;
+  }
+
+  .slick-slider {
+    width: 850px;
+  }
+
+  .slick-slide {
+    max-width: 263px;
+  }
+
+  .slick-prev {
+    left: -50px;
+  }
+
+  .slick-next {
+    right: -50px;
+  }
+
+  .col-2 {
+    width: 470px;
+  }
+
+  .col-2:nth-child(odd) {
+    margin-right: 40px;
+  }
+
+  .card-bg {
+    margin-top: 40px;
+  }
+
+  /* Documentation */
+
+  .doc-breadcrumb {
+    margin-left: 38px;
+  }
+
+  .sidebar {
+    margin-left: 17px;
+  }
+
+  .doc-container {
+    width: 1024px;
+  }
+
+  .doc-content {
+    width: 730px;
+    margin: 0 20px;
+  }
+
+  /* Training Guide */
+
+  .training-placard {
+    width: 330px;
+  }
+
+  .training-content {
+    width: 650px;
+  }
+
+  /* FAQ */
+
+  .faq-select-box {
+    width: 265px;
+  }
+
+}

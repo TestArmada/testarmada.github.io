@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test Armada</title>
+	<link rel="stylesheet" type="text/css" href="/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="/css/common.css">
+	<link rel="stylesheet" type="text/css" href="/css/subheader.css">
+	<link rel="stylesheet" type="text/css" href="/css/header.css">
+	<link rel="stylesheet" type="text/css" href="/css/home.css">
+	<link rel="stylesheet" type="text/css" href="/css/doc.css">
+	<link rel="stylesheet" type="text/css" href="/css/training.css">
+	<link rel="stylesheet" type="text/css" href="/css/faq.css">
+	<link rel="stylesheet" type="text/css" href="/css/contact.css">
+	<link rel="stylesheet" type="text/css" href="/css/search.css">
+	<link rel="stylesheet" type="text/css" href="/css/custom.css">
+	<link rel="stylesheet" type="text/css" href="/css/slick.css">
+	<link rel="stylesheet" type="text/css" href="/css/prism.css">
+	<link rel="stylesheet" type="text/css" href="/css/responsive.css">
+	
+	<link rel="shortcut icon" href="/documentation/images/favicon.ico">
+	
+</head>
+<body>
+
+	<div class="subheader">
+		<div class="search-bar">
+			<form class="search-bar__form" action="/search" method="get">
+				<div class="select-box-sub">
+					<select class="select-box-sub__select" name="fleet" id="fleet-box" onchange="document.getElementById('search-box').focus();">
+						<option value="all">All Fleets</option>
+						
+						<option value="Functional Testing">Functional Testing</option>
+						
+						<option value="Mocking">Mocking</option>
+						
+						<option value="Performance Testing">Performance Testing</option>
+						
+						<option value="Data Insights">Data Insights</option>
+						
+					</select>
+				</div>
+				<input type="text" id="search-box" name="query" autocomplete="off" class="search-box-sub">
+			</form>
+		</div>
+		<div class="nav-sub-links">
+			
+			
+			
+			<a href="/documentation/Presentations" class="nav-sub-links__link">Presentations</a>
+			
+			
+			
+			
+			<a href="/documentation/About" class="nav-sub-links__link">About Us</a>
+			
+			
+			
+			
+			
+			<a href="https://github.com/TestArmada/" class="nav-sub-links__link" target="_blank">GitHub</a>
+			
+			
+			
+		</div>
+	</div>
+
+	<header>
+		<a href="/">
+			<img src="/documentation/images/ta-logo.png" class="logo" alt="Main Brand Logo"
+				 srcset="/documentation/images/ta-logo%402x.png 2x, /documentation/images/ta-logo%403x.png 3x">
+		</a>
+		<!-- <form action="/search" method="get">
+			<input type="text" id="search-box" name="query" placeholder="Search" class="search-box">
+			<div class="select-box">
+				<select name="fleet" id="fleet-box" onchange="document.getElementById('search-box').focus();">
+					<option value="all">All Fleets</option>
+					
+					<option value="Functional Testing">Functional Testing</option>
+					
+					<option value="Mocking">Mocking</option>
+					
+					<option value="Performance Testing">Performance Testing</option>
+					
+					<option value="Data Insights">Data Insights</option>
+					
+				</select>
+			</div>
+		</form> -->
+		<div class="nav-links">
+			
+			
+			
+			
+			
+			
+			
+			<div class="nav-links__fleets">
+				<a class="nav-links__fleets-btn">
+					Fleets <img src="/images/arrow-down-icon.png" class="arrow-down-icon"
+								srcset="/images/arrow-down-icon%402x.png 2x,
+										/images/arrow-down-icon%403x.png 3x">
+				</a>
+				<div class="nav-links__fleets-content">
+					<a href="/">
+						All Fleets
+					</a>
+					
+					<a href="/documentation/Functional Testing/">
+						Functional Testing
+					</a>
+					
+					<a href="/documentation/Mocking/">
+						Mocking
+					</a>
+					
+					<a href="/documentation/Performance Testing/">
+						Performance Testing
+					</a>
+					
+					<a href="/documentation/Data Insights/">
+						Data Insights
+					</a>
+					
+				</div>
+			</div>
+			
+			
+			
+			
+			<a href="/faq" class="nav-links__main-links">FAQ</a>
+			
+			
+			
+			
+			
+		</div>
+	</header>
+
+	<div class="container">
+		  <div class="clear"></div>
+<div class="doc-container">
+  <div class="breadcrumb doc-breadcrumb">
+    <p>
+      <a class="breadcrumb__link" href="/">Home</a>
+      <img src="/images/arrow-right-icon.png"
+           srcset="/images/arrow-right-icon@2x.png 2x,
+                   /images/arrow-right-icon@3x.png 3x"
+           class="arrow-right-icon">
+      <a class="breadcrumb__link" href="/documentation/Functional Testing/">Functional Testing</a>
+      <img src="/images/arrow-right-icon.png"
+           srcset="/images/arrow-right-icon@2x.png 2x,
+                   /images/arrow-right-icon@3x.png 3x"
+           class="arrow-right-icon">
+      <span class="breadcrumb__current-page">rWeb JAVASCRIPT</span>
+    </p>
+  </div>
+  <div class="clear"></div>
+  <div class="sidebar">
+    <ul>
+    
+    
+    
+    
+    
+    
+      
+      
+        
+          
+          
+            <li><a href="/documentation/Functional Testing/rWeb/JAVASCRIPT/Introduction" class="sidebar__file-links">
+              Introduction
+            </a></li>
+          
+        
+      
+        
+          
+          
+            <li><a href="/documentation/Functional Testing/rWeb/JAVASCRIPT/Getting Started" class="sidebar__file-links">
+              Getting Started
+            </a></li>
+          
+        
+      
+        
+          
+            
+            
+              <li class="sidebar__file-links">Developer Guide</li>
+            
+          
+          
+          
+            <li><a href="/documentation/Functional Testing/rWeb/JAVASCRIPT/Training Guide" class="sidebar__file-links sidebar__file-sublink">
+              Training Guide
+            </a></li>
+          
+        
+      
+        
+          
+          
+          
+            <li><a href="/documentation/Functional Testing/rWeb/JAVASCRIPT/API Guide" class="sidebar__file-links sidebar__file-sublink">
+              API Guide
+            </a></li>
+          
+        
+      
+        
+          
+          
+          
+            <li><a href="/documentation/Functional Testing/rWeb/JAVASCRIPT/Boilerplates" class="sidebar__file-links sidebar__file-sublink">
+              Boilerplates
+            </a></li>
+          
+        
+      
+        
+          
+          
+            <li><a href="/documentation/Functional Testing/rWeb/JAVASCRIPT/Contribution Guide" class="sidebar__file-links">
+              Contribution Guide
+            </a></li>
+          
+        
+      
+        
+          
+          
+            <li><a href="/documentation/Functional Testing/rWeb/JAVASCRIPT/FAQ" class="sidebar__file-links sidebar__file-links-current">
+              FAQ
+            </a></li>
+          
+        
+      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </ul>
+  </div>
+  <div class="doc-content markdown">
+    <h2 id="im-having-npm-install-failure-what-should-i-do">I’m having npm install failure, what should I do?</h2>
+
+<p>Please make sure that you’re using compatible node and npm. Check versions by node -v and npm -v</p>
+
+<h2 id="which-magellan-command-should-i-use-to-launch-my-test">Which magellan command should I use to launch my test?</h2>
+
+<p>Please read magellan help by ./node_modules/.bin/magellan –help first. If you cannot find what you want there, or if you’re still not sure, please reach out to us.</p>
+
+<h2 id="how-should-i-run-my-test-in-different-browsers">How should I run my test in different browsers?</h2>
+
+<p>If you want to test locally, Firefox and Chrome would be supported by default no matter which OS you’re using. To run test in Safari, you need to follow this article. To run in IE serie, you need a Windows. Or, just simply invoke your test on saucelabs.</p>
+
+<h2 id="how-should-i-run-my-test-in-mobile-browser">How should I run my test in mobile browser?</h2>
+
+<p>Please use Saucelabs.</p>
+
+<h2 id="how-should-i-debug-my-test">How should I debug my test?</h2>
+
+<p>Right now we don’t have fancy feature like block current execution –&gt; do some variable watch –&gt; resume your test. However, you can add a .pause() command before the command you want to debug, run your test and check selector from either developer tool or firebug from browser. Another option is adding tons of console.log() in your test.</p>
+
+<h2 id="why-my-test-passes-in-one-browser-but-fails-in-another-one">Why my test passes in one browser but fails in another one?</h2>
+
+<p>There are couple of things can impact the test results. Page rendering speed, css selector compatibility, viewport size or even the way element’s being rendered. However in most cases the descrepancy is because we’re not really simulating user behaviors in the test. For instance, please make sure your code is not clicking on an element that is not in the viewport.</p>
+
+<h2 id="can-i-have-this-feature">Can I have this feature?</h2>
+
+<p>If you are asking for a customized command, please check if similar command exists in our API Guide and nightwatch first. Or, if you are asking for a feature like data tools, or any other stuff that you think is useful, please join us in slack group testarmada.slack.com.</p>
+
+  </div>
+  <div class="clear"></div>
+</div>
+<script type="text/javascript">
+  var elements = document.getElementsByClassName('highlight');
+  for (var i = 0; i < elements.length; i++) {
+    elements[i].className += " line-numbers";
+    if (!elements[i].parentElement.classList.value.match(/language/)) {
+      elements[i].children[0].className = "language-javascript";
+    }
+  }
+</script>
+<script type="text/javascript" src="/js/prism.js"></script>
+<script src="/js/jquery-3.3.1.min.js"></script>
+<script src="/js/doc.js"></script>
+	</div>
+
+	<footer>
+		<img class="left-footer-logo" alt="Left Footer Logo"
+			 src="/documentation/images/dxt-logo.png"
+			 srcset="/documentation/images/dxt-logo%402x.png 2x,
+					 /documentation/images/dxt-logo%403x.png 3x">
+		
+		<span class="copyright">&copy; 2018 Walmart Inc.</span>
+		
+		<img class="right-footer-logo" alt="Right Footer Logo"
+			 src="/documentation/images/walmartlabs-logo.png"
+			 srcset="/documentation/images/walmartlabs-logo%402x.png 2x,
+			 		 /documentation/images/walmartlabs-logo%403x.png 3x">
+	</footer>
+
+	<script type="text/javascript">
+		document.querySelector('.search-box-sub').addEventListener('click', function() {
+			document.querySelector('.search-box-sub').classList.add('expand-input');
+			document.querySelector('.search-box-sub').placeholder = 'Enter text to search or "Esc" to close';
+			document.querySelector('.select-box-sub').classList.add('expand-select');
+		});
+		document.querySelector('.search-box-sub').onkeydown = function(evt) {
+			evt = evt || window.event;
+			if (evt.keyCode == 27) {
+				document.querySelector('.search-box-sub').classList.remove('expand-input');
+				document.querySelector('.search-box-sub').placeholder = '';
+				document.querySelector('.select-box-sub').classList.remove('expand-select');
+			}
+		};
+		document.querySelector('body').addEventListener('click', function(evt) {
+			evt = evt || window.event;
+			var ignore = '.search-box-sub, .select-box-sub, .select-box-sub__select, a, button';
+			if (!evt.target.matches(ignore)) {
+				document.querySelector('.search-box-sub').classList.remove('expand-input');
+				document.querySelector('.search-box-sub').placeholder = '';
+				document.querySelector('.select-box-sub').classList.remove('expand-select');
+			}
+		});
+	</script>
+
+</body>
+</html>

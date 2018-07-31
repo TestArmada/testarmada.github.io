@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test Armada</title>
+	<link rel="stylesheet" type="text/css" href="/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="/css/common.css">
+	<link rel="stylesheet" type="text/css" href="/css/subheader.css">
+	<link rel="stylesheet" type="text/css" href="/css/header.css">
+	<link rel="stylesheet" type="text/css" href="/css/home.css">
+	<link rel="stylesheet" type="text/css" href="/css/doc.css">
+	<link rel="stylesheet" type="text/css" href="/css/training.css">
+	<link rel="stylesheet" type="text/css" href="/css/faq.css">
+	<link rel="stylesheet" type="text/css" href="/css/contact.css">
+	<link rel="stylesheet" type="text/css" href="/css/search.css">
+	<link rel="stylesheet" type="text/css" href="/css/custom.css">
+	<link rel="stylesheet" type="text/css" href="/css/slick.css">
+	<link rel="stylesheet" type="text/css" href="/css/prism.css">
+	<link rel="stylesheet" type="text/css" href="/css/responsive.css">
+	
+	<link rel="shortcut icon" href="/documentation/images/favicon.ico">
+	
+</head>
+<body>
+
+	<div class="subheader">
+		<div class="search-bar">
+			<form class="search-bar__form" action="/search" method="get">
+				<div class="select-box-sub">
+					<select class="select-box-sub__select" name="fleet" id="fleet-box" onchange="document.getElementById('search-box').focus();">
+						<option value="all">All Fleets</option>
+						
+						<option value="Functional Testing">Functional Testing</option>
+						
+						<option value="Mocking">Mocking</option>
+						
+						<option value="Performance Testing">Performance Testing</option>
+						
+						<option value="Data Insights">Data Insights</option>
+						
+					</select>
+				</div>
+				<input type="text" id="search-box" name="query" autocomplete="off" class="search-box-sub">
+			</form>
+		</div>
+		<div class="nav-sub-links">
+			
+			
+			
+			<a href="/documentation/Presentations" class="nav-sub-links__link">Presentations</a>
+			
+			
+			
+			
+			<a href="/documentation/About" class="nav-sub-links__link">About Us</a>
+			
+			
+			
+			
+			
+			<a href="https://github.com/TestArmada/" class="nav-sub-links__link" target="_blank">GitHub</a>
+			
+			
+			
+		</div>
+	</div>
+
+	<header>
+		<a href="/">
+			<img src="/documentation/images/ta-logo.png" class="logo" alt="Main Brand Logo"
+				 srcset="/documentation/images/ta-logo%402x.png 2x, /documentation/images/ta-logo%403x.png 3x">
+		</a>
+		<!-- <form action="/search" method="get">
+			<input type="text" id="search-box" name="query" placeholder="Search" class="search-box">
+			<div class="select-box">
+				<select name="fleet" id="fleet-box" onchange="document.getElementById('search-box').focus();">
+					<option value="all">All Fleets</option>
+					
+					<option value="Functional Testing">Functional Testing</option>
+					
+					<option value="Mocking">Mocking</option>
+					
+					<option value="Performance Testing">Performance Testing</option>
+					
+					<option value="Data Insights">Data Insights</option>
+					
+				</select>
+			</div>
+		</form> -->
+		<div class="nav-links">
+			
+			
+			
+			
+			
+			
+			
+			<div class="nav-links__fleets">
+				<a class="nav-links__fleets-btn">
+					Fleets <img src="/images/arrow-down-icon.png" class="arrow-down-icon"
+								srcset="/images/arrow-down-icon%402x.png 2x,
+										/images/arrow-down-icon%403x.png 3x">
+				</a>
+				<div class="nav-links__fleets-content">
+					<a href="/">
+						All Fleets
+					</a>
+					
+					<a href="/documentation/Functional Testing/">
+						Functional Testing
+					</a>
+					
+					<a href="/documentation/Mocking/">
+						Mocking
+					</a>
+					
+					<a href="/documentation/Performance Testing/">
+						Performance Testing
+					</a>
+					
+					<a href="/documentation/Data Insights/">
+						Data Insights
+					</a>
+					
+				</div>
+			</div>
+			
+			
+			
+			
+			<a href="/faq" class="nav-links__main-links">FAQ</a>
+			
+			
+			
+			
+			
+		</div>
+	</header>
+
+	<div class="container">
+		  <div class="clear"></div>
+<div class="doc-container">
+  <div class="breadcrumb doc-breadcrumb">
+    <p>
+      <a class="breadcrumb__link" href="/">Home</a>
+      <img src="/images/arrow-right-icon.png"
+           srcset="/images/arrow-right-icon@2x.png 2x,
+                   /images/arrow-right-icon@3x.png 3x"
+           class="arrow-right-icon">
+      <a class="breadcrumb__link" href="/documentation/Mocking/">Mocking</a>
+      <img src="/images/arrow-right-icon.png"
+           srcset="/images/arrow-right-icon@2x.png 2x,
+                   /images/arrow-right-icon@3x.png 3x"
+           class="arrow-right-icon">
+      <span class="breadcrumb__current-page">Services JAVASCRIPT</span>
+    </p>
+  </div>
+  <div class="clear"></div>
+  <div class="sidebar">
+    <ul>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+        
+          
+          
+            <li><a href="/documentation/Mocking/Services/JAVASCRIPT/Introduction" class="sidebar__file-links">
+              Introduction
+            </a></li>
+          
+        
+      
+        
+          
+          
+            <li><a href="/documentation/Mocking/Services/JAVASCRIPT/Getting Started" class="sidebar__file-links">
+              Getting Started
+            </a></li>
+          
+        
+      
+        
+          
+            
+            
+              <li class="sidebar__file-links">Developer Guide</li>
+            
+          
+          
+          
+            <li><a href="/documentation/Mocking/Services/JAVASCRIPT/Training Guide" class="sidebar__file-links sidebar__file-sublink">
+              Training Guide
+            </a></li>
+          
+        
+      
+        
+          
+          
+          
+            <li><a href="/documentation/Mocking/Services/JAVASCRIPT/API Guide" class="sidebar__file-links sidebar__file-sublink">
+              API Guide
+            </a></li>
+          
+        
+      
+        
+          
+          
+            <li><a href="/documentation/Mocking/Services/JAVASCRIPT/Contribution Guide" class="sidebar__file-links sidebar__file-links-current">
+              Contribution Guide
+            </a></li>
+          
+        
+      
+        
+          
+          
+            <li><a href="/documentation/Mocking/Services/JAVASCRIPT/FAQ" class="sidebar__file-links">
+              FAQ
+            </a></li>
+          
+        
+      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </ul>
+  </div>
+  <div class="doc-content markdown">
+    <h2 id="architecture">Architecture</h2>
+
+<p>These are the very high level components of mocking eco-system.</p>
+
+<p><img src="../../images/shifu_components_diagram.png?raw=true" alt="shifu_components_diagram" title="Mocking Components Diagram" /></p>
+
+<p>The below diagram shows the mocking components in detail.</p>
+
+<p><img src="../../images/shifu_components_architecture.png?raw=true" alt="shifu_components_architecture" title="Mocking Components Architecture" /></p>
+
+<p>The mocking service uses <code class="highlighter-rouge">shifu-smocks</code> which provides the stateful HTTP mocking service built on top of HAPI. It allows to add routes and different scenarios for each route.</p>
+
+<p>In addition, the mocking service provides certain utilities via <a href="https://github.com/TestArmada/shifu-util">shifu-util</a>. It also provides logging facility with <a href="https://github.com/TestArmada/shifu-logger">shifu-logger</a></p>
+
+<h2 id="mock-server-start-flow">Mock Server Start flow</h2>
+
+<p>The mocking service exposes its features via API’s and HTTP end points. Lets take a look at the sequence of events when the mock server is started.</p>
+
+<p><img src="../../images/shifu_start_sequence_diagram.png?raw=true" alt="shifu_start_sequence_diagram" title="Mocking Start Sequence Diagram" /></p>
+
+<p>In the above diagram, the actor can be the test code which starts mock server or a developer using the mock service for local development / testing.</p>
+
+<ul>
+  <li>
+    <p>Users can specify what routes to mock by specifying them in endpoints.js</p>
+  </li>
+  <li>
+    <p>Shifu’s <code class="highlighter-rouge">start()</code> is invoked with options to start the Shifu server</p>
+  </li>
+  <li>
+    <p>Shifu creates an instance of Hapi server</p>
+  </li>
+  <li>
+    <p>Shifu adds the routes for the system API’s it supports</p>
+  </li>
+  <li>
+    <p>Shifu gets the plugin from <code class="highlighter-rouge">shifu-smocks</code></p>
+  </li>
+  <li>
+    <p>Shifu registers the plugin it obtained from the above step</p>
+  </li>
+  <li>
+    <p>Shifu starts the server</p>
+  </li>
+  <li>
+    <p>Once the Shifu server is started, you can use the Shifu API’s via HTTP Calls or libraries [Read API Guide for examples]</p>
+  </li>
+</ul>
+
+<h2 id="parallel-vs-non-parallel-sessions">Parallel vs non-parallel sessions</h2>
+
+<h3 id="without-parallel-sessions">Without Parallel sessions</h3>
+
+<p><img src="../../images/without_parallel_sessions.png?raw=true" alt="shifu_without_parallel_sessions" title="Shifu without parallel sessions" /></p>
+
+<p>If we want to run two test cases in parallel, mocking the same route and returning different data, it won’t be possible with running one  mock server and sharing across the whole test suite. So we needed to run one mock server and one application server per test case.</p>
+
+<h3 id="with-parallel-sessions">With Parallel sessions</h3>
+
+<p><img src="../../images/with_parallel_sessions.png?raw=true" alt="shifu_with_parallel_sessions" title="Shifu without parallel sessions" /></p>
+
+<p>With parallel sessions, we can share one application server and mock server for the whole test suite. It allows to mock the same route but different data for different test cases.</p>
+
+<p>To use parallel sessions, the mock server is started with pre-defined number of sessions. For each test, the test case needs to register a session with the mock server. The mock server returns a unique session id which is then sent as part of the request to the application server. If the request gets routed to the mock server for a mocked route, the request handler in mock server extracts the session id from the request, and prepends it to the route. For e.g, if the session id is “123”, it is prepended to the route “/api/getCart” and the route becomes “/123/api/getCart”. For another test using session id “456” , the route will become “/456/api/getCart”. This enables the mock server to be able to return two different responses for the same mocked route.</p>
+
+<h2 id="tech-stack">Tech stack</h2>
+
+<p>Language : Nodejs</p>
+
+<p>Node Version: 4+</p>
+
+<p>Unit Tests: Mocha</p>
+
+<p>Code formatting: Eslint</p>
+
+<p>Code Coverage Report: Istanbul</p>
+
+<h2 id="deployment-information">Deployment information</h2>
+<p>Mocking components are released as <code class="highlighter-rouge">npm</code> libraries</p>
+
+<h2 id="git-repository-information">Git repository information</h2>
+
+<p>The source code for all mocking components reside in Github.</p>
+
+<ul>
+  <li><a href="https://github.com/TestArmada/shifu">Shifu</a></li>
+  <li><a href="https://github.com/TestArmada/shifu-util">Shifu Util</a></li>
+  <li><a href="https://github.com/TestArmada/shifu-magellan-nightwatch">Shifu Magellan Nightwatch</a></li>
+  <li><a href="https://github.com/TestArmada/shifu-logger">Shifu Logger</a></li>
+  <li><a href="https://github.com/TestArmada/shifu-smocks">Shifu Smocks</a></li>
+  <li><a href="https://github.com/TestArmada/shifu-swagger">Shifu Swagger</a></li>
+</ul>
+
+<h2 id="development-process">Development process</h2>
+
+<p><strong><em>To contribute to the mocking fleet, please follow these steps:</em></strong></p>
+
+<ol>
+  <li>
+    <p>Fork the repository https://github.com/TestArmada/shifu. If your Github username is “abc” for e.g, your forked repository will be https://github.com/abc/shifu.</p>
+  </li>
+  <li>
+    <p>Clone this forked repository using <code class="highlighter-rouge">git clone https://github.com/&lt;username&gt;/shifu.git</code> and make “shifu” your working directory.</p>
+  </li>
+  <li>
+    <p>Create a branch on local with <code class="highlighter-rouge">git checkout -b &lt;your branch name&gt;</code>. <strong>Note</strong> The default branch for all projects is <code class="highlighter-rouge">development</code> so any branch you create will be off the <code class="highlighter-rouge">development</code> branch.</p>
+  </li>
+  <li>
+    <p>Install dependencies using <code class="highlighter-rouge">npm install</code>.</p>
+  </li>
+  <li>
+    <p>Make the code changes in the branch you created in step (3) and write / update the unit tests to verify your changes. Run unit tests using <code class="highlighter-rouge">npm test</code>. We use <code class="highlighter-rouge">eslint</code> to ensure code formatting. This step runs both unit tests as well as verifies code formatting. We use <code class="highlighter-rouge">istanbul</code> for code coverage reporting. <strong>95%</strong> is the minimum code coverage we expect for all our components.</p>
+  </li>
+  <li>
+    <p>Once you’re ready, submit your pull request from your branch against the <code class="highlighter-rouge">development</code> branch of Shifu (https://github.com/TestArmada/shifu/tree/development). The PR triggers a <a href="https://travis-ci.org/TestArmada/shifu">Travis build</a> which runs the tests in CI environment (same steps as in (5) above).</p>
+  </li>
+  <li>
+    <p>Once the PR is reviewed, a team member merges the PR into the <code class="highlighter-rouge">development</code> branch.</p>
+  </li>
+  <li>
+    <p>When the <code class="highlighter-rouge">development</code> branch is merged to <code class="highlighter-rouge">master</code>, a team member will push a tag to <code class="highlighter-rouge">master</code>, a <a href="https://travis-ci.org/TestArmada/shifu">Travis build</a> is triggered and publishes a new version of the package to <code class="highlighter-rouge">npm</code> registry.</p>
+  </li>
+</ol>
+
+<p><strong>Note:</strong> <strong><em>The same steps above are applicable for contributing to any of the mocking components.</em></strong></p>
+
+<!-- Source : https://www.lucidchart.com/documents/edit/134f7bf4-036b-4c56-97ec-bf3920ac8017 -->
+
+<!-- Source : https://www.lucidchart.com/documents/edit/d5fb377b-4596-4b85-99f9-1f10fb3addaa -->
+
+<!-- Source : https://www.lucidchart.com/documents/edit/f1082d13-cda5-459b-b60f-35af4f06b340 -->
+
+<!-- Source : https://www.lucidchart.com/documents/edit/df4884f5-84be-49df-8cd8-927cdccb8c62/0 -->
+
+<!-- Source : https://www.lucidchart.com/documents/edit/df4884f5-84be-49df-8cd8-927cdccb8c62/0 -->
+
+  </div>
+  <div class="clear"></div>
+</div>
+<script type="text/javascript">
+  var elements = document.getElementsByClassName('highlight');
+  for (var i = 0; i < elements.length; i++) {
+    elements[i].className += " line-numbers";
+    if (!elements[i].parentElement.classList.value.match(/language/)) {
+      elements[i].children[0].className = "language-javascript";
+    }
+  }
+</script>
+<script type="text/javascript" src="/js/prism.js"></script>
+<script src="/js/jquery-3.3.1.min.js"></script>
+<script src="/js/doc.js"></script>
+	</div>
+
+	<footer>
+		<img class="left-footer-logo" alt="Left Footer Logo"
+			 src="/documentation/images/dxt-logo.png"
+			 srcset="/documentation/images/dxt-logo%402x.png 2x,
+					 /documentation/images/dxt-logo%403x.png 3x">
+		
+		<span class="copyright">&copy; 2018 Walmart Inc.</span>
+		
+		<img class="right-footer-logo" alt="Right Footer Logo"
+			 src="/documentation/images/walmartlabs-logo.png"
+			 srcset="/documentation/images/walmartlabs-logo%402x.png 2x,
+			 		 /documentation/images/walmartlabs-logo%403x.png 3x">
+	</footer>
+
+	<script type="text/javascript">
+		document.querySelector('.search-box-sub').addEventListener('click', function() {
+			document.querySelector('.search-box-sub').classList.add('expand-input');
+			document.querySelector('.search-box-sub').placeholder = 'Enter text to search or "Esc" to close';
+			document.querySelector('.select-box-sub').classList.add('expand-select');
+		});
+		document.querySelector('.search-box-sub').onkeydown = function(evt) {
+			evt = evt || window.event;
+			if (evt.keyCode == 27) {
+				document.querySelector('.search-box-sub').classList.remove('expand-input');
+				document.querySelector('.search-box-sub').placeholder = '';
+				document.querySelector('.select-box-sub').classList.remove('expand-select');
+			}
+		};
+		document.querySelector('body').addEventListener('click', function(evt) {
+			evt = evt || window.event;
+			var ignore = '.search-box-sub, .select-box-sub, .select-box-sub__select, a, button';
+			if (!evt.target.matches(ignore)) {
+				document.querySelector('.search-box-sub').classList.remove('expand-input');
+				document.querySelector('.search-box-sub').placeholder = '';
+				document.querySelector('.select-box-sub').classList.remove('expand-select');
+			}
+		});
+	</script>
+
+</body>
+</html>

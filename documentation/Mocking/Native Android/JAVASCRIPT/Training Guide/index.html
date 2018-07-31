@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test Armada</title>
+	<link rel="stylesheet" type="text/css" href="/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="/css/common.css">
+	<link rel="stylesheet" type="text/css" href="/css/subheader.css">
+	<link rel="stylesheet" type="text/css" href="/css/header.css">
+	<link rel="stylesheet" type="text/css" href="/css/home.css">
+	<link rel="stylesheet" type="text/css" href="/css/doc.css">
+	<link rel="stylesheet" type="text/css" href="/css/training.css">
+	<link rel="stylesheet" type="text/css" href="/css/faq.css">
+	<link rel="stylesheet" type="text/css" href="/css/contact.css">
+	<link rel="stylesheet" type="text/css" href="/css/search.css">
+	<link rel="stylesheet" type="text/css" href="/css/custom.css">
+	<link rel="stylesheet" type="text/css" href="/css/slick.css">
+	<link rel="stylesheet" type="text/css" href="/css/prism.css">
+	<link rel="stylesheet" type="text/css" href="/css/responsive.css">
+	
+	<link rel="shortcut icon" href="/documentation/images/favicon.ico">
+	
+</head>
+<body>
+
+	<div class="subheader">
+		<div class="search-bar">
+			<form class="search-bar__form" action="/search" method="get">
+				<div class="select-box-sub">
+					<select class="select-box-sub__select" name="fleet" id="fleet-box" onchange="document.getElementById('search-box').focus();">
+						<option value="all">All Fleets</option>
+						
+						<option value="Functional Testing">Functional Testing</option>
+						
+						<option value="Mocking">Mocking</option>
+						
+						<option value="Performance Testing">Performance Testing</option>
+						
+						<option value="Data Insights">Data Insights</option>
+						
+					</select>
+				</div>
+				<input type="text" id="search-box" name="query" autocomplete="off" class="search-box-sub">
+			</form>
+		</div>
+		<div class="nav-sub-links">
+			
+			
+			
+			<a href="/documentation/Presentations" class="nav-sub-links__link">Presentations</a>
+			
+			
+			
+			
+			<a href="/documentation/About" class="nav-sub-links__link">About Us</a>
+			
+			
+			
+			
+			
+			<a href="https://github.com/TestArmada/" class="nav-sub-links__link" target="_blank">GitHub</a>
+			
+			
+			
+		</div>
+	</div>
+
+	<header>
+		<a href="/">
+			<img src="/documentation/images/ta-logo.png" class="logo" alt="Main Brand Logo"
+				 srcset="/documentation/images/ta-logo%402x.png 2x, /documentation/images/ta-logo%403x.png 3x">
+		</a>
+		<!-- <form action="/search" method="get">
+			<input type="text" id="search-box" name="query" placeholder="Search" class="search-box">
+			<div class="select-box">
+				<select name="fleet" id="fleet-box" onchange="document.getElementById('search-box').focus();">
+					<option value="all">All Fleets</option>
+					
+					<option value="Functional Testing">Functional Testing</option>
+					
+					<option value="Mocking">Mocking</option>
+					
+					<option value="Performance Testing">Performance Testing</option>
+					
+					<option value="Data Insights">Data Insights</option>
+					
+				</select>
+			</div>
+		</form> -->
+		<div class="nav-links">
+			
+			
+			
+			
+			
+			
+			
+			<div class="nav-links__fleets">
+				<a class="nav-links__fleets-btn">
+					Fleets <img src="/images/arrow-down-icon.png" class="arrow-down-icon"
+								srcset="/images/arrow-down-icon%402x.png 2x,
+										/images/arrow-down-icon%403x.png 3x">
+				</a>
+				<div class="nav-links__fleets-content">
+					<a href="/">
+						All Fleets
+					</a>
+					
+					<a href="/documentation/Functional Testing/">
+						Functional Testing
+					</a>
+					
+					<a href="/documentation/Mocking/">
+						Mocking
+					</a>
+					
+					<a href="/documentation/Performance Testing/">
+						Performance Testing
+					</a>
+					
+					<a href="/documentation/Data Insights/">
+						Data Insights
+					</a>
+					
+				</div>
+			</div>
+			
+			
+			
+			
+			<a href="/faq" class="nav-links__main-links">FAQ</a>
+			
+			
+			
+			
+			
+		</div>
+	</header>
+
+	<div class="container">
+		  <div class="clear"></div>
+<div class="doc-container">
+  <div class="breadcrumb doc-breadcrumb">
+    <p>
+      <a class="breadcrumb__link" href="/">Home</a>
+      <img src="/images/arrow-right-icon.png"
+           srcset="/images/arrow-right-icon@2x.png 2x,
+                   /images/arrow-right-icon@3x.png 3x"
+           class="arrow-right-icon">
+      <a class="breadcrumb__link" href="/documentation/Mocking/">Mocking</a>
+      <img src="/images/arrow-right-icon.png"
+           srcset="/images/arrow-right-icon@2x.png 2x,
+                   /images/arrow-right-icon@3x.png 3x"
+           class="arrow-right-icon">
+      <span class="breadcrumb__current-page">Native Android JAVASCRIPT</span>
+    </p>
+  </div>
+  <div class="clear"></div>
+  <div class="sidebar">
+    <ul>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+        
+          
+          
+            <li><a href="/documentation/Mocking/Native Android/JAVASCRIPT/Introduction" class="sidebar__file-links">
+              Introduction
+            </a></li>
+          
+        
+      
+        
+          
+          
+            <li><a href="/documentation/Mocking/Native Android/JAVASCRIPT/Getting Started" class="sidebar__file-links">
+              Getting Started
+            </a></li>
+          
+        
+      
+        
+          
+            
+            
+              <li class="sidebar__file-links sidebar__file-links-current">Developer Guide</li>
+            
+          
+          
+          
+            <li><a href="/documentation/Mocking/Native Android/JAVASCRIPT/Training Guide" class="sidebar__file-links sidebar__file-sublink-current sidebar__file-sublink">
+              Training Guide
+            </a></li>
+          
+        
+      
+        
+          
+          
+          
+            <li><a href="/documentation/Mocking/Native Android/JAVASCRIPT/API Guide" class="sidebar__file-links sidebar__file-sublink">
+              API Guide
+            </a></li>
+          
+        
+      
+        
+          
+          
+            <li><a href="/documentation/Mocking/Native Android/JAVASCRIPT/Contribution Guide" class="sidebar__file-links">
+              Contribution Guide
+            </a></li>
+          
+        
+      
+        
+          
+          
+            <li><a href="/documentation/Mocking/Native Android/JAVASCRIPT/FAQ" class="sidebar__file-links">
+              FAQ
+            </a></li>
+          
+        
+      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </ul>
+  </div>
+  <div class="doc-content markdown">
+    <div class="training-placard training-placard__long">
+<p class="training-time">
+<span class="training-time__value training-time__long">
+<img src="/images/training/icon-time.png" srcset="/images/training/icon-time%402x.png 2x, /images/training/icon-time%403x.png 3x" />
+120 min
+</span>
+</p>
+<div class="training-data">
+<h2 class="training-data__title">Mocking 101</h2>
+<hr class="training-data__hr" />
+<div class="training-data__topics">
+<p class="training-data__topics-title">Covered topics</p>
+<div class="training-data__topics-row">
+<div class="training-data__topics-img">
+<img src="/images/training/icon-book.png" srcset="/images/training/icon-book%402x.png 2x, /images/training/icon-book%403x.png 3x" />
+</div>
+<p class="training-data__topics-text">Understand of mocking solution and it's features</p>
+</div>
+<div class="training-data__topics-row">
+<div class="training-data__topics-img">
+<img src="/images/training/icon-book.png" srcset="/images/training/icon-book%402x.png 2x, /images/training/icon-book%403x.png 3x" />
+</div>
+<p class="training-data__topics-text">How to set up and start mock server</p>
+</div>
+<div class="training-data__topics-row">
+<div class="training-data__topics-img">
+<img src="/images/training/icon-book.png" srcset="/images/training/icon-book%402x.png 2x, /images/training/icon-book%403x.png 3x" />
+</div>
+<p class="training-data__topics-text">Basic usage of mocking solution's functionalities</p>
+</div>
+</div>
+<div class="training-start-btn-wrapper"><a href="/documentation/Mocking/Native Android/JAVASCRIPT/Training Guide/Mocking 101/Introduction"><button class="training-start-btn">
+<span>Start</span>
+<img src="/images/training/icon-arrow.png" srcset="/images/training/icon-arrow%402x.png 2x, /images/training/icon-arrow%403x.png 3x" />
+</button></a></div>
+</div>
+</div>
+<div class="training-placard training-placard__long">
+<p class="training-time">
+<span class="training-time__value training-time__long">
+<img src="/images/training/icon-time.png" srcset="/images/training/icon-time%402x.png 2x, /images/training/icon-time%403x.png 3x" />
+120 min
+</span>
+</p>
+<div class="training-data">
+<h2 class="training-data__title">Mocking 201</h2>
+<hr class="training-data__hr" />
+<div class="training-data__topics">
+<p class="training-data__topics-title">Covered topics</p>
+<div class="training-data__topics-row">
+<div class="training-data__topics-img">
+<img src="/images/training/icon-book.png" srcset="/images/training/icon-book%402x.png 2x, /images/training/icon-book%403x.png 3x" />
+</div>
+<p class="training-data__topics-text">Learn creating dynamic URLs</p>
+</div>
+<div class="training-data__topics-row">
+<div class="training-data__topics-img">
+<img src="/images/training/icon-book.png" srcset="/images/training/icon-book%402x.png 2x, /images/training/icon-book%403x.png 3x" />
+</div>
+<p class="training-data__topics-text">Read various REST call request information</p>
+</div>
+<div class="training-data__topics-row">
+<div class="training-data__topics-img">
+<img src="/images/training/icon-book.png" srcset="/images/training/icon-book%402x.png 2x, /images/training/icon-book%403x.png 3x" />
+</div>
+<p class="training-data__topics-text">Customize mocked response</p>
+</div>
+</div>
+<div class="training-start-btn-wrapper"><a href="/documentation/Mocking/Native Android/JAVASCRIPT/Training Guide/Mocking 201/Dynamic URLs"><button class="training-start-btn">
+<span>Start</span>
+<img src="/images/training/icon-arrow.png" srcset="/images/training/icon-arrow%402x.png 2x, /images/training/icon-arrow%403x.png 3x" />
+</button></a></div>
+</div>
+</div>
+<div class="training-placard training-placard__long">
+<p class="training-time">
+<span class="training-time__value training-time__long">
+<img src="/images/training/icon-time.png" srcset="/images/training/icon-time%402x.png 2x, /images/training/icon-time%403x.png 3x" />
+120 min
+</span>
+</p>
+<div class="training-data">
+<h2 class="training-data__title">Mocking 301</h2>
+<hr class="training-data__hr" />
+<div class="training-data__topics">
+<p class="training-data__topics-title">Covered topics</p>
+<div class="training-data__topics-row">
+<div class="training-data__topics-img">
+<img src="/images/training/icon-book.png" srcset="/images/training/icon-book%402x.png 2x, /images/training/icon-book%403x.png 3x" />
+</div>
+<p class="training-data__topics-text">Returning response</p>
+</div>
+<div class="training-data__topics-row">
+<div class="training-data__topics-img">
+<img src="/images/training/icon-book.png" srcset="/images/training/icon-book%402x.png 2x, /images/training/icon-book%403x.png 3x" />
+</div>
+<p class="training-data__topics-text">SetMockId and APIs for it</p>
+</div>
+<div class="training-data__topics-row">
+<div class="training-data__topics-img">
+<img src="/images/training/icon-book.png" srcset="/images/training/icon-book%402x.png 2x, /images/training/icon-book%403x.png 3x" />
+</div>
+<p class="training-data__topics-text">Parallel Sessions</p>
+</div>
+</div>
+<div class="training-start-btn-wrapper"><a href="/documentation/Mocking/Native Android/JAVASCRIPT/Training Guide/Mocking 301/Different ways of returning response data"><button class="training-start-btn">
+<span>Start</span>
+<img src="/images/training/icon-arrow.png" srcset="/images/training/icon-arrow%402x.png 2x, /images/training/icon-arrow%403x.png 3x" />
+</button></a></div>
+</div>
+</div>
+<div class="training-placard training-placard__long">
+<p class="training-time">
+<span class="training-time__value training-time__long">
+<img src="/images/training/icon-time.png" srcset="/images/training/icon-time%402x.png 2x, /images/training/icon-time%403x.png 3x" />
+120 min
+</span>
+</p>
+<div class="training-data">
+<h2 class="training-data__title">Mocking 401</h2>
+<hr class="training-data__hr" />
+<div class="training-data__topics">
+<p class="training-data__topics-title">Covered topics</p>
+<div class="training-data__topics-row">
+<div class="training-data__topics-img">
+<img src="/images/training/icon-book.png" srcset="/images/training/icon-book%402x.png 2x, /images/training/icon-book%403x.png 3x" />
+</div>
+<p class="training-data__topics-text">Maintain states in mock server</p>
+</div>
+<div class="training-data__topics-row">
+<div class="training-data__topics-img">
+<img src="/images/training/icon-book.png" srcset="/images/training/icon-book%402x.png 2x, /images/training/icon-book%403x.png 3x" />
+</div>
+<p class="training-data__topics-text">Mocking utility methods</p>
+</div>
+<div class="training-data__topics-row">
+<div class="training-data__topics-img">
+<img src="/images/training/icon-book.png" srcset="/images/training/icon-book%402x.png 2x, /images/training/icon-book%403x.png 3x" />
+</div>
+<p class="training-data__topics-text">Supported Rest APIs for mock server</p>
+</div>
+</div>
+<div class="training-start-btn-wrapper"><a href="/documentation/Mocking/Native Android/JAVASCRIPT/Training Guide/Mocking 401/State"><button class="training-start-btn">
+<span>Start</span>
+<img src="/images/training/icon-arrow.png" srcset="/images/training/icon-arrow%402x.png 2x, /images/training/icon-arrow%403x.png 3x" />
+</button></a></div>
+</div>
+</div>
+
+  </div>
+  <div class="clear"></div>
+</div>
+<script type="text/javascript">
+  var elements = document.getElementsByClassName('highlight');
+  for (var i = 0; i < elements.length; i++) {
+    elements[i].className += " line-numbers";
+    if (!elements[i].parentElement.classList.value.match(/language/)) {
+      elements[i].children[0].className = "language-javascript";
+    }
+  }
+</script>
+<script type="text/javascript" src="/js/prism.js"></script>
+<script src="/js/jquery-3.3.1.min.js"></script>
+<script src="/js/doc.js"></script>
+	</div>
+
+	<footer>
+		<img class="left-footer-logo" alt="Left Footer Logo"
+			 src="/documentation/images/dxt-logo.png"
+			 srcset="/documentation/images/dxt-logo%402x.png 2x,
+					 /documentation/images/dxt-logo%403x.png 3x">
+		
+		<span class="copyright">&copy; 2018 Walmart Inc.</span>
+		
+		<img class="right-footer-logo" alt="Right Footer Logo"
+			 src="/documentation/images/walmartlabs-logo.png"
+			 srcset="/documentation/images/walmartlabs-logo%402x.png 2x,
+			 		 /documentation/images/walmartlabs-logo%403x.png 3x">
+	</footer>
+
+	<script type="text/javascript">
+		document.querySelector('.search-box-sub').addEventListener('click', function() {
+			document.querySelector('.search-box-sub').classList.add('expand-input');
+			document.querySelector('.search-box-sub').placeholder = 'Enter text to search or "Esc" to close';
+			document.querySelector('.select-box-sub').classList.add('expand-select');
+		});
+		document.querySelector('.search-box-sub').onkeydown = function(evt) {
+			evt = evt || window.event;
+			if (evt.keyCode == 27) {
+				document.querySelector('.search-box-sub').classList.remove('expand-input');
+				document.querySelector('.search-box-sub').placeholder = '';
+				document.querySelector('.select-box-sub').classList.remove('expand-select');
+			}
+		};
+		document.querySelector('body').addEventListener('click', function(evt) {
+			evt = evt || window.event;
+			var ignore = '.search-box-sub, .select-box-sub, .select-box-sub__select, a, button';
+			if (!evt.target.matches(ignore)) {
+				document.querySelector('.search-box-sub').classList.remove('expand-input');
+				document.querySelector('.search-box-sub').placeholder = '';
+				document.querySelector('.select-box-sub').classList.remove('expand-select');
+			}
+		});
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test Armada</title>
+	<link rel="stylesheet" type="text/css" href="/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="/css/common.css">
+	<link rel="stylesheet" type="text/css" href="/css/subheader.css">
+	<link rel="stylesheet" type="text/css" href="/css/header.css">
+	<link rel="stylesheet" type="text/css" href="/css/home.css">
+	<link rel="stylesheet" type="text/css" href="/css/doc.css">
+	<link rel="stylesheet" type="text/css" href="/css/training.css">
+	<link rel="stylesheet" type="text/css" href="/css/faq.css">
+	<link rel="stylesheet" type="text/css" href="/css/contact.css">
+	<link rel="stylesheet" type="text/css" href="/css/search.css">
+	<link rel="stylesheet" type="text/css" href="/css/custom.css">
+	<link rel="stylesheet" type="text/css" href="/css/slick.css">
+	<link rel="stylesheet" type="text/css" href="/css/prism.css">
+	<link rel="stylesheet" type="text/css" href="/css/responsive.css">
+	
+	<link rel="shortcut icon" href="/documentation/images/favicon.ico">
+	
+</head>
+<body>
+
+	<div class="subheader">
+		<div class="search-bar">
+			<form class="search-bar__form" action="/search" method="get">
+				<div class="select-box-sub">
+					<select class="select-box-sub__select" name="fleet" id="fleet-box" onchange="document.getElementById('search-box').focus();">
+						<option value="all">All Fleets</option>
+						
+						<option value="Functional Testing">Functional Testing</option>
+						
+						<option value="Mocking">Mocking</option>
+						
+						<option value="Performance Testing">Performance Testing</option>
+						
+						<option value="Data Insights">Data Insights</option>
+						
+					</select>
+				</div>
+				<input type="text" id="search-box" name="query" autocomplete="off" class="search-box-sub">
+			</form>
+		</div>
+		<div class="nav-sub-links">
+			
+			
+			
+			<a href="/documentation/Presentations" class="nav-sub-links__link">Presentations</a>
+			
+			
+			
+			
+			<a href="/documentation/About" class="nav-sub-links__link">About Us</a>
+			
+			
+			
+			
+			
+			<a href="https://github.com/TestArmada/" class="nav-sub-links__link" target="_blank">GitHub</a>
+			
+			
+			
+		</div>
+	</div>
+
+	<header>
+		<a href="/">
+			<img src="/documentation/images/ta-logo.png" class="logo" alt="Main Brand Logo"
+				 srcset="/documentation/images/ta-logo%402x.png 2x, /documentation/images/ta-logo%403x.png 3x">
+		</a>
+		<!-- <form action="/search" method="get">
+			<input type="text" id="search-box" name="query" placeholder="Search" class="search-box">
+			<div class="select-box">
+				<select name="fleet" id="fleet-box" onchange="document.getElementById('search-box').focus();">
+					<option value="all">All Fleets</option>
+					
+					<option value="Functional Testing">Functional Testing</option>
+					
+					<option value="Mocking">Mocking</option>
+					
+					<option value="Performance Testing">Performance Testing</option>
+					
+					<option value="Data Insights">Data Insights</option>
+					
+				</select>
+			</div>
+		</form> -->
+		<div class="nav-links">
+			
+			
+			
+			
+			
+			
+			
+			<div class="nav-links__fleets">
+				<a class="nav-links__fleets-btn">
+					Fleets <img src="/images/arrow-down-icon.png" class="arrow-down-icon"
+								srcset="/images/arrow-down-icon%402x.png 2x,
+										/images/arrow-down-icon%403x.png 3x">
+				</a>
+				<div class="nav-links__fleets-content">
+					<a href="/">
+						All Fleets
+					</a>
+					
+					<a href="/documentation/Functional Testing/">
+						Functional Testing
+					</a>
+					
+					<a href="/documentation/Mocking/">
+						Mocking
+					</a>
+					
+					<a href="/documentation/Performance Testing/">
+						Performance Testing
+					</a>
+					
+					<a href="/documentation/Data Insights/">
+						Data Insights
+					</a>
+					
+				</div>
+			</div>
+			
+			
+			
+			
+			<a href="/faq" class="nav-links__main-links">FAQ</a>
+			
+			
+			
+			
+			
+		</div>
+	</header>
+
+	<div class="container">
+		  <div class="clear"></div>
+<div class="doc-container">
+  <div class="breadcrumb doc-breadcrumb">
+    <p>
+      <a class="breadcrumb__link" href="/">Home</a>
+      <img src="/images/arrow-right-icon.png"
+           srcset="/images/arrow-right-icon@2x.png 2x,
+                   /images/arrow-right-icon@3x.png 3x"
+           class="arrow-right-icon">
+      <a class="breadcrumb__link" href="/documentation/Mocking/">Mocking</a>
+      <img src="/images/arrow-right-icon.png"
+           srcset="/images/arrow-right-icon@2x.png 2x,
+                   /images/arrow-right-icon@3x.png 3x"
+           class="arrow-right-icon">
+      <span class="breadcrumb__current-page">rWeb JAVASCRIPT</span>
+    </p>
+  </div>
+  <div class="clear"></div>
+  <div class="sidebar">
+    <ul>
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+        
+          
+          
+            <li><a href="/documentation/Mocking/rWeb/JAVASCRIPT/Introduction" class="sidebar__file-links">
+              Introduction
+            </a></li>
+          
+        
+      
+        
+          
+          
+            <li><a href="/documentation/Mocking/rWeb/JAVASCRIPT/Getting Started" class="sidebar__file-links sidebar__file-links-current">
+              Getting Started
+            </a></li>
+          
+        
+      
+        
+          
+            
+            
+              <li class="sidebar__file-links">Developer Guide</li>
+            
+          
+          
+          
+            <li><a href="/documentation/Mocking/rWeb/JAVASCRIPT/Training Guide" class="sidebar__file-links sidebar__file-sublink">
+              Training Guide
+            </a></li>
+          
+        
+      
+        
+          
+          
+          
+            <li><a href="/documentation/Mocking/rWeb/JAVASCRIPT/API Guide" class="sidebar__file-links sidebar__file-sublink">
+              API Guide
+            </a></li>
+          
+        
+      
+        
+          
+          
+            <li><a href="/documentation/Mocking/rWeb/JAVASCRIPT/Contribution Guide" class="sidebar__file-links">
+              Contribution Guide
+            </a></li>
+          
+        
+      
+        
+          
+          
+            <li><a href="/documentation/Mocking/rWeb/JAVASCRIPT/FAQ" class="sidebar__file-links">
+              FAQ
+            </a></li>
+          
+        
+      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </ul>
+  </div>
+  <div class="doc-content markdown">
+    <h2 id="pre-requisite">Pre-Requisite</h2>
+<ol>
+  <li>Please install the latest <a href="https://nodejs.org/en/download/">Node.js</a></li>
+</ol>
+
+<p><br /></p>
+
+<h2 id="setting-mock-server">Setting Mock Server</h2>
+<p>To set up mock server, you need only three things:</p>
+<ul>
+  <li>Install mock-server module.</li>
+  <li>Routes for mock-server.</li>
+  <li>Script to start mock-server.</li>
+</ul>
+
+<p><br /></p>
+
+<p><strong><em>Follow the steps below to set-up mock server:</em></strong></p>
+<ol>
+  <li>Create a new directory <code class="highlighter-rouge">mock-server</code>.</li>
+  <li>Create a new file <code class="highlighter-rouge">package.json</code> under <code class="highlighter-rouge">mock-server</code> directory.</li>
+  <li>
+    <p>Add Mock Server module dependency in <code class="highlighter-rouge">package.json</code> as shown below.</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code> "name": "&lt;name-for-your-project&gt;",
+ "dependencies": {
+   "shifu": "^1.0.0",
+   "shifu-magellan-nightwatch": "^1.0.0" // needed only for magellan/nightwatch
+ },
+ "scripts": {
+     "start-mock": "node mocks/run-mock-server-console.js"
+ }
+</code></pre>
+    </div>
+  </li>
+  <li>Create another directory <code class="highlighter-rouge">mocks</code> under the <code class="highlighter-rouge">mock-server</code> directory.</li>
+  <li>
+    <p>Under the directory <code class="highlighter-rouge">mocks</code>, create a file <code class="highlighter-rouge">endpoints.js</code> with the following code - <em>This file will contain the routes that you want to mock</em></p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>     var shifu = require('shifu'); // Required
+     shifu.id('example'); // Required
+
+     // add a route that returns a message "hello world"
+     shifu.route({
+         id: 'message',
+         label: 'hello message',
+         path: '/message',
+         method: 'GET',
+         variantLabel: 'hello world',
+         handler: function(req, reply) {
+           reply({message: 'hello world'});
+         }
+     });
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Under the directory <code class="highlighter-rouge">mocks</code>, create a file <code class="highlighter-rouge">run-mock-server-console.js</code>with the following code - <em>This file will contain the start-up script for mock server</em></p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>     // load mocked endpoint
+     require('./endpoints'); 
+     var shifu = require('shifu');
+
+     shifu.start({
+       host: 'localhost',
+       mockedDirectory: './mocks', // this can be provided as an absolute path as well.
+       port: 8080,
+       project: 'HelloShifu', //Replace HelloShifu with your project name (without dashes).
+     });
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Now open terminal/cmd prompt and navigate to the directory <code class="highlighter-rouge">mock-server</code> and run the following command to install Mock Server and dependencies:</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code> npm install
+</code></pre>
+    </div>
+    <p><br /></p>
+  </li>
+</ol>
+
+<h2 id="starting-mock-server">Starting Mock Server</h2>
+<ol>
+  <li>
+    <p>To start mock-server use the following command and than go to <code class="highlighter-rouge">http://localhost:8080/shifu</code> for mock-server admin-ui.</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code> npm run start-mock
+</code></pre>
+    </div>
+  </li>
+</ol>
+
+<p><br /></p>
+
+<h2 id="common-use-cases">Common Use Cases</h2>
+<ol>
+  <li>
+    <p><strong><em>Starting mock server on HTTPS port -</em></strong> 
+ To enable <code class="highlighter-rouge">https</code>, add <code class="highlighter-rouge">httpsPort</code> with the desired port number in server start script as shown below:</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>  shifu.start({
+    port: 8080,
+    httpsPort: 4444,
+    host: 'localhost',
+    mockedDirectory: './test/resources/mocked-data',
+    project: 'HelloShifu'
+  });
+</code></pre>
+    </div>
+  </li>
+  <li><strong><em>Mocking different REST methods -</em></strong>
+ To mock different rest methods, change the <code class="highlighter-rouge">method</code> value in the <code class="highlighter-rouge">shifu.route()</code> object to any one of the following desired values:
+    <ul>
+      <li>POST</li>
+      <li>GET</li>
+      <li>PUT</li>
+      <li>DELETE</li>
+      <li>OPTIONS</li>
+      <li>PATCH</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong><em>Returning different data set for the same mocked route (Variants) -</em></strong>
+ Variants allows to return a different set of data for the same mocked route. To add one or more variants, attach the variant object to <code class="highlighter-rouge">shifu.route()</code> as shown below:</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code> shifu.route({
+   id: 'message',
+   label: 'Hello message',
+   path: '/message',
+   method: 'GET',
+   variantLabel: 'hello world',
+   handler: function (req, reply) {
+     reply({message:'Hello World'})
+   }
+ })
+
+ .variant({
+    id: 'universe',
+    label: 'hello universe',
+    handler: function (req, reply) {
+      reply({message:'hello universe'})
+    }
+  })
+
+  .variant({
+    id: 'universe',
+    label: 'hello galaxy',
+    handler: function (req, reply) {
+      reply({message:'Hello Galaxy'})
+    }
+  });
+</code></pre>
+    </div>
+
+    <p>To get a different set of response, go to admin-ui and select a different variant for the above route and hit <code class="highlighter-rouge">http://localhost:8080/message</code> on your favorite browser.</p>
+  </li>
+  <li>
+    <p><strong><em>Storing mocked response in a file -</em></strong>
+ This feature allows you to respond with a static data stored in a file instead of hard coding the response data in the routes definition.</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code> // Automatic reply of the file
+ shifu.route({
+   id: 'Get Collection',
+   label: 'Get Collections',
+   path: '/product/grouping/api/collection/test',
+   method: 'GET',
+   variantLabel: 'test-1',
+   handler: function(req, reply) {
+     shifu.util.respondWithFile(this, reply);
+   }
+ })
+
+ .variant({
+    id: 'universe',
+    label: 'test-2',
+    handler: function (req, reply) {
+      shifu.util.respondWithFile(this, reply);
+    }
+  });
+</code></pre>
+    </div>
+
+    <p>In the above setup, file needed for default route handler (<code class="highlighter-rouge">test-1</code>) should be located at (file location/name is based on <code class="highlighter-rouge">mockedDirectory/route/method/[default|variant_name].{ext}</code>)</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code> ./mocks/product/grouping/api/collection/GET/default.{ext}
+</code></pre>
+    </div>
+
+    <p>If this would be a POST call than the file should have been at</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code> ./mocks/product/grouping/api/collection/POST/default.{ext}
+</code></pre>
+    </div>
+
+    <p>The file name for variants should change from <code class="highlighter-rouge">default.{ext}</code> to universe.{ext} in above example that is the file name should be the variant name.</p>
+  </li>
+</ol>
+
+<p><br /></p>
+
+<h2 id="directing-traffic-to-mock-server">Directing Traffic To Mock Server</h2>
+<p>To mock live services, your application should allow to configure it to be directed to a mock service instead of live services as shown below:</p>
+
+<p><img src="../../images/mock_service_design.png?raw=true" alt="directing_traffic" /></p>
+
+<p>Please update your app server or application by changing the host name of your live service with the host name for your mock server.</p>
+
+<p><br /></p>
+
+<h2 id="mock-server-set-up-flow">Mock Server Set-up Flow</h2>
+<ol>
+  <li>Identify REST endpoints that needs to be mocked.</li>
+  <li>Gather mocked data for those REST endpoints.</li>
+  <li>Create Mocked Routes by adding them in <code class="highlighter-rouge">endpoints.js</code> file.</li>
+  <li>Start Mock Server.</li>
+  <li>Start Your Application server that points to the Mock Server host name instead of live-service.</li>
+  <li>Run your application and the mocked data will be returned for mocked routes.</li>
+</ol>
+
+<p><img src="../../images/work_flow.png?raw=true" alt="mock_server_setup_flow" /></p>
+
+
+  </div>
+  <div class="clear"></div>
+</div>
+<script type="text/javascript">
+  var elements = document.getElementsByClassName('highlight');
+  for (var i = 0; i < elements.length; i++) {
+    elements[i].className += " line-numbers";
+    if (!elements[i].parentElement.classList.value.match(/language/)) {
+      elements[i].children[0].className = "language-javascript";
+    }
+  }
+</script>
+<script type="text/javascript" src="/js/prism.js"></script>
+<script src="/js/jquery-3.3.1.min.js"></script>
+<script src="/js/doc.js"></script>
+	</div>
+
+	<footer>
+		<img class="left-footer-logo" alt="Left Footer Logo"
+			 src="/documentation/images/dxt-logo.png"
+			 srcset="/documentation/images/dxt-logo%402x.png 2x,
+					 /documentation/images/dxt-logo%403x.png 3x">
+		
+		<span class="copyright">&copy; 2018 Walmart Inc.</span>
+		
+		<img class="right-footer-logo" alt="Right Footer Logo"
+			 src="/documentation/images/walmartlabs-logo.png"
+			 srcset="/documentation/images/walmartlabs-logo%402x.png 2x,
+			 		 /documentation/images/walmartlabs-logo%403x.png 3x">
+	</footer>
+
+	<script type="text/javascript">
+		document.querySelector('.search-box-sub').addEventListener('click', function() {
+			document.querySelector('.search-box-sub').classList.add('expand-input');
+			document.querySelector('.search-box-sub').placeholder = 'Enter text to search or "Esc" to close';
+			document.querySelector('.select-box-sub').classList.add('expand-select');
+		});
+		document.querySelector('.search-box-sub').onkeydown = function(evt) {
+			evt = evt || window.event;
+			if (evt.keyCode == 27) {
+				document.querySelector('.search-box-sub').classList.remove('expand-input');
+				document.querySelector('.search-box-sub').placeholder = '';
+				document.querySelector('.select-box-sub').classList.remove('expand-select');
+			}
+		};
+		document.querySelector('body').addEventListener('click', function(evt) {
+			evt = evt || window.event;
+			var ignore = '.search-box-sub, .select-box-sub, .select-box-sub__select, a, button';
+			if (!evt.target.matches(ignore)) {
+				document.querySelector('.search-box-sub').classList.remove('expand-input');
+				document.querySelector('.search-box-sub').placeholder = '';
+				document.querySelector('.select-box-sub').classList.remove('expand-select');
+			}
+		});
+	</script>
+
+</body>
+</html>

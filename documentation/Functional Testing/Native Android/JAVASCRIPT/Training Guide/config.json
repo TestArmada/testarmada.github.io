@@ -1,0 +1,18 @@
+{
+  "courseOrder": ["Setup", "Tests Framework", "iOS Automation","Trouble Shooting"],
+  "Setup": {
+    "time": 40,
+    "order": ["Prerequisites.md","Setup Android app test on local machine.md","Setup Android app test on SauceLabs.md"],
+    "coveredTopics": ["Prerequisites","Setup Android app test on local machine", "Setup Android app test on SauceLabs"]
+  },
+  "Tests Framework": {
+    "time": 50,
+    "order": ["Execution commands.md","Tests framework structure.md"],
+    "coveredTopics": ["Execution commands", "Understand tests framework structure"]
+  },
+  "Android Automation": {
+    "time": 50,
+    "order": ["Desired Capabilities.md","Native Android locators.md"],
+    "coveredTopics": ["Desired Capabilities", "Native Android locators"]
+  }
+}

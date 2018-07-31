@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:700,900');
+
+:root {
+  --greyish-brown: #444444;
+  --cool-blue: #478cc1;
+  --cool-blue-two: #4289bf;
+  --mango: #fcba2f;
+  --mid-blue: #1e6ca8;
+  --windows-blue: #3577b7;
+  --warm-grey: #979797;
+  --warm-grey-two: #888888;
+  --windows-blue-two: #3e88c1;
+}
+
+body {
+  width: 100%;
+  min-width: 1024px;
+  margin: 0 auto;
+  background-color: #444444;
+  background-color: var(--greyish-brown);
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.33;
+  color: #444444;
+  color: var(--greyish-brown);
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing : antialiased;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+.clear {
+  width: 100%;
+  clear: both;
+}
+
+.container {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.inner-container {
+  width: 1080px;
+  margin: 0px auto;
+  padding-top: 5px;
+  padding-bottom: 80px;
+}
+
+.col-2 {
+  width: 503px;
+  position: relative;
+  float: left;
+}
+
+.col-2:nth-child(odd) {
+  margin-right: 74px;
+}
+
+.functional-area-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0;
+  padding: 20px 0 5px;
+}
+
+.functional-area-description {
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* Placards */
+
+.card-bg {
+  background-color: #ffffff;
+  box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.2);
+  border: solid 1px #bdbdbd;
+  margin-top: 60px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.card-fg {
+  width: 100%;
+  padding: 15px;
+  padding-top: 7px;
+  background-color: #444444;
+  background-color: var(--greyish-brown);
+  box-sizing: border-box;
+}
+
+.gear {
+  width: 192px;
+  height: 148px;
+  object-fit: contain;
+}
+
+.title {
+  margin: 0;
+  margin-top: 13px;
+  font-size: 36px;
+  font-weight: normal;
+  color: #ffffff;
+}
+
+.platform-img {
+  height: 90px;
+  padding-top: 35px;
+}
+
+.platform-intro {
+  padding-bottom: 25px;
+}
+
+.intro {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 300;
+  color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-btn {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  text-align: center;
+  color: #ffffff;
+  width: 203px;
+  height: 38px;
+  border: none;
+  border-radius: 3px;
+  background-color: #3693ff;
+  margin: 23px auto;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.card-btn:hover {
+  background-color: #0078d8;
+}
+
+.platform-btn {
+  width: 124px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.placard-label,
+.placard-label-internal {
+  font-weight: 400;
+  background-color: #ffffff;
+  color: #444444;
+  position: absolute;
+  transform: rotate(35deg);
+  width: 175px;
+}
+
+.placard-label {
+  margin-top: 30px;
+  margin-left: -18px;
+}
+
+.placard-label-internal {
+  top: 30px;
+  right: -30px;
+}
+
+/* Footer */
+
+footer {
+  width: 100%;
+  height: 45px;
+  background-color: #444444;
+  background-color: var(--greyish-brown);
+  text-align: center;
+}
+
+.left-footer-logo,
+.right-footer-logo,
+.copyright {
+  margin-top: 7px;
+  height: 30px;
+}
+
+.left-footer-logo {
+  float: left;
+  margin-left: 40px;
+}
+
+.right-footer-logo {
+  float: right;
+  margin-right: 40px;
+}
+
+.copyright {
+  display: inline-block;
+  line-height: 30px;
+  max-width: 50%;
+  color: #ffffff;
+  overflow: hidden;
+  white-space: pre;
+  text-overflow: ellipsis;
+}
+
+/* Breadcrumbs */
+
+.breadcrumb {
+  padding: 30px 0;
+}
+
+.breadcrumb p {
+  font-size: 20px; 
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.breadcrumb__link, .breadcrumb__link:visited {
+  color: #3e88c1;
+  color: var(--windows-blue-two);
+}
+
+.arrow-right-icon {
+  padding: 0 5px 2px;
+}
+
+.breadcrumb__current-page {
+  font-weight: 900;
+}
+
+/* Markdown content */
+
+.markdown h1 {
+  font-size: 48px;
+}
+
+.markdown h2 {
+  font-size: 36px;
+}
+
+.markdown h3 {
+  font-size: 28px;
+}
+
+.markdown h4 {
+  font-size: 18px;
+}
+
+.markdown p, .markdown ul, .markdown ol {
+  font-weight: 300;
+}
+
+.markdown ul li, .markdown ol li {
+  line-height: 1.5;
+}
+
+.markdown ul li p, .markdown ol li p {
+  margin: 0;
+}
+
+.markdown p strong {
+  font-weight: bold;
+}
+
+.markdown pre {
+  background-color: #f8f8f8;
+  padding: 15px;
+  border-radius: 3px;
+}
+
+.markdown p code, .markdown ul li code, .markdown ol li code {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.9em;
+  font-weight: 400;
+  color: #26406d;
+  border-radius: 3px;
+  background-color: #f2f2f2;
+  padding: 0 3px;
+}
+
+.markdown p pre code, .markdown ul li pre code, .markdown ol li pre code {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: #444444;
+  background-color: transparent;
+}
+
+.markdown h1 code,
+.markdown h2 code,
+.markdown h3 code,
+.markdown h4 code {
+  font-family: 'Roboto Mono', sans-serif;
+  font-size: 0.9em;
+  color: #26406d;
+  border-radius: 3px;
+  background-color: #f2f2f2;
+  padding: 0 5px;
+}
+
+.markdown img {
+  border: 1px solid #cccccc;
+  padding: 5px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.markdown a {
+  color: #3e88c1;
+  color: var(--windows-blue-two);
+}
+
+.markdown table {
+  font-size: 16px;
+  /*border-collapse: collapse;*/
+  border-spacing: 0;
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.markdown table thead tr th {
+  border-bottom: 1px solid #cccccc;
+  padding: 15px;
+  background-color: #444444;
+  background-color: var(--greyish-brown);
+  color: #ffffff;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.markdown table tbody tr td {
+  padding: 12px;
+  font-weight: 400;
+}
+
+.markdown table thead tr th, .markdown table tbody tr td {
+  border-right: 1px solid #cccccc;
+}
+
+.markdown table thead tr th:last-child, .markdown table tbody tr td:last-child {
+  border-right: none;
+}
+
+.markdown table tbody tr:nth-child(even) {
+  background-color: #f5f5f5;
+}
+
+.markdown blockquote {
+  margin: 0;
+  padding: 13px 23px;
+  background-color: #f8f8f8;
+  border-left: 5px solid #444444;
+}
+
+.markdown blockquote p {
+  margin: 0;
+}
+
+.markdown blockquote p strong {
+  font-weight: 500;
+}
+
+.markdown hr {
+  border-top: 1px solid #cccccc;
+  border-bottom: none;
+  color: transparent;
+  margin: 25px 0;
+}

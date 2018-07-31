@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test Armada</title>
+	<link rel="stylesheet" type="text/css" href="/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="/css/common.css">
+	<link rel="stylesheet" type="text/css" href="/css/subheader.css">
+	<link rel="stylesheet" type="text/css" href="/css/header.css">
+	<link rel="stylesheet" type="text/css" href="/css/home.css">
+	<link rel="stylesheet" type="text/css" href="/css/doc.css">
+	<link rel="stylesheet" type="text/css" href="/css/training.css">
+	<link rel="stylesheet" type="text/css" href="/css/faq.css">
+	<link rel="stylesheet" type="text/css" href="/css/contact.css">
+	<link rel="stylesheet" type="text/css" href="/css/search.css">
+	<link rel="stylesheet" type="text/css" href="/css/custom.css">
+	<link rel="stylesheet" type="text/css" href="/css/slick.css">
+	<link rel="stylesheet" type="text/css" href="/css/prism.css">
+	<link rel="stylesheet" type="text/css" href="/css/responsive.css">
+	
+	<link rel="shortcut icon" href="/documentation/images/favicon.ico">
+	
+</head>
+<body>
+
+	<div class="subheader">
+		<div class="search-bar">
+			<form class="search-bar__form" action="/search" method="get">
+				<div class="select-box-sub">
+					<select class="select-box-sub__select" name="fleet" id="fleet-box" onchange="document.getElementById('search-box').focus();">
+						<option value="all">All Fleets</option>
+						
+						<option value="Functional Testing">Functional Testing</option>
+						
+						<option value="Mocking">Mocking</option>
+						
+						<option value="Performance Testing">Performance Testing</option>
+						
+						<option value="Data Insights">Data Insights</option>
+						
+					</select>
+				</div>
+				<input type="text" id="search-box" name="query" autocomplete="off" class="search-box-sub">
+			</form>
+		</div>
+		<div class="nav-sub-links">
+			
+			
+			
+			<a href="/documentation/Presentations" class="nav-sub-links__link">Presentations</a>
+			
+			
+			
+			
+			<a href="/documentation/About" class="nav-sub-links__link">About Us</a>
+			
+			
+			
+			
+			
+			<a href="https://github.com/TestArmada/" class="nav-sub-links__link" target="_blank">GitHub</a>
+			
+			
+			
+		</div>
+	</div>
+
+	<header>
+		<a href="/">
+			<img src="/documentation/images/ta-logo.png" class="logo" alt="Main Brand Logo"
+				 srcset="/documentation/images/ta-logo%402x.png 2x, /documentation/images/ta-logo%403x.png 3x">
+		</a>
+		<!-- <form action="/search" method="get">
+			<input type="text" id="search-box" name="query" placeholder="Search" class="search-box">
+			<div class="select-box">
+				<select name="fleet" id="fleet-box" onchange="document.getElementById('search-box').focus();">
+					<option value="all">All Fleets</option>
+					
+					<option value="Functional Testing">Functional Testing</option>
+					
+					<option value="Mocking">Mocking</option>
+					
+					<option value="Performance Testing">Performance Testing</option>
+					
+					<option value="Data Insights">Data Insights</option>
+					
+				</select>
+			</div>
+		</form> -->
+		<div class="nav-links">
+			
+			
+			
+			
+			
+			
+			
+			<div class="nav-links__fleets">
+				<a class="nav-links__fleets-btn">
+					Fleets <img src="/images/arrow-down-icon.png" class="arrow-down-icon"
+								srcset="/images/arrow-down-icon%402x.png 2x,
+										/images/arrow-down-icon%403x.png 3x">
+				</a>
+				<div class="nav-links__fleets-content">
+					<a href="/">
+						All Fleets
+					</a>
+					
+					<a href="/documentation/Functional Testing/">
+						Functional Testing
+					</a>
+					
+					<a href="/documentation/Mocking/">
+						Mocking
+					</a>
+					
+					<a href="/documentation/Performance Testing/">
+						Performance Testing
+					</a>
+					
+					<a href="/documentation/Data Insights/">
+						Data Insights
+					</a>
+					
+				</div>
+			</div>
+			
+			
+			
+			
+			<a href="/faq" class="nav-links__main-links">FAQ</a>
+			
+			
+			
+			
+			
+		</div>
+	</header>
+
+	<div class="container">
+		  <div class="clear"></div>
+<div class="doc-container">
+  <div class="breadcrumb doc-breadcrumb">
+    <p>
+      <a class="breadcrumb__link" href="/">Home</a>
+      <img src="/images/arrow-right-icon.png"
+           srcset="/images/arrow-right-icon%402x.png 2x,
+                   /images/arrow-right-icon%403x.png 3x"
+           class="arrow-right-icon">
+      <a class="breadcrumb__link" href="/documentation/Mocking/">Mocking</a>
+      <img src="/images/arrow-right-icon.png"
+           srcset="/images/arrow-right-icon%402x.png 2x,
+                   /images/arrow-right-icon%403x.png 3x"
+           class="arrow-right-icon">
+      <a class="breadcrumb__link" href="/documentation/Mocking/Services/JAVASCRIPT/Introduction">Services JAVASCRIPT</a>
+      <img src="/images/arrow-right-icon.png"
+           srcset="/images/arrow-right-icon%402x.png 2x,
+                   /images/arrow-right-icon%403x.png 3x"
+           class="arrow-right-icon">
+      <a class="breadcrumb__link" href="/documentation/Mocking/Services/JAVASCRIPT/Training Guide">Training Guide</a>
+      <img src="/images/arrow-right-icon.png"
+           srcset="/images/arrow-right-icon%402x.png 2x,
+                   /images/arrow-right-icon%403x.png 3x"
+           class="arrow-right-icon">
+      <span class="breadcrumb__current-page">Mocking 401</span>
+    </p>
+  </div>
+  <div class="clear"></div>
+  <div class="training-container">
+    <div class="sidebar">
+<div class="training-doc-link">
+<div class="training-doc-link-left">
+<img class="training-doc-link-left__img" src="/images/training/checked.png" srcset="/images/training/checked%402x.png 2x, /images/training/checked%403x.png 3x" /><hr class="training-doc-link-left__hr training-doc-link-left__hr-completed" /></div>
+<p class="training-doc-link__text">
+<a class="training-doc-link__text-completed" href="./State">State</a></p>
+</div>
+<div class="training-doc-link">
+<div class="training-doc-link-left">
+<img class="training-doc-link-left__img" src="/images/training/checked.png" srcset="/images/training/checked%402x.png 2x, /images/training/checked%403x.png 3x" /><hr class="training-doc-link-left__hr training-doc-link-left__hr-completed" /></div>
+<p class="training-doc-link__text">
+<a class="training-doc-link__text-completed" href="./Mocking Utility Methods">Mocking Utility Methods</a></p>
+</div>
+<div class="training-doc-link">
+<div class="training-doc-link-left">
+<img class="training-doc-link-left__img" src="/images/training/actived.png" srcset="/images/training/actived%402x.png 2x, /images/training/actived%403x.png 3x" /><hr class="training-doc-link-left__hr training-doc-link-left__hr-pending" /></div>
+<p class="training-doc-link__text">
+<a class="training-doc-link__text-current" href="./Rest APIs">Rest APIs</a></p>
+</div>
+<div class="training-doc-link">
+<div class="training-doc-link-left">
+<img class="training-doc-link-left__img" src="/images/training/unread.png" srcset="/images/training/unread%402x.png 2x, /images/training/unread%403x.png 3x" /><hr class="training-doc-link-left__hr training-doc-link-left__hr-pending" /></div>
+<p class="training-doc-link__text">
+<a class="training-doc-link__text-pending" href="./Starting HTTPS server with Mock Server">Starting HTTPS server with Mock Server</a></p>
+</div>
+<div class="training-doc-link">
+<div class="training-doc-link-left">
+<img class="training-doc-link-left__img" src="/images/training/unread.png" srcset="/images/training/unread%402x.png 2x, /images/training/unread%403x.png 3x" /></div>
+<p class="training-doc-link__text">
+<a class="training-doc-link__text-pending" href="./Exercise">Exercise</a></p>
+</div>
+</div>
+<div class="training-doc-nav-btn">
+<a href="./Mocking Utility Methods"><img src="/images/training/btn-left.png" srcset="/images/training/btn-left%402x.png 2x, /images/training/btn-left%403x.png 3x" /></a>
+</div>
+<div class="training-content markdown">
+<h3>1. Set Variant</h3>
+<pre><code class="language-js">Method    : POST
+Syntax    : {host}:{port}/_admin/api/route/{routeId}
+Rest API  : curl -H &quot;Content-Type: application/json&quot; -X POST -d '{&quot;variant&quot;:&quot;preorder&quot;}' http://localhost:8000/_admin/api/route/getCollection?returnConfig=true
+shifu.route({
+    id: 'getCollection',
+    label: 'Get Collection',
+    path: '/product/grouping/api/collection/{collectionId}',
+ 
+    variantLabel: 'default',
+    handler: function(req, reply) {
+        var response = getResponseData('/product/grouping/api/collection', 'default');
+        reply(response);
+    }
+})
+.variant({
+    id: 'preorder',
+    label: 'Get Pre-order Collection',
+    handler: function (req, reply) {
+        reply({message: 'hello pre-order'});
+    }
+});
+</code></pre>
+<blockquote>
+<p>To get the config back as a response, add query parameter <code>returnConfig=true</code> as shown in example above</p>
+</blockquote>
+<h3>2. Set Mock Id</h3>
+<pre><code>Method    : GET
+Syntax    : {host}:{port}/_admin/api/shifu/setMockId/{mockid}/{sessionid}
+Rest API  : curl http://localhost:8000/_admin/api/shifu/setMockId/1234/default
+</code></pre>
+<h3>3. Get Mock Id</h3>
+<pre><code>Method    : GET
+Syntax    : {host}:{port}/_admin/api/shifu/getMockId/{sessionid}
+Rest API  : curl http://localhost:8000/_admin/api/shifu/getMockId/default
+</code></pre>
+<h3>4. Reset Mock Id</h3>
+<pre><code>Method    : GET
+Syntax    : {host}:{port}/_admin/api/shifu/resetMockId/{sessionid}
+Rest API  : curl http://localhost:8000/_admin/api/shifu/resetMockId/default
+</code></pre>
+<h3>5. Get Url Count</h3>
+<pre><code>Method    : GET
+Syntax    : {host}:{port}/_admin/api/shifu/getURLCount/{sessionid}
+Rest API  : curl http://localhost:8000/_admin/api/shifu/getURLCount/default
+</code></pre>
+<h3>6. Reset Url Count</h3>
+<pre><code>Method    : GET
+Syntax    : {host}:{port}/_admin/api/shifu/resetURLCount/{sessionid}
+Rest API  : curl http://localhost:8000/_admin/api/shifu/resetURLCount/default
+</code></pre>
+<h3>7. Re-set the state of Mock Server</h3>
+<pre><code>Method    : POST
+Syntax    : {host}:{port}/_admin/api/state/reset
+Rest API  : curl -X POST http://localhost:8000/_admin/api/state/reset
+</code></pre>
+<h3>8. Register Session</h3>
+<pre><code>Method    : GET
+Syntax    : {host}:{port}/_admin/api/shifu/registerSession
+Rest API  : curl http://localhost:8000/_admin/api/shifu/registerSession
+</code></pre>
+<h3>9. Get Sessions</h3>
+<pre><code>Method    : GET
+Syntax    : {host}:{port}/_admin/api/shifu/getSessions
+Rest API  : curl http://localhost:8000/_admin/api/shifu/getSessions
+</code></pre>
+<h3>10. Check Session</h3>
+<pre><code>Method    : GET
+Syntax    : {host}:{port}/_admin/api/shifu/checkSession/{sessionid}
+Rest API  : curl http://localhost:8000/_admin/api/shifu/checkSession/{sessionid}
+</code></pre>
+<h3>11. Close Session</h3>
+<pre><code>Method    : GET
+Syntax    : {host}:{port}/_admin/api/shifu/closeSession/{sessionid}
+Rest API  : curl http://localhost:8000/_admin/api/shifu/closeSession/{sessionid}
+</code></pre>
+</div>
+<div class="training-doc-nav-btn">
+<a href="./Starting HTTPS server with Mock Server"><img src="/images/training/btn-right.png" srcset="/images/training/btn-right%402x.png 2x, /images/training/btn-right%403x.png 3x" /></a>
+</div>
+
+  </div>
+  <div class="clear"></div>
+</div>
+<script type="text/javascript">
+  var elements = document.getElementsByTagName('pre');
+  for (var i = 0; i < elements.length; i++) {
+    elements[i].className += " line-numbers";
+    if (!elements[i].children[0].className) {
+      elements[i].children[0].className = "language-javascript";
+    }
+  }
+</script>
+<script type="text/javascript" src="/js/prism.js"></script>
+	</div>
+
+	<footer>
+		<img class="left-footer-logo" alt="Left Footer Logo"
+			 src="/documentation/images/dxt-logo.png"
+			 srcset="/documentation/images/dxt-logo%402x.png 2x,
+					 /documentation/images/dxt-logo%403x.png 3x">
+		
+		<span class="copyright">&copy; 2018 Walmart Inc.</span>
+		
+		<img class="right-footer-logo" alt="Right Footer Logo"
+			 src="/documentation/images/walmartlabs-logo.png"
+			 srcset="/documentation/images/walmartlabs-logo%402x.png 2x,
+			 		 /documentation/images/walmartlabs-logo%403x.png 3x">
+	</footer>
+
+	<script type="text/javascript">
+		document.querySelector('.search-box-sub').addEventListener('click', function() {
+			document.querySelector('.search-box-sub').classList.add('expand-input');
+			document.querySelector('.search-box-sub').placeholder = 'Enter text to search or "Esc" to close';
+			document.querySelector('.select-box-sub').classList.add('expand-select');
+		});
+		document.querySelector('.search-box-sub').onkeydown = function(evt) {
+			evt = evt || window.event;
+			if (evt.keyCode == 27) {
+				document.querySelector('.search-box-sub').classList.remove('expand-input');
+				document.querySelector('.search-box-sub').placeholder = '';
+				document.querySelector('.select-box-sub').classList.remove('expand-select');
+			}
+		};
+		document.querySelector('body').addEventListener('click', function(evt) {
+			evt = evt || window.event;
+			var ignore = '.search-box-sub, .select-box-sub, .select-box-sub__select, a, button';
+			if (!evt.target.matches(ignore)) {
+				document.querySelector('.search-box-sub').classList.remove('expand-input');
+				document.querySelector('.search-box-sub').placeholder = '';
+				document.querySelector('.select-box-sub').classList.remove('expand-select');
+			}
+		});
+	</script>
+
+</body>
+</html>

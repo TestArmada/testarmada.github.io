@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test Armada</title>
+	<link rel="stylesheet" type="text/css" href="/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="/css/common.css">
+	<link rel="stylesheet" type="text/css" href="/css/subheader.css">
+	<link rel="stylesheet" type="text/css" href="/css/header.css">
+	<link rel="stylesheet" type="text/css" href="/css/home.css">
+	<link rel="stylesheet" type="text/css" href="/css/doc.css">
+	<link rel="stylesheet" type="text/css" href="/css/training.css">
+	<link rel="stylesheet" type="text/css" href="/css/faq.css">
+	<link rel="stylesheet" type="text/css" href="/css/contact.css">
+	<link rel="stylesheet" type="text/css" href="/css/search.css">
+	<link rel="stylesheet" type="text/css" href="/css/custom.css">
+	<link rel="stylesheet" type="text/css" href="/css/slick.css">
+	<link rel="stylesheet" type="text/css" href="/css/prism.css">
+	<link rel="stylesheet" type="text/css" href="/css/responsive.css">
+	
+	<link rel="shortcut icon" href="/documentation/images/favicon.ico">
+	
+</head>
+<body>
+
+	<div class="subheader">
+		<div class="search-bar">
+			<form class="search-bar__form" action="/search" method="get">
+				<div class="select-box-sub">
+					<select class="select-box-sub__select" name="fleet" id="fleet-box" onchange="document.getElementById('search-box').focus();">
+						<option value="all">All Fleets</option>
+						
+						<option value="Functional Testing">Functional Testing</option>
+						
+						<option value="Mocking">Mocking</option>
+						
+						<option value="Performance Testing">Performance Testing</option>
+						
+						<option value="Data Insights">Data Insights</option>
+						
+					</select>
+				</div>
+				<input type="text" id="search-box" name="query" autocomplete="off" class="search-box-sub">
+			</form>
+		</div>
+		<div class="nav-sub-links">
+			
+			
+			
+			<a href="/documentation/Presentations" class="nav-sub-links__link">Presentations</a>
+			
+			
+			
+			
+			<a href="/documentation/About" class="nav-sub-links__link">About Us</a>
+			
+			
+			
+			
+			
+			<a href="https://github.com/TestArmada/" class="nav-sub-links__link" target="_blank">GitHub</a>
+			
+			
+			
+		</div>
+	</div>
+
+	<header>
+		<a href="/">
+			<img src="/documentation/images/ta-logo.png" class="logo" alt="Main Brand Logo"
+				 srcset="/documentation/images/ta-logo%402x.png 2x, /documentation/images/ta-logo%403x.png 3x">
+		</a>
+		<!-- <form action="/search" method="get">
+			<input type="text" id="search-box" name="query" placeholder="Search" class="search-box">
+			<div class="select-box">
+				<select name="fleet" id="fleet-box" onchange="document.getElementById('search-box').focus();">
+					<option value="all">All Fleets</option>
+					
+					<option value="Functional Testing">Functional Testing</option>
+					
+					<option value="Mocking">Mocking</option>
+					
+					<option value="Performance Testing">Performance Testing</option>
+					
+					<option value="Data Insights">Data Insights</option>
+					
+				</select>
+			</div>
+		</form> -->
+		<div class="nav-links">
+			
+			
+			
+			
+			
+			
+			
+			<div class="nav-links__fleets">
+				<a class="nav-links__fleets-btn">
+					Fleets <img src="/images/arrow-down-icon.png" class="arrow-down-icon"
+								srcset="/images/arrow-down-icon%402x.png 2x,
+										/images/arrow-down-icon%403x.png 3x">
+				</a>
+				<div class="nav-links__fleets-content">
+					<a href="/">
+						All Fleets
+					</a>
+					
+					<a href="/documentation/Functional Testing/">
+						Functional Testing
+					</a>
+					
+					<a href="/documentation/Mocking/">
+						Mocking
+					</a>
+					
+					<a href="/documentation/Performance Testing/">
+						Performance Testing
+					</a>
+					
+					<a href="/documentation/Data Insights/">
+						Data Insights
+					</a>
+					
+				</div>
+			</div>
+			
+			
+			
+			
+			<a href="/faq" class="nav-links__main-links">FAQ</a>
+			
+			
+			
+			
+			
+		</div>
+	</header>
+
+	<div class="container">
+		<div class="inner-container">
+  <div class="breadcrumb">
+    <p>
+      <a class="breadcrumb__link" href="/">Home</a>
+      <img src="/images/arrow-right-icon.png" srcset="/images/arrow-right-icon%402x.png 2x,
+                   /images/arrow-right-icon%403x.png 3x" class="arrow-right-icon" />
+      <span class="breadcrumb__current-page">About</span>
+    </p>
+  </div>
+  <div class="accordion-content custom-page-content">
+<h2>About Us</h2>
+<p>Test Armada is a technology agnostic quality automation platform to enable engineers to develop and deliver high quality software.</p>
+<p><img src="./images/custom/mission.png?raw=true" alt="mission" title="Mission" /></p>
+<h3>Our Team</h3>
+<p>Claude Jones, Sr. Director of Egineering - <a href="mailto:CJones@walmartlabs.com">CJones@walmartlabs.com</a></p>
+<p>Pranav Verma, Sr. Engineering Manager - <a href="mailto:PVerma@walmartlabs.com">PVerma@walmartlabs.com</a></p>
+<hr />
+<h4>Functional Testing Fleet</h4>
+<p>Renas Reda, Staff Engineer - <a href="mailto:RReda@walmartlabs.com">RReda@walmartlabs.com</a></p>
+<p>Lei Zhu, Staff Engineer - <a href="mailto:LZhu@walmart.com">LZhu@walmart.com</a></p>
+<p>Chengzhi Jia, Software Engineer - <a href="mailto:CJia@walmartlabs.com">CJia@walmartlabs.com</a></p>
+<p>Chi Ahrens, Staff Engineer - <a href="mailto:CAhrens@walmartlabs.com">CAhrens@walmartlabs.com</a></p>
+<p>Lillian Wang, Staff Engineer - <a href="mailto:YWang0@walmart.com">YWang0@walmart.com</a></p>
+<hr />
+<h4>Mocking Fleet</h4>
+<p>Himanshu Jain, Engineering Manager - <a href="mailto:HJain@walmartlabs.com">HJain@walmartlabs.com</a></p>
+<p>Pranav Parikh, Senior Engineer - <a href="mailto:PParikh@walmartlabs.com">PParikh@walmartlabs.com</a></p>
+<p>Shane Chapman, Staff Engineer - <a href="mailto:Shane.Chapman@walmartlabs.com">Shane.Chapman@walmartlabs.com</a></p>
+<p>Yash Shah, Software Engineer - <a href="mailto:Yash.Shah@walmartlabs.com">Yash.Shah@walmartlabs.com</a></p>
+<hr />
+<h4>Performance Testing Fleet</h4>
+<p>Praveen Kulkarni, Sr. Engineering Manager - <a href="mailto:PKulkarni@walmartlabs.com">PKulkarni@walmartlabs.com</a></p>
+<p>Boris Oks, Staff Engineer - <a href="mailto:Boris.Oks@walmartlabs.com">Boris.Oks@walmartlabs.com</a></p>
+<p>Abha Gupta, Senior Engineer - <a href="mailto:AGupta3@walmart.com">AGupta3@walmart.com</a></p>
+<p>Ashish Shah, Senior Engineer - <a href="mailto:AShah@walmartlabs.com">AShah@walmartlabs.com</a></p>
+<p>Irfan RabbanSab, Senior Engineer - <a href="mailto:IRabban@walmartlabs.com">IRabban@walmartlabs.com</a></p>
+<p>Kiran Maharana, Software Engineer - <a href="mailto:Kiran.Maharana@walmartlabs.com">Kiran.Maharana@walmartlabs.com</a></p>
+<p>John Bouchard, Senior Engineer <a href="mailto:JBouchard@walmart.com">JBouchard@walmart.com</a></p>
+<hr />
+<h4>Data Insights Fleet</h4>
+<p>Dave Stevens, Sr. Engineering Manager - <a href="mailto:DStevens@walmartlabs.com">DStevens@walmartlabs.com</a></p>
+<p>Vijay Giri, Staff Engineer - <a href="mailto:vgiri@walmartlabs.com">vgiri@walmartlabs.com</a></p>
+<p>Michael Davis, Staff Engineer - <a href="mailto:Michael.Davis@walmartlabs.com">Michael.Davis@walmartlabs.com</a></p>
+<p>Vinay Pullepu - Software Engineer - <a href="mailto:Vinay.Pullepu@walmartlabs.com">Vinay.Pullepu@walmartlabs.com</a></p>
+<hr />
+<h4>Architect</h4>
+<p>Rainer Lichtenfeld, Principle Engineer - <a href="mailto:RLichtenfeld@walmartlabs.com">RLichtenfeld@walmartlabs.com</a></p>
+<hr />
+<h4>Program</h4>
+<p>Parag Parkhi, Principal Program Manager - <a href="mailto:Parag.Parkhi@walmartlabs.com">Parag.Parkhi@walmartlabs.com</a></p>
+<p>Amy Kirn, Program Manager - <a href="mailto:Amy.Kirn@walmartlabs.com">Amy.Kirn@walmartlabs.com</a></p>
+  </div>
+</div>
+
+	</div>
+
+	<footer>
+		<img class="left-footer-logo" alt="Left Footer Logo"
+			 src="/documentation/images/dxt-logo.png"
+			 srcset="/documentation/images/dxt-logo%402x.png 2x,
+					 /documentation/images/dxt-logo%403x.png 3x">
+		
+		<span class="copyright">&copy; 2018 Walmart Inc.</span>
+		
+		<img class="right-footer-logo" alt="Right Footer Logo"
+			 src="/documentation/images/walmartlabs-logo.png"
+			 srcset="/documentation/images/walmartlabs-logo%402x.png 2x,
+			 		 /documentation/images/walmartlabs-logo%403x.png 3x">
+	</footer>
+
+	<script type="text/javascript">
+		document.querySelector('.search-box-sub').addEventListener('click', function() {
+			document.querySelector('.search-box-sub').classList.add('expand-input');
+			document.querySelector('.search-box-sub').placeholder = 'Enter text to search or "Esc" to close';
+			document.querySelector('.select-box-sub').classList.add('expand-select');
+		});
+		document.querySelector('.search-box-sub').onkeydown = function(evt) {
+			evt = evt || window.event;
+			if (evt.keyCode == 27) {
+				document.querySelector('.search-box-sub').classList.remove('expand-input');
+				document.querySelector('.search-box-sub').placeholder = '';
+				document.querySelector('.select-box-sub').classList.remove('expand-select');
+			}
+		};
+		document.querySelector('body').addEventListener('click', function(evt) {
+			evt = evt || window.event;
+			var ignore = '.search-box-sub, .select-box-sub, .select-box-sub__select, a, button';
+			if (!evt.target.matches(ignore)) {
+				document.querySelector('.search-box-sub').classList.remove('expand-input');
+				document.querySelector('.search-box-sub').placeholder = '';
+				document.querySelector('.select-box-sub').classList.remove('expand-select');
+			}
+		});
+	</script>
+
+</body>
+</html>

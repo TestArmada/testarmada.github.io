@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test Armada</title>
+	<link rel="stylesheet" type="text/css" href="/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="/css/common.css">
+	<link rel="stylesheet" type="text/css" href="/css/subheader.css">
+	<link rel="stylesheet" type="text/css" href="/css/header.css">
+	<link rel="stylesheet" type="text/css" href="/css/home.css">
+	<link rel="stylesheet" type="text/css" href="/css/doc.css">
+	<link rel="stylesheet" type="text/css" href="/css/training.css">
+	<link rel="stylesheet" type="text/css" href="/css/faq.css">
+	<link rel="stylesheet" type="text/css" href="/css/contact.css">
+	<link rel="stylesheet" type="text/css" href="/css/search.css">
+	<link rel="stylesheet" type="text/css" href="/css/custom.css">
+	<link rel="stylesheet" type="text/css" href="/css/slick.css">
+	<link rel="stylesheet" type="text/css" href="/css/prism.css">
+	<link rel="stylesheet" type="text/css" href="/css/responsive.css">
+	
+	<link rel="shortcut icon" href="/documentation/images/favicon.ico">
+	
+</head>
+<body>
+
+	<div class="subheader">
+		<div class="search-bar">
+			<form class="search-bar__form" action="/search" method="get">
+				<div class="select-box-sub">
+					<select class="select-box-sub__select" name="fleet" id="fleet-box" onchange="document.getElementById('search-box').focus();">
+						<option value="all">All Fleets</option>
+						
+						<option value="Functional Testing">Functional Testing</option>
+						
+						<option value="Mocking">Mocking</option>
+						
+						<option value="Performance Testing">Performance Testing</option>
+						
+						<option value="Data Insights">Data Insights</option>
+						
+					</select>
+				</div>
+				<input type="text" id="search-box" name="query" autocomplete="off" class="search-box-sub">
+			</form>
+		</div>
+		<div class="nav-sub-links">
+			
+			
+			
+			<a href="/documentation/Presentations" class="nav-sub-links__link">Presentations</a>
+			
+			
+			
+			
+			<a href="/documentation/About" class="nav-sub-links__link">About Us</a>
+			
+			
+			
+			
+			
+			<a href="https://github.com/TestArmada/" class="nav-sub-links__link" target="_blank">GitHub</a>
+			
+			
+			
+		</div>
+	</div>
+
+	<header>
+		<a href="/">
+			<img src="/documentation/images/ta-logo.png" class="logo" alt="Main Brand Logo"
+				 srcset="/documentation/images/ta-logo%402x.png 2x, /documentation/images/ta-logo%403x.png 3x">
+		</a>
+		<!-- <form action="/search" method="get">
+			<input type="text" id="search-box" name="query" placeholder="Search" class="search-box">
+			<div class="select-box">
+				<select name="fleet" id="fleet-box" onchange="document.getElementById('search-box').focus();">
+					<option value="all">All Fleets</option>
+					
+					<option value="Functional Testing">Functional Testing</option>
+					
+					<option value="Mocking">Mocking</option>
+					
+					<option value="Performance Testing">Performance Testing</option>
+					
+					<option value="Data Insights">Data Insights</option>
+					
+				</select>
+			</div>
+		</form> -->
+		<div class="nav-links">
+			
+			
+			
+			
+			
+			
+			
+			<div class="nav-links__fleets">
+				<a class="nav-links__fleets-btn">
+					Fleets <img src="/images/arrow-down-icon.png" class="arrow-down-icon"
+								srcset="/images/arrow-down-icon%402x.png 2x,
+										/images/arrow-down-icon%403x.png 3x">
+				</a>
+				<div class="nav-links__fleets-content">
+					<a href="/">
+						All Fleets
+					</a>
+					
+					<a href="/documentation/Functional Testing/">
+						Functional Testing
+					</a>
+					
+					<a href="/documentation/Mocking/">
+						Mocking
+					</a>
+					
+					<a href="/documentation/Performance Testing/">
+						Performance Testing
+					</a>
+					
+					<a href="/documentation/Data Insights/">
+						Data Insights
+					</a>
+					
+				</div>
+			</div>
+			
+			
+			
+			
+			<a href="/faq" class="nav-links__main-links">FAQ</a>
+			
+			
+			
+			
+			
+		</div>
+	</header>
+
+	<div class="container">
+		  <div class="clear"></div>
+<div class="doc-container">
+  <div class="breadcrumb doc-breadcrumb">
+    <p>
+      <a class="breadcrumb__link" href="/">Home</a>
+      <img src="/images/arrow-right-icon.png"
+           srcset="/images/arrow-right-icon%402x.png 2x,
+                   /images/arrow-right-icon%403x.png 3x"
+           class="arrow-right-icon">
+      <a class="breadcrumb__link" href="/documentation/Functional Testing/">Functional Testing</a>
+      <img src="/images/arrow-right-icon.png"
+           srcset="/images/arrow-right-icon%402x.png 2x,
+                   /images/arrow-right-icon%403x.png 3x"
+           class="arrow-right-icon">
+      <a class="breadcrumb__link" href="/documentation/Functional Testing/rWeb/JAVASCRIPT/Introduction">rWeb JAVASCRIPT</a>
+      <img src="/images/arrow-right-icon.png"
+           srcset="/images/arrow-right-icon%402x.png 2x,
+                   /images/arrow-right-icon%403x.png 3x"
+           class="arrow-right-icon">
+      <a class="breadcrumb__link" href="/documentation/Functional Testing/rWeb/JAVASCRIPT/Training Guide">Training Guide</a>
+      <img src="/images/arrow-right-icon.png"
+           srcset="/images/arrow-right-icon%402x.png 2x,
+                   /images/arrow-right-icon%403x.png 3x"
+           class="arrow-right-icon">
+      <span class="breadcrumb__current-page">Magellan</span>
+    </p>
+  </div>
+  <div class="clear"></div>
+  <div class="training-container">
+    <div class="sidebar">
+<div class="training-doc-link">
+<div class="training-doc-link-left">
+<img class="training-doc-link-left__img" src="/images/training/checked.png" srcset="/images/training/checked%402x.png 2x, /images/training/checked%403x.png 3x" /><hr class="training-doc-link-left__hr training-doc-link-left__hr-completed" /></div>
+<p class="training-doc-link__text">
+<a class="training-doc-link__text-completed" href="./Magellan usage">Magellan usage</a></p>
+</div>
+<div class="training-doc-link">
+<div class="training-doc-link-left">
+<img class="training-doc-link-left__img" src="/images/training/actived.png" srcset="/images/training/actived%402x.png 2x, /images/training/actived%403x.png 3x" /></div>
+<p class="training-doc-link__text">
+<a class="training-doc-link__text-current" href="./Configure test profiles">Configure test profiles</a></p>
+</div>
+</div>
+<div class="training-doc-nav-btn">
+<a href="./Magellan usage"><img src="/images/training/btn-left.png" srcset="/images/training/btn-left%402x.png 2x, /images/training/btn-left%403x.png 3x" /></a>
+</div>
+<div class="training-content markdown">
+<h3>Configure test profiles</h3>
+<p>There are two ways to configure test profiles</p>
+<h4>Via <strong><em>--profile</em></strong> command line argument</h4>
+<ul>
+<li><p><strong>Magellan</strong> can retrieve test profile information from an URL (to your hosted test profile).</p></li>
+<li><p>The hosted test profile file needs to follow the format of:</p></li>
+</ul>
+<pre><code class="language-bash">{
+  &quot;profiles&quot;: {
+    &quot;microsoftedge&quot;: [{
+      &quot;browser&quot;: &quot;MicrosoftEdge_16_Windows_10_Desktop&quot;,
+      &quot;resolution&quot;: &quot;1280x1024&quot;,
+      &quot;executor&quot;: &quot;sauce&quot;
+    }],
+    &quot;tier-one-browsers&quot;: [{
+       &quot;browser&quot;: &quot;MicrosoftEdge_16_Windows_10_Desktop&quot;,
+       &quot;resolution&quot;: &quot;1280x1024&quot;,
+       &quot;executor&quot;: &quot;sauce&quot;
+      },
+      {
+       &quot;browser&quot;: &quot;chrome_latest_Windows_10_Desktop&quot;,
+       &quot;resolution&quot;: &quot;1280x1024&quot;,
+       &quot;executor&quot;: &quot;sauce&quot;
+      }
+    ]
+  }
+}
+</code></pre>
+<ul>
+<li>Magellan can read and resolve the hosted profile by the following command:</li>
+</ul>
+<pre><code class="language-bash">./node_modules/.bin/magellan --profile http://some.host#microsoftedge
+</code></pre>
+<ul>
+<li>You can add as many test profiles as your need in the hosted file. Magellan is able to read more test profiles via:</li>
+</ul>
+<pre><code class="language-bash">./node_modules/.bin/magellan --profile http://some.host#microsoftedge,firefox57
+</code></pre>
+<ul>
+<li>Or put multiple test profiles into one collection, such as <strong>tier-one-browsers</strong> in the above sample. To call it:</li>
+</ul>
+<pre><code class="language-bash">./node_modules/.bin/magellan --profile http://some.host#tier-one-browsers
+</code></pre>
+<h4>Via <em>magellan.json</em> file</h4>
+<ul>
+<li><strong>Magellan.json</strong> file is using the same test profile format as the hosted test profile file.</li>
+<li>To use it:</li>
+</ul>
+<pre><code class="language-bash">./node_modules/.bin/magellan --profile tier-one-browsers
+</code></pre>
+</div>
+<div class="training-doc-nav-btn">
+</div>
+
+  </div>
+  <div class="clear"></div>
+</div>
+<script type="text/javascript">
+  var elements = document.getElementsByTagName('pre');
+  for (var i = 0; i < elements.length; i++) {
+    elements[i].className += " line-numbers";
+    if (!elements[i].children[0].className) {
+      elements[i].children[0].className = "language-javascript";
+    }
+  }
+</script>
+<script type="text/javascript" src="/js/prism.js"></script>
+	</div>
+
+	<footer>
+		<img class="left-footer-logo" alt="Left Footer Logo"
+			 src="/documentation/images/dxt-logo.png"
+			 srcset="/documentation/images/dxt-logo%402x.png 2x,
+					 /documentation/images/dxt-logo%403x.png 3x">
+		
+		<span class="copyright">&copy; 2018 Walmart Inc.</span>
+		
+		<img class="right-footer-logo" alt="Right Footer Logo"
+			 src="/documentation/images/walmartlabs-logo.png"
+			 srcset="/documentation/images/walmartlabs-logo%402x.png 2x,
+			 		 /documentation/images/walmartlabs-logo%403x.png 3x">
+	</footer>
+
+	<script type="text/javascript">
+		document.querySelector('.search-box-sub').addEventListener('click', function() {
+			document.querySelector('.search-box-sub').classList.add('expand-input');
+			document.querySelector('.search-box-sub').placeholder = 'Enter text to search or "Esc" to close';
+			document.querySelector('.select-box-sub').classList.add('expand-select');
+		});
+		document.querySelector('.search-box-sub').onkeydown = function(evt) {
+			evt = evt || window.event;
+			if (evt.keyCode == 27) {
+				document.querySelector('.search-box-sub').classList.remove('expand-input');
+				document.querySelector('.search-box-sub').placeholder = '';
+				document.querySelector('.select-box-sub').classList.remove('expand-select');
+			}
+		};
+		document.querySelector('body').addEventListener('click', function(evt) {
+			evt = evt || window.event;
+			var ignore = '.search-box-sub, .select-box-sub, .select-box-sub__select, a, button';
+			if (!evt.target.matches(ignore)) {
+				document.querySelector('.search-box-sub').classList.remove('expand-input');
+				document.querySelector('.search-box-sub').placeholder = '';
+				document.querySelector('.select-box-sub').classList.remove('expand-select');
+			}
+		});
+	</script>
+
+</body>
+</html>

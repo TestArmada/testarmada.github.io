@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test Armada</title>
+	<link rel="stylesheet" type="text/css" href="/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="/css/common.css">
+	<link rel="stylesheet" type="text/css" href="/css/subheader.css">
+	<link rel="stylesheet" type="text/css" href="/css/header.css">
+	<link rel="stylesheet" type="text/css" href="/css/home.css">
+	<link rel="stylesheet" type="text/css" href="/css/doc.css">
+	<link rel="stylesheet" type="text/css" href="/css/training.css">
+	<link rel="stylesheet" type="text/css" href="/css/faq.css">
+	<link rel="stylesheet" type="text/css" href="/css/contact.css">
+	<link rel="stylesheet" type="text/css" href="/css/search.css">
+	<link rel="stylesheet" type="text/css" href="/css/custom.css">
+	<link rel="stylesheet" type="text/css" href="/css/slick.css">
+	<link rel="stylesheet" type="text/css" href="/css/prism.css">
+	<link rel="stylesheet" type="text/css" href="/css/responsive.css">
+	
+	<link rel="shortcut icon" href="/documentation/images/favicon.ico">
+	
+</head>
+<body>
+
+	<div class="subheader">
+		<div class="search-bar">
+			<form class="search-bar__form" action="/search" method="get">
+				<div class="select-box-sub">
+					<select class="select-box-sub__select" name="fleet" id="fleet-box" onchange="document.getElementById('search-box').focus();">
+						<option value="all">All Fleets</option>
+						
+						<option value="Functional Testing">Functional Testing</option>
+						
+						<option value="Mocking">Mocking</option>
+						
+						<option value="Performance Testing">Performance Testing</option>
+						
+						<option value="Data Insights">Data Insights</option>
+						
+					</select>
+				</div>
+				<input type="text" id="search-box" name="query" autocomplete="off" class="search-box-sub">
+			</form>
+		</div>
+		<div class="nav-sub-links">
+			
+			
+			
+			<a href="/documentation/Presentations" class="nav-sub-links__link">Presentations</a>
+			
+			
+			
+			
+			<a href="/documentation/About" class="nav-sub-links__link">About Us</a>
+			
+			
+			
+			
+			
+			<a href="https://github.com/TestArmada/" class="nav-sub-links__link" target="_blank">GitHub</a>
+			
+			
+			
+		</div>
+	</div>
+
+	<header>
+		<a href="/">
+			<img src="/documentation/images/ta-logo.png" class="logo" alt="Main Brand Logo"
+				 srcset="/documentation/images/ta-logo%402x.png 2x, /documentation/images/ta-logo%403x.png 3x">
+		</a>
+		<!-- <form action="/search" method="get">
+			<input type="text" id="search-box" name="query" placeholder="Search" class="search-box">
+			<div class="select-box">
+				<select name="fleet" id="fleet-box" onchange="document.getElementById('search-box').focus();">
+					<option value="all">All Fleets</option>
+					
+					<option value="Functional Testing">Functional Testing</option>
+					
+					<option value="Mocking">Mocking</option>
+					
+					<option value="Performance Testing">Performance Testing</option>
+					
+					<option value="Data Insights">Data Insights</option>
+					
+				</select>
+			</div>
+		</form> -->
+		<div class="nav-links">
+			
+			
+			
+			
+			
+			
+			
+			<div class="nav-links__fleets">
+				<a class="nav-links__fleets-btn">
+					Fleets <img src="/images/arrow-down-icon.png" class="arrow-down-icon"
+								srcset="/images/arrow-down-icon%402x.png 2x,
+										/images/arrow-down-icon%403x.png 3x">
+				</a>
+				<div class="nav-links__fleets-content">
+					<a href="/">
+						All Fleets
+					</a>
+					
+					<a href="/documentation/Functional Testing/">
+						Functional Testing
+					</a>
+					
+					<a href="/documentation/Mocking/">
+						Mocking
+					</a>
+					
+					<a href="/documentation/Performance Testing/">
+						Performance Testing
+					</a>
+					
+					<a href="/documentation/Data Insights/">
+						Data Insights
+					</a>
+					
+				</div>
+			</div>
+			
+			
+			
+			
+			<a href="/faq" class="nav-links__main-links">FAQ</a>
+			
+			
+			
+			
+			
+		</div>
+	</header>
+
+	<div class="container">
+		  <div class="clear"></div>
+<div class="doc-container">
+  <div class="breadcrumb doc-breadcrumb">
+    <p>
+      <a class="breadcrumb__link" href="/">Home</a>
+      <img src="/images/arrow-right-icon.png"
+           srcset="/images/arrow-right-icon@2x.png 2x,
+                   /images/arrow-right-icon@3x.png 3x"
+           class="arrow-right-icon">
+      <a class="breadcrumb__link" href="/documentation/Functional Testing/">Functional Testing</a>
+      <img src="/images/arrow-right-icon.png"
+           srcset="/images/arrow-right-icon@2x.png 2x,
+                   /images/arrow-right-icon@3x.png 3x"
+           class="arrow-right-icon">
+      <span class="breadcrumb__current-page">rWeb JAVASCRIPT</span>
+    </p>
+  </div>
+  <div class="clear"></div>
+  <div class="sidebar">
+    <ul>
+    
+    
+    
+    
+    
+    
+      
+      
+        
+          
+          
+            <li><a href="/documentation/Functional Testing/rWeb/JAVASCRIPT/Introduction" class="sidebar__file-links">
+              Introduction
+            </a></li>
+          
+        
+      
+        
+          
+          
+            <li><a href="/documentation/Functional Testing/rWeb/JAVASCRIPT/Getting Started" class="sidebar__file-links">
+              Getting Started
+            </a></li>
+          
+        
+      
+        
+          
+            
+            
+              <li class="sidebar__file-links sidebar__file-links-current">Developer Guide</li>
+            
+          
+          
+          
+            <li><a href="/documentation/Functional Testing/rWeb/JAVASCRIPT/Training Guide" class="sidebar__file-links sidebar__file-sublink">
+              Training Guide
+            </a></li>
+          
+        
+      
+        
+          
+          
+          
+            <li><a href="/documentation/Functional Testing/rWeb/JAVASCRIPT/API Guide" class="sidebar__file-links sidebar__file-sublink-current sidebar__file-sublink">
+              API Guide
+            </a></li>
+          
+        
+      
+        
+          
+          
+          
+            <li><a href="/documentation/Functional Testing/rWeb/JAVASCRIPT/Boilerplates" class="sidebar__file-links sidebar__file-sublink">
+              Boilerplates
+            </a></li>
+          
+        
+      
+        
+          
+          
+            <li><a href="/documentation/Functional Testing/rWeb/JAVASCRIPT/Contribution Guide" class="sidebar__file-links">
+              Contribution Guide
+            </a></li>
+          
+        
+      
+        
+          
+          
+            <li><a href="/documentation/Functional Testing/rWeb/JAVASCRIPT/FAQ" class="sidebar__file-links">
+              FAQ
+            </a></li>
+          
+        
+      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </ul>
+  </div>
+  <div class="doc-content markdown">
+    <h3 id="nightwatch-extra-apis">Nightwatch-Extra API:s</h3>
+
+<h4 id="commands">Commands</h4>
+
+<h5 id="getel">.getEl()</h5>
+
+<p><strong>description</strong>:</p>
+
+<p>Returns a html element</p>
+
+<p><strong>Syntax</strong>:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="p">.</span><span class="nx">getEl</span><span class="p">(</span><span class="nx">selector</span><span class="p">,</span> <span class="nx">callback</span><span class="cm">/*optional*/</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>selector : css selector to identify the html element.</p>
+
+<p>callback : callback which includes the element information.</p>
+
+<p><strong>Usage</strong>:</p>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="p">.</span><span class="nx">getEl</span><span class="p">(</span><span class="s2">".dropdown-link .user-name"</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">element</span><span class="p">){</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">element</span><span class="p">);</span> <span class="c1">// will print out {'ELEMENT': 1}</span>
+<span class="p">});</span>
+</code></pre>
+</div>
+
+<h5 id="getels">.getEls()</h5>
+
+<p><strong>description</strong>:</p>
+
+<p>Returns html elements</p>
+
+<p><strong>Syntax</strong>:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="p">.</span><span class="nx">getEls</span><span class="p">(</span><span class="nx">selector</span><span class="p">,</span> <span class="nx">callback</span><span class="cm">/*optional*/</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>selector : css selector to identify the html elements.</p>
+
+<p>callback : callback which includes the elements information.</p>
+
+<p><strong>Usage</strong>:</p>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="p">.</span><span class="nx">getEls</span><span class="p">(</span><span class="s2">".dropdown-link .user-name"</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">element</span><span class="p">){</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">element</span><span class="p">);</span>  <span class="c1">// will print out [{'ELEMENT': 1}, .....]</span>
+<span class="p">});</span>
+</code></pre>
+</div>
+
+<h5 id="clickel">.clickEl()</h5>
+
+<p><strong>description</strong>:</p>
+
+<p>Click a html element</p>
+
+<p><strong>Syntax</strong>:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="p">.</span><span class="nx">clickEl</span><span class="p">(</span><span class="nx">selector</span><span class="p">,</span> <span class="nx">callback</span><span class="cm">/*optional*/</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>selector : css selector to the html element.</p>
+
+<p>callback : optional callback to be called when the command finishes.</p>
+
+<p><strong>Usage</strong>:</p>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="p">.</span><span class="nx">clickEl</span><span class="p">(</span><span class="s2">"#submit"</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<h5 id="clickautomationel">.clickAutomationEl()</h5>
+
+<p><strong>description</strong>:</p>
+
+<p>Click an html element which has html attribute [data-automation-id].</p>
+
+<p><strong>Syntax</strong>:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="p">.</span><span class="nx">clickAutomationEl</span><span class="p">(</span><span class="nx">id</span><span class="p">,</span> <span class="nx">callback</span><span class="cm">/*optional*/</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>id : value of data-automation-id attribute.</p>
+
+<p>callback : optional callback to be called when the command finishes.</p>
+
+<p><strong>Usage</strong>:</p>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="p">.</span><span class="nx">clickAutomationEl</span><span class="p">(</span><span class="s2">"placeOrder"</span><span class="p">);</span> <span class="c1">// equals to .clickEl('[data-automation-id="placeOrder"]');</span>
+</code></pre>
+</div>
+
+<h5 id="getelvalue">.getElValue()</h5>
+
+<p><strong>description</strong>:</p>
+
+<p>Returns the textual value of a html element.</p>
+
+<p><strong>Syntax</strong>:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="p">.</span><span class="nx">getElValue</span><span class="p">(</span><span class="nx">selector</span><span class="p">,</span> <span class="nx">callback</span><span class="cm">/*optional*/</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>selector : css selector to the html element.</p>
+
+<p>callback : callback which includes the value of the element.</p>
+
+<p><strong>Usage</strong>:</p>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="p">.</span><span class="nx">getElValue</span><span class="p">(</span><span class="s2">".user-profile"</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">profile</span><span class="p">){</span> <span class="p">});</span>
+</code></pre>
+</div>
+
+<h5 id="setelvalue">.setElValue()</h5>
+
+<p><strong>description</strong>:</p>
+
+<p>Sets value to a html element.</p>
+
+<p><strong>Syntax</strong>:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="p">.</span><span class="nx">setElValue</span><span class="p">(</span><span class="nx">selector</span><span class="p">,</span> <span class="nx">value</span><span class="p">,</span> <span class="nx">callback</span><span class="cm">/*optional*/</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>selector : css selector to the html element.</p>
+
+<p>value : value to be set to the html element.</p>
+
+<p>callback : optional callback to be called when the command finishes.</p>
+
+<p><strong>Usage</strong>:</p>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="p">.</span><span class="nx">setElValue</span><span class="p">(</span><span class="s2">"#username"</span><span class="p">,</span> <span class="s2">"fake@login.com"</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<h5 id="setmaskedelvalue">.setMaskedElValue()</h5>
+
+<p><strong>description</strong>:</p>
+
+<p>Sets value to a masked html element like credit card number or phone number.</p>
+
+<p><strong>Syntax</strong>:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="p">.</span><span class="nx">setMaskedElValue</span><span class="p">(</span><span class="nx">selector</span><span class="p">,</span> <span class="nx">value</span><span class="p">,</span> <span class="nx">callback</span><span class="cm">/*optional*/</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>selector : css selector to the html element.</p>
+
+<p>value : value to be set to the html element.</p>
+
+<p>callback : optional callback to be called when the command finishes.</p>
+
+<p><strong>Usage</strong>:</p>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="p">.</span><span class="nx">setMaskedElValue</span><span class="p">(</span><span class="s2">".phone-number"</span><span class="p">,</span> <span class="s2">"123456789"</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<h5 id="movetoel">.moveToEl()</h5>
+
+<p><strong>description</strong>:</p>
+
+<p>Moves cursor to a html element</p>
+
+<p><strong>Syntax</strong>:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="p">.</span><span class="nx">moveToEl</span><span class="p">(</span><span class="nx">selector</span><span class="p">,</span> <span class="nx">xoffset</span><span class="p">,</span> <span class="nx">yoffset</span><span class="p">,</span> <span class="nx">callback</span><span class="cm">/*optional*/</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>selector : css selector to the html element.</p>
+
+<p>xoffset : x offset to move to, relative to the top-left corner of the element.</p>
+
+<p>yoffset : y offset to move to, relative to the top-left corner of the element.</p>
+
+<p>callback : optional callback to be called when the command finishes.</p>
+
+<p><strong>Usage</strong>:</p>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="p">.</span><span class="nx">moveToEl</span><span class="p">(</span><span class="s2">".checkout"</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<h5 id="takeelscreenshot">.takeElScreenshot()</h5>
+
+<p><strong>description</strong>:</p>
+
+<p>Takes screenshot for a html element and save it to file</p>
+
+<p><strong>Syntax</strong>:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="p">.</span><span class="nx">takeElScreenshot</span><span class="p">(</span><span class="nx">selector</span><span class="p">,</span> <span class="nx">filename</span><span class="p">,</span> <span class="nx">callback</span><span class="cm">/*optional*/</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>selector : css selector to the html element.</p>
+
+<p>filename : file name where the screen shot will be saved to (.png will be appended as prefix).</p>
+
+<p>callback : optional callback to be called when the command finishes.</p>
+
+<p><strong>Usage</strong>:</p>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="p">.</span><span class="nx">takeElScreenshot</span><span class="p">(</span><span class="s2">".phone-number"</span><span class="p">,</span> <span class="s2">"phone-number"</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<h5 id="takescreenhot">.takeScreenhot()</h5>
+
+<p><strong>description</strong>:</p>
+
+<p>Takes screenshot for the page.</p>
+
+<p><strong>Syntax</strong>:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="p">.</span><span class="nx">takeScreenhot</span><span class="p">(</span><span class="nx">filename</span><span class="p">,</span> <span class="nx">callback</span><span class="cm">/*optional*/</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>filename : file name where the screen shot will be saved to (.png will be appended as prefix).</p>
+
+<p>callback : optional callback to be called when the command finishes.</p>
+
+<p><strong>Usage</strong>:</p>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="p">.</span><span class="nx">takeScreenhot</span><span class="p">(</span><span class="s2">"home-page"</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<h5 id="assertelcontainstext">.assert.elContainsText()</h5>
+
+<p><strong>description</strong>:</p>
+
+<p>Asserts if current element contains a given text</p>
+
+<p><strong>Syntax</strong>:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="p">.</span><span class="nx">assert</span><span class="p">.</span><span class="nx">elContainsText</span><span class="p">(</span><span class="nx">selector</span><span class="p">,</span> <span class="nx">value</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>selector : css selector to the html element.</p>
+
+<p>value : textual value or regular expression to assert.</p>
+
+<p><strong>Usage</strong>:</p>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="p">.</span><span class="nx">assert</span><span class="p">.</span><span class="nx">elContainsText</span><span class="p">(</span><span class="s2">".username"</span><span class="p">,</span> <span class="s2">"testarmada"</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<h5 id="assertelnotcontainstext">.assert.elNotContainsText()</h5>
+
+<p><strong>description</strong>:</p>
+
+<p>Asserts if current element doesn’t contain a given text</p>
+
+<p><strong>Syntax</strong>:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="p">.</span><span class="nx">assert</span><span class="p">.</span><span class="nx">elNotContainsText</span><span class="p">(</span><span class="nx">selector</span><span class="p">,</span> <span class="nx">value</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>selector : css selector to the html element.</p>
+
+<p>value : textual value or regular expression to assert.</p>
+
+<p><strong>Usage</strong>:</p>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="p">.</span><span class="nx">assert</span><span class="p">.</span><span class="nx">elNotContainsText</span><span class="p">(</span><span class="s2">".username"</span><span class="p">,</span> <span class="s2">"testarmada"</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<h5 id="assertselectorhaslength">.assert.selectorHasLength()</h5>
+
+<p><strong>description</strong>:</p>
+
+<p>Asserts if current selector returns given amount of elements</p>
+
+<p><strong>Syntax</strong>:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="p">.</span><span class="nx">assert</span><span class="p">.</span><span class="nx">selectorHasLength</span><span class="p">(</span><span class="nx">selector</span><span class="p">,</span> <span class="nx">value</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>selector : css selector to the html element.</p>
+
+<p>value : numeric value to assert.</p>
+
+<p><strong>Usage</strong>:</p>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="p">.</span><span class="nx">assert</span><span class="p">.</span><span class="nx">selectorHasLength</span><span class="p">(</span><span class="s2">".username"</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<h5 id="assertelvaluecontains">.assert.elValueContains()</h5>
+
+<p><strong>description</strong>:</p>
+
+<p>Asserts if current element contains the given value</p>
+
+<p><strong>Syntax</strong>:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="p">.</span><span class="nx">assert</span><span class="p">.</span><span class="nx">elValueContains</span><span class="p">(</span><span class="nx">selector</span><span class="p">,</span> <span class="nx">value</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>selector : css selector to the html element.</p>
+
+<p>value : textual value to assert.</p>
+
+<p><strong>Usage</strong>:</p>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="p">.</span><span class="nx">assert</span><span class="p">.</span><span class="nx">elValueContains</span><span class="p">(</span><span class="s2">".username"</span><span class="p">,</span> <span class="s2">"Leo"</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<h5 id="assertellengthgreaterthan">.assert.elLengthGreaterThan()</h5>
+
+<p><strong>description</strong>:</p>
+
+<p>Asserts if the length of an element’s attribute is greater than a number</p>
+
+<p><strong>Syntax</strong>:</p>
+
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="p">.</span><span class="nx">assert</span><span class="p">.</span><span class="nx">elLengthGreaterThan</span><span class="p">(</span><span class="nx">selector</span><span class="p">,</span> <span class="nx">using</span><span class="p">,</span> <span class="nx">value</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<p><strong>Parameters</strong>:</p>
+
+<p>selector : css selector to the html element.</p>
+
+<p>using : element attribute, can be chosen from [“value”, “text”, “html”, “length”].</p>
+
+<p>value : numeric value to assert.</p>
+
+<p><strong>Usage</strong>:</p>
+<div class="language-js highlighter-rouge"><pre class="highlight"><code><span class="p">.</span><span class="nx">assert</span><span class="p">.</span><span class="nx">elLengthGreaterThan</span><span class="p">(</span><span class="s2">".username"</span><span class="p">,</span> <span class="s2">"text"</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<h3 id="nightwatch-apis">Nightwatch API:s</h3>
+
+<p>For Nightwatch API:s please <a href="http://nightwatchjs.org/api">go here</a></p>
+
+
+  </div>
+  <div class="clear"></div>
+</div>
+<script type="text/javascript">
+  var elements = document.getElementsByClassName('highlight');
+  for (var i = 0; i < elements.length; i++) {
+    elements[i].className += " line-numbers";
+    if (!elements[i].parentElement.classList.value.match(/language/)) {
+      elements[i].children[0].className = "language-javascript";
+    }
+  }
+</script>
+<script type="text/javascript" src="/js/prism.js"></script>
+<script src="/js/jquery-3.3.1.min.js"></script>
+<script src="/js/doc.js"></script>
+	</div>
+
+	<footer>
+		<img class="left-footer-logo" alt="Left Footer Logo"
+			 src="/documentation/images/dxt-logo.png"
+			 srcset="/documentation/images/dxt-logo%402x.png 2x,
+					 /documentation/images/dxt-logo%403x.png 3x">
+		
+		<span class="copyright">&copy; 2018 Walmart Inc.</span>
+		
+		<img class="right-footer-logo" alt="Right Footer Logo"
+			 src="/documentation/images/walmartlabs-logo.png"
+			 srcset="/documentation/images/walmartlabs-logo%402x.png 2x,
+			 		 /documentation/images/walmartlabs-logo%403x.png 3x">
+	</footer>
+
+	<script type="text/javascript">
+		document.querySelector('.search-box-sub').addEventListener('click', function() {
+			document.querySelector('.search-box-sub').classList.add('expand-input');
+			document.querySelector('.search-box-sub').placeholder = 'Enter text to search or "Esc" to close';
+			document.querySelector('.select-box-sub').classList.add('expand-select');
+		});
+		document.querySelector('.search-box-sub').onkeydown = function(evt) {
+			evt = evt || window.event;
+			if (evt.keyCode == 27) {
+				document.querySelector('.search-box-sub').classList.remove('expand-input');
+				document.querySelector('.search-box-sub').placeholder = '';
+				document.querySelector('.select-box-sub').classList.remove('expand-select');
+			}
+		};
+		document.querySelector('body').addEventListener('click', function(evt) {
+			evt = evt || window.event;
+			var ignore = '.search-box-sub, .select-box-sub, .select-box-sub__select, a, button';
+			if (!evt.target.matches(ignore)) {
+				document.querySelector('.search-box-sub').classList.remove('expand-input');
+				document.querySelector('.search-box-sub').placeholder = '';
+				document.querySelector('.select-box-sub').classList.remove('expand-select');
+			}
+		});
+	</script>
+
+</body>
+</html>
