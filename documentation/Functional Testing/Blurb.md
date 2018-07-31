@@ -1,1 +1,0 @@
-Run web, native or web services functional tests reliably at massive parallel scale, By distributing tests across available CPU cores, Test Armada blazes through long test suites in a fraction of the time, aggregating results in one friendly report.

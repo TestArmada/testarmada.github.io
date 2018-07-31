@@ -1,1 +1,0 @@
-The data insights platform collates test run data from multiple sources, providing a single source of truth for deep insight in to code quality, cross-browser test results and application performance.

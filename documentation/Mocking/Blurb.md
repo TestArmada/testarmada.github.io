@@ -1,1 +1,0 @@
-Create reliable test data for test execution and development. “Mocks” are imitations that emulate real software components for testing purposes. Mocking functions focus on very specific scenarios and contexts and simulate behavioral responses to fulfill a certain development need for repeated and reliable test execution and debugging. 
