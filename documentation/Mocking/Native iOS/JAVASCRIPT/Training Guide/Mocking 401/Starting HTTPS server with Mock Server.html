@@ -205,14 +205,14 @@
 <h3>1. Updating run-mock-server-console.js to enable HTTPS</h3>
 <pre><code class="language-js">require('./endpoints');
 var fs = require('fs');
-var shifu = require('shifu');
+var midway = require('testarmada-midway');
  
-shifu.start({
+midway.start({
   host: &quot;localhost&quot;,  
   mockedDirectory: &quot;./resources/mocked-data&quot;,
   port: 8000,
   httpsPort: 4444,
-  project: 'HelloShifu'
+  project: 'HelloMidway'
 });
 </code></pre>
 <blockquote>

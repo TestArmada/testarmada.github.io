@@ -214,41 +214,37 @@
 </ul>
 <h3>2. Add mock dependency to <code>package.json</code></h3>
 <pre><code class="language-json">&quot;dependencies&quot;: {
-  &quot;shifu&quot;: &quot;^1.0.0&quot;
+  &quot;testarmada-midway&quot;: &quot;^1.0.1&quot;
 }
 </code></pre>
-<h3>3. Add <code>.npmrc</code> file to the project</h3>
-<pre><code class="language-bash">registry=https://registry.npmjs.org/
-strict-ssl=false
-</code></pre>
-<h3>4. Install mock dependency with <code>npm install</code></h3>
+<h3>3. Install mock dependency with <code>npm install</code></h3>
 <p>Run <code>npm install</code> command to install mock related dependencies.</p>
-<h3>5. Add <code>resources/endpoints.js</code> and create <code>./resources/mocked-data</code> directory to store the mock data.</h3>
+<h3>4. Add <code>resources/endpoints.js</code> and create <code>./resources/mocked-data</code> directory to store the mock data.</h3>
 <pre><code class="language-js">require('./endpoints');
-require('shifu').start({
+require('midway').start({
   host: &quot;localhost&quot;,
   mockedDirectory: &quot;./resources/mocked-data&quot;,
   port: 8000,
-  project: 'HelloShifu'
+  project: 'HelloMidway'
 });
 </code></pre>
-<h3>6. Add <code>resources/run-mock-server-console.js</code></h3>
+<h3>5. Add <code>resources/run-mock-server-console.js</code></h3>
 <pre><code class="language-js">require('./endpoints');
-require('shifu').start({
+require('midway').start({
   host: &quot;localhost&quot;,
   mockedDirectory: &quot;./resources/mocked-data&quot;,
   port: 8000,
-  project: 'HelloShifu'
+  project: 'HelloMidway'
 });
 </code></pre>
-<p>Please note that you will need to replace <code>HelloShifu</code> for key <code>project</code> field with your project name(without dashes).</p>
-<h3>7. Add script to start mock server in <code>package.json</code></h3>
+<p>Please note that you will need to replace <code>HelloMidway</code> for key <code>project</code> field with your project name(without dashes).</p>
+<h3>6. Add script to start mock server in <code>package.json</code></h3>
 <pre><code class="language-json">&quot;scripts&quot;: {
   &quot;lint&quot;: &quot;eslint . --ext .js&quot;,
   &quot;start-server&quot;: &quot;node ./resources/run-mock-server-console.js&quot;
 },
 </code></pre>
-<h3>8. Test mock server can be started</h3>
+<h3>7. Test mock server can be started</h3>
 <pre><code class="language-bash">npm run start-server
 </code></pre>
 </div>

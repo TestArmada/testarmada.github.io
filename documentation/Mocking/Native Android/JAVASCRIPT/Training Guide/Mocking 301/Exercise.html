@@ -261,14 +261,14 @@
 }
 </code></pre></li>
 </ol></li>
-<li><p>Call API to setMockId to the folder name via Shifu UI</p></li>
+<li><p>Call API to setMockId to the folder name via Midway UI</p></li>
 <li><p>Hit the rest endpoint <code>/get/message</code> and <code>/get/number</code> one time each and verify the response is <code>&quot;message&quot; : 1</code> and <code>&quot;number&quot; : 1</code> respectively.</p></li>
 <li><p>Hit the rest endpoint <code>/get/message</code> and <code>/get/number</code> once more and verify the response for second hit is <code>&quot;message&quot; : 2</code> and <code>&quot;number&quot; : 2</code> respectively.</p></li>
 <li><p>Hit the rest endpoint <code>/get/message</code> and <code>/get/number</code> one more time to verify that the response is <code>&quot;message&quot; : &quot;undefined&quot;</code> and <code>&quot;number&quot; : &quot;undefined&quot;</code> respectively.</p></li>
-<li><p>Call ResetMockId API via Shifu UI</p></li>
+<li><p>Call ResetMockId API via Midway UI</p></li>
 <li><p>Hit the rest endpoint <code>/get/message</code> and <code>/get/number</code> once each and verify the response is based on the handler and not on SetMockId - <strong><em>You may have to add appropriate file based on the route path.</em></strong></p></li>
 <li><p>Update run-mock-server-console.js to add two parallel sessions to the server.</p></li>
-<li><p>Now call GetSessionId to register a session using Shifu UI.</p></li>
+<li><p>Now call GetSessionId to register a session using Midway UI.</p></li>
 <li><p>Now set <code>Hello World</code> and <code>Hello Universe</code> variant for <code>get/message</code> api for the two sessions Ids respectively.</p></li>
 <li><p>Now hit the server <code>https://localhost:8000/sessionId/get/message</code> for different session Ids and verify that you get different responses as per each variant.</p></li>
 </ol>

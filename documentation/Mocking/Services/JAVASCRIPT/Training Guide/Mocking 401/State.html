@@ -204,7 +204,7 @@
 <h3>1. What is state?</h3>
 <p>State allows you to maintain state of your server, for example if a user is logged in or logged out. The mock server internally uses <code>Hapi</code> node server, which helps you return the state of the current application state. Within any response handler, use <code>this.state('varName')</code> to access an object stored in the state and this.state<code>('varName', 'varValue')</code> where varValue can be any type of object you want to set the state.</p>
 <h3>2. How to set a state in mock server?</h3>
-<pre><code class="language-js">shifu.route({
+<pre><code class="language-js">midway.route({
   path: '/api/login',
   label: 'LogIn',
   method: 'POST',

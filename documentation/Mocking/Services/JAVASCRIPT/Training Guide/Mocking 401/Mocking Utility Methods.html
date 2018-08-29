@@ -203,41 +203,41 @@
 </div>
 <div class="training-content markdown">
 <h3>1. RespondWithFile Utility</h3>
-<pre><code class="language-js">shifu.route({
+<pre><code class="language-js">midway.route({
   id: 'message',
   label: 'hello message',
   path: '/message',
  
   handler: function(req, reply) {
-    shifu.util.respondWithFile(this, reply);
+    midway.util.respondWithFile(this, reply);
   }
 })
 </code></pre>
 <ol>
 <li><p>Setting Code</p>
-<pre><code class="language-js">shifu.route({
+<pre><code class="language-js">midway.route({
     id: 'message',
     label: 'hello message',
     path: '/message',
 
     handler: function(req, reply) {
-        shifu.util.respondWithFile(this, reply, {code: 400});
+        midway.util.respondWithFile(this, reply, {code: 400});
     }
 })
 </code></pre></li>
 <li><p>Custom File Location</p>
-<pre><code class="language-js">shifu.route({
+<pre><code class="language-js">midway.route({
     id: 'message',
     label: 'hello message',
     path: '/message',
 
     handler: function(req, reply) {
-        shifu.util.respondWithFile(this, reply, {code: 400, filePath: '../mocked-data/fileName.json'});
+        midway.util.respondWithFile(this, reply, {code: 400, filePath: '../mocked-data/fileName.json'});
     }
 })
 </code></pre></li>
 <li><p>Setting Headers</p>
-<pre><code class="language-js">shifu.route({
+<pre><code class="language-js">midway.route({
 id: 'message',
 label: 'hello message',
 path: '/message',
@@ -248,12 +248,12 @@ handler: function(req, reply) {
         header2: 'test2',
         header3: true
     };
-    shifu.util.respondWithFile(this, reply, {code: 400, filePath: '../mocked-data/fileName.json', headers: myHeaders});
+    midway.util.respondWithFile(this, reply, {code: 400, filePath: '../mocked-data/fileName.json', headers: myHeaders});
 }
 });
 </code></pre></li>
 <li><p>Setting Cookies</p>
-<pre><code class="language-js">shifu.route({
+<pre><code class="language-js">midway.route({
 id: 'message',
 label: 'hello message',
 path: '/message',
@@ -270,12 +270,12 @@ handler: function(req, reply) {
         {name: 'CID', value: 'SmockedCID', options: {domain: 'domain', path: '/'}},
         {name: 'anotherCookie', value: 'cookieValue'}
     ];
-    shifu.util.respondWithFile(this, reply, {code: 400, filePath: '../mocked-data/fileName.json', headers: myHeaders, cookies: cookies});
+    midway.util.respondWithFile(this, reply, {code: 400, filePath: '../mocked-data/fileName.json', headers: myHeaders, cookies: cookies});
 }
 });
 </code></pre></li>
 <li><p>Setting Delay</p>
-<pre><code class="language-js">shifu.route({
+<pre><code class="language-js">midway.route({
     id: 'message',
     label: 'hello message',
     path: '/message',
@@ -290,7 +290,7 @@ handler: function(req, reply) {
             {name: 'CID', value: 'SmockedCID', options: {domain: 'domain', path: '/'}},
             {name: 'anotherCookie', value: 'cookieValue'}
         ];
-        shifu.util.respondWithFile(this, reply, {code: 400, filePath: '../mocked-data/fileName.json', headers: myHeaders, cookies: cookies, delay: 1000});
+        midway.util.respondWithFile(this, reply, {code: 400, filePath: '../mocked-data/fileName.json', headers: myHeaders, cookies: cookies, delay: 1000});
     }
 });
 </code></pre></li>
@@ -316,7 +316,7 @@ handler: function(req, reply) {
 </code></pre>
 <pre><code class="language-js">// Sample code for substituting id from 1234 to 7777 and flavor from Mint to Mint 2 for second array element in routes
 
-shifu.route({
+midway.route({
     id: 'Get Collection',
     label: 'Get Collections',
     path: '/product/grouping/api/collection/{collectionId}',
@@ -326,7 +326,7 @@ shifu.route({
             'id': '7777',
             'details[1].flavor': 'Mint 2'
         }
-        shifu.util.respondWithFile(this, reply, {transpose: dataToChange}); 
+        midway.util.respondWithFile(this, reply, {transpose: dataToChange}); 
     }
 });
 </code></pre>
@@ -351,28 +351,28 @@ shifu.route({
 </code></pre></li>
 </ol>
 <h3>2. Logging utility</h3>
-<p>Shifu exposes a logging utility which can be used to log data</p>
-<pre><code class="language-js">shifu.log.debug('This is debug Message');
-shifu.log.info('This is info Message');
-shifu.log.error('This is error Message');
-shifu.log.warn('This is warn Message');
-shifu.log.setLogLevel('debug');
-shifu.log.getLogLevel();
-shifu.log.resetLogLevel();
+<p>Midway exposes a logging utility which can be used to log data</p>
+<pre><code class="language-js">midway.log.debug('This is debug Message');
+midway.log.info('This is info Message');
+midway.log.error('This is error Message');
+midway.log.warn('This is warn Message');
+midway.log.setLogLevel('debug');
+midway.log.getLogLevel();
+midway.log.resetLogLevel();
 // default level is INFO
 </code></pre>
 <h3>3. Responding with a specific variant in handlers (respondWithMockVariant)</h3>
 <p>This function will respond with a variant on the main route handler. The <code>variant</code> passed in MUST be the variant on existing route.</p>
-<pre><code class="language-js">shifu.util.respondWithMockVariant(this, 'variant', reply);
+<pre><code class="language-js">midway.util.respondWithMockVariant(this, 'variant', reply);
 </code></pre>
 <p>The <code>variant</code> passed in MUST be the variant on existing route.</p>
-<pre><code class="language-js">shifu.route({
+<pre><code class="language-js">midway.route({
     id: 'respondWithVariant',
     label: 'Respond With Variant',
     path: '/respondWithVariant',
     variantLabel: 'Respond With Variant Main Route',
     handler: function (req, reply) {
-        shifu.util.respondWithMockVariant(this, 'variant', reply); // make sure that the variant exist in the same route.
+        midway.util.respondWithMockVariant(this, 'variant', reply); // make sure that the variant exist in the same route.
     }
 })
 .variant({
@@ -385,11 +385,11 @@ shifu.log.resetLogLevel();
 </code></pre>
 <h3>4. GetUrlCount</h3>
 <p>To get URL count for all Rest APIs mocked by mock server</p>
-<pre><code class="language-js">Shifu API : shifu.getURLCount(&quot;default&quot;);
+<pre><code class="language-js">Midway API : midway.getURLCount(&quot;default&quot;);
 </code></pre>
 <h3>5. ResetUrlCount</h3>
 <p>To resets URL count to zero</p>
-<pre><code class="language-js">Shifu API : shifu.resetURLCount(&quot;default&quot;);
+<pre><code class="language-js">Midway API : midway.resetURLCount(&quot;default&quot;);
 </code></pre>
 </div>
 <div class="training-doc-nav-btn">

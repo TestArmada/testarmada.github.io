@@ -277,7 +277,7 @@ the actual back end service and add a mocked route in the file containing mocked
 <h2 id="how-can-i-add-mock-server-dependency-to-my-node-project">How Can I Add Mock Server Dependency To My Node Project?</h2>
 
 <div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="s2">"dependencies"</span><span class="err">:</span> <span class="p">{</span>
-  <span class="s2">"shifu"</span><span class="err">:</span> <span class="s2">"1.0.0"</span> <span class="c1">// add the latest version</span>
+  <span class="s2">"testarmada-midway"</span><span class="err">:</span> <span class="s2">"1.0.1"</span> <span class="c1">// add the latest version</span>
 <span class="p">}</span>
 </code></pre>
 </div>
@@ -287,7 +287,7 @@ the actual back end service and add a mocked route in the file containing mocked
 <h2 id="how-to-add-a-mocked-route">How To Add A Mocked Route?</h2>
 <p>Add the following code in your routes file, typically <code class="highlighter-rouge">endpoints.js</code></p>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">shifu</span><span class="p">.</span><span class="nx">route</span><span class="p">({</span>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">midway</span><span class="p">.</span><span class="nx">route</span><span class="p">({</span>
   <span class="na">id</span><span class="p">:</span> <span class="s1">'helloWorld'</span><span class="p">,</span>                 <span class="c1">// required</span>
   <span class="na">label</span><span class="p">:</span> <span class="s1">'Hello World'</span><span class="p">,</span>             <span class="c1">// Used for Mock Server UI</span>
   <span class="na">path</span><span class="p">:</span> <span class="s1">'/helloWorld'</span><span class="p">,</span>              <span class="c1">// the path you want to mock</span>
@@ -305,7 +305,7 @@ the actual back end service and add a mocked route in the file containing mocked
 <p>By adding the URL part in curly brackets that you would liek to by dynamic such as <code class="highlighter-rouge">/get/customerInfo/{customerid}/{zipcode}</code></p>
 
 <p>For example:</p>
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">shifu</span><span class="p">.</span><span class="nx">route</span><span class="p">({</span>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">midway</span><span class="p">.</span><span class="nx">route</span><span class="p">({</span>
   <span class="na">id</span><span class="p">:</span> <span class="s1">'customerInfo'</span><span class="p">,</span>
   <span class="na">label</span><span class="p">:</span> <span class="s1">'Customer Info'</span><span class="p">,</span>
   <span class="na">path</span><span class="p">:</span> <span class="s1">'/get/customerInfo/{customerid}/{zipcode}'</span><span class="p">,</span> <span class="c1">// both customerid and zipcode will be dynamic</span>
@@ -322,8 +322,8 @@ the actual back end service and add a mocked route in the file containing mocked
 
 <h2 id="how-to-read-dynamic-urls-in-request">How To Read Dynamic URLs In Request?</h2>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">shifu</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'shifu'</span><span class="p">);</span>
-<span class="nx">shifu</span><span class="p">.</span><span class="nx">route</span><span class="p">({</span>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">midway</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'testarmada-midway'</span><span class="p">);</span>
+<span class="nx">midway</span><span class="p">.</span><span class="nx">route</span><span class="p">({</span>
   <span class="na">path</span><span class="p">:</span> <span class="s1">'/get/customerInfo/{customerid}/{zipcode}'</span>
   <span class="na">handler</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">request</span><span class="p">,</span> <span class="nx">reply</span><span class="p">)</span> <span class="p">{</span> 
     <span class="kd">var</span> <span class="nx">params</span> <span class="o">=</span> <span class="nx">request</span><span class="p">.</span><span class="nx">params</span><span class="p">;</span>
@@ -338,8 +338,8 @@ the actual back end service and add a mocked route in the file containing mocked
 
 <h2 id="how-to-read-header-parameters-in-request">How To Read Header Parameters In Request?</h2>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">shifu</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'shifu'</span><span class="p">);</span>
-<span class="nx">shifu</span><span class="p">.</span><span class="nx">route</span><span class="p">({</span>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">midway</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'testarmada-midway'</span><span class="p">);</span>
+<span class="nx">midway</span><span class="p">.</span><span class="nx">route</span><span class="p">({</span>
   <span class="na">path</span><span class="p">:</span> <span class="s1">'/api/getCart'</span>
   <span class="na">handler</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">request</span><span class="p">,</span> <span class="nx">reply</span><span class="p">)</span> <span class="p">{</span>
     <span class="kd">var</span> <span class="nx">headers</span> <span class="o">=</span> <span class="nx">request</span><span class="p">.</span><span class="nx">raw</span><span class="p">.</span><span class="nx">req</span><span class="p">.</span><span class="nx">headers</span><span class="p">;</span>
@@ -353,8 +353,8 @@ the actual back end service and add a mocked route in the file containing mocked
 
 <h2 id="how-to-read-payload-in-request">How To Read Payload In Request?</h2>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">shifu</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'shifu'</span><span class="p">);</span>
-<span class="nx">shifu</span><span class="p">.</span><span class="nx">route</span><span class="p">({</span>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">midway</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'testarmada-midway'</span><span class="p">);</span>
+<span class="nx">midway</span><span class="p">.</span><span class="nx">route</span><span class="p">({</span>
   <span class="na">path</span><span class="p">:</span> <span class="s1">'/api/getCart'</span>
   <span class="na">handler</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">request</span><span class="p">,</span> <span class="nx">reply</span><span class="p">)</span> <span class="p">{</span>
     <span class="kd">var</span> <span class="nx">payload</span> <span class="o">=</span> <span class="nx">request</span><span class="p">.</span><span class="nx">payload</span><span class="p">;</span>
@@ -369,8 +369,8 @@ the actual back end service and add a mocked route in the file containing mocked
 
 <h2 id="how-to-read-query-parameters-in-request">How To Read Query Parameters In Request?</h2>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">shifu</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'shifu'</span><span class="p">);</span>
-<span class="nx">shifu</span><span class="p">.</span><span class="nx">route</span><span class="p">({</span>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">midway</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'testarmada-midway'</span><span class="p">);</span>
+<span class="nx">midway</span><span class="p">.</span><span class="nx">route</span><span class="p">({</span>
   <span class="na">path</span><span class="p">:</span> <span class="s1">'/api/getCart'</span>
   <span class="na">handler</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">request</span><span class="p">,</span> <span class="nx">reply</span><span class="p">)</span> <span class="p">{</span>
     <span class="kd">var</span> <span class="nx">queryParams</span> <span class="o">=</span> <span class="nx">request</span><span class="p">.</span><span class="nx">query</span><span class="p">;</span>
@@ -386,7 +386,7 @@ the actual back end service and add a mocked route in the file containing mocked
 <h2 id="how-to-set-custom-headers-in-mocked-response">How To Set Custom Headers In Mocked Response?</h2>
 <h3 id="preferred-way">Preferred Way</h3>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">shifu</span><span class="p">.</span><span class="nx">route</span><span class="p">({</span>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">midway</span><span class="p">.</span><span class="nx">route</span><span class="p">({</span>
   <span class="na">id</span><span class="p">:</span> <span class="s1">'header'</span><span class="p">,</span>
   <span class="na">label</span><span class="p">:</span> <span class="s1">'Test Headers'</span><span class="p">,</span>
   <span class="na">path</span><span class="p">:</span> <span class="s1">'/api/testHeaders'</span><span class="p">,</span>
@@ -396,7 +396,7 @@ the actual back end service and add a mocked route in the file containing mocked
       <span class="na">header2</span><span class="p">:</span> <span class="s1">'test2'</span><span class="p">,</span>
       <span class="na">header3</span><span class="p">:</span> <span class="kc">true</span>
     <span class="p">};</span>
-    <span class="nx">shifu</span><span class="p">.</span><span class="nx">util</span><span class="p">.</span><span class="nx">respondWithFile</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">reply</span><span class="p">,</span> <span class="p">{</span><span class="na">headers</span><span class="p">:</span> <span class="nx">myHeaders</span><span class="p">});</span>
+    <span class="nx">midway</span><span class="p">.</span><span class="nx">util</span><span class="p">.</span><span class="nx">respondWithFile</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">reply</span><span class="p">,</span> <span class="p">{</span><span class="na">headers</span><span class="p">:</span> <span class="nx">myHeaders</span><span class="p">});</span>
   <span class="p">}</span>
 <span class="p">});</span>
 </code></pre>
@@ -404,7 +404,7 @@ the actual back end service and add a mocked route in the file containing mocked
 
 <h3 id="alternate-way">Alternate Way</h3>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">shifu</span><span class="p">.</span><span class="nx">route</span><span class="p">({</span>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">midway</span><span class="p">.</span><span class="nx">route</span><span class="p">({</span>
   <span class="na">id</span><span class="p">:</span> <span class="s1">'Get Collection'</span><span class="p">,</span>
   <span class="na">label</span><span class="p">:</span> <span class="s1">'Get Collections'</span><span class="p">,</span>
   <span class="na">path</span><span class="p">:</span> <span class="s1">'/product/grouping/api/collection/{collectionId}'</span><span class="p">,</span>
@@ -421,7 +421,7 @@ the actual back end service and add a mocked route in the file containing mocked
 <h2 id="how-to-set-custom-cookies-in-mocked-response">How To Set Custom Cookies In Mocked Response?</h2>
 <h3 id="preferred-way-1">Preferred Way</h3>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">shifu</span><span class="p">.</span><span class="nx">route</span><span class="p">({</span>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">midway</span><span class="p">.</span><span class="nx">route</span><span class="p">({</span>
   <span class="na">id</span><span class="p">:</span> <span class="s1">'cookie'</span><span class="p">,</span>
   <span class="na">label</span><span class="p">:</span> <span class="s1">'Test Cookies'</span><span class="p">,</span>
   <span class="na">path</span><span class="p">:</span> <span class="s1">'/api/testCookies'</span><span class="p">,</span>
@@ -432,7 +432,7 @@ the actual back end service and add a mocked route in the file containing mocked
       <span class="p">{</span><span class="na">name</span><span class="p">:</span> <span class="s1">'anotherCookie'</span><span class="p">,</span> <span class="na">value</span><span class="p">:</span> <span class="s1">'cookieValue'</span><span class="p">}</span>
     <span class="p">];</span>
     
-    <span class="nx">shifu</span><span class="p">.</span><span class="nx">util</span><span class="p">.</span><span class="nx">respondWithFile</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">reply</span><span class="p">,</span> <span class="p">{</span><span class="na">cookies</span><span class="p">:</span> <span class="nx">cookies</span><span class="p">});</span>
+    <span class="nx">midway</span><span class="p">.</span><span class="nx">util</span><span class="p">.</span><span class="nx">respondWithFile</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">reply</span><span class="p">,</span> <span class="p">{</span><span class="na">cookies</span><span class="p">:</span> <span class="nx">cookies</span><span class="p">});</span>
   <span class="p">}</span>
 <span class="p">});</span>
 </code></pre>
@@ -440,7 +440,7 @@ the actual back end service and add a mocked route in the file containing mocked
 
 <h3 id="alternate-way-1">Alternate Way</h3>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">shifu</span><span class="p">.</span><span class="nx">route</span><span class="p">({</span>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">midway</span><span class="p">.</span><span class="nx">route</span><span class="p">({</span>
   <span class="na">id</span><span class="p">:</span> <span class="s1">'Get Collection'</span><span class="p">,</span>
   <span class="na">label</span><span class="p">:</span> <span class="s1">'Get Collections'</span><span class="p">,</span>
   <span class="na">path</span><span class="p">:</span> <span class="s1">'/product/grouping/api/collection/{collectionId}'</span><span class="p">,</span>
@@ -463,7 +463,7 @@ the actual back end service and add a mocked route in the file containing mocked
 <span class="p">}</span>
 
 <span class="c1">// Items</span>
-<span class="nx">shifu</span><span class="p">.</span><span class="nx">route</span><span class="p">({</span>
+<span class="nx">midway</span><span class="p">.</span><span class="nx">route</span><span class="p">({</span>
   <span class="na">id</span><span class="p">:</span> <span class="s1">'tempo'</span><span class="p">,</span>
   <span class="na">label</span><span class="p">:</span> <span class="s1">'Tempo'</span><span class="p">,</span>
   <span class="na">path</span><span class="p">:</span> <span class="s1">'/tempo1'</span><span class="p">,</span>
@@ -472,7 +472,7 @@ the actual back end service and add a mocked route in the file containing mocked
     <span class="na">cors</span><span class="p">:</span> <span class="nx">corsHeaders</span>
   <span class="p">},</span>
   <span class="na">handler</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">reply</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">shifu</span><span class="p">.</span><span class="nx">util</span><span class="p">.</span><span class="nx">respondWithFile</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">reply</span><span class="p">);</span>
+    <span class="nx">midway</span><span class="p">.</span><span class="nx">util</span><span class="p">.</span><span class="nx">respondWithFile</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">reply</span><span class="p">);</span>
   <span class="p">}</span>
 <span class="p">});</span>
 </code></pre>
@@ -483,12 +483,12 @@ the actual back end service and add a mocked route in the file containing mocked
 <h2 id="what-is-respondwithfile-utility">What Is <code class="highlighter-rouge">respondWithFile</code> Utility?</h2>
 <p>This feature allows you to respond with a data stored in a file instead of hard coding the response data in the routes definition. This way user does not have to hard-code/change the response in handler and rather can just swap the file with different data without even bringing the server down.</p>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code>  <span class="nx">shifu</span><span class="p">.</span><span class="nx">route</span><span class="p">({</span>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code>  <span class="nx">midway</span><span class="p">.</span><span class="nx">route</span><span class="p">({</span>
       <span class="na">id</span><span class="p">:</span> <span class="s1">'ResponseFromFile'</span><span class="p">,</span>
       <span class="na">label</span><span class="p">:</span> <span class="s1">'Response From File'</span><span class="p">,</span>
       <span class="na">path</span><span class="p">:</span> <span class="s1">'/get/fromFile'</span><span class="p">,</span>
       <span class="na">handler</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">reply</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">shifu</span><span class="p">.</span><span class="nx">util</span><span class="p">.</span><span class="nx">respondWithFile</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">reply</span><span class="p">);</span>
+        <span class="nx">midway</span><span class="p">.</span><span class="nx">util</span><span class="p">.</span><span class="nx">respondWithFile</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">reply</span><span class="p">);</span>
       <span class="p">}</span>
   <span class="p">});</span>
 </code></pre>
@@ -500,19 +500,19 @@ the actual back end service and add a mocked route in the file containing mocked
 <h2 id="how-file-path-is-calculated-for-respondwithfile-utility">How File Path Is Calculated For <code class="highlighter-rouge">respondWithFile</code> Utility?</h2>
 <p>The path to the mocked data file is auto-calculated based on the route path. For example if the route path is /get/cart than for the default variant, mock server will look for the <code class="highlighter-rouge">default.{some_extension}</code> file at <code class="highlighter-rouge">./mocked-data/get/fromFile/GET/default.{some_extension}</code>. For variants, the name of the file should be changed from default to the variant name as shown below:</p>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">shifu</span><span class="p">.</span><span class="nx">route</span><span class="p">({</span>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">midway</span><span class="p">.</span><span class="nx">route</span><span class="p">({</span>
   <span class="na">id</span><span class="p">:</span> <span class="s1">'ResponseFromFile'</span><span class="p">,</span>
   <span class="na">label</span><span class="p">:</span> <span class="s1">'Response From File'</span><span class="p">,</span>
   <span class="na">path</span><span class="p">:</span> <span class="s1">'/get/fromFile'</span><span class="p">,</span>
   <span class="na">handler</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">reply</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">shifu</span><span class="p">.</span><span class="nx">util</span><span class="p">.</span><span class="nx">respondWithFile</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">reply</span><span class="p">);</span>
+    <span class="nx">midway</span><span class="p">.</span><span class="nx">util</span><span class="p">.</span><span class="nx">respondWithFile</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">reply</span><span class="p">);</span>
   <span class="p">}</span>
 <span class="p">})</span>
 <span class="p">.</span><span class="nx">variant</span><span class="p">({</span>
   <span class="na">id</span><span class="p">:</span> <span class="s1">'textData'</span><span class="p">,</span>
   <span class="na">label</span><span class="p">:</span> <span class="s1">'Text Data'</span><span class="p">,</span>
   <span class="na">handler</span><span class="p">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">reply</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">shifu</span><span class="p">.</span><span class="nx">util</span><span class="p">.</span><span class="nx">respondWithFile</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">reply</span><span class="p">);</span>
+    <span class="nx">midway</span><span class="p">.</span><span class="nx">util</span><span class="p">.</span><span class="nx">respondWithFile</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">reply</span><span class="p">);</span>
   <span class="p">}</span>
 <span class="p">});</span>
 </code></pre>
@@ -524,12 +524,12 @@ the actual back end service and add a mocked route in the file containing mocked
 <h2 id="can-i-provide-a-custom-file-location-respondwithfile-utility">Can I Provide A Custom File Location <code class="highlighter-rouge">respondWithFile</code> Utility?</h2>
 <p>Yes. By adding <code class="highlighter-rouge">filePath</code> parameter as shown in below example:</p>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">shifu</span><span class="p">.</span><span class="nx">route</span><span class="p">({</span>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">midway</span><span class="p">.</span><span class="nx">route</span><span class="p">({</span>
   <span class="na">id</span><span class="p">:</span> <span class="s1">'CustomResponseFile'</span><span class="p">,</span>
   <span class="na">label</span><span class="p">:</span> <span class="s1">'Response From Custom Path'</span><span class="p">,</span>
   <span class="na">path</span><span class="p">:</span> <span class="s1">'/get/customFile'</span><span class="p">,</span>
   <span class="na">handler</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">reply</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">shifu</span><span class="p">.</span><span class="nx">util</span><span class="p">.</span><span class="nx">respondWithFile</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">reply</span><span class="p">,</span> <span class="p">{</span><span class="na">filePath</span><span class="p">:</span> <span class="s1">'./custom.json'</span><span class="p">});</span>
+    <span class="nx">midway</span><span class="p">.</span><span class="nx">util</span><span class="p">.</span><span class="nx">respondWithFile</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">reply</span><span class="p">,</span> <span class="p">{</span><span class="na">filePath</span><span class="p">:</span> <span class="s1">'./custom.json'</span><span class="p">});</span>
   <span class="p">}</span>
 <span class="p">});</span>
 </code></pre>
@@ -540,7 +540,7 @@ the actual back end service and add a mocked route in the file containing mocked
 
 <h2 id="how-to-respond-only-with-code">How To Respond Only With Code?</h2>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">shifu</span><span class="p">.</span><span class="nx">route</span><span class="p">({</span>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">midway</span><span class="p">.</span><span class="nx">route</span><span class="p">({</span>
   <span class="na">id</span><span class="p">:</span> <span class="s1">'message'</span><span class="p">,</span>
   <span class="na">label</span><span class="p">:</span> <span class="s1">'hello message'</span><span class="p">,</span>
   <span class="na">path</span><span class="p">:</span> <span class="s1">'/message'</span><span class="p">,</span>
@@ -556,13 +556,13 @@ the actual back end service and add a mocked route in the file containing mocked
 <h2 id="can-i-return-a-response-code-with-respondwithfile-utility">Can I Return A Response Code With <code class="highlighter-rouge">respondWithFile</code> Utility?</h2>
 <p>Yes - by adding <code class="highlighter-rouge">code</code> parameter as shown in below example:</p>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">shifu</span><span class="p">.</span><span class="nx">route</span><span class="p">({</span>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">midway</span><span class="p">.</span><span class="nx">route</span><span class="p">({</span>
   <span class="na">id</span><span class="p">:</span> <span class="s1">'message'</span><span class="p">,</span>
   <span class="na">label</span><span class="p">:</span> <span class="s1">'hello message'</span><span class="p">,</span>
   <span class="na">path</span><span class="p">:</span> <span class="s1">'/message'</span><span class="p">,</span>
  
   <span class="na">handler</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">reply</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">shifu</span><span class="p">.</span><span class="nx">util</span><span class="p">.</span><span class="nx">respondWithFile</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">reply</span><span class="p">,</span> <span class="p">{</span><span class="na">code</span><span class="p">:</span> <span class="mi">400</span><span class="p">});</span>
+    <span class="nx">midway</span><span class="p">.</span><span class="nx">util</span><span class="p">.</span><span class="nx">respondWithFile</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">reply</span><span class="p">,</span> <span class="p">{</span><span class="na">code</span><span class="p">:</span> <span class="mi">400</span><span class="p">});</span>
   <span class="p">}</span>
 <span class="p">});</span>
 </code></pre>
@@ -574,11 +574,11 @@ the actual back end service and add a mocked route in the file containing mocked
 <p>Mocked directory path is the location to the base directory where all your mocked response file will be stored. This parameter is defined in run-mock-server-console.js file. It is defined at the start of mock server as shown in the code below:</p>
 
 <div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">require</span><span class="p">(</span><span class="s1">'./endpoints'</span><span class="p">);</span>
-<span class="nx">require</span><span class="p">(</span><span class="s1">'shifu'</span><span class="p">).</span><span class="nx">start</span><span class="p">({</span>
+<span class="nx">require</span><span class="p">(</span><span class="s1">'testarmada-midway'</span><span class="p">).</span><span class="nx">start</span><span class="p">({</span>
   <span class="na">host</span><span class="p">:</span> <span class="s2">"localhost"</span><span class="p">,</span>
   <span class="na">mockedDirectory</span><span class="p">:</span> <span class="s2">"./resources/mocked-data"</span><span class="p">,</span>
   <span class="na">port</span><span class="p">:</span> <span class="mi">8000</span><span class="p">,</span>
-  <span class="na">project</span><span class="p">:</span> <span class="s1">'HelloShifu'</span>
+  <span class="na">project</span><span class="p">:</span> <span class="s1">'HelloMidway'</span>
 <span class="p">});</span>
 </code></pre>
 </div>
@@ -616,7 +616,7 @@ and for <code class="highlighter-rouge">mixItem</code> variant mock server will 
 <h2 id="how-to-add-a-variant-to-a-route">How To Add A Variant To A Route?</h2>
 <p>To add a one or more variants do the following:</p>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">shifu</span><span class="p">.</span><span class="nx">route</span><span class="p">({</span>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">midway</span><span class="p">.</span><span class="nx">route</span><span class="p">({</span>
   <span class="na">id</span><span class="p">:</span> <span class="s1">'message'</span><span class="p">,</span>
   <span class="na">label</span><span class="p">:</span> <span class="s1">'Message'</span><span class="p">,</span>
   <span class="na">path</span><span class="p">:</span> <span class="s1">'/get/message'</span><span class="p">,</span>
@@ -656,9 +656,9 @@ and for <code class="highlighter-rouge">mixItem</code> variant mock server will 
 <p><br /></p>
 
 <h2 id="how-to-switch-variants-with-http-call">How To Switch Variants With HTTP Call?</h2>
-<p>You can also switch the variants via HTTP call (Recommended only when not using Shifu as a library). As an example, if you want to set variant to <code class="highlighter-rouge">helloUniverse</code> for the route below:</p>
+<p>You can also switch the variants via HTTP call (Recommended only when not using Midway as a library). As an example, if you want to set variant to <code class="highlighter-rouge">helloUniverse</code> for the route below:</p>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code>  <span class="nx">shifu</span><span class="p">.</span><span class="nx">route</span><span class="p">({</span>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code>  <span class="nx">midway</span><span class="p">.</span><span class="nx">route</span><span class="p">({</span>
     <span class="na">id</span><span class="p">:</span> <span class="s1">'helloWorld'</span><span class="p">,</span>
     <span class="na">label</span><span class="p">:</span> <span class="s1">'Hello World'</span><span class="p">,</span>
     <span class="na">path</span><span class="p">:</span> <span class="s1">'/helloWorld'</span><span class="p">,</span>
@@ -677,22 +677,22 @@ and for <code class="highlighter-rouge">mixItem</code> variant mock server will 
 </code></pre>
 </div>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>curl  -H "Content-type: application/json" -X POST -d '{"variant":"&lt;variant&gt;"}' &lt;host&gt;:&lt;port&gt;/shifu/api/route/&lt;routeId&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>curl  -H "Content-type: application/json" -X POST -d '{"variant":"&lt;variant&gt;"}' &lt;host&gt;:&lt;port&gt;/midway/api/route/&lt;routeId&gt;
 </code></pre>
 </div>
 
 <p>So for the above route, you can switch the variant to <code class="highlighter-rouge">helloUniverse</code> like this:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>curl  -H "Content-type: application/json" -X POST -d '{"variant":"helloUniverse"}' http://localhost:8000/shifu/api/route/helloWorld
+<div class="highlighter-rouge"><pre class="highlight"><code>curl  -H "Content-type: application/json" -X POST -d '{"variant":"helloUniverse"}' http://localhost:8000/midway/api/route/helloWorld
 </code></pre>
 </div>
 
 <p>When using parallel sessions, if you want to switch a variant for a route for a particular session, register the session with mock server like this:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>curl &lt;host&gt;:&lt;port&gt;/shifu/api/registerSession
+<div class="highlighter-rouge"><pre class="highlight"><code>curl &lt;host&gt;:&lt;port&gt;/midway/api/registerSession
 
 // e.g 
-curl http://localhost:8000/shifu/api/registerSession
+curl http://localhost:8000/midway/api/registerSession
 </code></pre>
 </div>
 
@@ -702,7 +702,7 @@ curl http://localhost:8000/shifu/api/registerSession
 </div>
 
 <p>Extract the session id from response and append it to the route id you want to switch variant for e.g:</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>curl -H "Content-type: application/json" -X POST -d "variant":"helloUniverse"}' http://localhost:8000/shifu/api/route/helloWorld-33b08d
+<div class="highlighter-rouge"><pre class="highlight"><code>curl -H "Content-type: application/json" -X POST -d "variant":"helloUniverse"}' http://localhost:8000/midway/api/route/helloWorld-33b08d
 </code></pre>
 </div>
 
@@ -717,10 +717,10 @@ curl http://localhost:8000/shifu/api/registerSession
 <p>Parallel sessions allows you to run multiple instance of server virtually while running only one server. This is helpful when you are running multiple test cases which access the same routes but different variants as parallel sessions allow you to set different variants on same routes without conflicting. This saves CPU and RAM both as only one server is running instead of multiple. Please see the call flow explaination without and with Parallel Sessions Below:</p>
 
 <h3 id="call-flow-without-parallel-sessions">Call Flow Without Parallel Sessions</h3>
-<p><img src="../../images/shifu_without_parallel_sessions.png?raw=true" alt="without_parallel_sessions" title="Shifu Without Parallel Sessions" /></p>
+<p><img src="../../images/midway_without_parallel_sessions.png?raw=true" alt="without_parallel_sessions" title="Midway Without Parallel Sessions" /></p>
 
 <h3 id="call-flow-with-parallel-sessions">Call Flow With Parallel Sessions</h3>
-<p><img src="../../images/shifu_with_parallel_sessions.png?raw=true" alt="with_parallel_sessions" title="Shifu With Parallel Sessions" /></p>
+<p><img src="../../images/midway_with_parallel_sessions.png?raw=true" alt="with_parallel_sessions" title="Midway With Parallel Sessions" /></p>
 
 <p><br /></p>
 
@@ -728,13 +728,13 @@ curl http://localhost:8000/shifu/api/registerSession
 <p>Add <code class="highlighter-rouge">sessions</code> parameter with number of virtual services you want as shown in below example while startung mock Server.</p>
 
 <div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">require</span><span class="p">(</span><span class="s1">'./endpoints'</span><span class="p">);</span>
-<span class="kd">var</span> <span class="nx">shifu</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'shifu'</span><span class="p">);</span>
-<span class="nx">shifu</span><span class="p">.</span><span class="nx">start</span><span class="p">({</span>
+<span class="kd">var</span> <span class="nx">midway</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'testarmada-midway'</span><span class="p">);</span>
+<span class="nx">midway</span><span class="p">.</span><span class="nx">start</span><span class="p">({</span>
   <span class="na">host</span><span class="p">:</span> <span class="s2">"localhost"</span><span class="p">,</span>
   <span class="na">mockedDirectory</span><span class="p">:</span> <span class="s2">"./resources/mocked-data"</span><span class="p">,</span>
   <span class="na">port</span><span class="p">:</span> <span class="mi">8000</span><span class="p">,</span>
   <span class="na">sessions</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
-  <span class="na">project</span><span class="p">:</span> <span class="s1">'HelloShifu'</span>
+  <span class="na">project</span><span class="p">:</span> <span class="s1">'HelloMidway'</span>
 <span class="p">});</span>
 </code></pre>
 </div>
@@ -743,7 +743,7 @@ curl http://localhost:8000/shifu/api/registerSession
 
 <h2 id="how-can-i-register-a-session-for-parallel-sessions">How Can I Register a Session For Parallel Sessions?</h2>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">sessionId</span> <span class="o">=</span> <span class="nx">shifu</span><span class="p">.</span><span class="nx">registerSession</span><span class="p">();</span>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">sessionId</span> <span class="o">=</span> <span class="nx">midway</span><span class="p">.</span><span class="nx">registerSession</span><span class="p">();</span>
 </code></pre>
 </div>
 
@@ -751,7 +751,7 @@ curl http://localhost:8000/shifu/api/registerSession
 
 <h2 id="how-can-i-close-a-session-for-parallel-sessions">How Can I Close A Session For Parallel Sessions?</h2>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">closeSession</span> <span class="o">=</span> <span class="nx">shifu</span><span class="p">.</span><span class="nx">closeSession</span><span class="p">(</span><span class="nx">sessionId</span><span class="p">);</span>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">closeSession</span> <span class="o">=</span> <span class="nx">midway</span><span class="p">.</span><span class="nx">closeSession</span><span class="p">(</span><span class="nx">sessionId</span><span class="p">);</span>
 </code></pre>
 </div>
 
@@ -784,7 +784,7 @@ curl http://localhost:8000/shifu/api/registerSession
 <span class="p">}</span>
 
 <span class="c1">// Sample code for substituting id from 1234 to 7777 and flavor from Mint to Mint 2 for second array element in routes</span>
-<span class="nx">shifu</span><span class="p">.</span><span class="nx">route</span><span class="p">({</span>
+<span class="nx">midway</span><span class="p">.</span><span class="nx">route</span><span class="p">({</span>
     <span class="na">id</span><span class="p">:</span> <span class="s1">'Get Collection'</span><span class="p">,</span>
     <span class="na">label</span><span class="p">:</span> <span class="s1">'Get Collections'</span><span class="p">,</span>
     <span class="na">path</span><span class="p">:</span> <span class="s1">'/product/grouping/api/collection/{collectionId}'</span><span class="p">,</span>
@@ -794,7 +794,7 @@ curl http://localhost:8000/shifu/api/registerSession
         <span class="s1">'id'</span><span class="p">:</span> <span class="s1">'7777'</span><span class="p">,</span>
         <span class="s1">'details[1].flavor'</span><span class="p">:</span> <span class="s1">'Mint 2'</span>
       <span class="p">}</span>
-      <span class="nx">shifu</span><span class="p">.</span><span class="nx">util</span><span class="p">.</span><span class="nx">respondWithFile</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">reply</span><span class="p">,</span> <span class="p">{</span><span class="na">transpose</span><span class="p">:</span> <span class="nx">dataToChange</span><span class="p">});</span> 
+      <span class="nx">midway</span><span class="p">.</span><span class="nx">util</span><span class="p">.</span><span class="nx">respondWithFile</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">reply</span><span class="p">,</span> <span class="p">{</span><span class="na">transpose</span><span class="p">:</span> <span class="nx">dataToChange</span><span class="p">});</span> 
     <span class="p">}</span>
 <span class="p">});</span>
 
@@ -821,7 +821,7 @@ curl http://localhost:8000/shifu/api/registerSession
 <p><br /></p>
 
 <h2 id="can-i-use-transposedata-functionality-outside-of-respondwithfile">Can I Use <code class="highlighter-rouge">transposeData</code> Functionality Outside Of <code class="highlighter-rouge">respondWithFile</code>?</h2>
-<p>Yes - You can use it by Shifu Utils.</p>
+<p>Yes - You can use it by Midway Utils.</p>
 
 <div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">fileLocation</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">"path"</span><span class="p">).</span><span class="nx">join</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">,</span> <span class="s1">'./resources/test-data/data-transposition-test.json'</span><span class="p">);</span>
 <span class="kd">var</span> <span class="nx">dataSet</span> <span class="o">=</span> <span class="nx">utils</span><span class="p">.</span><span class="nx">readJsonFile</span><span class="p">(</span><span class="nx">fileLocation</span><span class="p">);</span>
@@ -831,7 +831,7 @@ curl http://localhost:8000/shifu/api/registerSession
  <span class="s1">'items.item[1].id'</span><span class="p">:</span> <span class="mi">4567</span><span class="p">,</span> <span class="c1">// Add 'id' to second array element of items.item</span>
  <span class="s1">'items.item[0].batters.batter[0].id'</span><span class="p">:</span> <span class="mi">5678</span> <span class="c1">// substitue id 1001 to 5678</span>
 <span class="p">}</span>
-<span class="nx">substitutedData</span> <span class="o">=</span> <span class="nx">shifu</span><span class="p">.</span><span class="nx">util</span><span class="p">.</span><span class="nx">transposeData</span><span class="p">(</span><span class="nx">dataSet</span><span class="p">,</span> <span class="nx">dataToChange</span><span class="p">);</span>
+<span class="nx">substitutedData</span> <span class="o">=</span> <span class="nx">midway</span><span class="p">.</span><span class="nx">util</span><span class="p">.</span><span class="nx">transposeData</span><span class="p">(</span><span class="nx">dataSet</span><span class="p">,</span> <span class="nx">dataToChange</span><span class="p">);</span>
 
 <span class="c1">// Base JSON file - data-transposition-test.json</span>
 <span class="p">{</span>
@@ -895,7 +895,7 @@ curl http://localhost:8000/shifu/api/registerSession
 <h2 id="why-mock-server-returns-error-415-unsupported-media-type">Why Mock Server Returns Error 415 Unsupported Media Type?</h2>
 <p>If you’re using content type like <code class="highlighter-rouge">application/graphql</code>, follow this example</p>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code>  <span class="nx">shifu</span><span class="p">.</span><span class="nx">route</span><span class="p">({</span>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code>  <span class="nx">midway</span><span class="p">.</span><span class="nx">route</span><span class="p">({</span>
     <span class="na">id</span><span class="p">:</span> <span class="s1">'id'</span><span class="p">,</span>
     <span class="na">label</span><span class="p">:</span> <span class="s1">'id'</span><span class="p">,</span>
     <span class="na">path</span><span class="p">:</span> <span class="s1">'/graphql'</span><span class="p">,</span>
@@ -907,7 +907,7 @@ curl http://localhost:8000/shifu/api/registerSession
       <span class="p">}</span>
     <span class="p">},</span>
     <span class="na">handler</span><span class="p">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">reply</span><span class="p">)</span> <span class="p">{</span>
-      <span class="nx">shifu</span><span class="p">.</span><span class="nx">util</span><span class="p">.</span><span class="nx">respondWithFile</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">reply</span><span class="p">,</span> <span class="p">{</span><span class="na">code</span><span class="p">:</span> <span class="mi">200</span><span class="p">});</span>
+      <span class="nx">midway</span><span class="p">.</span><span class="nx">util</span><span class="p">.</span><span class="nx">respondWithFile</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">reply</span><span class="p">,</span> <span class="p">{</span><span class="na">code</span><span class="p">:</span> <span class="mi">200</span><span class="p">});</span>
     <span class="p">}</span>
   <span class="p">});</span>
 </code></pre>

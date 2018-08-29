@@ -271,26 +271,27 @@
   <li>
     <p>Add Mock Server module dependency in <code class="highlighter-rouge">package.json</code> as shown below.</p>
 
-    <div class="highlighter-rouge"><pre class="highlight"><code> "name": "&lt;name-for-your-project&gt;",
- "dependencies": {
-   "shifu": "^1.0.0",
-   "shifu-magellan-nightwatch": "^1.0.0" // needed only for magellan/nightwatch
- },
- "scripts": {
-     "start-mock": "node mocks/run-mock-server-console.js"
- }
-</code></pre>
+    <div class="highlighter-rouge"><pre class="highlight"><code><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test-midway"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"dependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"testarmada-midway"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^1.0.1"</span><span class="w">
+   </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"scripts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"start-mock"</span><span class="p">:</span><span class="w"> </span><span class="s2">"node mocks/run-mock-server-console.js"</span><span class="w">
+   </span><span class="p">}</span><span class="w">
+ </span><span class="p">}</span><span class="w">
+</span></code></pre>
     </div>
   </li>
   <li>Create another directory <code class="highlighter-rouge">mocks</code> under the <code class="highlighter-rouge">mock-server</code> directory.</li>
   <li>
     <p>Under the directory <code class="highlighter-rouge">mocks</code>, create a file <code class="highlighter-rouge">endpoints.js</code> with the following code - <em>This file will contain the routes that you want to mock</em></p>
 
-    <div class="highlighter-rouge"><pre class="highlight"><code>     var shifu = require('shifu'); // Required
-     shifu.id('example'); // Required
+    <div class="highlighter-rouge"><pre class="highlight"><code>     var midway = require('testarmada-midway'); // Required
+     midway.id('example'); // Required
 
      // add a route that returns a message "hello world"
-     shifu.route({
+     midway.route({
          id: 'message',
          label: 'hello message',
          path: '/message',
@@ -308,13 +309,13 @@
 
     <div class="highlighter-rouge"><pre class="highlight"><code>     // load mocked endpoint
      require('./endpoints'); 
-     var shifu = require('shifu');
+     var midway = require('testarmada-midway');
 
-     shifu.start({
+     midway.start({
        host: 'localhost',
        mockedDirectory: './mocks', // this can be provided as an absolute path as well.
        port: 8080,
-       project: 'HelloShifu', //Replace HelloShifu with your project name (without dashes).
+       project: 'HelloMidway', //Replace HelloMidway with your project name (without dashes).
      });
 </code></pre>
     </div>
@@ -332,7 +333,7 @@
 <h2 id="starting-mock-server">Starting Mock Server</h2>
 <ol>
   <li>
-    <p>To start mock-server use the following command and than go to <code class="highlighter-rouge">http://localhost:8080/shifu</code> for mock-server admin-ui.</p>
+    <p>To start mock-server use the following command and than go to <code class="highlighter-rouge">http://localhost:8080/midway</code> for mock-server admin-ui.</p>
 
     <div class="highlighter-rouge"><pre class="highlight"><code> npm run start-mock
 </code></pre>
@@ -348,18 +349,18 @@
     <p><strong><em>Starting mock server on HTTPS port -</em></strong> 
  To enable <code class="highlighter-rouge">https</code>, add <code class="highlighter-rouge">httpsPort</code> with the desired port number in server start script as shown below:</p>
 
-    <div class="highlighter-rouge"><pre class="highlight"><code>  shifu.start({
+    <div class="highlighter-rouge"><pre class="highlight"><code>  midway.start({
     port: 8080,
     httpsPort: 4444,
     host: 'localhost',
     mockedDirectory: './test/resources/mocked-data',
-    project: 'HelloShifu'
+    project: 'HelloMidway'
   });
 </code></pre>
     </div>
   </li>
   <li><strong><em>Mocking different REST methods -</em></strong>
- To mock different rest methods, change the <code class="highlighter-rouge">method</code> value in the <code class="highlighter-rouge">shifu.route()</code> object to any one of the following desired values:
+ To mock different rest methods, change the <code class="highlighter-rouge">method</code> value in the <code class="highlighter-rouge">midway.route()</code> object to any one of the following desired values:
     <ul>
       <li>POST</li>
       <li>GET</li>
@@ -371,9 +372,9 @@
   </li>
   <li>
     <p><strong><em>Returning different data set for the same mocked route (Variants) -</em></strong>
- Variants allows to return a different set of data for the same mocked route. To add one or more variants, attach the variant object to <code class="highlighter-rouge">shifu.route()</code> as shown below:</p>
+ Variants allows to return a different set of data for the same mocked route. To add one or more variants, attach the variant object to <code class="highlighter-rouge">midway.route()</code> as shown below:</p>
 
-    <div class="highlighter-rouge"><pre class="highlight"><code> shifu.route({
+    <div class="highlighter-rouge"><pre class="highlight"><code> midway.route({
    id: 'message',
    label: 'Hello message',
    path: '/message',
@@ -409,14 +410,14 @@
  This feature allows you to respond with a static data stored in a file instead of hard coding the response data in the routes definition.</p>
 
     <div class="highlighter-rouge"><pre class="highlight"><code> // Automatic reply of the file
- shifu.route({
+ midway.route({
    id: 'Get Collection',
    label: 'Get Collections',
    path: '/product/grouping/api/collection/test',
    method: 'GET',
    variantLabel: 'test-1',
    handler: function(req, reply) {
-     shifu.util.respondWithFile(this, reply);
+     midway.util.respondWithFile(this, reply);
    }
  })
 
@@ -424,7 +425,7 @@
     id: 'universe',
     label: 'test-2',
     handler: function (req, reply) {
-      shifu.util.respondWithFile(this, reply);
+      midway.util.respondWithFile(this, reply);
     }
   });
 </code></pre>

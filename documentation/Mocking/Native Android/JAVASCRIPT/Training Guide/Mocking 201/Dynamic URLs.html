@@ -205,7 +205,7 @@
 <pre><code>/get/customerInfo/{customerid}/{zipcode}
 </code></pre>
 <h3>2. Adding a dynamic URL in mock server</h3>
-<pre><code class="language-js">shifu.route({
+<pre><code class="language-js">midway.route({
   id: 'customerInfo',
   label: 'Customer Info',
   path: '/get/customerInfo/{customerid}',
@@ -220,7 +220,7 @@
 <pre><code class="language-js">var id = req.params.customerid;
 </code></pre>
 <h3>4. Using dynamic values to define response</h3>
-<pre><code class="language-js">shifu.route({
+<pre><code class="language-js">midway.route({
   id: 'customerInfo',
   label: 'Customer Info',
   path: '/get/customerInfo/{customerid}',
@@ -232,8 +232,8 @@
   }
 });
 </code></pre>
-<h3>5. Passing dynamic URL parameters from the Shifu UI</h3>
-<p>Try to pass dynamic url parameters generated from Shifu UI</p>
+<h3>5. Passing dynamic URL parameters from the Midway UI</h3>
+<p>Try to pass dynamic url parameters generated from Midway UI</p>
 </div>
 <div class="training-doc-nav-btn">
 <a href="./Request Call Information"><img src="/images/training/btn-right.png" srcset="/images/training/btn-right%402x.png 2x, /images/training/btn-right%403x.png 3x" /></a>

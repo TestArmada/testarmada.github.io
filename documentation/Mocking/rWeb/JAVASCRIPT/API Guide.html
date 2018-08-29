@@ -250,54 +250,58 @@
     <!-- TOC -->
 
 <ul>
-  <li><a href="#start-mock-server---start">Start Mock Server - start()</a></li>
-  <li><a href="#stop-mock-server---stop">Stop Mock Server - stop()</a></li>
-  <li><a href="#create-mocked-route---route">Create Mocked Route - route()</a></li>
-  <li><a href="#create-variant---variant">Create Variant - variant()</a></li>
-  <li><a href="#set-variant---setmockvariant">Set variant - setMockVariant()</a></li>
-  <li><a href="#add-global-variants---addglobalvariant">Add global variants - addGlobalVariant()</a></li>
-  <li><a href="#respond-with-file---respondwithfile">Respond With File - respondWithFile()</a></li>
-  <li><a href="#respond-with-mock-variant---respondwithmockvariant">Respond with mock variant - respondWithMockVariant()</a></li>
-  <li><a href="#set-mock-id---setmockid">Set Mock Id - setMockId()</a></li>
-  <li><a href="#get-mock-id---getmockid">Get Mock Id - getMockId()</a></li>
-  <li><a href="#reset-mock-id---resetmockid">Reset Mock Id - resetMockId()</a></li>
-  <li><a href="#reset-url-count---reseturlcount">Reset url count - resetURLCount()</a></li>
-  <li><a href="#get-url-count---geturlcount">Get url count - getURLCount()</a></li>
-  <li><a href="#register-session---registersession">Register session - registerSession()</a></li>
-  <li><a href="#close-session---closesession">Close session - closeSession()</a></li>
-  <li><a href="#check-session---checksession">Check session - checkSession()</a></li>
-  <li><a href="#get-sessions---getsessions">Get sessions - getSessions()</a></li>
-  <li><a href="#clear-sessions---clearsessions">Clear sessions - clearSessions()</a></li>
-  <li><a href="#get-project-name---getprojectname">Get project name - getProjectName()</a></li>
-  <li><a href="#get-port-information---getportinfo">Get port information - getPortInfo()</a></li>
-  <li><a href="#add-state---addstate">Add state - addState()</a></li>
-  <li><a href="#get-state---getstate">Get state - getState()</a></li>
-  <li><a href="#clear-state---clearstate">Clear state - clearState()</a></li>
-  <li><a href="#enable-metrics---enablemetrics">Enable Metrics - enableMetrics()</a></li>
-  <li><a href="#check-if-metrics-are-enabled---ismetricsenabled">Check if metrics are enabled - isMetricsEnabled()</a></li>
-  <li><a href="#dynamic-transposition-of-json-data---transposedata">Dynamic transposition of JSON data - transposeData()</a></li>
-  <li><a href="#kill-process---killprocess">Kill process - killProcess()</a></li>
-  <li><a href="#read-contents-of-a-file---readfile">Read contents of a file - readFile()</a></li>
-  <li><a href="#read-contents-of-a-file---readfilesynchronously">Read contents of a file - readFileSynchronously()</a></li>
-  <li><a href="#read-contents-of-json-file---readjsonfile">Read contents of JSON file - readJsonFile()</a></li>
-  <li><a href="#write-to-file---writefile">Write to file - writeFile()</a></li>
-  <li><a href="#delete-file---deletefile">Delete file - deleteFile()</a></li>
-  <li><a href="#check-if-directory-exists---checkdirectoryexists">Check if directory exists - checkDirectoryExists()</a></li>
-  <li><a href="#check-if-file-exists---checkfileexists">Check if file exists - checkFileExists()</a></li>
-  <li><a href="#set-log-level---setloglevel">Set Log level - setLogLevel()</a></li>
-  <li><a href="#get-log-level---getloglevel">Get Log level - getLogLevel()</a></li>
-  <li><a href="#reset-log-level---resetloglevel">Reset Log level - resetLogLevel()</a></li>
+  <li><a href="#mocking-apis">Mocking API’s</a>
+    <ul>
+      <li><a href="#start-mock-server---start">Start Mock Server - start()</a></li>
+      <li><a href="#stop-mock-server---stop">Stop Mock Server - stop()</a></li>
+      <li><a href="#create-mocked-route---route">Create Mocked Route - route()</a></li>
+      <li><a href="#create-variant---variant">Create Variant - variant()</a></li>
+      <li><a href="#set-variant---setmockvariant">Set variant - setMockVariant()</a></li>
+      <li><a href="#add-global-variants---addglobalvariant">Add global variants - addGlobalVariant()</a></li>
+      <li><a href="#respond-with-file---respondwithfile">Respond With File - respondWithFile()</a></li>
+      <li><a href="#respond-with-mock-variant---respondwithmockvariant">Respond with mock variant - respondWithMockVariant()</a></li>
+      <li><a href="#set-mock-id---setmockid">Set Mock Id - setMockId()</a></li>
+      <li><a href="#get-mock-id---getmockid">Get Mock Id - getMockId()</a></li>
+      <li><a href="#reset-mock-id---resetmockid">Reset Mock Id - resetMockId()</a></li>
+      <li><a href="#reset-url-count---reseturlcount">Reset url count - resetURLCount()</a></li>
+      <li><a href="#get-url-count---geturlcount">Get url count - getURLCount()</a></li>
+      <li><a href="#register-session---registersession">Register session - registerSession()</a></li>
+      <li><a href="#close-session---closesession">Close session - closeSession()</a></li>
+      <li><a href="#check-session---checksession">Check session - checkSession()</a></li>
+      <li><a href="#get-sessions---getsessions">Get sessions - getSessions()</a></li>
+      <li><a href="#clear-sessions---clearsessions">Clear sessions - clearSessions()</a></li>
+      <li><a href="#get-project-name---getprojectname">Get project name - getProjectName()</a></li>
+      <li><a href="#get-port-information---getportinfo">Get port information - getPortInfo()</a></li>
+      <li><a href="#add-state---addstate">Add state - addState()</a></li>
+      <li><a href="#get-state---getstate">Get state - getState()</a></li>
+      <li><a href="#clear-state---clearstate">Clear state - clearState()</a></li>
+      <li><a href="#enable-metrics---enablemetrics">Enable Metrics - enableMetrics()</a></li>
+      <li><a href="#check-if-metrics-are-enabled---ismetricsenabled">Check if metrics are enabled - isMetricsEnabled()</a></li>
+      <li><a href="#dynamic-transposition-of-json-data---transposedata">Dynamic transposition of JSON data - transposeData()</a></li>
+      <li><a href="#kill-process---killprocess">Kill process - killProcess()</a></li>
+      <li><a href="#read-contents-of-a-file---readfile">Read contents of a file - readFile()</a></li>
+      <li><a href="#read-contents-of-a-file---readfilesynchronously">Read contents of a file - readFileSynchronously()</a></li>
+      <li><a href="#read-contents-of-json-file---readjsonfile">Read contents of JSON file - readJsonFile()</a></li>
+      <li><a href="#write-to-file---writefile">Write to file - writeFile()</a></li>
+      <li><a href="#delete-file---deletefile">Delete file - deleteFile()</a></li>
+      <li><a href="#check-if-directory-exists---checkdirectoryexists">Check if directory exists - checkDirectoryExists()</a></li>
+      <li><a href="#check-if-file-exists---checkfileexists">Check if file exists - checkFileExists()</a></li>
+      <li><a href="#set-log-level---setloglevel">Set Log level - setLogLevel()</a></li>
+      <li><a href="#get-log-level---getloglevel">Get Log level - getLogLevel()</a></li>
+      <li><a href="#reset-log-level---resetloglevel">Reset Log level - resetLogLevel()</a></li>
+    </ul>
+  </li>
 </ul>
 
 <!-- /TOC -->
 
-<p><br /></p>
+<h2 id="mocking-apis">Mocking API’s</h2>
 
 <h3 id="start-mock-server---start">Start Mock Server - start()</h3>
 
 <p>This API allows to start the mock server.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>shifu.start(options, callback);
+<div class="highlighter-rouge"><pre class="highlight"><code>midway.start(options, callback);
 </code></pre>
 </div>
 
@@ -376,8 +380,8 @@
 
 <p><strong>Example</strong></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>var shifu = require('shifu');
-shifu.start({
+<div class="highlighter-rouge"><pre class="highlight"><code>var midway = require('testarmada-midway');
+midway.start({
   host: 'localhost',
   port: 12000,
   httpsPort: 12001,
@@ -396,7 +400,7 @@ shifu.start({
 
 <p>This API allows to stop the mock server.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>shifu.stop(server, callback);
+<div class="highlighter-rouge"><pre class="highlight"><code>midway.stop(server, callback);
 </code></pre>
 </div>
 
@@ -426,12 +430,12 @@ shifu.start({
 
 <p><strong>Example</strong></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>var shifu = require('shifu');
-var server = shifu.start(options, callback);
+<div class="highlighter-rouge"><pre class="highlight"><code>var midway = require('testarmada-midway');
+var server = midway.start(options, callback);
 
 // do something with mock server
 
-shifu.stop(server, function (error) {
+midway.stop(server, function (error) {
   if (error) {
       console.log('Unable to stop mock server');
   } else {
@@ -449,7 +453,7 @@ shifu.stop(server, function (error) {
 
 <p>This API allows to create/add required mocked REST endpoints.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>shifu.route(options);
+<div class="highlighter-rouge"><pre class="highlight"><code>midway.route(options);
 </code></pre>
 </div>
 
@@ -490,7 +494,7 @@ shifu.stop(server, function (error) {
     </tr>
     <tr>
       <td style="text-align: center">label</td>
-      <td>The route label used for display on the Shifu Admin Panel</td>
+      <td>The route label used for display on the Midway Admin Panel</td>
       <td style="text-align: center">No</td>
     </tr>
     <tr>
@@ -513,8 +517,8 @@ shifu.stop(server, function (error) {
 
 <p><strong>Example</strong></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>var shifu = require('shifu');
-shifu.route({
+<div class="highlighter-rouge"><pre class="highlight"><code>var midway = require('testarmada-midway');
+midway.route({
   id: 'my_route',
   label: 'My Route',
   path: '/api/foo',
@@ -533,9 +537,9 @@ shifu.route({
 
 <h3 id="create-variant---variant">Create Variant - variant()</h3>
 
-<p>This API allows to create/add variants. Variants are route handlers that you can select manually (via Shifu Admin panel) or Rest call or through Node API to select a different dataset for the response for a given route. Variants are defined using the <code class="highlighter-rouge">variant()</code> method on the Route object (returned by calling the route method).</p>
+<p>This API allows to create/add variants. Variants are route handlers that you can select manually (via Midway Admin panel) or Rest call or through Node API to select a different dataset for the response for a given route. Variants are defined using the <code class="highlighter-rouge">variant()</code> method on the Route object (returned by calling the route method).</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>shifu.route(routeOptions).variant(options)
+<div class="highlighter-rouge"><pre class="highlight"><code>midway.route(routeOptions).variant(options)
 </code></pre>
 </div>
 
@@ -589,8 +593,8 @@ shifu.route({
 
 <p><strong>Example</strong></p>
 
-<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">shifu</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'shifu'</span><span class="p">);</span>
-<span class="nx">shifu</span><span class="p">.</span><span class="nx">route</span><span class="p">({</span>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">midway</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'testarmada-midway'</span><span class="p">);</span>
+<span class="nx">midway</span><span class="p">.</span><span class="nx">route</span><span class="p">({</span>
   <span class="na">id</span><span class="p">:</span> <span class="s1">'my_route'</span><span class="p">,</span>
   <span class="na">path</span><span class="p">:</span> <span class="s1">'/api/foo'</span><span class="p">,</span>
   <span class="na">handler</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">request</span><span class="p">,</span> <span class="nx">reply</span><span class="p">)</span> <span class="p">{</span>
@@ -620,7 +624,7 @@ shifu.route({
 <h3 id="set-variant---setmockvariant">Set variant - setMockVariant()</h3>
 <p><code class="highlighter-rouge">setMockVariant</code> can be used to set a variant to an existing API path.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>shifu.setMockVariant(options, callback) // with Shifu library
+<div class="highlighter-rouge"><pre class="highlight"><code>midway.setMockVariant(options, callback) // with Midway library
 
 or 
 
@@ -679,8 +683,8 @@ browser.setMockVariant(options, callback) // when using Magellan
       <td style="text-align: center">No</td>
     </tr>
     <tr>
-      <td style="text-align: center">shifuSessionId</td>
-      <td>Shifu session id, if using parallel sessions</td>
+      <td style="text-align: center">midwaySessionId</td>
+      <td>Midway session id, if using parallel sessions</td>
       <td style="text-align: center">No</td>
     </tr>
   </tbody>
@@ -690,8 +694,8 @@ browser.setMockVariant(options, callback) // when using Magellan
 
 <p>If the routes are defined like</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>var shifu = require('shifu');
-shifu.route({
+<div class="highlighter-rouge"><pre class="highlight"><code>var midway = require('testarmada-midway');
+midway.route({
   id: 'hello',
   path: '/helloWorld',
   handler: function(request, reply) {
@@ -708,8 +712,8 @@ shifu.route({
 </div>
 
 <p>For the route and variant defined as above, you can set the variant to <code class="highlighter-rouge">universe</code> as follows:</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>// when using Shifu library
-shifu.setMockVariant({
+<div class="highlighter-rouge"><pre class="highlight"><code>// when using Midway library
+midway.setMockVariant({
     fixture: 'hello', // same as id in the .route() options
     variant: 'universe' // same as id in the .variant() options
 }, function (err) {
@@ -727,9 +731,9 @@ browser.setMockVariant({ fixture: "hello", variant: "universe" });
 
 or 
 
-Alternately, you can also use `curl` call to set a variant with this POST call to `{host}:{port}/shifu/api/route/{routeId}`
+Alternately, you can also use `curl` call to set a variant with this POST call to `{host}:{port}/midway/api/route/{routeId}`
 
-curl -H "Content-Type: application/json" -X POST -d '{"variant":"{universe}"}' http://localhost:8080/shifu/api/route/hello?returnConfig=true
+curl -H "Content-Type: application/json" -X POST -d '{"variant":"{universe}"}' http://localhost:8080/midway/api/route/hello?returnConfig=true
 </code></pre>
 </div>
 
@@ -745,7 +749,7 @@ curl -H "Content-Type: application/json" -X POST -d '{"variant":"{universe}"}' h
 
 <p>You can also add global variants that will affect all routes. The attributes to the <code class="highlighter-rouge">options</code> are same as that of <code class="highlighter-rouge">variant()</code>.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>shifu.route(routeOptions).addGlobalVariant(options)
+<div class="highlighter-rouge"><pre class="highlight"><code>midway.route(routeOptions).addGlobalVariant(options)
 </code></pre>
 </div>
 
@@ -754,9 +758,9 @@ curl -H "Content-Type: application/json" -X POST -d '{"variant":"{universe}"}' h
 <p><strong>options</strong> - JSON object with the same attributes as of variant <a href="#set-variant---setmockvariant">described in this section</a></p>
 
 <p><strong>Example</strong></p>
-<div class="highlighter-rouge"><pre class="highlight"><code>var shifu = require('shifu');
+<div class="highlighter-rouge"><pre class="highlight"><code>var midway = require('testarmada-midway');
 
-shifu.addGlobalVariant({
+midway.addGlobalVariant({
   id: '500',
   label: '500 error',
   handler: function(request, reply) {
@@ -774,9 +778,9 @@ shifu.addGlobalVariant({
 
 <h3 id="respond-with-file---respondwithfile">Respond With File - respondWithFile()</h3>
 
-<p>This API allows to respond with static data stored in a file instead of hard coding the response data in the routes definition. Based on the path of the URL that is being mocked, the response file can be dropped in the directory location and the file will be automatically used by Shifu for sending the response. It also allows to specify the absolute path of the response files.</p>
+<p>This API allows to respond with static data stored in a file instead of hard coding the response data in the routes definition. Based on the path of the URL that is being mocked, the response file can be dropped in the directory location and the file will be automatically used by Midway for sending the response. It also allows to specify the absolute path of the response files.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>shifu.util.respondWithFile(route, reply, options);
+<div class="highlighter-rouge"><pre class="highlight"><code>midway.util.respondWithFile(route, reply, options);
 </code></pre>
 </div>
 
@@ -793,7 +797,7 @@ shifu.addGlobalVariant({
   <tbody>
     <tr>
       <td style="text-align: center">route</td>
-      <td>Handle to the shifu route object</td>
+      <td>Handle to the midway route object</td>
       <td style="text-align: center">Yes</td>
     </tr>
     <tr>
@@ -803,7 +807,7 @@ shifu.addGlobalVariant({
     </tr>
     <tr>
       <td style="text-align: center">options</td>
-      <td>JSON object with additional options desribed below</td>
+      <td>JSON object with additional options described below</td>
       <td style="text-align: center">No</td>
     </tr>
   </tbody>
@@ -839,16 +843,16 @@ shifu.addGlobalVariant({
 <p>To use this feature, you can call <code class="highlighter-rouge">respondWithFile()</code> from inside route configuration as follows:</p>
 
 <p><strong>Example</strong></p>
-<div class="highlighter-rouge"><pre class="highlight"><code>var shifu = require('shifu');
+<div class="highlighter-rouge"><pre class="highlight"><code>var midway = require('testarmada-midway');
 
 // Automatic reply of the file
-shifu.route({
+midway.route({
   id: 'Get Collection',
   label: 'Get Collections',
   path: '/product/grouping/api/collection/{collectionId}'
 
   handler: function(req, reply) {
-    shifu.util.respondWithFile(this, reply);
+    midway.util.respondWithFile(this, reply);
   }
 })
 
@@ -857,13 +861,13 @@ shifu.route({
   label: 'Mix Item'
 
   handler: function(req, reply) {
-    shifu.util.respondWithFile(this, reply, {code: 204, filePath: '../mocked-data/fileName.json', delay: 1000});
+    midway.util.respondWithFile(this, reply, {code: 204, filePath: '../mocked-data/fileName.json', delay: 1000});
   }
 })
 </code></pre>
 </div>
 
-<p><strong><em>Note the Use of <code class="highlighter-rouge">shifu.util</code> to access the method <code class="highlighter-rouge">respondWithFile</code></em></strong></p>
+<p><strong><em>Note the Use of <code class="highlighter-rouge">midway.util</code> to access the method <code class="highlighter-rouge">respondWithFile</code></em></strong></p>
 
 <hr />
 
@@ -873,7 +877,7 @@ shifu.route({
 
 <p>This API allows to respond with a variant on the main route handler. The ‘variant’ passed in MUST be the variant on existing route.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>shifu.util.respondWithMockVariant(route, variant, req, reply)
+<div class="highlighter-rouge"><pre class="highlight"><code>midway.util.respondWithMockVariant(route, variant, req, reply)
 </code></pre>
 </div>
 
@@ -912,14 +916,14 @@ shifu.route({
 </table>
 
 <p><strong>Example</strong></p>
-<div class="highlighter-rouge"><pre class="highlight"><code>var shifu = require('shifu');
-shifu.route({
+<div class="highlighter-rouge"><pre class="highlight"><code>var midway = require('testarmada-midway');
+midway.route({
     id: 'respondWithVariant',
     label: 'Respond With Variant',
     path: '/respondWithVariant',
     variantLabel: 'Respond With Main Route',
     handler: function(req, reply) {
-        shifu.util.respondWithMockVariant(this, 'variant', req, reply); // make sure that the variant exist in the same route.
+        midway.util.respondWithMockVariant(this, 'variant', req, reply); // make sure that the variant exist in the same route.
     }
 }).variant({
     id: 'variant',
@@ -933,7 +937,7 @@ shifu.route({
 </code></pre>
 </div>
 
-<p><strong><em>Note the Use of <code class="highlighter-rouge">shifu.util</code> to access the method <code class="highlighter-rouge">respondWithMockVariant</code></em></strong></p>
+<p><strong><em>Note the Use of <code class="highlighter-rouge">midway.util</code> to access the method <code class="highlighter-rouge">respondWithMockVariant</code></em></strong></p>
 
 <hr />
 
@@ -943,11 +947,11 @@ shifu.route({
 
 <p>This API allows to set mock id for a given test case. If this is set, it overrides all the variants and mocked URLs responses to return mocked data from the given directory as <code class="highlighter-rouge">mock-id</code>, where <code class="highlighter-rouge">mock-id</code> is the directory name.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>shifu.setMockId(mockId, shifuSessionId) // with Shifu library
+<div class="highlighter-rouge"><pre class="highlight"><code>midway.setMockId(mockId, midwaySessionId) // with Midway library
 
 or 
 
-browser.setMockId(mocKId, shifuSessionId, callback); // when using Magellan
+browser.setMockId(mocKId, midwaySessionId, callback); // when using Magellan
 </code></pre>
 </div>
 
@@ -968,8 +972,8 @@ browser.setMockId(mocKId, shifuSessionId, callback); // when using Magellan
       <td style="text-align: center">Yes</td>
     </tr>
     <tr>
-      <td style="text-align: center">shifuSessionId</td>
-      <td>Shifu session id, if using parallel sessions</td>
+      <td style="text-align: center">midwaySessionId</td>
+      <td>Midway session id, if using parallel sessions</td>
       <td style="text-align: center">No</td>
     </tr>
     <tr>
@@ -982,27 +986,27 @@ browser.setMockId(mocKId, shifuSessionId, callback); // when using Magellan
 
 <p>The file name should be in the format <code class="highlighter-rouge">url-methodName-urlCount.extension</code> for the responses stored under file. For example, for the given route below</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>var shifu = require('shifu');
+<div class="highlighter-rouge"><pre class="highlight"><code>var midway = require('testarmada-midway');
 
-shifu.route({
+midway.route({
   id: 'my_route',
   label: 'My Route',
   path: '/api/foo',
   method: 'GET',
 
   handler: function(req, reply) {
-    shifu.util.respondWithFile(this, reply);
+    midway.util.respondWithFile(this, reply);
   }
 });
 </code></pre>
 </div>
 
-<p>the file name should be <code class="highlighter-rouge">api-foo-GET-1.json</code> for the first time the URL is hit. For second time the URL is hit, the file name returned would be <code class="highlighter-rouge">api-foo-GET-2.json</code>. If the specific file for the count is not present, Shifu will look for default file <code class="highlighter-rouge">api-foo-GET.json</code>, which is also helpful if you want to always return the same response irrespective of the number of times the URL is hit.</p>
+<p>the file name should be <code class="highlighter-rouge">api-foo-GET-1.json</code> for the first time the URL is hit. For second time the URL is hit, the file name returned would be <code class="highlighter-rouge">api-foo-GET-2.json</code>. If the specific file for the count is not present, Midway will look for default file <code class="highlighter-rouge">api-foo-GET.json</code>, which is also helpful if you want to always return the same response irrespective of the number of times the URL is hit.</p>
 
 <p><strong>Example</strong>:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>var shifu = require('shifu');
-shifu.setMockId('cart', 'abcdef'); // All responses should be under "cart" directory under your mocked data directory
+<div class="highlighter-rouge"><pre class="highlight"><code>var midway = require('testarmada-midway');
+midway.setMockId('cart', 'abcdef'); // All responses should be under "cart" directory under your mocked data directory
 
 or 
 
@@ -1010,7 +1014,7 @@ browser.setMockId('cart', 'abcdef' , callback);
 
 or
 
-curl http://localhost:8000/shifu/api/setMockId/cart/abcdef
+curl http://localhost:8000/midway/api/setMockId/cart/abcdef
 
 </code></pre>
 </div>
@@ -1025,7 +1029,7 @@ curl http://localhost:8000/shifu/api/setMockId/cart/abcdef
 
 <p>This API is used to retrieve the currently set mock id.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>shifu.getMockId(shifuSessionId);
+<div class="highlighter-rouge"><pre class="highlight"><code>midway.getMockId(midwaySessionId);
 </code></pre>
 </div>
 
@@ -1041,8 +1045,8 @@ curl http://localhost:8000/shifu/api/setMockId/cart/abcdef
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center">shifuSessionId</td>
-      <td>Shifu session id, if using parallel sessions</td>
+      <td style="text-align: center">midwaySessionId</td>
+      <td>Midway session id, if using parallel sessions</td>
       <td style="text-align: center">No</td>
     </tr>
   </tbody>
@@ -1050,12 +1054,12 @@ curl http://localhost:8000/shifu/api/setMockId/cart/abcdef
 
 <p><strong>Example</strong>:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>var shifu = require('shifu');
-var mockId = shifu.getMockId('abcdef');
+<div class="highlighter-rouge"><pre class="highlight"><code>var midway = require('testarmada-midway');
+var mockId = midway.getMockId('abcdef');
 
 or 
 
-curl http://localhost:8000/shifu/api/getMockId/cart/abcdef
+curl http://localhost:8000/midway/api/getMockId/cart/abcdef
 
 </code></pre>
 </div>
@@ -1070,11 +1074,11 @@ curl http://localhost:8000/shifu/api/getMockId/cart/abcdef
 
 <p>This API is used to reset currently set mock id.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>shifu.resetMockId(shifuSessionId) // with Shifu library
+<div class="highlighter-rouge"><pre class="highlight"><code>midway.resetMockId(midwaySessionId) // with Midway library
 
 or 
 
-browser.resetMockId(shifuSessionId, callback); // when using Magellan
+browser.resetMockId(midwaySessionId, callback); // when using Magellan
 </code></pre>
 </div>
 
@@ -1090,8 +1094,8 @@ browser.resetMockId(shifuSessionId, callback); // when using Magellan
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center">shifuSessionId</td>
-      <td>Shifu session id, if using parallel sessions</td>
+      <td style="text-align: center">midwaySessionId</td>
+      <td>Midway session id, if using parallel sessions</td>
       <td style="text-align: center">No</td>
     </tr>
     <tr>
@@ -1104,8 +1108,8 @@ browser.resetMockId(shifuSessionId, callback); // when using Magellan
 
 <p><strong>Example</strong>:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>var shifu = require('shifu');
-shifu.resetMockId('abcdef');
+<div class="highlighter-rouge"><pre class="highlight"><code>var midway = require('testarmada-midway');
+midway.resetMockId('abcdef');
 
 or 
 
@@ -1113,7 +1117,7 @@ browser.resetMockId('abcdef', callback);
 
 or 
 
-curl http://localhost:8000/shifu/api/resetMockId/cart/abcdef
+curl http://localhost:8000/midway/api/resetMockId/cart/abcdef
 
 </code></pre>
 </div>
@@ -1128,11 +1132,11 @@ curl http://localhost:8000/shifu/api/resetMockId/cart/abcdef
 
 <p>This API is used to reset URL count to zero. This works in conjunction with <code class="highlighter-rouge">setMockId</code> function where you want to restart over for the URL count.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>shifu.resetURLCount(shifuSessionId)
+<div class="highlighter-rouge"><pre class="highlight"><code>midway.resetURLCount(midwaySessionId)
 
 or 
 
-browser.resetURLCount(shifuSessionId, callback)
+browser.resetURLCount(midwaySessionId, callback)
 </code></pre>
 </div>
 
@@ -1148,8 +1152,8 @@ browser.resetURLCount(shifuSessionId, callback)
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center">shifuSessionId</td>
-      <td>Shifu session id, if using parallel sessions</td>
+      <td style="text-align: center">midwaySessionId</td>
+      <td>Midway session id, if using parallel sessions</td>
       <td style="text-align: center">No</td>
     </tr>
     <tr>
@@ -1162,16 +1166,16 @@ browser.resetURLCount(shifuSessionId, callback)
 
 <p><strong>Example</strong>:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>var shifu = require('shifu');
-shifu.resetURLCount('abcdef');
+<div class="highlighter-rouge"><pre class="highlight"><code>var midway = require('testarmada-midway');
+midway.resetURLCount('abcdef');
 
 or 
 
-browser.resetCount('abcdef', callback); // 'abcdef' is a shifu session id in use for the test
+browser.resetCount('abcdef', callback); // 'abcdef' is a midway session id in use for the test
 
 or
 
-curl http://localhost:8000/shifu/api/resetURLCount/abcdef
+curl http://localhost:8000/midway/api/resetURLCount/abcdef
 </code></pre>
 </div>
 
@@ -1185,7 +1189,7 @@ curl http://localhost:8000/shifu/api/resetURLCount/abcdef
 
 <p>This API is used in conjunction with <code class="highlighter-rouge">setMockId</code> function where you want to get the URL count for all mocked calls.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>shifu.getURLCount(shifuSessionId)
+<div class="highlighter-rouge"><pre class="highlight"><code>midway.getURLCount(midwaySessionId)
 </code></pre>
 </div>
 
@@ -1201,8 +1205,8 @@ curl http://localhost:8000/shifu/api/resetURLCount/abcdef
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center">shifuSessionId</td>
-      <td>Shifu session id, if using parallel sessions</td>
+      <td style="text-align: center">midwaySessionId</td>
+      <td>Midway session id, if using parallel sessions</td>
       <td style="text-align: center">No</td>
     </tr>
   </tbody>
@@ -1210,12 +1214,12 @@ curl http://localhost:8000/shifu/api/resetURLCount/abcdef
 
 <p><strong>Example</strong>:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>var shifu = require('shifu');
-shifu.getURLCount('abcdef');
+<div class="highlighter-rouge"><pre class="highlight"><code>var midway = require('testarmada-midway');
+midway.getURLCount('abcdef');
 
 or 
 
-curl http://localhost:8000/shifu/api/getURLCount/abcdef
+curl http://localhost:8000/midway/api/getURLCount/abcdef
 
 </code></pre>
 </div>
@@ -1228,9 +1232,9 @@ curl http://localhost:8000/shifu/api/getURLCount/abcdef
 
 <h3 id="register-session---registersession">Register session - registerSession()</h3>
 
-<p>This API is used to register a session with Shifu for a test case when using parallel sessions. Shifu needs to be started with <code class="highlighter-rouge">sessions</code>.</p>
+<p>This API is used to register a session with Midway for a test case when using parallel sessions. Midway needs to be started with <code class="highlighter-rouge">sessions</code>.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>shifu.registerSession(); // with Shifu library
+<div class="highlighter-rouge"><pre class="highlight"><code>midway.registerSession(); // with Midway library
 
 or 
 
@@ -1257,22 +1261,22 @@ browser.registerSession(callback); // with browser tests
   </tbody>
 </table>
 
-<p>You can use <code class="highlighter-rouge">registerSession()</code> to register a session with Shifu and can subsequently use that session id for the current test. Shifu returns a unique identifier when registering a session.</p>
+<p>You can use <code class="highlighter-rouge">registerSession()</code> to register a session with Midway and can subsequently use that session id for the current test. Midway returns a unique identifier when registering a session.</p>
 
-<p>If no session is available to use, Shifu returns with the message <code class="highlighter-rouge">NOT_AVAILABLE</code>.</p>
+<p>If no session is available to use, Midway returns with the message <code class="highlighter-rouge">NOT_AVAILABLE</code>.</p>
 
 <p><strong>Example</strong></p>
 
-<p>If <code class="highlighter-rouge">shifu</code> server is started with sessions, for e.g 3 sessions as shown below,</p>
+<p>If <code class="highlighter-rouge">midway</code> server is started with sessions, for e.g 3 sessions as shown below,</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>var shifu = require('shifu');
-shifu.start({
+<div class="highlighter-rouge"><pre class="highlight"><code>var midway = require('testarmada-midway');
+midway.start({
     host: 'localhost',
     port: 8080,
     mockedDirectory: 'resources/mockedData',
     sessions: 3
 });
-var shifuSessionId = shifu.registerSession();
+var midwaySessionId = midway.registerSession();
 
 or
 
@@ -1281,14 +1285,14 @@ or
     if (err) {
       return callback(new Error("Unable to get the sessionId"));
     }
-    self.shifuSessionId = sessId;
-    client.shifuSessionId = sessId; 
+    self.midwaySessionId = sessId;
+    client.midwaySessionId = sessId; 
     return callback();
 });
 
 or
 
-curl http://localhost:8000/shifu/api/registerSession
+curl http://localhost:8000/midway/api/registerSession
 </code></pre>
 </div>
 
@@ -1300,11 +1304,11 @@ curl http://localhost:8000/shifu/api/registerSession
 
 <p>This API is used to close a session after running a test so it can be made available for subsequent tests.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>shifu.closeSession(shifuSessionId);
+<div class="highlighter-rouge"><pre class="highlight"><code>midway.closeSession(midwaySessionId);
 
 or 
 
-browser.closeSession(shifuSessionId, callback);
+browser.closeSession(midwaySessionId, callback);
 </code></pre>
 </div>
 
@@ -1320,8 +1324,8 @@ browser.closeSession(shifuSessionId, callback);
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center">shifuSesssionId</td>
-      <td>Shifu session id to be closed</td>
+      <td style="text-align: center">midwaySesssionId</td>
+      <td>Midway session id to be closed</td>
       <td style="text-align: center">Yes</td>
     </tr>
     <tr>
@@ -1334,8 +1338,8 @@ browser.closeSession(shifuSessionId, callback);
 
 <p><strong>Example</strong></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>var shifu = require('shifu);
-shifu.closeSession('abcdef'); // abcdef is a previously registered session with Shifu
+<div class="highlighter-rouge"><pre class="highlight"><code>var midway = require('testarmada-midway');
+midway.closeSession('abcdef'); // abcdef is a previously registered session with Midway
 
 or 
 
@@ -1347,11 +1351,11 @@ client.closeSession('abcdef', function (err) {
 
 or
 
-curl http://localhost:8000/shifu/api/closeSession/abcdef
+curl http://localhost:8000/midway/api/closeSession/abcdef
 </code></pre>
 </div>
 
-<p>Note that <code class="highlighter-rouge">abcdef</code> is a previously registered session with Shifu.</p>
+<p>Note that <code class="highlighter-rouge">abcdef</code> is a previously registered session with Midway.</p>
 
 <hr />
 
@@ -1379,8 +1383,8 @@ curl http://localhost:8000/shifu/api/closeSession/abcdef
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center">shifuSessionId</td>
-      <td>Shifu session id</td>
+      <td style="text-align: center">midwaySessionId</td>
+      <td>Midway session id</td>
       <td style="text-align: center">Yes</td>
     </tr>
   </tbody>
@@ -1388,12 +1392,12 @@ curl http://localhost:8000/shifu/api/closeSession/abcdef
 
 <p><strong>Example</strong></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>var shifu = require('shifu);
-var status = shifu.checkSession('abcdef');
+<div class="highlighter-rouge"><pre class="highlight"><code>var midway = require('testarmada-midway');
+var status = midway.checkSession('abcdef');
 
 or 
 
-curl http://localhost:8000/shifu/api/checkSession/abcdef
+curl http://localhost:8000/midway/api/checkSession/abcdef
 </code></pre>
 </div>
 
@@ -1405,18 +1409,18 @@ curl http://localhost:8000/shifu/api/checkSession/abcdef
 
 <p>This API is used to get sessions information</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>shifu.getSessions();
+<div class="highlighter-rouge"><pre class="highlight"><code>midway.getSessions();
 </code></pre>
 </div>
 
 <p><strong>Example</strong></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>var shifu = require('shifu);
-var status = shifu.getSessions();
+<div class="highlighter-rouge"><pre class="highlight"><code>var midway = require('testarmada-midway');
+var status = midway.getSessions();
 
 or 
 
-curl http://localhost:8000/shifu/api/getSessions
+curl http://localhost:8000/midway/api/getSessions
 </code></pre>
 </div>
 
@@ -1428,14 +1432,14 @@ curl http://localhost:8000/shifu/api/getSessions
 
 <p>This API is used to clear the sessions information.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>shifu.clearSessions();
+<div class="highlighter-rouge"><pre class="highlight"><code>midway.clearSessions();
 </code></pre>
 </div>
 
 <p><strong>Example</strong></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>var shifu = require('shifu);
-var status = shifu.clearSessions();
+<div class="highlighter-rouge"><pre class="highlight"><code>var midway = require('testarmada-midway');
+var status = midway.clearSessions();
 </code></pre>
 </div>
 
@@ -1445,16 +1449,16 @@ var status = shifu.clearSessions();
 
 <h3 id="get-project-name---getprojectname">Get project name - getProjectName()</h3>
 
-<p>This API is used to get the project name passed in Shifu options</p>
+<p>This API is used to get the project name passed in Midway options</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>shifu.getProjectName();
+<div class="highlighter-rouge"><pre class="highlight"><code>midway.getProjectName();
 </code></pre>
 </div>
 
 <p><strong>Example</strong></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>var shifu = require('shifu);
-var projectName = shifu.getProjectName();
+<div class="highlighter-rouge"><pre class="highlight"><code>var midway = require('testarmada-midway');
+var projectName = midway.getProjectName();
 </code></pre>
 </div>
 
@@ -1464,16 +1468,16 @@ var projectName = shifu.getProjectName();
 
 <h3 id="get-port-information---getportinfo">Get port information - getPortInfo()</h3>
 
-<p>This API is used to get the port information passed in Shifu options</p>
+<p>This API is used to get the port information passed in Midway options</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>shifu.getPortInfo();
+<div class="highlighter-rouge"><pre class="highlight"><code>midway.getPortInfo();
 </code></pre>
 </div>
 
 <p><strong>Example</strong></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>var shifu = require('shifu);
-var portInfo = shifu.getPortInfo();
+<div class="highlighter-rouge"><pre class="highlight"><code>var midway = require('testarmada-midway');
+var portInfo = midway.getPortInfo();
 </code></pre>
 </div>
 
@@ -1485,7 +1489,7 @@ var portInfo = shifu.getPortInfo();
 
 <p>This API is used to add a value to the server state.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>shifu.addState(route, key, value);
+<div class="highlighter-rouge"><pre class="highlight"><code>midway.addState(route, key, value);
 </code></pre>
 </div>
 
@@ -1520,14 +1524,14 @@ var portInfo = shifu.getPortInfo();
 
 <p><strong>Example</strong></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>var shifu = require('shifu);
+<div class="highlighter-rouge"><pre class="highlight"><code>var midway = require('testarmada-midway');
 
-shifu.route({
+midway.route({
   id: 'setState',
   label: 'Add State',
   path: '/login',
   handler: function (req, reply) {
-    shifu.addState(this, 'loggedIn', true);
+    midway.addState(this, 'loggedIn', true);
     reply().code(204);
   }
 });
@@ -1541,7 +1545,7 @@ shifu.route({
 
 <p>This API is used to read a value from the server state.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>shifu.getState(route, key);
+<div class="highlighter-rouge"><pre class="highlight"><code>midway.getState(route, key);
 </code></pre>
 </div>
 
@@ -1571,14 +1575,14 @@ shifu.route({
 
 <p><strong>Example</strong></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>var shifu = require('shifu);
+<div class="highlighter-rouge"><pre class="highlight"><code>var midway = require('testarmada-midway');
 
-shifu.route({
+midway.route({
   id: 'getState',
   label: 'Get State',
   path: '/isLogin',
   handler: function (req, reply) {
-    var isLoggedIn = shifu.getState(this, 'login');
+    var isLoggedIn = midway.getState(this, 'login');
     reply(isLoggedIn);
   }
 });
@@ -1592,7 +1596,7 @@ shifu.route({
 
 <p>This API is used to clear a state for a given session id (Defaults to <code class="highlighter-rouge">default</code> session).</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>shifu.clearState(shifuSessionId);
+<div class="highlighter-rouge"><pre class="highlight"><code>midway.clearState(midwaySessionId);
 </code></pre>
 </div>
 
@@ -1608,8 +1612,8 @@ shifu.route({
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center">shifuSessionId</td>
-      <td>Shifu session id</td>
+      <td style="text-align: center">midwaySessionId</td>
+      <td>Midway session id</td>
       <td style="text-align: center">No</td>
     </tr>
   </tbody>
@@ -1617,11 +1621,11 @@ shifu.route({
 
 <p><strong>Example</strong></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>var shifu = require('shifu);
+<div class="highlighter-rouge"><pre class="highlight"><code>var midway = require('testarmada-midway');
 
-shifu.clearState(); // Clears state for default session
+midway.clearState(); // Clears state for default session
 
-shifu.clearState('abcdef') // Clears state for session id `abcdef`
+midway.clearState('abcdef') // Clears state for session id `abcdef`
 </code></pre>
 </div>
 
@@ -1632,7 +1636,7 @@ shifu.clearState('abcdef') // Clears state for session id `abcdef`
 
 <p>This API is used to enable gathering of usage metrics.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>shifu.enableMetrics(boolean);
+<div class="highlighter-rouge"><pre class="highlight"><code>midway.enableMetrics(boolean);
 </code></pre>
 </div>
 
@@ -1657,11 +1661,11 @@ shifu.clearState('abcdef') // Clears state for session id `abcdef`
 
 <p><strong>Example</strong></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>var shifu = require('shifu);
+<div class="highlighter-rouge"><pre class="highlight"><code>var midway = require('testarmada-midway');
 
-shifu.enableMetrics(true); // Enables gathering of usage metrics
+midway.enableMetrics(true); // Enables gathering of usage metrics
 
-shifu.enableMetrics(false); // Disables gathering of usage metrics
+midway.enableMetrics(false); // Disables gathering of usage metrics
 </code></pre>
 </div>
 
@@ -1671,17 +1675,17 @@ shifu.enableMetrics(false); // Disables gathering of usage metrics
 
 <h3 id="check-if-metrics-are-enabled---ismetricsenabled">Check if metrics are enabled - isMetricsEnabled()</h3>
 
-<p>This API is used to check if metrics gathering is enabled on Shifu. Returns true if metrics gathering is enabled, false otherwise</p>
+<p>This API is used to check if metrics gathering is enabled on Midway. Returns true if metrics gathering is enabled, false otherwise</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>shifu.isMetricsEnabled();
+<div class="highlighter-rouge"><pre class="highlight"><code>midway.isMetricsEnabled();
 </code></pre>
 </div>
 
 <p><strong>Example</strong></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>var shifu = require('shifu);
+<div class="highlighter-rouge"><pre class="highlight"><code>var midway = require('testarmada-midway');
 
-shifu.isMetricsEnabled();
+midway.isMetricsEnabled();
 </code></pre>
 </div>
 
@@ -1693,7 +1697,7 @@ shifu.isMetricsEnabled();
 
 <p>This API allows to dynamically transpose the JSON data</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>shifu.util.transposeData(dataSet, dataToChange);
+<div class="highlighter-rouge"><pre class="highlight"><code>midway.util.transposeData(dataSet, dataToChange);
 </code></pre>
 </div>
 
@@ -1762,10 +1766,10 @@ var dataToChange = {
 // when using utils class
 var fileLocation = require("path").join(__dirname, './resources/test-data/data-transposition-test.json');
 var dataSet = utils.readJsonFile(fileLocation);
-substitutedData = shifu.util.transposeData(dataSet, dataToChange);
+substitutedData = midway.util.transposeData(dataSet, dataToChange);
 
 // When using with respondwithFile (This will read the file based on url path and transpose the data)
-shifu.util.respondWithFile(this, reply, {transpose: dataToChange});
+midway.util.respondWithFile(this, reply, {transpose: dataToChange});
 
 // Resulted JSON
 {
@@ -1797,7 +1801,7 @@ shifu.util.respondWithFile(this, reply, {transpose: dataToChange});
 </code></pre>
 </div>
 
-<p><strong><em>Note the Use of <code class="highlighter-rouge">shifu.util</code> to access the method <code class="highlighter-rouge">transposeData</code></em></strong></p>
+<p><strong><em>Note the Use of <code class="highlighter-rouge">midway.util</code> to access the method <code class="highlighter-rouge">transposeData</code></em></strong></p>
 
 <hr />
 
@@ -1807,7 +1811,7 @@ shifu.util.respondWithFile(this, reply, {transpose: dataToChange});
 
 <p>This API allows to Kill a process with a pid</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>shifu.util.killProcess(pid, signal, callback);
+<div class="highlighter-rouge"><pre class="highlight"><code>midway.util.killProcess(pid, signal, callback);
 </code></pre>
 </div>
 
@@ -1842,15 +1846,15 @@ shifu.util.respondWithFile(this, reply, {transpose: dataToChange});
 
 <p><strong><em>Example</em></strong></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>var shifu = require('shifu);
+<div class="highlighter-rouge"><pre class="highlight"><code>var midway = require('testarmada-midway');
 
-shifu.util.killProcess(18222, 'SIGKILL', function () {
+midway.util.killProcess(18222, 'SIGKILL', function () {
   console.log('Process killed);
 });
 </code></pre>
 </div>
 
-<p><strong><em>Note the Use of <code class="highlighter-rouge">shifu.util</code> to access the method <code class="highlighter-rouge">killProcess</code></em></strong></p>
+<p><strong><em>Note the Use of <code class="highlighter-rouge">midway.util</code> to access the method <code class="highlighter-rouge">killProcess</code></em></strong></p>
 
 <hr />
 
@@ -1860,7 +1864,7 @@ shifu.util.killProcess(18222, 'SIGKILL', function () {
 
 <p>This API allows to read contents of a file asynchronously</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>shifu.util.readFile(filePath, callback);
+<div class="highlighter-rouge"><pre class="highlight"><code>midway.util.readFile(filePath, callback);
 </code></pre>
 </div>
 
@@ -1890,9 +1894,9 @@ shifu.util.killProcess(18222, 'SIGKILL', function () {
 
 <p><strong><em>Example</em></strong></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>var shifu = require('shifu);
+<div class="highlighter-rouge"><pre class="highlight"><code>var midway = require('testarmada-midway');
 
-shifu.util.readFile('data.json', function (err, fileData) {
+midway.util.readFile('data.json', function (err, fileData) {
   if (err) {
     console.log('Error in reading file ', err);
   } else {
@@ -1902,7 +1906,7 @@ shifu.util.readFile('data.json', function (err, fileData) {
 </code></pre>
 </div>
 
-<p><strong><em>Note the Use of <code class="highlighter-rouge">shifu.util</code> to access the method <code class="highlighter-rouge">readFile</code></em></strong></p>
+<p><strong><em>Note the Use of <code class="highlighter-rouge">midway.util</code> to access the method <code class="highlighter-rouge">readFile</code></em></strong></p>
 
 <hr />
 
@@ -1912,7 +1916,7 @@ shifu.util.readFile('data.json', function (err, fileData) {
 
 <p>This API allows to read contents of a file synchronously</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>shifu.util.readFileSynchronously(filePath);
+<div class="highlighter-rouge"><pre class="highlight"><code>midway.util.readFileSynchronously(filePath);
 </code></pre>
 </div>
 
@@ -1937,13 +1941,13 @@ shifu.util.readFile('data.json', function (err, fileData) {
 
 <p><strong><em>Example</em></strong></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>var shifu = require('shifu);
+<div class="highlighter-rouge"><pre class="highlight"><code>var midway = require('testarmada-midway');
 
-shifu.util.readFileSynchronously('data.json');
+midway.util.readFileSynchronously('data.json');
 </code></pre>
 </div>
 
-<p><strong><em>Note the Use of <code class="highlighter-rouge">shifu.util</code> to access the method <code class="highlighter-rouge">readFileSynchronously</code></em></strong></p>
+<p><strong><em>Note the Use of <code class="highlighter-rouge">midway.util</code> to access the method <code class="highlighter-rouge">readFileSynchronously</code></em></strong></p>
 
 <hr />
 
@@ -1953,7 +1957,7 @@ shifu.util.readFileSynchronously('data.json');
 
 <p>This API allows to read contents of a JSON file synchronously</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>shifu.util.readJsonFile(filePath);
+<div class="highlighter-rouge"><pre class="highlight"><code>midway.util.readJsonFile(filePath);
 </code></pre>
 </div>
 
@@ -1978,13 +1982,13 @@ shifu.util.readFileSynchronously('data.json');
 
 <p><strong><em>Example</em></strong></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>var shifu = require('shifu);
+<div class="highlighter-rouge"><pre class="highlight"><code>var midway = require('testarmada-midway');
 
-shifu.util.readJsonFile('data.json');
+midway.util.readJsonFile('data.json');
 </code></pre>
 </div>
 
-<p><strong><em>Note the Use of <code class="highlighter-rouge">shifu.util</code> to access the method <code class="highlighter-rouge">readJsonFile</code></em></strong></p>
+<p><strong><em>Note the Use of <code class="highlighter-rouge">midway.util</code> to access the method <code class="highlighter-rouge">readJsonFile</code></em></strong></p>
 
 <hr />
 
@@ -1994,7 +1998,7 @@ shifu.util.readJsonFile('data.json');
 
 <p>This API allows to write file contents to a file</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>shifu.util.writeFile(filePath, file data, callback);
+<div class="highlighter-rouge"><pre class="highlight"><code>midway.util.writeFile(filePath, file data, callback);
 </code></pre>
 </div>
 
@@ -2029,15 +2033,15 @@ shifu.util.readJsonFile('data.json');
 
 <p><strong><em>Example</em></strong></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>var shifu = require('shifu);
+<div class="highlighter-rouge"><pre class="highlight"><code>var midway = require('testarmada-midway');
 
-shifu.util.writeFile('hello.txt', 'hello world blah blah', function () {
+midway.util.writeFile('hello.txt', 'hello world blah blah', function () {
   console.log('Wrote to file successfully');
 });
 </code></pre>
 </div>
 
-<p><strong><em>Note the Use of <code class="highlighter-rouge">shifu.util</code> to access the method <code class="highlighter-rouge">writeFile</code></em></strong></p>
+<p><strong><em>Note the Use of <code class="highlighter-rouge">midway.util</code> to access the method <code class="highlighter-rouge">writeFile</code></em></strong></p>
 
 <hr />
 
@@ -2047,7 +2051,7 @@ shifu.util.writeFile('hello.txt', 'hello world blah blah', function () {
 
 <p>This API allows to write file contents to a file</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>shifu.util.deleteFile(filePath, callback);
+<div class="highlighter-rouge"><pre class="highlight"><code>midway.util.deleteFile(filePath, callback);
 </code></pre>
 </div>
 
@@ -2077,9 +2081,9 @@ shifu.util.writeFile('hello.txt', 'hello world blah blah', function () {
 
 <p><strong><em>Example</em></strong></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>var shifu = require('shifu);
+<div class="highlighter-rouge"><pre class="highlight"><code>var midway = require('testarmada-midway');
 
-shifu.util.deleteFile('filetoDelete.txt', function (err) {
+midway.util.deleteFile('filetoDelete.txt', function (err) {
   if (err) {
     console.log('Error in deleting file');
   }
@@ -2087,7 +2091,7 @@ shifu.util.deleteFile('filetoDelete.txt', function (err) {
 </code></pre>
 </div>
 
-<p><strong><em>Note the Use of <code class="highlighter-rouge">shifu.util</code> to access the method <code class="highlighter-rouge">deleteFile</code></em></strong></p>
+<p><strong><em>Note the Use of <code class="highlighter-rouge">midway.util</code> to access the method <code class="highlighter-rouge">deleteFile</code></em></strong></p>
 
 <p><br /></p>
 
@@ -2095,7 +2099,7 @@ shifu.util.deleteFile('filetoDelete.txt', function (err) {
 
 <p>This API allows to check if a directory exists. Returns true if directory exists, false otherwise.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>shifu.util.checkDirectoryExists(directoryPath);
+<div class="highlighter-rouge"><pre class="highlight"><code>midway.util.checkDirectoryExists(directoryPath);
 </code></pre>
 </div>
 
@@ -2120,20 +2124,20 @@ shifu.util.deleteFile('filetoDelete.txt', function (err) {
 
 <p><strong><em>Example</em></strong></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>var shifu = require('shifu);
+<div class="highlighter-rouge"><pre class="highlight"><code>var midway = require('testarmada-midway');
 
-shifu.util.checkDirectoryExists('/home/data');
+midway.util.checkDirectoryExists('/home/data');
 </code></pre>
 </div>
 
-<p><strong><em>Note the Use of <code class="highlighter-rouge">shifu.util</code> to access the method <code class="highlighter-rouge">checkDirectoryExists</code></em></strong></p>
+<p><strong><em>Note the Use of <code class="highlighter-rouge">midway.util</code> to access the method <code class="highlighter-rouge">checkDirectoryExists</code></em></strong></p>
 
 <p><br /></p>
 <h3 id="check-if-file-exists---checkfileexists">Check if file exists - checkFileExists()</h3>
 
 <p>This API allows to check if a file exists. Returns true if file exists, false otherwise.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>shifu.util.checkFileExists(filePath);
+<div class="highlighter-rouge"><pre class="highlight"><code>midway.util.checkFileExists(filePath);
 </code></pre>
 </div>
 
@@ -2158,25 +2162,25 @@ shifu.util.checkDirectoryExists('/home/data');
 
 <p><strong><em>Example</em></strong></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>var shifu = require('shifu);
+<div class="highlighter-rouge"><pre class="highlight"><code>var midway = require('testarmada-midway');
 
-shifu.util.checkFileExists('/home/data');
+midway.util.checkFileExists('/home/data');
 </code></pre>
 </div>
 
-<p><strong><em>Note the Use of <code class="highlighter-rouge">shifu.util</code> to access the method <code class="highlighter-rouge">checkFileExists</code></em></strong></p>
+<p><strong><em>Note the Use of <code class="highlighter-rouge">midway.util</code> to access the method <code class="highlighter-rouge">checkFileExists</code></em></strong></p>
 
 <hr />
 
 <p><br /></p>
 <h3 id="set-log-level---setloglevel">Set Log level - setLogLevel()</h3>
-<p>This API allows to set log level on Shifu</p>
+<p>This API allows to set log level on Midway</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>shifu.log.setLogLevel(logLevel); // when using Shifu
+<div class="highlighter-rouge"><pre class="highlight"><code>midway.log.setLogLevel(logLevel); // when using Midway
 
 or
 
-Logger.setLogLevel(logLevel); // when using Shifu-Logger
+Logger.setLogLevel(logLevel); // when using Midway-Logger
 </code></pre>
 </div>
 
@@ -2201,13 +2205,13 @@ Logger.setLogLevel(logLevel); // when using Shifu-Logger
 
 <p><strong><em>Example</em></strong></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>var shifu = require('shifu);
+<div class="highlighter-rouge"><pre class="highlight"><code>var midway = require('testarmada-midway');
 
-shifu.log.setLogLevel('debug');
+midway.log.setLogLevel('debug');
 
 or
 
-curl -X GET http://localhost:8080/shifu/api/setloglevel/debug
+curl -X GET http://localhost:8080/midway/api/setloglevel/debug
 </code></pre>
 </div>
 
@@ -2215,30 +2219,30 @@ curl -X GET http://localhost:8080/shifu/api/setloglevel/debug
 
 <p><br /></p>
 <h3 id="get-log-level---getloglevel">Get Log level - getLogLevel()</h3>
-<p>This API allows to get the current log level on Shifu</p>
+<p>This API allows to get the current log level on Midway</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>shifu.log.getLogLevel(); // when using Shifu
+<div class="highlighter-rouge"><pre class="highlight"><code>midway.log.getLogLevel(); // when using Midway
 
 or 
 
-Logger.getLogLevel(); // when using Shifu-Logger
+Logger.getLogLevel(); // when using Midway-Logger
 </code></pre>
 </div>
 
 <p><strong><em>Example</em></strong></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>var shifu = require('shifu);
+<div class="highlighter-rouge"><pre class="highlight"><code>var midway = require('testarmada-midway');
 
-shifu.log.getLogLevel();
+midway.log.getLogLevel();
 
 or
 
-var Logger = require('shifu-logger');
+var Logger = require('testarmada-midway'-logger');
 Logger.getLogLevel();
 
 or
 
-curl -X GET http://localhost:8080/shifu/api/getloglevel
+curl -X GET http://localhost:8080/midway/api/getloglevel
 </code></pre>
 </div>
 
@@ -2246,9 +2250,9 @@ curl -X GET http://localhost:8080/shifu/api/getloglevel
 
 <p><br /></p>
 <h3 id="reset-log-level---resetloglevel">Reset Log level - resetLogLevel()</h3>
-<p>This API allows to reset the log level of Shifu to <code class="highlighter-rouge">info</code> (Default log level)</p>
+<p>This API allows to reset the log level of Midway to <code class="highlighter-rouge">info</code> (Default log level)</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>shifu.log.resetLogLevel();
+<div class="highlighter-rouge"><pre class="highlight"><code>midway.log.resetLogLevel();
 
 or 
 
@@ -2258,17 +2262,17 @@ Logger.resetLogLevel();
 
 <p><strong><em>Example</em></strong></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>var shifu = require('shifu);
-shifu.log.resetLogLevel();
+<div class="highlighter-rouge"><pre class="highlight"><code>var midway = require('testarmada-midway');
+midway.log.resetLogLevel();
 
 or
 
-var Logger = require('shifu-logger');
+var Logger = require('testarmada-midway'-logger');
 Logger.resetLogLevel();
 
 or 
 
-curl -X GET http://localhost:8080/shifu/api/resetloglevel
+curl -X GET http://localhost:8080/midway/api/resetloglevel
 </code></pre>
 </div>
 

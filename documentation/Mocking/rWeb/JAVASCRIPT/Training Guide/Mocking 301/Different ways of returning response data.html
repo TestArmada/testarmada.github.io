@@ -202,7 +202,7 @@
 </div>
 <div class="training-content markdown">
 <h3>1. Returning only the code</h3>
-<pre><code class="language-js">shifu.route({
+<pre><code class="language-js">midway.route({
  id: 'message',
  label: 'hello message',
  path: '/message',
@@ -212,20 +212,20 @@
 })
 </code></pre>
 <h3>2. Using <code>RespondWithFile</code> without handler</h3>
-<pre><code class="language-js">shifu.route({
+<pre><code class="language-js">midway.route({
   path: '/api/customer/getId',
   label: 'Get Customer Id',
   method: 'GET',
  }).respondWithFile();
 </code></pre>
 <h3>3. Returning static mocked data with a response code</h3>
-<pre><code class="language-js">shifu.route({
+<pre><code class="language-js">midway.route({
   id: 'message',
   label: 'hello message',
   path: '/message',
  
   handler: function(req, reply) {
-    shifu.util.respondWithFile(this, reply, {code: 400});
+    midway.util.respondWithFile(this, reply, {code: 400});
   }
 })
 </code></pre>

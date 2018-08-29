@@ -203,7 +203,7 @@
 </div>
 <div class="training-content markdown">
 <h3>1. Set custom headers</h3>
-<pre><code class="language-js">shifu.route({
+<pre><code class="language-js">midway.route({
   id: 'header',
   label: 'Custom Headers',
   path: '/set/headers',
@@ -215,7 +215,7 @@
   }
 })
  
-shifu.route({
+midway.route({
   id: 'header',
   label: 'Custom Headers',
   path: '/set/headers',
@@ -225,12 +225,12 @@ shifu.route({
       header2: 'test2',
       header3: true
     };
-    shifu.util.respondWithFile(this, reply, {headers: myHeaders});
+    midway.util.respondWithFile(this, reply, {headers: myHeaders});
   }
 });
 </code></pre>
 <h3>2. Set custom cookies</h3>
-<pre><code class="language-js">shifu.route({
+<pre><code class="language-js">midway.route({
   id: 'cookies',
   label: 'Custom Cookies',
   path: '/set/cookies',
@@ -241,7 +241,7 @@ shifu.route({
     }
 });
  
-shifu.route({
+midway.route({
   id: 'cookies',
   label: 'Custom Cookies',
   path: '/set/cookies',
@@ -250,7 +250,7 @@ shifu.route({
       {name: 'cookie1', value: 'testCookie1'},
       {name: 'cookie2', value: 'testCookie2'},
     ];
-    shifu.util.respondWithFile(this, reply, {cookies: cookies});
+    midway.util.respondWithFile(this, reply, {cookies: cookies});
   }
 });
 </code></pre>
@@ -262,7 +262,7 @@ shifu.route({
 }
  
 // Items
-shifu.route({
+midway.route({
   id: 'corsheaders',
   label: 'CORS',
   path: '/set/cors',

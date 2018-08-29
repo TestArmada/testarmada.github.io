@@ -207,9 +207,9 @@
 <pre><code class="language-js">var ctype = req.query.ctype;
 </code></pre>
 <blockquote>
-<p>To run the above scenario, hit the following in any browser with Shifu server running: http://localhost:8000/get/customerInfo/12345?ctype=new after updating the route to</p>
+<p>To run the above scenario, hit the following in any browser with Midway server running: http://localhost:8000/get/customerInfo/12345?ctype=new after updating the route to</p>
 </blockquote>
-<pre><code class="language-js">shifu.route({
+<pre><code class="language-js">midway.route({
   id: 'customerInfo',
   label: 'Customer Info',
   path: '/get/customerInfo/{customerid}',
@@ -231,7 +231,7 @@ var name = req.headers.name;
 <blockquote>
 <p>To run the above scenario, use postman to make the following get call: http://localhost:8000/get/customerInfo/12345?ctype=new and add header 'name' with value 'John' after updating the route to</p>
 </blockquote>
-<pre><code class="language-js">shifu.route({
+<pre><code class="language-js">midway.route({
   id: 'customerInfo',
   label: 'Customer Info',
   path: '/get/customerInfo/{customerid}',
@@ -255,7 +255,7 @@ var fname = req.payload.fname;
 <blockquote>
 <p>To run the above scenario, use postman to make the following POST call: http://localhost:8000/payload and add payload <code>{&quot;fname&quot;: &quot;Bob&quot;}</code> in the request.</p>
 </blockquote>
-<pre><code class="language-js">shifu.route({
+<pre><code class="language-js">midway.route({
   id: 'payload',
   label: 'Reading Payload',
   path: '/payload',

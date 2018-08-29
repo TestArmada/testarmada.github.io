@@ -205,12 +205,12 @@
 <h3>1. What does it mean?</h3>
 <p>This feature allows you to respond with a data stored in a file instead of hard coding the response data in the routes definition. This way user does not have to change the response rather can just swap the file with different data.</p>
 <h3>2. How it works?</h3>
-<pre><code class="language-js">shifu.route({
+<pre><code class="language-js">midway.route({
   id: 'ResponseFromFile',
   label: 'Response From File',
   path: '/get/fromFile',
   handler: function(req, reply) {
-    shifu.util.respondWithFile(this, reply);
+    midway.util.respondWithFile(this, reply);
   }
 });
 </code></pre>
@@ -219,29 +219,29 @@
 </blockquote>
 <h3>3. What is <code>mockedDirectory</code> Path?</h3>
 <p>Mocked directory path is the location to the base directory where all your mocked response file will be stored. This parameter is defined in run-mock-server-console.js file. It is defined at the start of mock server as shown in the code below:</p>
-<pre><code class="language-js">require('./endpoints-Shifu-201');
-require('shifu').start({
+<pre><code class="language-js">require('./endpoints-Midway-201');
+require('midway').start({
   host: &quot;localhost&quot;,
   mockedDirectory: &quot;./resources/mocked-data&quot;,
   port: 8000,
-  project: 'HelloShifu'
+  project: 'HelloMidway'
 });
 </code></pre>
 <h3>4. Automatic calculation of file location</h3>
 <p>The path to the mocked data file is auto-calculated based on the route path. For variants, the name of the file should be changed from default to the variant name as shown below:</p>
-<pre><code class="language-js">shifu.route({
+<pre><code class="language-js">midway.route({
   id: 'ResponseFromFile',
   label: 'Response From File',
   path: '/get/fromFile',
   handler: function(req, reply) {
-    shifu.util.respondWithFile(this, reply);
+    midway.util.respondWithFile(this, reply);
   }
 })
 .variant({
   id: 'textData',
   label: 'Text Data',
   handler: function (req, reply) {
-    shifu.util.respondWithFile(this, reply);
+    midway.util.respondWithFile(this, reply);
   }
 })
 </code></pre>
@@ -250,17 +250,17 @@ require('shifu').start({
 </blockquote>
 <h3>5. Providing custom path to the response file</h3>
 <p>A custom file path could also be provided for a mocked data file. to do so, use the following code:</p>
-<pre><code class="language-js">shifu.route({
+<pre><code class="language-js">midway.route({
   id: 'CustomResponseFile',
   label: 'Response From Custom Path',
   path: '/get/customFile',
   handler: function(req, reply) {
-    shifu.util.respondWithFile(this, reply, {filePath: './custom.json'});
+    midway.util.respondWithFile(this, reply, {filePath: './custom.json'});
   }
 })
 </code></pre>
 <blockquote>
-<p>Shifu will look for the file under MockedDirectory only but at <code>./resources/mocked-data/custom.json</code></p>
+<p>Midway will look for the file under MockedDirectory only but at <code>./resources/mocked-data/custom.json</code></p>
 </blockquote>
 </div>
 <div class="training-doc-nav-btn">

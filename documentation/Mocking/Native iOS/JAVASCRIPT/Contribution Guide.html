@@ -251,21 +251,21 @@
 
 <p>These are the very high level components of mocking eco-system.</p>
 
-<p><img src="../../images/shifu_components_diagram.png?raw=true" alt="shifu_components_diagram" title="Mocking Components Diagram" /></p>
+<p><img src="../../images/midway_components_diagram.png?raw=true" alt="midway_components_diagram" title="Mocking Components Diagram" /></p>
 
 <p>The below diagram shows the mocking components in detail.</p>
 
-<p><img src="../../images/shifu_components_architecture.png?raw=true" alt="shifu_components_architecture" title="Mocking Components Architecture" /></p>
+<p><img src="../../images/midway_components_architecture.png?raw=true" alt="midway_components_architecture" title="Mocking Components Architecture" /></p>
 
-<p>The mocking service uses <code class="highlighter-rouge">shifu-smocks</code> which provides the stateful HTTP mocking service built on top of HAPI. It allows to add routes and different scenarios for each route.</p>
+<p>The mocking service uses <code class="highlighter-rouge">midway-smocks</code> which provides the stateful HTTP mocking service built on top of HAPI. It allows to add routes and different scenarios for each route.</p>
 
-<p>In addition, the mocking service provides certain utilities via <a href="https://github.com/TestArmada/shifu-util">shifu-util</a>. It also provides logging facility with <a href="https://github.com/TestArmada/shifu-logger">shifu-logger</a></p>
+<p>In addition, the mocking service provides certain utilities via <a href="https://github.com/TestArmada/midway-util">midway-util</a>. It also provides logging facility with <a href="https://github.com/TestArmada/midway-logger">midway-logger</a></p>
 
 <h2 id="mock-server-start-flow">Mock Server Start flow</h2>
 
 <p>The mocking service exposes its features via API’s and HTTP end points. Lets take a look at the sequence of events when the mock server is started.</p>
 
-<p><img src="../../images/shifu_start_sequence_diagram.png?raw=true" alt="shifu_start_sequence_diagram" title="Mocking Start Sequence Diagram" /></p>
+<p><img src="../../images/midway_start_sequence_diagram.png?raw=true" alt="midway_start_sequence_diagram" title="Mocking Start Sequence Diagram" /></p>
 
 <p>In the above diagram, the actor can be the test code which starts mock server or a developer using the mock service for local development / testing.</p>
 
@@ -274,25 +274,25 @@
     <p>Users can specify what routes to mock by specifying them in endpoints.js</p>
   </li>
   <li>
-    <p>Shifu’s <code class="highlighter-rouge">start()</code> is invoked with options to start the Shifu server</p>
+    <p>Midway’s <code class="highlighter-rouge">start()</code> is invoked with options to start the Midway server</p>
   </li>
   <li>
-    <p>Shifu creates an instance of Hapi server</p>
+    <p>Midway creates an instance of Hapi server</p>
   </li>
   <li>
-    <p>Shifu adds the routes for the system API’s it supports</p>
+    <p>Midway adds the routes for the system API’s it supports</p>
   </li>
   <li>
-    <p>Shifu gets the plugin from <code class="highlighter-rouge">shifu-smocks</code></p>
+    <p>Midway gets the plugin from <code class="highlighter-rouge">midway-smocks</code></p>
   </li>
   <li>
-    <p>Shifu registers the plugin it obtained from the above step</p>
+    <p>Midway registers the plugin it obtained from the above step</p>
   </li>
   <li>
-    <p>Shifu starts the server</p>
+    <p>Midway starts the server</p>
   </li>
   <li>
-    <p>Once the Shifu server is started, you can use the Shifu API’s via HTTP Calls or libraries [Read API Guide for examples]</p>
+    <p>Once the Midway server is started, you can use the Midway API’s via HTTP Calls or libraries [Read API Guide for examples]</p>
   </li>
 </ul>
 
@@ -300,13 +300,13 @@
 
 <h3 id="without-parallel-sessions">Without Parallel sessions</h3>
 
-<p><img src="../../images/without_parallel_sessions.png?raw=true" alt="shifu_without_parallel_sessions" title="Shifu without parallel sessions" /></p>
+<p><img src="../../images/without_parallel_sessions.png?raw=true" alt="midway_without_parallel_sessions" title="Midway without parallel sessions" /></p>
 
 <p>If we want to run two test cases in parallel, mocking the same route and returning different data, it won’t be possible with running one  mock server and sharing across the whole test suite. So we needed to run one mock server and one application server per test case.</p>
 
 <h3 id="with-parallel-sessions">With Parallel sessions</h3>
 
-<p><img src="../../images/with_parallel_sessions.png?raw=true" alt="shifu_with_parallel_sessions" title="Shifu without parallel sessions" /></p>
+<p><img src="../../images/with_parallel_sessions.png?raw=true" alt="midway_with_parallel_sessions" title="Midway without parallel sessions" /></p>
 
 <p>With parallel sessions, we can share one application server and mock server for the whole test suite. It allows to mock the same route but different data for different test cases.</p>
 
@@ -332,12 +332,12 @@
 <p>The source code for all mocking components reside in Github.</p>
 
 <ul>
-  <li><a href="https://github.com/TestArmada/shifu">Shifu</a></li>
-  <li><a href="https://github.com/TestArmada/shifu-util">Shifu Util</a></li>
-  <li><a href="https://github.com/TestArmada/shifu-magellan-nightwatch">Shifu Magellan Nightwatch</a></li>
-  <li><a href="https://github.com/TestArmada/shifu-logger">Shifu Logger</a></li>
-  <li><a href="https://github.com/TestArmada/shifu-smocks">Shifu Smocks</a></li>
-  <li><a href="https://github.com/TestArmada/shifu-swagger">Shifu Swagger</a></li>
+  <li><a href="https://github.com/TestArmada/midway">Midway</a></li>
+  <li><a href="https://github.com/TestArmada/midway-util">Midway Util</a></li>
+  <li><a href="https://github.com/TestArmada/midway-magellan-nightwatch">Midway Magellan Nightwatch</a></li>
+  <li><a href="https://github.com/TestArmada/midway-logger">Midway Logger</a></li>
+  <li><a href="https://github.com/TestArmada/midway-smocks">Midway Smocks</a></li>
+  <li><a href="https://github.com/TestArmada/midway-swagger">Midway Swagger</a></li>
 </ul>
 
 <h2 id="development-process">Development process</h2>
@@ -346,10 +346,10 @@
 
 <ol>
   <li>
-    <p>Fork the repository https://github.com/TestArmada/shifu. If your Github username is “abc” for e.g, your forked repository will be https://github.com/abc/shifu.</p>
+    <p>Fork the repository https://github.com/TestArmada/midway. If your Github username is “abc” for e.g, your forked repository will be https://github.com/abc/midway.</p>
   </li>
   <li>
-    <p>Clone this forked repository using <code class="highlighter-rouge">git clone https://github.com/&lt;username&gt;/shifu.git</code> and make “shifu” your working directory.</p>
+    <p>Clone this forked repository using <code class="highlighter-rouge">git clone https://github.com/&lt;username&gt;/midway.git</code> and make “midway” your working directory.</p>
   </li>
   <li>
     <p>Create a branch on local with <code class="highlighter-rouge">git checkout -b &lt;your branch name&gt;</code>. <strong>Note</strong> The default branch for all projects is <code class="highlighter-rouge">development</code> so any branch you create will be off the <code class="highlighter-rouge">development</code> branch.</p>
@@ -361,13 +361,13 @@
     <p>Make the code changes in the branch you created in step (3) and write / update the unit tests to verify your changes. Run unit tests using <code class="highlighter-rouge">npm test</code>. We use <code class="highlighter-rouge">eslint</code> to ensure code formatting. This step runs both unit tests as well as verifies code formatting. We use <code class="highlighter-rouge">istanbul</code> for code coverage reporting. <strong>95%</strong> is the minimum code coverage we expect for all our components.</p>
   </li>
   <li>
-    <p>Once you’re ready, submit your pull request from your branch against the <code class="highlighter-rouge">development</code> branch of Shifu (https://github.com/TestArmada/shifu/tree/development). The PR triggers a <a href="https://travis-ci.org/TestArmada/shifu">Travis build</a> which runs the tests in CI environment (same steps as in (5) above).</p>
+    <p>Once you’re ready, submit your pull request from your branch against the <code class="highlighter-rouge">development</code> branch of Midway (https://github.com/TestArmada/midway/tree/development). The PR triggers a <a href="https://travis-ci.org/TestArmada/midway">Travis build</a> which runs the tests in CI environment (same steps as in (5) above).</p>
   </li>
   <li>
     <p>Once the PR is reviewed, a team member merges the PR into the <code class="highlighter-rouge">development</code> branch.</p>
   </li>
   <li>
-    <p>When the <code class="highlighter-rouge">development</code> branch is merged to <code class="highlighter-rouge">master</code>, a team member will push a tag to <code class="highlighter-rouge">master</code>, a <a href="https://travis-ci.org/TestArmada/shifu">Travis build</a> is triggered and publishes a new version of the package to <code class="highlighter-rouge">npm</code> registry.</p>
+    <p>When the <code class="highlighter-rouge">development</code> branch is merged to <code class="highlighter-rouge">master</code>, a team member will push a tag to <code class="highlighter-rouge">master</code>, a <a href="https://travis-ci.org/TestArmada/midway">Travis build</a> is triggered and publishes a new version of the package to <code class="highlighter-rouge">npm</code> registry.</p>
   </li>
 </ol>
 

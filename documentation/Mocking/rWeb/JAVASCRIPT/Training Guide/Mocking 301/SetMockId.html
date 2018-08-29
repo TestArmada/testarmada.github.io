@@ -227,11 +227,11 @@ The underlying mock service automatically figures out the file extension so that
 <li>First file encountered of any other extension</li>
 </ul>
 <blockquote>
-<p>Once the <code>shifu.setMockId(“test1”)</code> API is called, Shifu only looks for the responses under the test1 folder. If it does not find the response, it will return 404 with the file name that it did not find. Shifu internally keeps track of the number of times each individual endpoint is called after <code>client.setMockId(“test1”)</code> API is called and first looks for the file with count specific name such as <code>api-message-GET-1.json</code>, if it does not find the said file then it looks for the default file which is <code>api-message-GET.json</code>.</p>
+<p>Once the <code>midway.setMockId(“test1”)</code> API is called, Midway only looks for the responses under the test1 folder. If it does not find the response, it will return 404 with the file name that it did not find. Midway internally keeps track of the number of times each individual endpoint is called after <code>client.setMockId(“test1”)</code> API is called and first looks for the file with count specific name such as <code>api-message-GET-1.json</code>, if it does not find the said file then it looks for the default file which is <code>api-message-GET.json</code>.</p>
 </blockquote>
 <h3>3. Good To Know</h3>
 <p>If setMockId is set, then custom file path in handler</p>
-<pre><code class="language-js">shifu.util.respondWithFile(this, reply, {filePath: ‘./message/GET/default.json’});
+<pre><code class="language-js">midway.util.respondWithFile(this, reply, {filePath: ‘./message/GET/default.json’});
 </code></pre>
 <p>and file based on URL path <code>./mocked-data/api/message/get/default.json</code> are ignored for the mocked response. Here is the order followed for file lookup:</p>
 <ul>
@@ -242,7 +242,7 @@ The underlying mock service automatically figures out the file extension so that
 <blockquote>
 <p>SetMockId does not work with in-line Handler</p>
 </blockquote>
-<pre><code class="language-js">shifu.route({
+<pre><code class="language-js">midway.route({
   id: 'message',
   label: 'Message',
   path: '/get/message/{customerid}',

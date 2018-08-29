@@ -206,7 +206,7 @@
 <pre><code class="language-js">Method    : POST
 Syntax    : {host}:{port}/_admin/api/route/{routeId}
 Rest API  : curl -H &quot;Content-Type: application/json&quot; -X POST -d '{&quot;variant&quot;:&quot;preorder&quot;}' http://localhost:8000/_admin/api/route/getCollection?returnConfig=true
-shifu.route({
+midway.route({
     id: 'getCollection',
     label: 'Get Collection',
     path: '/product/grouping/api/collection/{collectionId}',
@@ -230,28 +230,28 @@ shifu.route({
 </blockquote>
 <h3>2. Set Mock Id</h3>
 <pre><code>Method    : GET
-Syntax    : {host}:{port}/_admin/api/shifu/setMockId/{mockid}/{sessionid}
-Rest API  : curl http://localhost:8000/_admin/api/shifu/setMockId/1234/default
+Syntax    : {host}:{port}/_admin/api/midway/setMockId/{mockid}/{sessionid}
+Rest API  : curl http://localhost:8000/_admin/api/midway/setMockId/1234/default
 </code></pre>
 <h3>3. Get Mock Id</h3>
 <pre><code>Method    : GET
-Syntax    : {host}:{port}/_admin/api/shifu/getMockId/{sessionid}
-Rest API  : curl http://localhost:8000/_admin/api/shifu/getMockId/default
+Syntax    : {host}:{port}/_admin/api/midway/getMockId/{sessionid}
+Rest API  : curl http://localhost:8000/_admin/api/midway/getMockId/default
 </code></pre>
 <h3>4. Reset Mock Id</h3>
 <pre><code>Method    : GET
-Syntax    : {host}:{port}/_admin/api/shifu/resetMockId/{sessionid}
-Rest API  : curl http://localhost:8000/_admin/api/shifu/resetMockId/default
+Syntax    : {host}:{port}/_admin/api/midway/resetMockId/{sessionid}
+Rest API  : curl http://localhost:8000/_admin/api/midway/resetMockId/default
 </code></pre>
 <h3>5. Get Url Count</h3>
 <pre><code>Method    : GET
-Syntax    : {host}:{port}/_admin/api/shifu/getURLCount/{sessionid}
-Rest API  : curl http://localhost:8000/_admin/api/shifu/getURLCount/default
+Syntax    : {host}:{port}/_admin/api/midway/getURLCount/{sessionid}
+Rest API  : curl http://localhost:8000/_admin/api/midway/getURLCount/default
 </code></pre>
 <h3>6. Reset Url Count</h3>
 <pre><code>Method    : GET
-Syntax    : {host}:{port}/_admin/api/shifu/resetURLCount/{sessionid}
-Rest API  : curl http://localhost:8000/_admin/api/shifu/resetURLCount/default
+Syntax    : {host}:{port}/_admin/api/midway/resetURLCount/{sessionid}
+Rest API  : curl http://localhost:8000/_admin/api/midway/resetURLCount/default
 </code></pre>
 <h3>7. Re-set the state of Mock Server</h3>
 <pre><code>Method    : POST
@@ -260,23 +260,23 @@ Rest API  : curl -X POST http://localhost:8000/_admin/api/state/reset
 </code></pre>
 <h3>8. Register Session</h3>
 <pre><code>Method    : GET
-Syntax    : {host}:{port}/_admin/api/shifu/registerSession
-Rest API  : curl http://localhost:8000/_admin/api/shifu/registerSession
+Syntax    : {host}:{port}/_admin/api/midway/registerSession
+Rest API  : curl http://localhost:8000/_admin/api/midway/registerSession
 </code></pre>
 <h3>9. Get Sessions</h3>
 <pre><code>Method    : GET
-Syntax    : {host}:{port}/_admin/api/shifu/getSessions
-Rest API  : curl http://localhost:8000/_admin/api/shifu/getSessions
+Syntax    : {host}:{port}/_admin/api/midway/getSessions
+Rest API  : curl http://localhost:8000/_admin/api/midway/getSessions
 </code></pre>
 <h3>10. Check Session</h3>
 <pre><code>Method    : GET
-Syntax    : {host}:{port}/_admin/api/shifu/checkSession/{sessionid}
-Rest API  : curl http://localhost:8000/_admin/api/shifu/checkSession/{sessionid}
+Syntax    : {host}:{port}/_admin/api/midway/checkSession/{sessionid}
+Rest API  : curl http://localhost:8000/_admin/api/midway/checkSession/{sessionid}
 </code></pre>
 <h3>11. Close Session</h3>
 <pre><code>Method    : GET
-Syntax    : {host}:{port}/_admin/api/shifu/closeSession/{sessionid}
-Rest API  : curl http://localhost:8000/_admin/api/shifu/closeSession/{sessionid}
+Syntax    : {host}:{port}/_admin/api/midway/closeSession/{sessionid}
+Rest API  : curl http://localhost:8000/_admin/api/midway/closeSession/{sessionid}
 </code></pre>
 </div>
 <div class="training-doc-nav-btn">
